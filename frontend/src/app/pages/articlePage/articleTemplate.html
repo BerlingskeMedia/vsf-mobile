@@ -1,0 +1,72 @@
+
+<div class="article-container" ng-show="loaded">
+   
+    <div class="article general-background tag-{{::tag}}" ng-show="loaded" ng-class="vote" id="node-{{::contentitem.nodeId}}" article-directive>
+        <div class="article-heading-wrapper">
+            <div class="article-tag-bg-container">
+                <div class="article-tag-bg" ng-style="{'background-color': template.backgroundColor}"></div>
+                <div class="article-title-wrapper" style="visibility:hidden;">
+                    <h2 class="tag">#{{::tag}}</h2>
+                    <h1 class="title">{{::contentitem.title}}</h1>
+                </div>
+            </div>
+            <div class="article-title-wrapper">
+                <h2 class="tag">#{{::tag}}</h2>
+
+                <h1 class="title">{{::contentitem.title}}</h1>
+            </div>
+            <div class="image-container">
+                <img
+                    class="main-article-image"
+                    berl-srcset="contentitem.image"
+                    sizes="
+                                (max-width: 600px) calc(100vw - 50px),
+                                (max-width: 940px) calc(100vw - 280px),
+                                (min-width: 940px) 640px"
+                    />
+                <div class="photo-author" ng-show="contentitem.image.photographer">Foto:
+                    {{::contentitem.image.photographer}}
+                </div>
+            </div>
+
+        </div>
+        <div class="voting-box" ng-class="votingBarShow">
+            <a class="downvote button" ng-click="downvote()"><i class="icon-thumb-down"></i>{{::votingTextDown}}</a>
+            <a class="upvote button" ng-click="upvote()"><i class="icon-heart"></i>{{::votingTextUp}}</a>
+
+            <div class="voting-text">{{::votingText}}</div>
+        </div>
+        <div class="social-box" >
+            <div ng-hide="sticky">
+                <a class="button icon-facebook" ng-href="{{::facebookUrl}}"></a><a class="button icon-twitter" ng-href="{{::twitterUrl}}"></a>
+            </div>
+        </div>
+        <div class="bodytext">
+            <div class="publisheddate">{{::contentitem.published| date:" d '.' MMMM yyyy ',' HH:MM "}}</div>
+            <div ng-bind-html="contentitem.summary" class="summary"></div>
+            <div ng-bind-html="contentitem.body" class="body"></div>
+            <a class="facebookcontainer" href="https://www.facebook.com/stiftendk" target="_blank">Følg os på <i class="icon-facebook"></i></a>
+            <div class="author-box" ng-if="author.profileName">
+                <div class="authorFirstBox">
+                    <p class="name">
+                        <i>Af</i>
+                        &nbsp;
+                        <b><a href="mailto:{{::author.profileEmail}}">{{::author.profileName | limitTo: 30}}</a></b>
+                    </p>
+
+                    <p>
+                        <a class="button icon-facebook" ng-href="{{::author.facebookProfile.id}}" ng-if="author.facebookProfile.id"></a>
+                        <a class="button icon-twitter" ng-href="{{::author.twitterProfile.id}}" ng-if="author.twitterProfile.id"></a>
+                        <a class="button icon-instagram" ng-href="{{::author.instragramProfile.id}}" ng-if="author.instragramProfile.id"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sticky-social-box" ng-show="sticky">
+        <a class="button icon-facebook" ng-href="{{::facebookUrl}}"></a>
+        <a class="button icon-twitter" ng-href="{{::twitterUrl}}"></a>
+    </div>
+
+</div>
+<footer stiften-footer class="footer article-footer container"></footer>

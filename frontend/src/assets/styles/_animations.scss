@@ -1,0 +1,109 @@
+@media(min-width:600px) {
+
+
+    .toplist-switch-animation {
+        &.ng-enter, &.ng-leave {
+            top: -60px;
+            opacity: 0.1;
+            transition: all 1s ease;
+        }
+        &.ng-enter-active {
+            top:0;
+            opacity:1;
+        }
+    }
+}
+
+.toplist-article-stagger {
+    &.ng-leave {
+        opacity:0;
+    }
+    &.ng-enter {
+        -webkit-transition: 1s linear all;
+        transition: 1s linear all;
+        opacity: 0.1;
+        visibility: hidden;
+    }
+    &.ng-enter-stagger {
+        -webkit-transition-delay: 0.1s;
+        transition-delay: 0.1s;
+        visibility: visible;
+        -webkit-transition-duration: 0s;
+        transition-duration: 0s;
+    }
+    &.ng-enter.ng-enter-active {
+        opacity:1;
+        visibility: visible;
+    }
+}
+
+
+.anim-crossfade {
+    opacity: 1;
+    &.ng-enter, &.ng-leave {
+        transition: all 1s ease;
+        animation-delay: 8s;
+    }
+
+    &.ng-enter {
+        opacity: 0;
+    }
+    &.ng-enter-active, &.ng-leave {
+        opacity: 1;
+    }
+    &.ng-leave-active {
+        opacity: 0;
+    }
+}
+$animtime :.3s;
+
+.article {
+    transform: translate3d(0,0,0);
+    transition: all $animtime ease-in;
+    z-index: 900;
+
+    &.ng-hide {
+        transform: translate3d(0,100vh,0) !important;
+        z-index: 0;
+    }
+}
+
+@media(max-width: 600px) {
+    .article {
+
+        &.upvoted, &.upvoted-add, &.upvoted-add-active {
+            transform: rotate(35deg) translate3d(0,0,0);
+        }
+        &.downvoted, &.downvoted-add {
+            transform: rotate(-35deg) translate3d(0,0,0);
+        }
+
+    }
+}
+
+/* TODO: consider if this would work better for targeting child elements, so it could be set on container instead of the individual element  */
+
+.anim-staggeredcascade > * {
+    animation: grow .3s cubic-bezier(0.23, 1, .32, 1);
+
+    &.ng-enter, &.ng-enter-active {
+        transition: 0s all ease;
+        opacity: 0;
+    }
+
+    &.ng-enter-stagger {
+        animation-delay: .1s;
+        animation-duration: 0s;
+    }
+}
+
+@keyframes grow {
+    from {
+        opacity: 0;
+        transform: scale(0.75)
+    }
+    to {
+        opacity: 1;
+        transform: translate(1)
+    }
+}

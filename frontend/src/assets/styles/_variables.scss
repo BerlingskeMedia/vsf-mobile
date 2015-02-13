@@ -1,0 +1,79 @@
+/* VARIABLES */
+
+$skew : 6.7deg; // in degrees
+//$skew : 0deg; // in degrees
+$maxwidth : 940px;
+
+
+$tabletbreakpoint : 960px;
+$phonebreakpoint  : 600px;
+
+$footerheight     : 215px;
+
+/* Colors */
+
+$pink: #ff00ff;
+$purple: #990099;
+$yellow: #ffff00;
+$cyan:  #00ffce;
+$blue: #0000ff;
+$black: #000;
+$grey0: rgb(40,40,40); //#282828
+$grey1: rgb(90,90,90); //#5A5A5A
+$grey2: rgb(100,100,100); //#646464
+$grey3: rgb(180,180,180); //#B4B4B4
+$grey4: rgb(220,220,220); //#DCDCDC
+$grey5: rgb(171,171,171); //#ABABAB
+$middlegrey : $grey3;
+$lastgrey : $grey1;
+$grey: #6e6e78;
+$lightgrey: $grey4;
+$white: #fff;
+$nude: #ffb7aa;
+$red: #ff0000;
+$green: #00dc1e;
+$orange: #f56e19;
+
+$upvote : #2BB502;
+$downvote: #7B8185;
+
+$twitter : #4696FF;
+$facebook: #3C579E;
+
+// Official colors from the designer
+//Name        RGB               HEX
+$aquamarine : rgb(0 ,255,207);  //#00FFCF
+$yellow     : rgb(255,255,0);   //#ffff00
+$orange     : rgb(255,114,24);  //#ff7218
+$red        : rgb(255,40,0);    //#ff2800
+$darkred    : rgb(152,0,0);     //#980000
+$pink       : rgb(250,0,250);   //#fa00fa
+$violet     : rgb(140,72,206);  //#8c48ce
+$purple     : rgb(153,0,153);   //#990099
+$coral      : rgb(255,102,126); //#ff667e
+$salmon     : rgb(255,184,171); //#ffb8ab
+$blue       : rgb(0,0,255);     //#0000ff
+$seagreen   : rgb(0,155,155);   //#009b9b
+$green      : rgb(0,213,49);    //#00d531
+$darkgreen  : rgb(0,105,56);    //#006938
+$grey       : rgb(120,120,130); //#787882
+$black      : rgb(20,20,20);    //#141414
+
+
+
+/* Themes */
+
+$themes :
+        /*"Name"      , background, text-bg, text */
+        ("stiftencore"   , $cyan, $pink, $yellow ),
+        ("sexdating"  , $nude, $cyan, $purple),
+        ("fashion"    , $white, $white, $black),
+        ("gadgets"    , $grey, $white, $blue),
+        ("filmseries" , $blue, $white, $black),
+        ("trending"   , $yellow, $pink, $cyan),
+        ("mad"        , $green, $yellow, $red),
+        ("roskilde"   , $orange, $black, $white),
+        ("musik"      , $pink, $black, $white),
+        ("wtf"        , $cyan, $yellow, $pink),
+        ("politik"    , $red, $blue, $cyan),
+        ("nightlife"  , $black, $blue, $white);

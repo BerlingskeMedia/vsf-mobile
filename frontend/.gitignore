@@ -1,0 +1,24 @@
+### Managed components ###
+node_modules
+bower_components
+
+### Temp and build folders ###
+dist
+.tmp
+.sass-cache
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### PhpStorm ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+*.iml
+
+## Directory-based project format:
+.idea/
+
+### Some moron proofing ###
+*.css
+*.css.map

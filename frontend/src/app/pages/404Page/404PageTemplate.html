@@ -1,0 +1,17 @@
+<div tag-manager></div>
+<div class="content">
+     <div class="general-background not-found-page">
+        <div class="bodytext">
+            <h1>OOOPS!</h1>
+            <h4>DET ER VI KEDE AF...</h4>
+            <h4>MEN DET DU LEDER EFTER FINDES IKKE...</h4>
+           <div class="fourofour-image" ></div>
+        </div>
+        <div class="tag-finish" ng-repeat="article in articles.items" ng-style="{'background-color': article.tags[0].template.backgroundColor, 'width': '90%', 'margin': '5px auto 0px auto'}">
+            <a ng-href="/{{::article.tags[0].slug}}/{{::article.slug}}">
+                <div class="tag-finish tag-name" ng-style="{'color': article.tags[0].template.textColorSecondary}"><p>{{::article.name | uppercase}}</p></div>
+            </a>
+        </div>
+     </div>
+     <footer stiften-footer class="footer article-footer container"></footer>
+ </div>

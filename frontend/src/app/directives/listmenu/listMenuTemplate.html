@@ -1,0 +1,11 @@
+<div class="scroller">
+    <ul class="flexcontainer flexrow" ng-class="status">
+        <li ng-repeat="tag in tags.items" class="flexbox">
+            {{activeTag(tag.slug, tag.template.backgroundColor)}}
+            <a ng-style="{'border-top-color': activeTagColor, 'border-left-color': tag.template.backgroundColor}" ng-class="activeTagStatus" ng-href="/{{tag.slug}}/{{tag.firstContentItem.slug}}" ng-click="closeMenus()">#{{::tag.name}}</a>
+        </li>
+    </ul>
+</div>
+<div class="mailbox">
+    <a href="mailto:hej@stiften.dk">SEND MAIL</a>
+</div>

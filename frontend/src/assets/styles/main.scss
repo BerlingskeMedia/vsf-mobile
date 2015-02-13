@@ -1,0 +1,26 @@
+@import "variables";
+@import "logo";
+@import "fonts";
+@import "icons";
+@import "animations";
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-family: 'berlingske_sans_roundmedium', sans-serif;
+    font-size: 95%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #c9cacc;
+    //overflow: hidden;
+    color: $grey2;
+}

@@ -1,0 +1,19 @@
+.articles > .flexbox {
+    @media (max-width: 600px) {
+        width: 50%;
+
+        &:first-child {
+            width: 100%;
+            clear: both;
+        }
+    }
+
+    @media (min-width: 600px) {
+        width: calc(50% - 115px);
+
+        &:first-child {
+            width: calc(100% - 230px);
+            clear: both;
+        }
+    }
+}
