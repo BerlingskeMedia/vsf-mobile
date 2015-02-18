@@ -41,11 +41,6 @@ app.config(function ($routeProvider, $locationProvider) {
             templateUrl: 'app/pages/frontPage/frontPageTemplate.html',
             controller: 'FrontpageController'
         })
-        // Landing page after last article in specific tag voting
-        .when('/:tag/finish', {
-            templateUrl: 'app/pages/tagFinishPage/tagFinishPageTemplate.html',
-            controller: 'TagFinishController'
-        })
         .when('/:tag/:id', {
             templateUrl: 'app/pages/articlePage/articleTemplate.html',
             controller: 'ArticleController'
@@ -53,11 +48,6 @@ app.config(function ($routeProvider, $locationProvider) {
         .when('/404', {
             templateUrl: 'app/pages/404Page/404PageTemplate.html',
             controller: 'fourofourController'
-        })
-        // This one is used to forward to the 404 paqge on wrong tag.
-        .when('/:tag', {
-            controller: 'TagRedirectController',
-            template: ''
         })
         .otherwise({
             redirectTo: '/'

@@ -34,14 +34,12 @@
     <body>
         <div class="container">
             <stiften-header class="container" ng-class="status"></stiften-header>
-            <div class="toplistBase">
-                <stiften-toplist id="toplist" class="toplistwrap" count="10" ng-class="[toplistState, status]" ng-style="stylePosition"></stiften-toplist>
-            </div>
             <div class="container">
                 <div ng-view class="main anim-crossfade"></div>
             </div>
             <div ng-class="lockbg" ng-click="closeMenus()"></div>
         </div>
+        <footer stiften-footer class="footer container"></footer>
         <cookieinformer class="container"></cookieinformer>
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
@@ -64,25 +62,19 @@
         <script src="app/index.js"></script>
 
         <script src="app/services/contentitem.js"></script>
-        <script src="app/services/tag.js"></script>
-        <script src="app/services/tagcontent.js"></script>
         <script src="app/services/forside.js"></script>
-        <script src="app/pages/articlePage/tagRedirectController.js"></script>
         <script src="app/directives/header/headerDirective.js"></script>
         <script src="app/directives/articlelist/articleListDirective.js"></script>
-        <script src="app/directives/taglist/tagListDirective.js"></script>
+        <script src="app/directives/featured/featuredDirective.js"></script>
         <script src="app/directives/footer/footerDirective.js"></script>
-        <script src="app/directives/toplist/topListDirective.js"></script>
-        <script src="app/directives/listmenu/listMenuDirective.js"></script>
+        <script src="app/directives/menu/menuDirective.js"></script>
         <script src="app/pages/articlePage/articleController.js"></script>
         <script src="app/pages/articlePage/articleDirective.js"></script>
         <script src="app/pages/frontPage/frontPageController.js"></script>
-        <script src="app/pages/tagFinishPage/tagFinishController.js"></script>
         <script src="app/pages/404Page/fourofourController.js"></script>
         <script src="app/directives/cookieinformer/cookieInformerDirective.js"></script>
         <script src="app/directives/responsiveimage/berlSourcsetDirective.js"></script>
         <script src="app/directives/emediate/emediateDirective.js"></script>
-        <script src="app/directives/tagmanager/tagManagerDirective.js"></script>
 
         <!-- inject:partials -->
         <!-- angular templates will be automaticaly converted in js and inserted here -->

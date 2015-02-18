@@ -1,16 +1,5 @@
 <div ng-repeat="article in articles">
-    <a ng-href="/{{::article.tags[0].slug}}/{{::article.slug}}">
-        <img
-            berl-srcset="article.image"
-            sizes="
-                (min-width: 600px) calc(100% - 230px),
-                100vw"
-            >
-        <div class="front-content-item-title">
-            <div class="front-content-item-title-wrapper">
-                <h1 ng-style="{'box-shadow':'.5rem 0 0 ' + article.tags[0].template.textColorSecondary + ',-.5rem 0 0 ' + article.tags[0].template.textColorSecondary, 'color': article.tags[0].template.textColorPrimary, 'background-color': article.tags[0].template.textColorSecondary}">{{::article.title}}</h1>
-            </div>
-        </div>
-        <h5 ng-style="{'color': article.tags[0].template.textColorSecondary}">#{{::article.tags[0].slug}}</h5>
+    <a ng-href="{{ article.link }}">
+      <h2>{{ article.title }}</h2>
     </a>
 </div>

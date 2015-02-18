@@ -1,0 +1,6 @@
+
+
+Array ( 
+[Top historier] => http://www.stiften.dk/mecommobile/nodequeue/1011/15?output_type=xml&mmfd_version=2.0&show_related=true&show_external=true&show_external_sources=true 
+[Seneste Nyt] => http://www.stiften.dk/mecommobile/latest/news_article/64873/20?output_type=xml&mmfd_version=2.0&show_related=true&show_external=true&show_external_sources=true 
+[Mest Læste] => http://www.stiften.dk/mecommobile/nodequeue/1077/20?output_type=xml&mmfd_version=2.0&show_related=true&show_external=true&show_external_sources=true )

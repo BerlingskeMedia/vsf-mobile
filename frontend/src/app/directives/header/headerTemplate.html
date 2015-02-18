@@ -1,32 +1,9 @@
-<div class="logo-top-bar">
-    <a href="http://www.bt.dk" target="_blank">
-        <i class="logo-icon bt-logo-no-box icon-bt-logo-no-box"></i>
-    </a>
-    <div>
-        <i class="made-with-love-icon icon-make-wlv"></i>
-    </div>
-</div>
 <div class="main-header">
-    <div class="menu-table-wrapper">
-        <div class="left-menu icon-left-menu" ng-click="leftmnclk()"></div>
-        <div class="social-sharing" ng-class="menuState">
-            <a ng-repeat="social in socials" ng-href="{{::social.account}}" target="_blank">
-                <div class="header-sharing-icons icon-{{::social.icon}}-background"><span></span>
-                </div>
-            </a>
-        </div>
-        <div class="main-stiften-logo">
-            <a href="/" ng-click="tagResizeIndex()">
-                <div class="stiften-logo-icon icon-stiften-logo">
-                    <div class="beta icon-beta"></div>
-                </div>
-            </a>
-        </div>
-        <div class="right-menu icon-right-menu" ng-click="rightmnclk()"></div>
-        <div class="send-to-email">
-            <a href="mailto:hej@bite.dk"></a>
-        </div>
+
+    <div class="main-stiften-logo">
+
     </div>
-    <nav stiften-listmenu class="tag-menu container" ng-class="[menuState, overflow, status]" ng-style="stylePosition"></nav>
+    <div class="right-menu" ng-click="toggleMenu()"></div>
+    <nav stiften-menu class="tag-menu container" ng-class="[menuState, overflow, status]" ng-style="stylePosition"></nav>
 </div>
 

@@ -22,7 +22,7 @@ app.directive('berlEmediate', function() {
                     $scope.status = "unstick";
 
                     // Evaluate emediate script only in case if banner wrapper ready and ad block is not installed
-                    if (typeof(EAS_load_fif) != "undefined" && angular.element("#"+id)[0] && config.emediate[cu].cu && config.emediate[cu].cu != "0") {
+                    if (typeof(EAS_load_fif) != "undefined" && angular.element(document.getElementById("#"+id))[0] && config.emediate[cu].cu && config.emediate[cu].cu != "0") {
                         EAS_load_fif(id, "./assets/html/EAS_fif.html",
                             "http://ad1.emediate.dk/eas?cu=" + config.emediate[cu].cu + ";cre=mu;js=y;pageviewid=;target=_blank",
                             config.emediate[cu].w,
@@ -40,7 +40,7 @@ app.directive('berlEmediate', function() {
 
                         angular.element(window).bind('scroll', function() {
                             var id =  "#B1-" + tag + url.replace(/\//g,"-"),
-                                offsetToHide = angular.element(id).height();
+                                offsetToHide = angular.element(document.getElementById(id)).height();
 
                             
                             // if B1 banner didn't load and build then get away
