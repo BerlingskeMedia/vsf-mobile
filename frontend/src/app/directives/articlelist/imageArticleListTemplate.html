@@ -1,0 +1,12 @@
+<article ng-repeat="article in articles" class="image-article-list-article">
+    <a href ng-click="showArticle(article[0].value)">
+      <div class="meta-wrapper">
+        <div class="label">{{ article.category }}</div><time class="publish-date">{{ article.pubDate | date:"dd MMM h:mm"}}</time>
+      </div>
+      <img ng-src="{{ article[1].attributes.url }}" />
+      
+      <h2>{{ article.title }}</h2>
+    </a>
+</article>
+
+{{1288323623006 | date:"MM/dd/yyyy 'at' h:mma"}}

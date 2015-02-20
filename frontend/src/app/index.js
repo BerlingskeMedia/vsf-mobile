@@ -35,7 +35,7 @@ var app = angular
     )
     .constant('config', appConfig);
 
-app.config(function ($routeProvider, $locationProvider) {
+app.config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
         .when('/', {
             templateUrl: 'app/pages/frontPage/frontPageTemplate.html',

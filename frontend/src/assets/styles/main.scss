@@ -3,6 +3,9 @@
 @import "fonts";
 @import "icons";
 @import "animations";
+@import "images";
+
+@import "elements/image-article-list";
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
@@ -20,7 +23,5 @@ html, body {
     width: 100%;
     padding: 0;
     margin: 0;
-    background-color: #c9cacc;
-    //overflow: hidden;
-    color: $grey2;
+    max-width: 940px;
 }
