@@ -5,23 +5,24 @@ app.directive('stiftenImageArticleList', function() {
         restrict: 'AEC',
         templateUrl: 'app/directives/articlelist/imageArticleListTemplate.html',
         scope: true,
-        controller: function($scope, $attrs, $rootScope, ForsideContent, $location) {
+        controller: function($scope, $attrs, ForsideContent, $location) {
           
+          /*
           if ($attrs.content = 'frontpageFeatured') {
-            var frontpageContent = ForsideContent.get();
-            frontpageContent.$promise.then(function(){
-              $scope.articles = frontpageContent.items[0];
-              
-            });
-          }
-
+            $scope.article = $rootScope.frontpageArticles.items;
+          }*/
+          
           if ($attrs.content = 'otherFrontpageArticles') {
+            //articles = $rootScope.frontpageArticles.items;
+            //articles.shift();
+           
             var frontpageContent = ForsideContent.get();
             frontpageContent.$promise.then(function(){
               $scope.articles = frontpageContent.items;
-              $scope.articles.shift();
             });
+            
           }
+
           $scope.showArticle = function(guid) {
             $location.path('/path/' + guid);
             console.log(guid);

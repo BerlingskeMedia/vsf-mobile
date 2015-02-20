@@ -32,13 +32,14 @@
     <![endif]-->
 </head>
     <body>
+
+        <header stiften-header class="site-header" ng-class="menu-status"></header>
+        <nav stiften-main-menu class="main-menu" ng-class="menu-status"></nav>
         <div class="container">
-            <stiften-header class="container" ng-class="status"></stiften-header>
-            <div class="container">
-                <div ng-view class="main anim-crossfade"></div>
-            </div>
-            <div ng-class="lockbg" ng-click="closeMenus()"></div>
+            <div ng-view class="main anim-crossfade"></div>
         </div>
+
+
         <footer stiften-footer class="footer container"></footer>
         <cookieinformer class="container"></cookieinformer>
         <!-- build:js scripts/vendor.js -->
@@ -65,7 +66,6 @@
         <script src="app/services/forside.js"></script>
         <script src="app/directives/header/headerDirective.js"></script>
         <script src="app/directives/articlelist/articleListDirective.js"></script>
-        <script src="app/directives/featured/featuredDirective.js"></script>
         <script src="app/directives/footer/footerDirective.js"></script>
         <script src="app/directives/menu/menuDirective.js"></script>
         <script src="app/pages/articlePage/articleController.js"></script>

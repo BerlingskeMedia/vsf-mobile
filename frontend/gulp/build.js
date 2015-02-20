@@ -104,7 +104,7 @@ gulp.task('stupidJWPlayer', function() {
 
 gulp.task('fonts', function () {
   return gulp.src('src/assets/fonts/**/*')
-    .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2}'))
+    .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2,otf}'))
     .pipe($.flatten())
     .pipe(gulp.dest('dist/fonts'))
     .pipe($.size());
