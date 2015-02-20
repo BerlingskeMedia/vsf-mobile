@@ -3,7 +3,7 @@ node_modules
 bower_components
 
 ### Temp and build folders ###
-# dist // Temp add dist for testing
+dist
 .tmp
 .sass-cache
 
