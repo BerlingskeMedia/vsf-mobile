@@ -22,12 +22,12 @@
     height: 33px;
     border-radius: 100%;
     text-align: center;
-    line-height: 1.6;
+    line-height: 1.45;
     font-family: Arial, Helvetica;
     transition: .4s transform;
-    .icon {
-      display: block;
-      transform: scaleX(1.3);
+    img {
+      vertical-align: middle;
+      width: 20px;
     }
   }
   .main-stiften-logo {
