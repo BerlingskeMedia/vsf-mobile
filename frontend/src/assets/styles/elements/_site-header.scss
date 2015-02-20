@@ -1,0 +1,33 @@
+.site-header {
+  top: 0px;
+  z-index: 40;
+  position: fixed;
+  height: $header-height;
+  padding: 0 $side-margin;
+  width: 100%;
+  border-bottom: 1px solid #000;
+  font-family: 'Berlingske Sans', sans-serif;
+  background: rgba(255,255,255, 0.9);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  .header-menu-link {
+    display: block;
+    font-size: 24px;
+    color: #000;
+    background: #ffba3b;
+    width: 33px;
+    height: 33px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 1.6;
+    padding-left: 1px;
+  }
+  .main-stiften-logo {
+    img {
+      width: 138px;
+      vertical-align: bottom;
+    }
+  } 
+}
