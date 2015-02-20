@@ -1,6 +1,6 @@
 'use strict';
 
-app.directive('stiftenListmenu', function($routeParams){
+app.directive('stiftenMainMenu', function($routeParams){
     return {
         restrict: 'AE',
         scope: true,

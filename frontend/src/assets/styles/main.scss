@@ -7,6 +7,7 @@
 
 @import "elements/image-article-list";
 @import "elements/site-header";
+@import "elements/main-menu";
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
@@ -30,5 +31,15 @@ a {
 }
 .main-container {
   position: relative;
-  top: $header-height;
+  padding-top: $header-height;
+  top: 0;
+  z-index: 20;
+  background: #FFF;
+  min-height: 100vh;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.4s;
+}
+
+.menu-open .main-container {
+  transform: translate3d(- $menu-width, 0, 0);
 }
