@@ -1,11 +1,12 @@
 @import "variables";
+@import "mixins";
 @import "logo";
 @import "fonts";
 @import "icons";
 @import "animations";
 @import "images";
 
-@import "elements/image-article-list";
+@import "elements/article-list";
 @import "elements/site-header";
 @import "elements/main-menu";
 
@@ -38,7 +39,7 @@ a {
   background: #FFF;
   min-height: 100vh;
   transform: translate3d(0, 0, 0);
-  transition: transform 0.4s;
+  transition: transform 0.3s;
 }
 
 .menu-open .main-container {

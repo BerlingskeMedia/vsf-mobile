@@ -1,6 +1,6 @@
 <article ng-repeat="article in articles" class="image-article-list-article">
   <div class="meta-wrapper">
-    <div class="label"><a href>{{ article.category }}</a></div><time class="publish-date">{{ article.pubDate | date:"dd MMM h:mm"}}</time>
+    <div class="label"><a href>{{ article.category }}</a></div><time class="publish-date">{{ article.pubDate | date:"dd MMM hh:mm"}}</time>
   </div>
   <a class="article-content" href ng-click="showArticle(article[0].value)">
     <img ng-src="{{ article[1].attributes.url }}" />
