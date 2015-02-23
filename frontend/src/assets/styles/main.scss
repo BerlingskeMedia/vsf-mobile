@@ -6,10 +6,11 @@
 @import "animations";
 @import "images";
 
-@import "elements/article-list";
+@import "elements/cookie-informer";
 @import "elements/site-header";
 @import "elements/site-footer";
 @import "elements/main-menu";
+@import "elements/article-list";
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
