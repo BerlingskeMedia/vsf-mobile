@@ -41,11 +41,14 @@ h2 {
   margin-bottom: 13px;
 }
 /* IMAGE ARTICLE LIST ITEM */
-.image-article-list-article {
-
+.header-article-list .image-article-list-article {
+  margin-bottom: 5px;
 }
 
 /* HEADER ARTICLE LIST ITEM */
+.header-article-list .header-article-list-article {
+  margin-bottom: 5px;
+}
 .header-article-list-article {
    @include clearfix;
 
@@ -54,7 +57,7 @@ h2 {
     text-align: right;
     display: block;
     width: 10%;
-    margin-top: 12px;
+    margin-top: 10px;
     font-size: 13px;
   }
   h2 {
@@ -62,5 +65,8 @@ h2 {
     width: 90%;
     font-size: 18px;
     font-weight: bold;
+    line-height: 1.25;
+    padding-right: 10px;
+    margin-bottom: 6px;
   }
 }
