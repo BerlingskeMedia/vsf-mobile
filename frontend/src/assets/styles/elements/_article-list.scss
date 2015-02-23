@@ -1,7 +1,7 @@
 /* LISTS */
 .header-article-list, .image-article-list {
   margin: 0 $side-margin;
-  padding-top: 14px;
+  padding-top: 6px;
 }
 
 /* GENERIC LIST ITEMS */
@@ -30,7 +30,7 @@
   float: left;
 }
 a {
-  color: #333;
+  color: $header-color;
 }
 
 h2 {
@@ -41,13 +41,16 @@ h2 {
   margin-bottom: 13px;
 }
 /* IMAGE ARTICLE LIST ITEM */
-.header-article-list .image-article-list-article {
-  margin-bottom: 5px;
+.image-article-list {
+     padding-top: 14px;
+  .image-article-list-article {
+
+  }
 }
 
 /* HEADER ARTICLE LIST ITEM */
 .header-article-list .header-article-list-article {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 .header-article-list-article {
    @include clearfix;
@@ -67,6 +70,7 @@ h2 {
     font-weight: bold;
     line-height: 1.25;
     padding-right: 10px;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
+    letter-spacing: .015em;
   }
 }

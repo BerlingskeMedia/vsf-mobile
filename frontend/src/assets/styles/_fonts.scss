@@ -52,3 +52,14 @@
   }
 }
 
+h3.section-header {
+  font-family: 'Berlingske Sans', Helvetica;
+  font-size: 22px;
+  font-weight: 900;
+  border-bottom: 5px solid $stiften-orange;
+  color: $header-color;
+  text-transform: uppercase;
+  margin: 10px $side-margin 0px;
+
+}
+
