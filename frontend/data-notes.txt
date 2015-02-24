@@ -1,0 +1,27 @@
+
+
+API og data
+
+
+Tilføjelser
+---------------
+- Hent side-info (node-id, tag-id elk. lign) baseret på url
+
+
+Rettelser
+---------------
+- Kan API'et returnere relative stier, i stedet for absolutte URL'er
+
+
+
+Performance
+---------------
+- API'et svarer (når siden ikke er cachet i netscaler) til tider først efter mere end 5 sek. Det går ikke rigtig.
+
+
+Spørgsmål
+---------------
+- Er der nogle mønstre i URL'erne fra Stiften, så jeg kan afkode forskellige sidetyper på URL'en
+- Kan vi hente (ændrede) menu-data? Eller skal det hardcodes?
+
+
