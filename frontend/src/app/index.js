@@ -20,21 +20,20 @@
  */
 
 var app = angular
-    .module('mStiftenDkApp', [
-        'ngAnimate',
-        'ngCookies',
-        'ngResource',
-        'ngRoute',
-        'ngSanitize',
-        'ngTouch'
-    ])
-    .constant(
-        'BACKEND_ADDRESS',
-        'http://stiften.dk'
-    )
-    .constant('config', appConfig);
-
-app.config(function ($routeProvider, $locationProvider, $httpProvider) {
+  .module('mStiftenDkApp', [
+      'ngAnimate',
+      'ngCookies',
+      'ngResource',
+      'ngRoute',
+      'ngSanitize',
+      'ngTouch'
+  ])
+  .constant(
+      'BACKEND_ADDRESS',
+      'http://stiften.dk'
+  )
+  .constant('config', appConfig)
+  .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
         .when('/', {
             templateUrl: 'app/pages/frontPage/frontPageTemplate.html',
@@ -58,4 +57,4 @@ app.config(function ($routeProvider, $locationProvider, $httpProvider) {
 
     // use the HTML5 History API
     $locationProvider.html5Mode(true).hashPrefix('!');
-});
+  });

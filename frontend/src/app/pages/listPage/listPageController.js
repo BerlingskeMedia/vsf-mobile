@@ -12,4 +12,7 @@ app.controller('ListController', function ($scope, $rootScope, $routeParams, Cat
     $scope.header = latest.category;
     $scope.articles = latest.items;
   });
+  
+  $rootScope.pageTypeClass = 'page-list-page';
+
 });

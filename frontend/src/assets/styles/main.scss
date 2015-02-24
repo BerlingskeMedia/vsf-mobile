@@ -12,6 +12,9 @@
 @import "elements/main-menu";
 @import "elements/article-list";
 
+@import "pages/article-page";
+@import "pages/list-page";
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     box-sizing: border-box;

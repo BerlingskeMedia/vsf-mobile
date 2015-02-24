@@ -7,8 +7,9 @@ app.directive('stiftenHeader', function() {
         scope: false,
         controller: function($scope, $rootScope) {
           $rootScope.menuOpen = false;
-          $scope.toggleMenu = function() {
+          $rootScope.toggleMenu = function() {
             $rootScope.menuOpen = !$rootScope.menuOpen;
+            $rootScope.menuStatusClass = $rootScope.menuOpen ? 'menu-open' : '';
           }
         }
     };
