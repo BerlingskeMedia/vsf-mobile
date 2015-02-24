@@ -6,9 +6,13 @@ app.directive('stiftenArticleList', function() {
         scope: true,
         controller: function($scope, $attrs, Nodequeue, Latest, $location, $rootScope) {
           var id  = 0;
+
+          // Get id from a parent controller
           if ('list' in $scope && 'id' in $scope.list) {
             id = $scope.list.id;
           }
+
+          // If an attribute with id exists, overwrite.
           if ('id' in $attrs) {
             id = $attrs.id;
           }
