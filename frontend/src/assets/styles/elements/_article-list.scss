@@ -53,19 +53,20 @@ h2 {
   margin-bottom: 8px;
 }
 .header-article-list-article {
-   @include clearfix;
-
+  @include clearfix;
+  a {
+    display: flex;  
+  }
   time {
-    float: left;
+    float: right;
     text-align: right;
     display: block;
-    width: 10%;
     margin-top: 10px;
     font-size: 13px;
   }
   h2 {
+    flex: 1;
     float: left;
-    width: 90%;
     font-size: 18px;
     font-weight: bold;
     line-height: 1.25;
