@@ -35,11 +35,8 @@ app.directive('stiftenArticleList', function() {
           }
 
           $scope.showArticle = function(article) {
-            // article[0].value
             var absoluteUrl = article.link;
             var relativeUrl = absoluteUrl.replace('http://stiften.dk', '');
-            $rootScope.currentPage = '';
-            $rootScope.currentArticle = article[0].value;
             $location.path(relativeUrl);
           }
         }

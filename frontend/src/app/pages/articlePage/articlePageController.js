@@ -2,13 +2,14 @@
 
 'use strict';
 
-app.controller('ArticleController', function ($scope, $rootScope, ContentItem) {
+app.controller('ArticleController', function ($scope, $rootScope, ContentItemByPath, DOMAIN, $routeParams) {
 
   $rootScope.pageTypeClass = 'page-article-page';
-  //http://www.bt.dk/mecommobile/node/www.bt.dk/krimi/kryds-spaerret-fodgaenger-ramt-af-bus-i-koebenhavn
-  var content =  ContentItem.get({id:$rootScope.currentArticle});
+  var content =  ContentItemByPath.get({tag:$routeParams.tag, id:$routeParams.articleid});
   content.$promise.then(function(){
     $scope.article = content.items[0];
   });
+
+
 
 });

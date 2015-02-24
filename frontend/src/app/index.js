@@ -29,6 +29,10 @@ var app = angular
       'ngTouch'
   ])
   .constant(
+      'DOMAIN',
+      'stiften.dk'
+  )
+  .constant(
       'BACKEND_ADDRESS',
       'http://stiften.dk'
   )
