@@ -1,5 +1,5 @@
 <article ng-repeat="article in articles" class="header-article-list-article">
-  <a class="article-content" href ng-click="showArticle(article[0].value)">
+  <a class="article-content" href ng-click="showArticle(article)">
     <h2>{{ article.title }}</h2>
     <time class="publish-date">{{ article.pubDate | date:"HH:mm"}}</time>
   </a>
