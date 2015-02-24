@@ -5,16 +5,26 @@ app.directive('stiftenArticleList', function() {
         restrict: 'AEC',
         scope: true,
         controller: function($scope, $attrs, Nodequeue, Latest, $location, $rootScope) {
+          var id  = 0;
+          if ('list' in $scope && 'id' in $scope.list) {
+            id = $scope.list.id;
+          }
+          if ('id' in $attrs) {
+            id = $attrs.id;
+          }
+
+          // Notice, that if the content attribute is not set, then
+          // articles can be loaded from a parent controller
 
           if ($attrs.content == 'latest') {
-            var latest =  Latest.get({id:$attrs.id, items:$attrs.items, type:$attrs.type});
+            var latest =  Latest.get({id:id, items:$attrs.items, type:$attrs.type});
             latest.$promise.then(function(){
               $scope.articles = latest.items;
             });
           }
 
           if ($attrs.content == 'nodequeue') {
-            var nodequeue =  Nodequeue.get({id:$attrs.id, items:$attrs.items});
+            var nodequeue =  Nodequeue.get({id:id, items:$attrs.items});
             nodequeue.$promise.then(function(){
               $scope.articles = nodequeue.items;
             });
@@ -23,13 +33,10 @@ app.directive('stiftenArticleList', function() {
           $scope.showArticle = function(article) {
             // article[0].value
             var absoluteUrl = article.link;
-            console.log(absoluteUrl);
             var relativeUrl = absoluteUrl.replace('http://stiften.dk', '');
-            console.log(relativeUrl);
             $rootScope.currentPage = '';
-            $rootScope.currentArticle = article[0].value; 
+            $rootScope.currentArticle = article[0].value;
             $location.path(relativeUrl);
-            //console.log(guid);
           }
         }
     };

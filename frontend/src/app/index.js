@@ -40,9 +40,13 @@ app.config(function ($routeProvider, $locationProvider, $httpProvider) {
             templateUrl: 'app/pages/frontPage/frontPageTemplate.html',
             controller: 'FrontpageController'
         })
-        .when('/:tag/:id', {
-            templateUrl: 'app/pages/articlePage/articleTemplate.html',
+        .when('/:tag/:articleid', {
+            templateUrl: 'app/pages/articlePage/articlePageTemplate.html',
             controller: 'ArticleController'
+        })
+        .when('/:tag', {
+            templateUrl: 'app/pages/listPage/listPageTemplate.html',
+            controller: 'ListController'
         })
         .when('/404', {
             templateUrl: 'app/pages/404Page/404PageTemplate.html',
