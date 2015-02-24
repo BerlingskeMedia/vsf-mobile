@@ -30,8 +30,7 @@ var app = angular
     ])
     .constant(
         'BACKEND_ADDRESS',
-        window.location.protocol + '//' + window.location.host + '/api/v1/'
-        //'http://54.171.106.198/api/v1/'
+        'http://stiften.dk'
     )
     .constant('config', appConfig);
 
