@@ -4,12 +4,11 @@ app.directive('stiftenArticleList', function() {
     return {
         restrict: 'AEC',
         scope: true,
-        controller: function($scope, $attrs, Nodequeue, Latest, $location) {
+        controller: function($scope, $attrs, Nodequeue, Latest, $location, $rootScope) {
 
           if ($attrs.content == 'latest') {
             var latest =  Latest.get({id:$attrs.id, items:$attrs.items, type:$attrs.type});
             latest.$promise.then(function(){
-              console.log(latest.items);
               $scope.articles = latest.items;
             });
           }
@@ -21,9 +20,16 @@ app.directive('stiftenArticleList', function() {
             });
           }
 
-          $scope.showArticle = function(guid) {
-            $location.path('/path/' + guid);
-            console.log(guid);
+          $scope.showArticle = function(article) {
+            // article[0].value
+            var absoluteUrl = article.link;
+            console.log(absoluteUrl);
+            var relativeUrl = absoluteUrl.replace('http://stiften.dk', '');
+            console.log(relativeUrl);
+            $rootScope.currentPage = '';
+            $rootScope.currentArticle = article[0].value; 
+            $location.path(relativeUrl);
+            //console.log(guid);
           }
         }
     };
