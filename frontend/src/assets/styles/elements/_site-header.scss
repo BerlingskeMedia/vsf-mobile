@@ -8,12 +8,15 @@
   border-bottom: 1px solid #b2b2b2;
   font-family: 'Berlingske Sans', sans-serif;
   background: rgba(255,255,255, 0.95);
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
   padding-bottom: 5px;
-
-  .header-menu-link {
+  @include clearfix;
+  .header-inner {
+    width: 100%;
+    @include clearfix;
+ 
+  }
+  .header-link {
+    float: right;
     display: block;
     font-size: 22px;
     color: #000;
@@ -31,6 +34,7 @@
     }
   }
   .main-stiften-logo {
+    float: left;
     img {
       width: 138px;
       vertical-align: bottom;
