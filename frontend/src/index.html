@@ -35,6 +35,7 @@
     <body ng-class="[menuStatusClass, searchStatusClass, pageTypeClass]">
 
         <header stiften-header class="site-header"></header>
+        <div stiften-search-form class="search-form"></div>
         <nav stiften-main-menu class="main-menu"></nav>
         <div class="main-container">
             <div ng-view class="main anim-crossfade"></div>
@@ -68,11 +69,13 @@
         <script src="app/services/latest.js"></script>
         <script src="app/services/category.js"></script>
         
+        <script src="app/directives/focus/focusDirective.js"></script>
         <script src="app/directives/header/headerDirective.js"></script>
         <script src="app/directives/searchform/searchFormDirective.js"></script>
         <script src="app/directives/articlelist/articleListDirective.js"></script>
         <script src="app/directives/footer/footerDirective.js"></script>
         <script src="app/directives/menu/menuDirective.js"></script>
+        
         
         <script src="app/pages/articlePage/articlePageController.js"></script>
         <script src="app/pages/listPage/listPageController.js"></script>

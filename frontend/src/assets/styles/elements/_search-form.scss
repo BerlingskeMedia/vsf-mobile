@@ -1,3 +1,33 @@
+
 .search-form {
+  transform: translateY(-120vh);
+  transition: transform 0.3s;
   width: 100%;
+  position: fixed;
+  left: 0;
+  top: $header-height;
+  z-index: 30;
+  background: #eee; //rgba(223,223,223, 0.95);
+  min-height: 100vh;
+  padding: $side-margin;
+  #search-field {
+    border: none;
+    background: none;
+    font-size: 40px;
+    color: #666;
+    min-height: 50px;
+    line-height: 1;
+  }
+  #search-submit {
+    text-indent: -9999px;
+    background: none;
+    border: none;
+  }
+  input:focus {
+    outline: none;
+  };
+}
+
+.search-open .search-form {
+  transform: translateY(0);
 }

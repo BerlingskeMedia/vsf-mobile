@@ -3,19 +3,16 @@
   z-index: 40;
   position: fixed;
   height: $header-height;
-  padding: 0 $side-margin;
+  padding: 6px $side-margin 0;
   width: 100%;
   border-bottom: 1px solid #b2b2b2;
   font-family: 'Berlingske Sans', sans-serif;
   background: rgba(255,255,255, 0.95);
   padding-bottom: 5px;
   @include clearfix;
-  .header-inner {
-    width: 100%;
-    @include clearfix;
- 
-  }
+
   .header-link {
+    margin-top: 6px;
     float: right;
     display: block;
     font-size: 22px;
@@ -23,6 +20,7 @@
     background: #ffba3b;
     width: 33px;
     height: 33px;
+    margin-left: 15px;
     border-radius: 100%;
     text-align: center;
     line-height: 1.45;
