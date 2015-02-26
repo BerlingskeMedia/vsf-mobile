@@ -12,8 +12,14 @@ app.directive('stiftenHeader', function() {
           $rootScope.toggleMenu = function() {
             $rootScope.menuOpen = !$rootScope.menuOpen;
             $rootScope.menuStatusClass = $rootScope.menuOpen ? 'menu-open' : '';
+            if ($rootScope.searchOpen) {
+              $rootScope.toggleSearch();
+            }
           }
-          $rootScope.toggleSearch = function() {
+          $rootScope.toggleSearch = function($event) {
+            if (typeof $event === 'object') {
+              $event.preventDefault();
+            }
             $rootScope.searchOpen = !$rootScope.searchOpen;
             $rootScope.searchStatusClass = $rootScope.searchOpen ? 'search-open' : '';
           }

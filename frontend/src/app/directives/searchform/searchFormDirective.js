@@ -6,10 +6,20 @@ app.directive('stiftenSearchForm', function() {
         templateUrl: 'app/directives/searchform/searchFormTemplate.html',
         scope: false,
         controller: function($scope, $rootScope) {
-          if ($rootScope.menuOpen) {
-              
-          }
           
+          
+          $scope.doSearch = function() {
+
+
+            console.log($scope.searchphrase);
+
+            $rootScope.toggleSearch();
+
+          }
+          if ($rootScope.menuOpen) {
+
+          }
+
         }
     };
 });
