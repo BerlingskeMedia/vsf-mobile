@@ -5,21 +5,12 @@ app.directive('stiftenSearchForm', function() {
         restrict: 'AEC',
         templateUrl: 'app/directives/searchform/searchFormTemplate.html',
         scope: false,
-        controller: function($scope, $rootScope) {
-          
-          
+        controller: function($scope, $rootScope, $location) {
           $scope.doSearch = function() {
-
-
-            console.log($scope.searchphrase);
-
+            //TODO: validation + formatting
             $rootScope.toggleSearch();
-
+            $location.path('/search/' + $scope.searchphrase);
           }
-          if ($rootScope.menuOpen) {
-
-          }
-
         }
     };
 });

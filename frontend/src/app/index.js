@@ -39,9 +39,9 @@ var app = angular
   .constant('config', appConfig)
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
-        .when('/', {
-            templateUrl: 'app/pages/frontPage/frontPageTemplate.html',
-            controller: 'FrontpageController'
+        .when('/search/:searchphrase', {
+            templateUrl: 'app/pages/searchPage/searchPageTemplate.html',
+            controller: 'SearchController'
         })
         .when('/:tag/:articleid', {
             templateUrl: 'app/pages/articlePage/articlePageTemplate.html',
@@ -54,6 +54,10 @@ var app = angular
         .when('/404', {
             templateUrl: 'app/pages/404Page/404PageTemplate.html',
             controller: 'fourofourController'
+        })
+        .when('/', {
+            templateUrl: 'app/pages/frontPage/frontPageTemplate.html',
+            controller: 'FrontpageController'
         })
         .otherwise({
             redirectTo: '/'
