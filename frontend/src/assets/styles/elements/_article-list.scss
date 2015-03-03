@@ -1,11 +1,7 @@
-/* LISTS */
-.header-article-list, .image-article-list {
+/* GENERIC LIST PROPERTIES */
+.header-article-list, .image-article-list, .result-article-list {
   margin: 0 $side-margin;
   padding-top: 6px;
-}
-
-/* GENERIC LIST ITEMS */
-.header-article-list, .image-article-list {
   article {
     margin-bottom: 20px;
     border-bottom: 1px solid $divider-default;
@@ -74,4 +70,10 @@ h2 {
     margin-bottom: 10px;
     letter-spacing: .015em;
   }
+}
+
+
+.result-article-list-article {
+  margin-bottom: 5px;
+  padding-bottom: 20px;
 }
