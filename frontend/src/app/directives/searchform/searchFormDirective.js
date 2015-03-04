@@ -8,7 +8,7 @@ app.directive('stiftenSearchForm', function() {
         controller: function($scope, $rootScope, $location) {
           $scope.doSearch = function() {
             //TODO: validation + formatting
-            $rootScope.toggleSearch();
+            $rootScope.searchOpen = false;
             $location.path('/search/' + $scope.searchphrase);
           }
         }

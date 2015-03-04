@@ -10,6 +10,13 @@
   ul {
     padding: 0;
     margin: 0;
+    width: 48vw;
+    float: left;
+    margin-right: 2vw;
+  }
+  ul.col-second {
+    margin-right: 0;
+    margin-left: 2vw;
   }
   li {
     
@@ -19,7 +26,7 @@
   }
   a {
     background: #333;
-    padding: 18px 25px;
+    padding: $side-margin 25px;
     font-size: 16px;
     color: #fff;
     width: 100%;

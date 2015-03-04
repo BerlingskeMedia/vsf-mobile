@@ -8,28 +8,25 @@ app.directive('stiftenHeader', function() {
         controller: function($scope, $rootScope) {
           $rootScope.menuOpen = false;
           $rootScope.searchOpen = false;
-          
-          $rootScope.toggleMenu = function() {
-            $rootScope.menuOpen = !$rootScope.menuOpen;
-            $rootScope.menuStatusClass = $rootScope.menuOpen ? 'menu-open' : '';
-            if ($rootScope.searchOpen) {
-              $rootScope.toggleSearch();
-            }
-          }
-          $rootScope.toggleSearch = function($event) {
-            if (typeof $event === 'object') {
-              $event.preventDefault();
-            }
-            $rootScope.searchOpen = !$rootScope.searchOpen;
+          $rootScope.$watch('searchOpen', function(value) {
             $rootScope.searchStatusClass = $rootScope.searchOpen ? 'search-open' : '';
-          }
+            if (value) {
+              $rootScope.menuOpen = false;
+            }
+          });
+          $rootScope.$watch('menuOpen', function(value) {
+            $rootScope.menuStatusClass = $rootScope.menuOpen ? 'menu-open' : '';
+            if (value) {
+              $rootScope.searchOpen = false;
+            }
+          });
           
           $rootScope.$on("$routeChangeStart", function (event, next, current) {
             if ($rootScope.menuOpen) {
-              $rootScope.toggleMenu();
+              $rootScope.menuOpen = false;
             }
             if ($rootScope.searchOpen) {
-              $rootScope.toggleSearch();
+              $rootScope.searchOpen = false;
             }
           });
         }
