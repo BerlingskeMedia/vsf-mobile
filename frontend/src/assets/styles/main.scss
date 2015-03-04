@@ -45,18 +45,4 @@ a {
   z-index: 20;
   background: #FFF;
   min-height: 100vh;
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.3s;
-}
-
-.menu-open .main-container {
-  transform: translate3d(- $menu-width, 0, 0);
-}
-.main-menu {
-  transition: transform 0s .4s;
-  transform: translate3d($menu-width, 0, 0);
-}
-.menu-open .main-menu {
-  transition: transform 0s 0s;
-  transform: translate3d(0, 0, 0);
 }

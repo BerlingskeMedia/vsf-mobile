@@ -1,7 +1,8 @@
 
 .search-form {
   transform: translateY(-120vh);
-  transition: transform 0.3s;
+  opacity: 0;
+  transition: transform $default-transition-time, opacity $default-transition-time;
   width: 100%;
   position: fixed;
   left: 0;
@@ -39,4 +40,5 @@
 
 .search-open .search-form {
   transform: translateY(0);
+  opacity: 1;
 }

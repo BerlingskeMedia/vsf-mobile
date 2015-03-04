@@ -1,12 +1,15 @@
 
 .main-menu {
   background: #333;
-  z-index: 10;
+  z-index: 30;
   position: fixed;
   top: $header-height;
-  right: 0;
+  left: 0;
   height: 100vh;
   width: $menu-width;
+  transition: transform $default-transition-time, opacity $default-transition-time;
+  transform: translate3d(0, -100vh, 0);
+  opacity: 0;
   ul {
     padding: 0;
     margin: 0;
@@ -39,3 +42,7 @@
   
 }
 
+.menu-open .main-menu {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
