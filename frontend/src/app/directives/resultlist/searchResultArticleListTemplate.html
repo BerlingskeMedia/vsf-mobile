@@ -1,9 +1,14 @@
 <article ng-repeat="result in results" class="result-article-list-article">
-  <div class="meta-wrapper">
-    <div class="label"><a href>{{ result.term[0] }}</a></div><time class="publish-date">{{ result.publish_date_locale | date:"dd MMM yyyy HH:mm"}}</time>
-  </div>
+  
+  <pre>{{ result || json }}</pre>
   <a class="article-content" href ng-click="showResult(result)">
-    <h2 ng-bind-html="result.heading"></h2>
-    <div ng-bind-html="result.summary"></div>
+    <img ng-src="{{ result.image_file }}" />
+    <div class="result-content">
+      <div class="meta-wrapper">
+        <div class="label"><a href>{{ result.term[0] }}</a></div><time class="publish-date">{{ result.publish_date_locale | date:"dd MMM yyyy HH:mm"}}</time>
+      </div>
+      <h2 ng-bind-html="result.heading"></h2>
+      <!-- <div ng-bind-html="result.summary"></div> -->
+    </div>
   </a>
 </article>

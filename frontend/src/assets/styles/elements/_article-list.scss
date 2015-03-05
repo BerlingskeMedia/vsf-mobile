@@ -73,7 +73,18 @@ h2 {
 }
 
 
+/* RESULT ARTICLE LIST ITEM */
 .result-article-list-article {
   margin-bottom: 5px;
   padding-bottom: 20px;
+  @include clearfix();
+  img {
+    width: (2 * $col-width) + $gutter-width;
+    float: left;
+    margin-right: $gutter-width;
+  }
+  .result-content {
+    float: left;
+    width: (4 * $col-width) + (3 * $gutter-width);
+  }
 }

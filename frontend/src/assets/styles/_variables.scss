@@ -7,9 +7,11 @@ $menu-width: 100vw;
 
 
 /* "GRID" */
+/* 40 / (320 / 100) */
 $col-width: 12.5vw;
 
-
+/* 11 / (320 / 100) */
+$gutter-width: 3.4vw;
 
 /* COLORS */
 $divider-default: #dddddd;
