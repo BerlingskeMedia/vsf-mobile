@@ -7,6 +7,7 @@
       <div class="label"><a href>{{ result.term[0] }}</a></div><time class="publish-date">{{ result.publish_date_locale | date:"dd MMM yyyy HH:mm"}}</time>
     </div>
     <a href ng-href="{{ result.doc_href | relativize }}"><h2 ng-bind-html="result.heading"></h2></a>
+    <a href ng-if="!result.image_file" ng-href="{{ result.doc_href | relativize }}"><div ng-bind-html="result.summary"></div></a>
   </div>
   
 </article>
