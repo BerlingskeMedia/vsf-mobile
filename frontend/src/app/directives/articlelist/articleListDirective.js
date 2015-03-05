@@ -1,21 +1,6 @@
 'use strict';
 
 
-// This is the baseline list directive
-app.directive('stiftenArticleList', function() {
-    return {
-        restrict: 'AEC',
-        scope: true,
-        controller: function($scope, $attrs, Nodequeue, Latest, $location) {
-          $scope.showArticle = function(article) {
-            var absoluteUrl = article.link;
-            var relativeUrl = absoluteUrl.replace('http://stiften.dk', '');
-            $location.path(relativeUrl);
-          }
-        }
-    };
-});
-
 // This directive gets contents from Nodequeue service
 app.directive('stiftenNodequeueList', function() {
     return {
