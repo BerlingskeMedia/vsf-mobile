@@ -5,3 +5,8 @@
     clear: both;
   }
 }
+
+@mixin list-article() {
+  margin-bottom: 20px;
+  border-bottom: 1px solid $divider-default;
+}

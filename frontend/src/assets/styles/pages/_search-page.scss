@@ -1,10 +1,16 @@
 .page-search-page {
-  h1 {
-    margin-left: $side-margin;
-    margin-right: $side-margin;
-  }
+
 }
 
+.search-stats {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #747474;
+  .searchphrase {
+    font-style: italic;
+  }
+}
 #search-show-more {
   width: 90%;
   font-size: 20px;
@@ -15,4 +21,24 @@
   color: #fff;
   min-height: 60px;
   margin: 20px $side-margin 80px;  
+}
+
+/* RESULT ARTICLE LIST ITEM */
+.result-article-list-article {
+  margin-bottom: 5px;
+  padding-bottom: 20px;
+  @include clearfix();
+  @include list-article();
+
+}
+.meta-wrapper.meta-wrapper-search {
+  margin-top: 20px;
+  color: #747474;
+  a {
+    color: #747474;
+  }
+  .publish-date {
+    float: none;
+    color: #747474;
+  }
 }

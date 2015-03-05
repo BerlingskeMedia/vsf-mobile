@@ -39,7 +39,7 @@ var app = angular
   .constant('config', appConfig)
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
-        .when('/search/:searchphrase', {
+        .when('/search', {
             templateUrl: 'app/pages/searchPage/searchPageTemplate.html',
             controller: 'SearchController'
         })
