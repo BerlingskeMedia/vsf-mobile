@@ -1,14 +1,12 @@
-<article ng-repeat="result in results" class="result-article-list-article">
-  
-  <pre>{{ result || json }}</pre>
-  <a class="article-content" href ng-click="showResult(result)">
+<article ng-repeat="result in results" class="result-article-list-article" ng-class="{'result-has-image': result.image_file}">
+  <a class="article-content" href ng-href="{{ result.doc_href | relativize }}">
     <img ng-src="{{ result.image_file }}" />
-    <div class="result-content">
-      <div class="meta-wrapper">
-        <div class="label"><a href>{{ result.term[0] }}</a></div><time class="publish-date">{{ result.publish_date_locale | date:"dd MMM yyyy HH:mm"}}</time>
-      </div>
-      <h2 ng-bind-html="result.heading"></h2>
-      <!-- <div ng-bind-html="result.summary"></div> -->
-    </div>
   </a>
+  <div class="result-content">
+    <div class="meta-wrapper">
+      <div class="label"><a href>{{ result.term[0] }}</a></div><time class="publish-date">{{ result.publish_date_locale | date:"dd MMM yyyy HH:mm"}}</time>
+    </div>
+    <a href ng-href="{{ result.doc_href | relativize }}"><h2 ng-bind-html="result.heading"></h2></a>
+  </div>
+  
 </article>
