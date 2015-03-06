@@ -12,7 +12,7 @@ app.controller('SearchController', function ($scope, $rootScope, $location, Sear
 
   $scope.results = [];
 
-  $scope.fetchResults = function() {
+  $scope.fetchResults = function(event) {
     var results =  Search.get({query:$scope.searchphrase, page:$scope.page});
     results.$promise.then(function(){
       if ($scope.results.length == 0) {
@@ -33,16 +33,20 @@ app.controller('SearchController', function ($scope, $rootScope, $location, Sear
     $scope.page++;
     $scope.fetchResults();
   }
-  $scope.doSearch = function() {
+  $scope.doSearch = function(event) {
     //TODO: validation + formatting
     if ($scope.searchphrase.length > 0) {
       $location.search('q', $scope.searchphrase)
-      $scope.fetchResults();
+      $scope.fetchResults(event);
       $scope.searched = true;
       $rootScope.searchFocus = false;
+
     }
   }
-  
+  $scope.hopla = function(event, msg) {
+    console.log(event);
+    console.log('type: ' + msg);
+  }
   
   if ('q' in $location.search()) {
     $scope.searchphrase = $location.search()['q'];

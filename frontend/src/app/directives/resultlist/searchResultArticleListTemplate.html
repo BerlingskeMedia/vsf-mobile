@@ -4,7 +4,7 @@
     <a href ng-href="{{ result.doc_href | relativize }}"><h2 ng-bind-html="result.heading"></h2></a>
     <a href ng-href="{{ result.doc_href | relativize }}"><div ng-bind-html="result.summary"></div></a>
     <div class="meta-wrapper meta-wrapper-search">
-      <a href>{{ result.term[0] }}</a> - <time class="publish-date">{{ result.publish_date_locale | date:"dd MMM yyyy HH:mm"}}</time>
+      <a href>{{ result.term[0] }}</a>&nbsp;-&nbsp;<time class="publish-date">{{ result.publish_date_locale | date:"dd MMM yyyy HH:mm"}}</time>
     </div>
     
   </div>
