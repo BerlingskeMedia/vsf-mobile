@@ -10,8 +10,19 @@ app.directive('stiftenHeader', function() {
           $rootScope.searchOpen = false;
           $rootScope.searchLink = '/search';
           $rootScope.lastPage = '/';
+
           if ($location.path() == '/search') {
             $rootScope.searchLink = '/';
+          }
+
+          $scope.searchClick = function() {
+            if ($location.path() == '/search') {
+              $location.path($rootScope.searchLink);
+              $rootScope.searchFocus = false;
+            } else {
+              $location.path($rootScope.searchLink);
+              $rootScope.searchFocus = true;
+            }
           }
           $rootScope.$watch('searchOpen', function(value) {
             $rootScope.searchStatusClass = $rootScope.searchOpen ? 'search-open' : '';
@@ -25,20 +36,22 @@ app.directive('stiftenHeader', function() {
               $rootScope.searchOpen = false;
             }
           });
-          
+
           $rootScope.$on("$routeChangeStart", function (event, next, current) {
-            if ($location.path() == '/search') {
-              $rootScope.searchLink = $rootScope.lastPage;
-            } else {
-              $rootScope.searchLink = '/search';
-            }
+
             if ($rootScope.menuOpen) {
               $rootScope.menuOpen = false;
             }
             if ($rootScope.searchOpen) {
               $rootScope.searchOpen = false;
             }
-            $rootScope.lastPage = $location.path();
+            if ($location.path() == '/search') {
+              $rootScope.searchLink = $rootScope.lastPage;
+            } else {
+              $rootScope.searchLink = '/search';
+              $rootScope.lastPage = $location.path();
+            }
+            
           });
         }
     };

@@ -39,6 +39,7 @@ app.controller('SearchController', function ($scope, $rootScope, $location, Sear
       $location.search('q', $scope.searchphrase)
       $scope.fetchResults();
       $scope.searched = true;
+      $rootScope.searchFocus = false;
     }
   }
   
