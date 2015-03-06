@@ -15,7 +15,8 @@ app.directive('stiftenHeader', function() {
             $rootScope.searchLink = '/';
           }
 
-          $scope.searchClick = function() {
+          $scope.searchClick = function(event) {
+            event.preventDefault();
             if ($location.path() == '/search') {
               $location.path($rootScope.searchLink);
               $rootScope.searchFocus = false;
