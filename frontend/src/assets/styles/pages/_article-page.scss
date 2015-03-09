@@ -3,4 +3,11 @@
     margin-left: $side-margin;
     margin-right: $side-margin;
   }
+  .embedded-article {
+
+  }
+  .embedded-article::before {
+        font-weight: bold;
+    content: 'Læs også: ';
+  }
 }
