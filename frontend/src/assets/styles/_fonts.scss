@@ -38,7 +38,9 @@
   font-style: normal;
 }
 
-
+a {
+  color: $header-color;
+}
 
 .publish-date, .label, .search-stats, .meta-wrapper-search {
   font-family: 'Berlingske Sans';

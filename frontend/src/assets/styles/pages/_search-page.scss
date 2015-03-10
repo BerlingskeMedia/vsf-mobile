@@ -5,7 +5,7 @@
 .search-stats {
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 12px;
+  font-size: 14px;
   color: #747474;
   .searchphrase {
     font-style: italic;
@@ -23,20 +23,31 @@
   margin: 20px $side-margin 80px;  
 }
 
+.result-article-list {
+  border-top: 1px solid #dddddd;
+}
+
 /* RESULT ARTICLE LIST ITEM */
 .result-article-list-article {
   margin-bottom: 5px;
   padding-bottom: 20px;
   @include clearfix();
   @include list-article();
-
+  h2 {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .search-summary {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
 .meta-wrapper.meta-wrapper-search {
   margin-top: 20px;
   color: #747474;
-  a {
-    color: #747474;
-  }
   .publish-date {
     float: none;
     color: #747474;

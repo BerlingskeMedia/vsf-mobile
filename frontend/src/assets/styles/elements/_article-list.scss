@@ -5,9 +5,7 @@
   article {
     @include list-article();
   }
-  a {
-    color: $header-color;
-  }
+
   .article-content {
     display: block;
   }
@@ -40,7 +38,7 @@
 .header-article-list-article {
   @include clearfix;
   a {
-    display: flex;  
+    display: flex;
   }
   time {
     float: right;
@@ -86,7 +84,7 @@
     .img-div {
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center; 
+      background-position: center;
       vertical-align: bottom;
       height: 250px;
       max-width: none;
