@@ -86,4 +86,11 @@ app.directive('stiftenHeaderArticleList', function() {
         scope: true
     };
 });
-
+// This directive just sets a template
+app.directive('stiftenFeaturedArticleList', function() {
+    return {
+        restrict: 'AEC',
+        templateUrl: 'app/directives/articlelist/featuredArticleListTemplate.html',
+        scope: true
+    };
+});

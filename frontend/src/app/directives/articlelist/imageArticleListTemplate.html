@@ -1,10 +1,9 @@
 <article ng-repeat="article in articles" class="image-article-list-article">
+  <a class="article-content" href ng-href="{{ article.link | relativize }}"><img ng-src="{{ article[1].attributes.url }}" /></a>
   <div class="meta-wrapper">
-
-    <div class="label"><a href ng-href="/{{ article.category_id }}">{{ article.category }}</a></div><time class="publish-date">{{ article.pubDate | date:"dd MMM HH:mm"}}</time>
+      <a class="label" href ng-href="/{{ article.category_id }}">{{ article.category }}</a>·<time class="publish-date">{{ article.pubDate | date:"dd MMM HH:mm"}}</time>
   </div>
-  <a class="article-content" href ng-href="{{ article.link | relativize }}">
-    <img ng-src="{{ article[1].attributes.url }}" />
+  <a href ng-href="{{ article.link | relativize }}">  
     <h2>{{ article.title }}</h2>
   </a>
 </article>
