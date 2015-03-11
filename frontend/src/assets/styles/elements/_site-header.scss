@@ -5,6 +5,7 @@
   height: $header-height;
   padding: 8px $side-margin 0;
   width: 100%;
+  max-width: $page-max-width;
   border-bottom: 1px solid #b2b2b2;
   font-family: 'Berlingske Sans', sans-serif;
   background: rgba(255,255,255, 0.95);
