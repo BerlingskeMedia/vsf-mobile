@@ -2,7 +2,7 @@
   <a class="label" href>{{ article.category }}</a>
 </div>
 <h1>{{ article.title }}</h1>
-<figure class="article-image-wrapper">
+<figure class="article-image-wrapper" ng-show="article[1].attributes.url">
   <img ng-src="{{ article[1].attributes.url }}" alt />
   <figcaption>{{ article[1].attributes.desc }}</figcaption>
 </figure>
