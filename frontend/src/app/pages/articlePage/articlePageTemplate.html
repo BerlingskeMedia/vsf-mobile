@@ -8,7 +8,7 @@
 </figure>
 <div class="byline-wrapper">
   <div class="byline">{{ article.author }}</div>
-  
+  <time class="publish-date">{{ article.pubDate | date:"dd MMM yyyy HH:mm"}}</time>
 </div>
 <h4 class="subheader">{{ article.description }}</h4>
 <div class="article-body" ng-bind-html="article['content']"></div>
