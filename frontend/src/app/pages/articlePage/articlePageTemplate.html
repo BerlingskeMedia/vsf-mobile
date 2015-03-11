@@ -1,8 +1,14 @@
-<h1>{{ article.title }}</h1>
 <div class="meta-wrapper">
-  <div class="label"><a href>{{ article.category }}</a></div><time class="publish-date">{{ article.pubDate | date:"dd MMM HH:mm"}}</time>
+  <a class="label" href>{{ article.category }}</a>
 </div>
-<div class="byline">{{ article.author }}</div>
-<img ng-src="{{ article[1].attributes.url }}" />
+<h1>{{ article.title }}</h1>
+<figure class="article-image-wrapper">
+  <img ng-src="{{ article[1].attributes.url }}" alt />
+  <figcaption>{{ article[1].attributes.desc }}</figcaption>
+</figure>
+<div class="byline-wrapper">
+  <div class="byline">{{ article.author }}</div>
+  
+</div>
 <h4 class="subheader">{{ article.description }}</h1>
-<div class="article-body" ng-bind-html="article['content']">s</div>
+<div class="article-body" ng-bind-html="article['content']"></div>
