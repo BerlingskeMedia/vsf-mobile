@@ -1,2 +1,12 @@
-<h1>{{ header }}</h1>
+<div class="section-header">
+  <h1>{{ header }}</h1>
+  <a href class="section-menu-link" ng-if="hasSubsection" ng-click="toggleSubsectionMenu()">﹀</a>
+</div>
+<div class="section-menu-pulldown" ng-class="{'submenu-open': subsectionVisible}">
+  <ul>
+    <li ng-repeat="link in submenuLinks">
+      <a href ng-href="{{ link.slug }}">{{ link.name }}</a>
+    </li>
+  </ul>
+</div>
 <div stiften-image-article-list  content="controlled" type="news_article" items="7" class="image-article-list"></div>

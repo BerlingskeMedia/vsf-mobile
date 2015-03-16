@@ -1,6 +1,38 @@
 .page-list-page {
   h1 {
-    margin-left: $side-margin;
-    margin-right: $side-margin;
+
+    margin: 22px 0 15px $side-margin;
+    float: left;
+    color: #fff;
+    font-size: 22px;
+    font-family: 'Berlingske Sans';
+    font-weight: 900;
+    text-transform: uppercase;
   }
+  .section-header {
+    background: #ffba3b;
+    @include clearfix();
+  }
+  .section-menu-link {
+    margin: 15px $side-margin 12px 0;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 7px;
+    color: #fff;
+    float: right;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    margin-right: $side-margin;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+
+  }
+  .section-menu-pulldown {
+    display: none;
+    &.submenu-open {
+      display: block;
+    }
+  }
+
 }
