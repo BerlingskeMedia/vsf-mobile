@@ -11,32 +11,29 @@ app.controller('ListController', function ($scope, $rootScope, $routeParams, Cat
     } else {
       id = $routeParams.tag;
     }
-    
-
   }
+
   $scope.hasSubsection = true; // TODO: Make "dynamic"
   $scope.subsectionVisible = false;
   if ($scope.hasSubsection) {
 
   }
+  //TODO temp data
   $scope.submenuLinks = [
     {slug: 'fodbold', name: 'Fodbold'},
     {slug: 'haandbold', name: 'Håndbold'},
     {slug: 'cricket', name: 'Cricket'}
   ];
-  console.log('VOILA!');
   $scope.toggleSubsectionMenu = function() {
-    console.log('CALLED!!');
     $scope.subsectionVisible = !$scope.subsectionVisible;
-    //if ()
   }
-  
+
   var latest =  Latest.get({id:id, items: 20, type: 'news_article'});
   latest.$promise.then(function(){
     $scope.header = latest.category;
     $scope.articles = latest.items;
   });
-  
+
   $rootScope.pageTypeClass = 'page-list-page';
 
 });
