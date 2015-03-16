@@ -26,7 +26,8 @@ var app = angular
       'ngResource',
       'ngRoute',
       'ngSanitize',
-      'ngTouch'
+      'ngTouch',
+      'LocalStorageModule'
   ])
   .constant(
       'DOMAIN',
@@ -37,7 +38,7 @@ var app = angular
       'http://stiften.dk'
   )
   .constant('config', appConfig)
-  .config(function ($routeProvider, $locationProvider, $httpProvider) {
+  .config(function ($routeProvider, $locationProvider, $httpProvider, localStorageServiceProvider) {
     $routeProvider
         .when('/search', {
             templateUrl: 'app/pages/searchPage/searchPageTemplate.html',
@@ -65,4 +66,6 @@ var app = angular
 
     // use the HTML5 History API
     $locationProvider.html5Mode(true).hashPrefix('!');
+
+    localStorageServiceProvider.setPrefix('stm');
   });
