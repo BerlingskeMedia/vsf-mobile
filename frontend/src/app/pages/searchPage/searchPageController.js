@@ -7,7 +7,7 @@ app.controller('SearchController', function ($scope, $rootScope, $location, Sear
   $rootScope.searchOpen = true;
 
   $scope.page = 1;
-
+  $scope.searching = false;
   $scope.showMoreLink = false;
 
   $scope.results = [];
@@ -19,6 +19,7 @@ app.controller('SearchController', function ($scope, $rootScope, $location, Sear
         $scope.resultphrase = $scope.searchphrase;
         $scope.numberOfResults = results.response.sources[0]['total-results'];
       }
+      $scope.searching = false;
       $scope.results = $scope.results.concat(results.response.sources[0].docs);
       $scope.updateMoreLink(results);
 
@@ -36,6 +37,7 @@ app.controller('SearchController', function ($scope, $rootScope, $location, Sear
   $scope.doSearch = function(event) {
     //TODO: validation + formatting
     if ($scope.searchphrase.length > 0) {
+      $scope.searching = true;
       $location.search('q', $scope.searchphrase)
       $scope.fetchResults(event);
       $scope.searched = true;

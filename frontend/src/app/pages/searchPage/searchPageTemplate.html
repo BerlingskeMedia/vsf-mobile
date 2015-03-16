@@ -3,7 +3,7 @@
     <input search-field type="search" name="search" placeholder="Søgeord..." id="search-field" ng-model="searchphrase" />
     <input type="submit" name="submit" value="Søg" id="search-submit" />
   </form>
-  <div id="search-results" class="search-results" ng-if="searched">
+  <div id="search-results" class="search-results" ng-if="searched" ng-class="{'result-returned': searching}">
     <div class="search-stats">{{ numberOfResults }} resultater på <span class="searchphrase">{{ resultphrase }}</span></div>
     <div stiften-result-list class="result-article-list"></div>
     <button id="search-show-more" href ng-if="showMoreLink" ng-click="showMoreResults()">Vis flere</button>
