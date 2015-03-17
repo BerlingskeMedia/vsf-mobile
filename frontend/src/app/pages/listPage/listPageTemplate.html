@@ -3,7 +3,7 @@
   <a href class="section-menu-link" ng-if="hasSubsection" ng-click="toggleSubsectionMenu()">﹀</a>
 </div>
 <div class="section-menu-pulldown" ng-class="{'submenu-open': subsectionVisible}">
-  <ul>
+  <ul class="menu">
     <li ng-repeat="link in submenuLinks">
       <a href ng-href="{{ link.slug }}">{{ link.name }}</a>
     </li>

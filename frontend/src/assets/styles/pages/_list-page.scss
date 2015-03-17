@@ -33,6 +33,7 @@
     &.submenu-open {
       display: block;
     }
+    @include menu-base();
   }
 
 }

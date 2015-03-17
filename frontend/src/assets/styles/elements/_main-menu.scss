@@ -1,6 +1,5 @@
 
 .main-menu {
-  background: #333;
   z-index: 30;
   position: fixed;
   top: $header-height;
@@ -10,46 +9,14 @@
   transition: transform $default-transition-time, opacity $default-transition-time;
   transform: translate3d(0, -100vh, 0);
   opacity: 0;
-  .col {
-    padding: 0;
-    margin: 0;
-    width: 48vw;
-    float: left;
-  }
-  .col-first {
-    margin-left: 0;
-    margin-right: 2vw;
-  }
-  .col-second {
-    margin-right: 0;
-    margin-left: 2vw;
-  }
-  li {
-    
-    list-style-position: outside;
-    list-style-type: none;
-    border-bottom: 1px solid #4a4a4a;
-  }
+  @include menu-base();
   .button-wrapper {
     background: #333;
     padding: $side-margin 25px;
     font-size: 16px;
     color: #fff;
     width: 100%;
-  }
-  a {
-    background: #333;
-    padding: $side-margin 25px;
-    font-size: 16px;
-    color: #fff;
-    width: 100%;
-    font-family: 'Berlingske Sans';
-    display: block;
-    &:hover {
-      background: #4a4a4a;
-    }
-  }
-  
+  }  
 }
 
 .menu-open .main-menu {

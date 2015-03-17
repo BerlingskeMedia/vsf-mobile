@@ -10,3 +10,32 @@
   margin-bottom: 20px;
   border-bottom: 1px solid $divider-default;
 }
+
+@mixin menu-base() {
+  background: $menu-background-color;
+  ul.menu {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    @include clearfix();
+  }
+  li {
+    width: 50vw;
+    float: left;
+    list-style-position: outside;
+    list-style-type: none;
+    border-bottom: 1px solid #4a4a4a;
+  }
+  a {
+    background: #333;
+    padding: $side-margin 25px;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    font-family: 'Berlingske Sans';
+    display: block;
+    &:hover {
+      background: #4a4a4a;
+    }
+  }
+}
