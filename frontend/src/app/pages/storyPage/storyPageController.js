@@ -6,7 +6,7 @@ app.controller('StoryController', function ($scope, $rootScope, ContentItemByPat
 
   $rootScope.pageTypeClass = 'page-story-page';
 
-  var defaultTemplatePath = 'app/pages/storyPage/'; //articlePageTemplate.html';
+  var defaultTemplatePath = 'app/pages/storyPage/';
 
 
   // First we get the story from local storage
@@ -32,6 +32,7 @@ app.controller('StoryController', function ($scope, $rootScope, ContentItemByPat
           break;
         case 'news_article':
         default:
+          $rootScope.pageTypeClass = 'page-article-page';
           $scope.templateUrl = defaultTemplatePath + 'articlePageTemplate.html';
           break;
       }
