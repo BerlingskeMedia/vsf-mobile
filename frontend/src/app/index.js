@@ -45,8 +45,9 @@ var app = angular
             controller: 'SearchController'
         })
         .when('/:tag/:articleid', {
-            templateUrl: 'app/pages/articlePage/articlePageTemplate.html',
-            controller: 'ArticleController'
+            // We use this hack to load different template based on Bond content types.
+            template: '<article ng-include="templateUrl"></article>',
+            controller: 'StoryController'
         })
         .when('/:tag', {
             templateUrl: 'app/pages/listPage/listPageTemplate.html',
