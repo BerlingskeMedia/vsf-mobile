@@ -12,18 +12,28 @@ app.controller('ListController', function ($scope, $rootScope, $routeParams, Cat
       id = $routeParams.tag;
     }
   }
-
-  $scope.hasSubsection = true; // TODO: Make "dynamic"
-  $scope.subsectionVisible = false;
-  if ($scope.hasSubsection) {
-
-  }
   //TODO temp data
-  $scope.submenuLinks = [
-    {slug: 'fodbold', name: 'Fodbold'},
-    {slug: 'haandbold', name: 'Håndbold'},
-    {slug: 'cricket', name: 'Cricket'}
-  ];
+  var submenuLinks = {
+    'sport': [
+      {slug: 'fodbold', name: 'Fodbold'},
+      {slug: 'haandbold', name: 'Håndbold'},
+      {slug: 'cricket', name: 'Cricket'}
+    ],
+    'lokal': [
+      {slug: 'aarhus', name: 'Aarhus'},
+      {slug: 'skanderborg', name: 'Skanderborg'},
+      {slug: 'odder', name: 'Odder'}
+    ]
+  };
+  $scope.subsectionVisible = false;
+  // TODO: Make "dynamic"
+  if ($routeParams.tag == 'lokal' || $routeParams.tag == 'sport') {
+      $scope.hasSubsection = true;
+      $scope.submenuLinks = submenuLinks[$routeParams.tag];
+  }
+
+
+
   $scope.toggleSubsectionMenu = function() {
     $scope.subsectionVisible = !$scope.subsectionVisible;
   }
