@@ -61,7 +61,7 @@
 .featured-article-list {
   .featured-article-list-article {
     position: relative;
-    min-height: 250px;
+    min-height: 280px;
     margin-bottom: 20px;
     @include clearfix();
     .featured-overlay {
@@ -86,7 +86,7 @@
       background-size: cover;
       background-position: center;
       vertical-align: bottom;
-      height: 250px;
+      height: 280px;
       max-width: none;
       width: auto;
     }
