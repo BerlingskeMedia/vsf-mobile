@@ -43,7 +43,7 @@ a {
 }
 
 .publish-date, .label, .search-stats, .meta-wrapper-search {
-  font-family: 'Berlingske Sans';
+  font-family: $berlingske-sans;
 
 }
 .label {
@@ -64,7 +64,7 @@ a {
   line-height: 26px;
 }
 h3.section-header {
-  font-family: 'Berlingske Sans', Helvetica;
+  font-family: $berlingske-sans;
   font-size: 22px;
   font-weight: 900;
   border-bottom: 5px solid $stiften-orange;

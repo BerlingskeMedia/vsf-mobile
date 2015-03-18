@@ -12,6 +12,7 @@
 @import "elements/site-header";
 @import "elements/site-footer";
 @import "elements/main-menu";
+@import "elements/news-alert";
 @import "elements/article-list";
 
 @import "pages/article-page";
@@ -45,10 +46,13 @@ html, body {
 a {
   text-decoration: none;
 }
-.main-container {
+.alert-element {
   position: relative;
   padding-top: $header-height;
   top: 0;
+  z-index: 30;
+}
+.main-container {
   z-index: 20;
   background: #FFF;
   min-height: 100vh;

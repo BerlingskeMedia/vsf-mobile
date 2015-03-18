@@ -1,0 +1,40 @@
+.alert-wrapper {
+  display: none;
+  height: 90px;
+  width: 100vw;
+  padding: 22px $side-margin;
+  background: #f8f8f8;
+  box-shadow: 0 1px 4px -2px #999;
+  margin-bottom: 15px;
+  color: #212121;
+  a {
+    color: #212121;
+  }
+  &.alert-displayed {
+    display: block;
+  }
+
+  .alert-label {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: $berlingske-sans;
+    text-transform: uppercase;
+  }
+  .alert-title {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: $berlingske-sans;
+    margin-bottom: 0;
+  }
+  &.alert-breaking {
+    color: #fff;
+    background: $breaking-background-color;
+    box-shadow: 0 1px 4px -2px #000;
+    a {
+      color: #fff;
+    }
+  }
+}
+.page-front-page .alert-wrapper {
+  margin-bottom: 0;
+}
