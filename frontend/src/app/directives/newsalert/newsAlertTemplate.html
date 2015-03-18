@@ -1,4 +1,6 @@
-<div class="alert-wrapper" ng-class="[alertVisibility, alertType]">
-  <div class="alert-label">{{ alertLabel }}</div>
-  <h2 class="alert-title"><a href ng-href="{{ alertUrl }}">{{ alertTitle }}</a></h2>
-</div>
+<a href ng-href="{{ alertUrl }}">
+  <div class="alert-wrapper" ng-class="[alertVisibility, alertType]">
+    <div class="alert-label">{{ alertLabel }}</div>
+    <h2 class="alert-title">{{ alertTitle }}</h2>
+  </div>
+</a>
