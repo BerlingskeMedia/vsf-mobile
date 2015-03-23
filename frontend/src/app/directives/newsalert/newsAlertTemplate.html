@@ -1,6 +1,6 @@
-<a href ng-href="{{ alertUrl }}">
-  <div class="alert-wrapper" ng-class="[alertVisibility, alertType]">
-    <div class="alert-label">{{ alertLabel }}</div>
-    <h2 class="alert-title">{{ alertTitle }}</h2>
+<a ng-repeat="alert in alertArticles" href ng-href="{{ alert.link | relativize }}">
+  <div class="alert-wrapper" ng-class="[alertVisibility, alert.alertType]">
+    <div class="alert-label">{{ alert.alertLabel }}</div>
+    <h2 class="alert-title">{{ alert.title }}</h2>
   </div>
 </a>
