@@ -6,6 +6,7 @@
 @import "animations";
 @import "images";
 
+@import "elements/emediate";
 @import "elements/article-metadata";
 @import "elements/cookie-informer";
 @import "elements/search-form";
@@ -48,7 +49,6 @@ a {
 }
 .alert-element {
   position: relative;
-  padding-top: $header-height;
   top: 0;
   z-index: 20;
 }
@@ -56,4 +56,7 @@ a {
   z-index: 20;
   background: #FFF;
   min-height: 100vh;
+}
+.outer-wrapper {
+  padding-top: $header-height;
 }

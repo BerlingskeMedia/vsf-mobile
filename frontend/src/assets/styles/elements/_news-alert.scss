@@ -1,3 +1,4 @@
+
 .alert-wrapper {
   display: none;
   height: 90px;
@@ -5,7 +6,6 @@
   padding: 22px $side-margin;
   background: #f8f8f8;
   box-shadow: 0 1px 4px -2px #999;
-  margin-bottom: 15px;
   color: #212121;
   a {
     color: #212121;
@@ -35,6 +35,9 @@
     }
   }
 }
-.page-front-page .alert-wrapper {
+.alert-element {
+  margin-bottom: 15px;
+}
+.page-front-page .alert-element {
   margin-bottom: 0;
 }
