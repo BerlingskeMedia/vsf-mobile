@@ -22,10 +22,11 @@ app.directive('stiftenNewsAlert', function(){
                 for (var x=0; x < nodequeue.items[i].fields.length; x++) {
                   if (nodequeue.items[i].fields[x].attributes.keys == 'p_tag') {
                     if (nodequeue.items[i].fields[x].attributes.label == 328917) {
-
+                    // Breaking, presentation tag
                       nodequeue.items[i].alertType = 'alert-breaking';
                       nodequeue.items[i].alertLabel = 'Breaking';
                     }
+                    // Just-now, presentation tag
                     if (nodequeue.items[i].fields[x].attributes.label == 328920) {
 
                       nodequeue.items[i].alertType = 'alert-justnow';
