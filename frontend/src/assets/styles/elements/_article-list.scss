@@ -76,9 +76,15 @@
       position: absolute;
       bottom: 5px;
       z-index: 3;
-      a.label {
+      .label {
         color: #fff;
         font-size: 13px;
+      }
+      .label.label-breaking {
+        background: $breaking-background-color;
+        padding: 4px 6px 2px;
+        border-radius: 2px;
+        display: inline-block;
       }
     }
     .img-div {

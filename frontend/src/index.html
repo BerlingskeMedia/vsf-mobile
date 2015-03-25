@@ -36,7 +36,7 @@
         <div class="outer-wrapper">
           <header stiften-header class="site-header"></header>
           <nav stiften-main-menu class="main-menu"></nav>
-          <div stiften-news-alert class="alert-element"></div>
+          <div stiften-news-alert class="alerts"></div>
           <div class="main-container">
               <div ng-view class="main anim-crossfade"></div>
           </div>
@@ -66,12 +66,14 @@
         <script src="app/index.js"></script>
 
         <script src="app/filters/relativize.js"></script>
+        <script src="app/filters/dismissed.js"></script>
 
         <script src="app/services/contentitem.js"></script>
         <script src="app/services/nodequeue.js"></script>
         <script src="app/services/latest.js"></script>
         <script src="app/services/category.js"></script>
         <script src="app/services/search.js"></script>
+        <script src="app/services/preproces.js"></script>
 
         <script src="app/directives/searchfield/searchFieldDirective.js"></script>
         <script src="app/directives/header/headerDirective.js"></script>

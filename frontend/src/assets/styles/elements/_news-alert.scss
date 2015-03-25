@@ -7,13 +7,29 @@
   background: #f8f8f8;
   box-shadow: 0 1px 4px -2px #999;
   color: #212121;
+  justify-content: space-around;
+  align-items: stretch;
   a {
     color: #212121;
   }
   &.alert-displayed {
-    display: block;
+    display: flex;
   }
-
+  .alert-content {
+    display: block;
+    width: 100%;
+  }
+  .alert-closer {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    padding-top: 15px;
+    font-family: $berlingske-sans;
+  }
   .alert-label {
     font-size: 14px;
     font-weight: bold;

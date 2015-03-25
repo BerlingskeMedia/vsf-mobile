@@ -4,14 +4,14 @@ app.directive('stiftenNewsAlert', function(){
     return {
         restrict: 'AEC',
         templateUrl: 'app/directives/newsalert/newsAlertTemplate.html',
-        controller : function($scope, localStorageService, Nodequeue) {
+        controller : function($scope, localStorageService, Nodequeue, PreprocesArticle, dismissedFilter) {
           $scope.displayAlert = false;
           $scope.alertVisibility = 'alert-displayed';
           var alertArticles = localStorageService.get('alertArticles');
+          var dismissedArticles = localStorageService.get('dismissedArticles');
           if (alertArticles !== null) {
-            $scope.alertArticles = alertArticles;
+            $scope.alertArticles = dismissedFilter(alertArticles);
           }
-
           var nodequeue =  Nodequeue.get({id:5910, items:2});
           nodequeue.$promise.then(function(){
             // If the breaking queu is not empty we update.
@@ -19,24 +19,10 @@ app.directive('stiftenNewsAlert', function(){
 
               // Here we traverse to extract presentation-tags.
               for (var i=0; i < nodequeue.items.length; i++) {
-                for (var x=0; x < nodequeue.items[i].fields.length; x++) {
-                  if (nodequeue.items[i].fields[x].attributes.keys == 'p_tag') {
-                    if (nodequeue.items[i].fields[x].attributes.label == 328917) {
-                    // Breaking, presentation tag
-                      nodequeue.items[i].alertType = 'alert-breaking';
-                      nodequeue.items[i].alertLabel = 'Breaking';
-                    }
-                    // Just-now, presentation tag
-                    if (nodequeue.items[i].fields[x].attributes.label == 328920) {
-
-                      nodequeue.items[i].alertType = 'alert-justnow';
-                      nodequeue.items[i].alertLabel = 'Netop nu';
-                    }
-                  }
-                }
+                nodequeue.items[i] = PreprocesArticle(nodequeue.items[i]);
               }
 
-              $scope.alertArticles = nodequeue.items;
+              $scope.alertArticles = dismissedFilter(nodequeue.items);
               localStorageService.set('alertArticles', $scope.alertArticles);
 
 
@@ -48,6 +34,16 @@ app.directive('stiftenNewsAlert', function(){
             }
 
           });
+          // Dsimiss callback
+          $scope.dismissAlert = function(alert) {
+            //dismissedArticles.push(alert.link);
+            if (dismissedArticles === null) {
+              dismissedArticles = [];
+            }
+            dismissedArticles.push(alert.link);
+            localStorageService.set('dismissedArticles',dismissedArticles);
+            $scope.alertArticles = dismissedFilter($scope.alertArticles);
+          }
 
 
 

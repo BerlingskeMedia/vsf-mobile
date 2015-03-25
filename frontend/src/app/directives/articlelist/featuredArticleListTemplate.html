@@ -1,13 +1,11 @@
 <article ng-repeat="article in articles" class="featured-article-list-article">
-  
-    
     <div class="content-wrapper">
-      <a class="label" href ng-href="/{{ article.category_id }}">{{ article.category }}</a>
+      <span ng-show="article.alertType == 'alert-breaking'" class="label label-breaking" href ng-href="/{{ article.category_id }}" ng-class="">Breaking</span>
+      <a ng-hide="article.alertType == 'alert-breaking'" class="label" href ng-href="/{{ article.category_id }}" ng-class="">{{ article.category }}</a>
       <a class="article-content" href ng-href="{{ article.link | relativize }}"><h2>{{ article.title }}</h2></a>
     </div>
     <a class="article-content" href ng-href="{{ article.link | relativize }}"><div class="featured-overlay"></div>  </a>
     <a class="article-content" href ng-href="{{ article.link | relativize }}">
       <div class="img-div" style="background-image: url('{{ article[1].attributes.url }}');"></div>
     </a>
-    <!--     <a class="article-content" href ng-href="{{ article.link | relativize }}"><img ng-src="{{ article[1].attributes.url }}" /></a> -->
 </article>
