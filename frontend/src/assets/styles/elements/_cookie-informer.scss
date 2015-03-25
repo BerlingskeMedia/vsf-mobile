@@ -1,10 +1,21 @@
 #cookie-informer-content {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background: rgba(0,0,0,0.8);
-  z-index: 400;
+  height: $cookie-consent-height;
+  background: #4f4f4f;
   color: #FFF;
+  padding: $side-margin;
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  button {
+    background: #2abff3;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    margin: 0 auto;
+    width: 180px;
+    padding: 10px 20px;
+    display: block;
+  }
 }

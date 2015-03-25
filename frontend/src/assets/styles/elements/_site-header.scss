@@ -3,12 +3,11 @@
   z-index: 40;
   position: fixed;
   height: $header-height;
-  padding: 8px $side-margin 0;
   width: 100%;
   max-width: $page-max-width;
-  border-bottom: 1px solid #b2b2b2;
-  font-family: $berlingske-sans;
   background: rgba(255,255,255, 0.95);
+  font-family: $berlingske-sans;
+  border-bottom: 1px solid #b2b2b2;
   padding-bottom: 5px;
   @include clearfix;
   .main-stiften-logo {
@@ -17,7 +16,20 @@
       width: 138px;
       vertical-align: bottom;
     }
-  } 
+
+  }
+
+}
+body.cookie-consent-visible .site-header {
+  height: $header-height + $cookie-consent-height;
+}
+.header-wrapper {
+  padding: 8px $side-margin 0;
+
+  @include clearfix;
+}
+body.cookie-consent-visible .header-wrapper {
+  top: $cookie-consent-height;
 }
 
 .header-link {
@@ -40,6 +52,7 @@
     vertical-align: middle;
     width: 20px;
   }
+
 }
 .icon-close {
   display: none;
@@ -48,7 +61,6 @@
   color: #7d7d7d;
   background: #fff;
   border-color: #b2b2b2;
-
 }
 body.search-open .header-link.header-search-link {
   .icon-search {
@@ -57,6 +69,7 @@ body.search-open .header-link.header-search-link {
   .icon-close {
     display: inline;
   }
+
 }
 .header-link.header-menu-link {
   color: #000;
@@ -70,4 +83,5 @@ body.menu-open .header-link.header-menu-link {
   .icon-close {
     display: inline;
   }
+
 }

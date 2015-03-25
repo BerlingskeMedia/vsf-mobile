@@ -60,3 +60,6 @@ a {
 .outer-wrapper {
   padding-top: $header-height;
 }
+body.cookie-consent-visible .outer-wrapper {
+  padding-top: $cookie-consent-height + $header-height;
+}

@@ -32,7 +32,7 @@
     <!-- endbuild -->
     <![endif]-->
 </head>
-    <body ng-class="[menuStatusClass, searchStatusClass, pageTypeClass]">
+    <body ng-class="[menuStatusClass, searchStatusClass, pageTypeClass, cookieConsentVisibility]">
         <div class="outer-wrapper">
           <header stiften-header class="site-header"></header>
           <nav stiften-main-menu class="main-menu"></nav>
@@ -43,7 +43,6 @@
 
 
           <footer stiften-footer class="site-footer"></footer>
-          <cookieinformer ng-show="showCookieInformer" class="cookie-informer"></cookieinformer>
         </div>
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
