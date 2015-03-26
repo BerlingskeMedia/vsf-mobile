@@ -2,34 +2,22 @@
 
 'use strict';
 
-app.controller('ListController', function ($scope, $rootScope, $routeParams, Category, Latest) {
+app.controller('ListController', function ($scope, $rootScope, $routeParams, config, Latest) {
     // We need to lookup term-ids based on slugs in BOND - this is an UGLY  hack.
   var id = 0;
-  if ('tag' in $routeParams) {
-    if (isNaN(parseFloat($routeParams.tag))) {
-      id = Category($routeParams.tag);
-    } else {
-      id = $routeParams.tag;
-    }
+  if (('tag' in $routeParams) && ($routeParams.tag in config.sections)) {
+    id = config.sections[$routeParams.tag].id;
   }
-  //TODO temp data
-  var submenuLinks = {
-    'sport': [
-      {slug: 'fodbold', name: 'Fodbold'},
-      {slug: 'haandbold', name: 'Håndbold'},
-      {slug: 'cricket', name: 'Cricket'}
-    ],
-    'lokal': [
-      {slug: 'aarhus', name: 'Aarhus'},
-      {slug: 'skanderborg', name: 'Skanderborg'},
-      {slug: 'odder', name: 'Odder'}
-    ]
-  };
+  if (id === 0) {
+    // TODO: Error
+    console.log('ERROR');
+  }
+
   $scope.subsectionVisible = false;
-  // TODO: Make "dynamic"
-  if ($routeParams.tag == 'lokal' || $routeParams.tag == 'sport') {
+
+  if ('subsections' in config.sections[$routeParams.tag]) {
       $scope.hasSubsection = true;
-      $scope.submenuLinks = submenuLinks[$routeParams.tag];
+      $scope.submenuLinks = config.sections[$routeParams.tag].subsections;
   }
 
 
