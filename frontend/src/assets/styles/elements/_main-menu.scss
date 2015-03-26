@@ -4,12 +4,17 @@
   position: fixed;
   top: $header-height;
   left: 0;
+  right: 0;
   height: 100vh;
+  margin: 0 auto;
   width: $menu-width;
+  max-width: $page-max-width;
   transition: transform $default-transition-time, opacity $default-transition-time;
   transform: translate3d(0, -100vh, 0);
   opacity: 0;
+
   @include menu-base();
+  
   .button-wrapper {
     background: #333;
     padding: $side-margin 25px;

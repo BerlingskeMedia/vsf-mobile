@@ -14,13 +14,13 @@
 @mixin menu-base() {
   background: $menu-background-color;
   ul.menu {
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 0;
     @include clearfix();
   }
   li {
-    width: 50vw;
+    width: 50%;
     float: left;
     list-style-position: outside;
     list-style-type: none;
