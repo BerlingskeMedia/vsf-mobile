@@ -18,7 +18,7 @@ app.directive('stiftenNodequeueList', function() {
           if ('id' in $attrs) {
             id = $attrs.id;
           }
-
+          console.log(id + ' - ' + $attrs.items);
           var nodequeue =  Nodequeue.get({id:id, items:$attrs.items});
           nodequeue.$promise.then(function(){
             $scope.articles = nodequeue.items;
@@ -96,6 +96,15 @@ app.directive('stiftenFeaturedArticleList', function() {
     return {
         restrict: 'AEC',
         templateUrl: 'app/directives/articlelist/featuredArticleListTemplate.html',
+        scope: true
+    };
+});
+
+// This directive just sets a template
+app.directive('stiftenMostPopularArticleList', function() {
+    return {
+        restrict: 'AEC',
+        templateUrl: 'app/directives/articlelist/mostPopularArticleListTemplate.html',
         scope: true
     };
 });

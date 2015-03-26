@@ -1,0 +1,6 @@
+<article ng-repeat="article in articles" class="image-article-list-article">
+  <a href ng-href="{{ article.link | relativize }}">  
+    <div class="counter">{{ $index+1 }}</div>
+    <h2>{{ article.title }}</h2>
+  </a>
+</article>

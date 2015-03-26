@@ -9,7 +9,7 @@ app.controller('ListController', function ($scope, $rootScope, $routeParams, con
     id = config.sections[$routeParams.tag].id;
   }
   if (id === 0) {
-    // TODO: Error
+    // TODO: 404
     console.log('ERROR');
   }
 

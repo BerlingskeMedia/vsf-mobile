@@ -1,5 +1,5 @@
 /* GENERIC LIST PROPERTIES */
-.header-article-list, .image-article-list  {
+.header-article-list, .image-article-list, .most-popular-article-list {
   margin: 0 $side-margin;
   padding-top: 6px;
   article {
@@ -101,5 +101,39 @@
       color: #fff;
       font-size: 28px;
     }
+  }
+}
+
+/* MOST POPULAR ARTICLE LIST ITEM */
+.most-popular-article-list {
+  margin-top: 10px;
+  article a {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .counter {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    align-self: flex-start;
+    text-align: center;
+    border-radius: 100%;
+    border: 1px solid $stiften-orange;
+    font-family: $berlingske-text;
+    font-weight: bold;
+    font-size: 19px;
+    padding-top: 10px;
+  }
+  h2 {
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: $berlingske-text;
+    font-size: 18px;
+    align-self: flex-start;
   }
 }
