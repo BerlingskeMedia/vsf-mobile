@@ -46,42 +46,27 @@ body.cookie-consent-visible .header-wrapper {
   border: 1px solid #000;
   text-align: center;
   line-height: 1.3;
-  font-family: Arial, Helvetica;
   transition: .4s transform;
-  img {
-    vertical-align: middle;
-    width: 20px;
-  }
+  font-weight: normal;
+
 
 }
-.icon-close {
-  display: none;
-}
+
 .header-link.header-search-link {
   color: #7d7d7d;
   background: #fff;
   border-color: #b2b2b2;
 }
-body.search-open .header-link.header-search-link {
-  .icon-search {
-    display: none;
-  }
-  .icon-close {
-    display: inline;
-  }
-
+// set psedo content
+body.search-open .icon-search:before {
+  content: "\e600";
 }
 .header-link.header-menu-link {
   color: #000;
   background: #ffba3b;
   border-color: #ffba3b;
 }
-body.menu-open .header-link.header-menu-link {
-  .icon-menu {
-    display: none;
-  }
-  .icon-close {
-    display: inline;
-  }
-
+// set psedo content
+body.menu-open .icon-menu:before {
+  content: "\e600";
 }
