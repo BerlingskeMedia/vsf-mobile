@@ -18,7 +18,6 @@ app.directive('stiftenNodequeueList', function() {
           if ('id' in $attrs) {
             id = $attrs.id;
           }
-          console.log(id + ' - ' + $attrs.items);
           var nodequeue =  Nodequeue.get({id:id, items:$attrs.items});
           nodequeue.$promise.then(function(){
             $scope.articles = nodequeue.items;
