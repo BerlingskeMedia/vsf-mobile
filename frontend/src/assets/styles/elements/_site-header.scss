@@ -16,9 +16,7 @@
       width: 138px;
       vertical-align: bottom;
     }
-
   }
-
 }
 body.cookie-consent-visible .site-header {
   height: $header-height + $cookie-consent-height;
@@ -36,7 +34,6 @@ body.cookie-consent-visible .header-wrapper {
   margin-top: 2px;
   float: right;
   display: block;
-  font-size: 26px;
   color: #000;
   background: #ffba3b;
   width: 38px;
@@ -48,23 +45,34 @@ body.cookie-consent-visible .header-wrapper {
   line-height: 1.3;
   transition: .4s transform;
   font-weight: normal;
-
+  font-size: 17px;
+  line-height: 2.1;
 
 }
 
-.header-link.header-search-link {
-  color: #7d7d7d;
+
+.header-wrapper .icon-search {
+
+  color: #333;
   background: #fff;
   border-color: #b2b2b2;
 }
+body.search-open .icon-search {
+  font-size: 15px;
+  line-height: 2.5;
+
+}
 // set psedo content
 body.search-open .icon-search:before {
+  margin-right: -1px;
   content: "\e600";
 }
-.header-link.header-menu-link {
+.header-wrapper .icon-menu {
   color: #000;
   background: #ffba3b;
   border-color: #ffba3b;
+  font-size: 13px;
+  line-height: 2.9;
 }
 // set psedo content
 body.menu-open .icon-menu:before {
