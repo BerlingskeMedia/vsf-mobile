@@ -1,6 +1,7 @@
 <article ng-repeat="article in articles" class="header-article-list-article">
   <a class="article-content" href ng-href="{{ article.link | relativize }}">
-    <h2>{{ article.title }}</h2>
     <time class="publish-date">{{ article.pubDate | date:"HH:mm"}}</time>
+    <h2>{{ article.title }}</h2>
   </a>
 </article>
+<a ng-show="moreLink" href ng-href="{{ moreLink }}">{{ moreLinkText}}</a>

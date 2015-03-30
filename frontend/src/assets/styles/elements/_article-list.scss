@@ -34,17 +34,21 @@
 /* HEADER ARTICLE LIST ITEM */
 .header-article-list .header-article-list-article {
   margin-bottom: 8px;
+  background: $header-list-background;
+  border-bottom: none;
 }
+
 .header-article-list-article {
   @include clearfix;
   a {
     display: flex;
+    padding: 15px 10px 10px;
   }
   time {
-    float: right;
-    display: inline;
     margin-top: 10px;
     font-size: 13px;
+    font-weight: 900;
+    color: #747474;
   }
   h2 {
     flex: 1;
