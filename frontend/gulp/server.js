@@ -1,14 +1,7 @@
 'use strict';
 
 var gulp = require('gulp');
-
-var util = require('util');
-
 var connect = require('gulp-connect');
-
-
-
-
 var modRewrite = require('connect-modrewrite');
 
 

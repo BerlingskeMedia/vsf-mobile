@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 
+
 gulp.task('watch', ['styles'] ,function () {
   gulp.watch('src/{app,assets}/**/*.scss', ['styles']);
   gulp.watch('src/app/**/*.js', ['scripts']);
