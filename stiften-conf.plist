@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TestConfig</key>
+	<dict>
+		<key>1</key>
+		<dict>
+			<key>banners</key>
+			<string>yes, please</string>
+			<key>cookieConsent</key>
+			<string>true</string>
+		</dict>
+	</dict>
+	<key>MoreTests</key>
+	<dict>
+		<key>Hopla</key>
+		<array>
+			<string>mere</string>
+			<string>test</string>
+		</array>
+	</dict>
+</plist>

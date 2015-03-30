@@ -40,7 +40,11 @@ var app = angular
   .constant('config', appConfig)
   .config(function ($routeProvider, $locationProvider, $httpProvider, localStorageServiceProvider) {
     $routeProvider
-        .when('/search', {
+        .when('/seneste', {
+            templateUrl: 'app/pages/latestPage/latestPageTemplate.html',
+            controller: 'LatestController'
+        })
+        .when('/søg', {
             templateUrl: 'app/pages/searchPage/searchPageTemplate.html',
             controller: 'SearchController'
         })

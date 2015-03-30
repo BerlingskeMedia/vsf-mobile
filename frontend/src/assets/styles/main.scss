@@ -63,3 +63,8 @@ a {
 body.cookie-consent-visible .outer-wrapper {
   padding-top: $cookie-consent-height + $header-height;
 }
+
+.more-link {
+  margin-left: $side-margin;
+  margin-right: $side-margin; 
+}
