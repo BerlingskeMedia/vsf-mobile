@@ -22,7 +22,6 @@ app.controller('FrontpageController', function ($scope, $rootScope,  Nodequeue, 
   var nodequeue =  Nodequeue.get({id:1011, items:20});
   nodequeue.$promise.then(function(){
     $scope.frontpageArticles = nodequeue.items;
-    //$scope.frontpageArticles.shift(); ID 5910
     $scope.frontpageArticles[0] = PreprocesArticle($scope.frontpageArticles[0]);
     localStorageService.set('frontpageArticles', $scope.frontpageArticles);
   });
