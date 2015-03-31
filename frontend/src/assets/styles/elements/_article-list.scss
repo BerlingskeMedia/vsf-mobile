@@ -141,3 +141,63 @@
     align-self: flex-start;
   }
 }
+/* EDITORIAL ARTICLE LIST ITEM */
+.editorial-article-list {
+  article {
+    margin-top: 70px;
+  }
+  .label {
+    font-family: $berlingske-sans;
+    font-weight: 900;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 2px;
+  }
+  .byline {
+    font-family: $berlingske-sans;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  article a {
+    background: #f2f2f2;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  h2 {
+    font-family: $berlingske-text;
+    color: #333;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-left: $side-margin;
+    margin-right: $side-margin;
+  }
+  article .img-div {
+    flex: 0 0 110px;
+    width: 110px;
+    height: 110px;
+    align-self: flex-start;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -35px;
+    border: 1px solid #b2b2b2;
+    margin-left: $side-margin;
+    margin-right: $side-margin;
+  }
+  .meta-wrapper {
+    margin: 15px $side-margin 0;
+    display: block;
+    width: 100%;
+    align-self: flex-start;
+    border-bottom: 1px solid #b2b2b2;
+    padding-bottom: 10px;
+  }
+}
