@@ -14,12 +14,12 @@ app.controller('FrontpageController', function ($scope, $rootScope,  Nodequeue, 
     $scope.frontpageArticles = frontpageArticles;
   }
 
-  if ($location.path() === '/search') {
+  if ($location.path() === '/søg') {
     $rootScope.searchOpen = true;
   }
   
 
-  var nodequeue =  Nodequeue.get({id:1011, items:10});
+  var nodequeue =  Nodequeue.get({id:1011, items:20});
   nodequeue.$promise.then(function(){
     $scope.frontpageArticles = nodequeue.items;
     //$scope.frontpageArticles.shift(); ID 5910

@@ -107,3 +107,12 @@ app.directive('stiftenMostPopularArticleList', function() {
         scope: true
     };
 });
+
+// This directive just sets a template
+app.directive('stiftenEditorialArticleList', function() {
+    return {
+        restrict: 'AEC',
+        templateUrl: 'app/directives/articlelist/editorialArticleListTemplate.html',
+        scope: true
+    };
+});

@@ -1,0 +1,7 @@
+<article ng-repeat="article in articles" class="featured-article-list-article">
+    <div class="content-wrapper">
+      <span ng-show="article.alertType == 'alert-breaking'" class="label label-breaking" href ng-href="/{{ article.category_id }}" ng-class="">Breaking</span>
+      <a ng-hide="article.alertType == 'alert-breaking'" class="label" href ng-href="/{{ article.category_id }}" ng-class="">{{ article.category }}</a>
+      <a class="article-content" href ng-href="{{ article.link | relativize }}"><h2>{{ article.title }}</h2></a>
+    </div>
+</article>
