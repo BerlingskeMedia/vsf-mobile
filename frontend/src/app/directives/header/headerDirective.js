@@ -8,10 +8,10 @@ app.directive('stiftenHeader', function() {
         controller: function($scope, $rootScope, $location) {
           $rootScope.menuOpen = false;
           $rootScope.searchOpen = false;
-          $rootScope.searchLink = '/search';
+          $rootScope.searchLink = '/søg';
           $rootScope.lastPage = '/';
 
-          if ($location.path() == '/search') {
+          if ($location.path() == '/søg') {
             $rootScope.searchLink = '/';
           }
 
@@ -26,13 +26,13 @@ app.directive('stiftenHeader', function() {
             }
           }
           $rootScope.$watch('searchOpen', function(value) {
-            $rootScope.searchStatusClass = $rootScope.searchOpen ? 'search-open' : '';
+            $rootScope.searchStatusClass = $rootScope.searchOpen ? 'search-open' : 'search-closed';
             if (value) {
               $rootScope.menuOpen = false;
             }
           });
           $rootScope.$watch('menuOpen', function(value) {
-            $rootScope.menuStatusClass = $rootScope.menuOpen ? 'menu-open' : '';
+            $rootScope.menuStatusClass = $rootScope.menuOpen ? 'menu-open' : 'menu-closed';
             if (value) {
               $rootScope.searchOpen = false;
             }
@@ -46,10 +46,10 @@ app.directive('stiftenHeader', function() {
             if ($rootScope.searchOpen) {
               $rootScope.searchOpen = false;
             }
-            if ($location.path() == '/search') {
+            if ($location.path() == '/søg') {
               $rootScope.searchLink = $rootScope.lastPage;
             } else {
-              $rootScope.searchLink = '/search';
+              $rootScope.searchLink = '/søg';
               $rootScope.lastPage = $location.path();
             }
             

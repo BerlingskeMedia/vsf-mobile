@@ -43,30 +43,36 @@ body.cookie-consent-visible .header-wrapper {
   border: 1px solid #000;
   text-align: center;
   line-height: 1.3;
-  transition: .4s transform;
   font-weight: normal;
   font-size: 17px;
   line-height: 2.1;
-
 }
 
-
+// SEARCH ICON
 .header-wrapper .icon-search {
-
   color: #333;
   background: #fff;
   border-color: #b2b2b2;
-}
-body.search-open .icon-search {
   font-size: 15px;
   line-height: 2.5;
+}
 
+body.search-closed .icon-search::before {
+  animation-name: entre;
+  animation-duration: $icon-animation-speed;
+}
+body.search-open .icon-search::before {
+  animation-name: entre;
+  animation-duration: $icon-animation-speed;
 }
 // set psedo content
-body.search-open .icon-search:before {
+body.search-open .icon-search::before {
   margin-right: -1px;
   content: "\e600";
 }
+
+// SEARCH ICON
+
 .header-wrapper .icon-menu {
   color: #000;
   background: #ffba3b;
@@ -74,7 +80,43 @@ body.search-open .icon-search:before {
   font-size: 13px;
   line-height: 2.9;
 }
+
+body.menu-closed .icon-menu::before {
+  animation-name: entre;
+  animation-duration: $icon-animation-speed;
+}
+
+body.menu-open .icon-menu::before {
+  animation-name: entre;
+  animation-duration: $icon-animation-speed;
+}
 // set psedo content
-body.menu-open .icon-menu:before {
+body.menu-open .icon-menu::before {
   content: "\e600";
+}
+
+
+/* The animation code */
+@keyframes entre {
+    0%   {
+      opacity: 0;
+      transform: scale3d(0,0,0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale3d(1,1,1);
+    }
+}
+
+/* The animation code */
+@keyframes sortie {
+    0%   {
+      opacity: 1;
+      transform: scale3d(1,1,1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale3d(0,0,0);
+
+    }
 }
