@@ -1,0 +1,49 @@
+.weather {
+
+padding: 0 $side-margin;
+
+  select {
+     background: transparent;
+     border: none;
+     font-size: 22px;
+     height: 29px;
+     padding: 0px; /* If you add too much padding here, the options won't show in IE */
+     width: 100%;
+     option {
+       padding: 0;
+       border: none;
+       background: #fff;
+     }
+  }
+  ul {
+    
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    width: 100%;
+    li {
+      list-style: none;
+       flex-grow: 0;
+       text-align: center;
+    }
+    time {
+      text-align: left;
+      font-size: 22px;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .wi {
+      font-size: 40px;
+    }
+    .weather-icon-wrapper {
+      margin-bottom: 20px;
+    }
+    .weather-temp {
+      text-align: left;
+      font-size: 22px;
+      
+    }
+  }
+}

@@ -1,0 +1,15 @@
+ <select ng-model="city" ng-change="updateChart()">
+   <option ng-repeat="cityChoice in cities" ng-value="cityChoice" ng-selected="cityChoice == city">{{ cityChoice }}</option>
+</select>
+  
+{{ current.main.temp || json }}
+
+<ul>
+  <li class="weather-item" ng-repeat="item in list">
+    <time>{{ item.dt * 1000  | date: "HH:mm" }}</time>
+    <div class="weather-icon-wrapper">
+      <i class="wi" ng-class="item.icon"></i>
+    </div>
+    <div class="weather-temp">{{ item.main.temp | number:0 }}°</div>
+  </li>
+</ul>

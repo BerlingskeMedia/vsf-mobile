@@ -143,6 +143,7 @@
 }
 /* EDITORIAL ARTICLE LIST ITEM */
 .editorial-article-list {
+  margin-bottom: 40px;
   article {
     margin-top: 70px;
   }
@@ -177,6 +178,7 @@
     margin-top: 0px;
     margin-left: $side-margin;
     margin-right: $side-margin;
+    margin-bottom: 0px;
   }
   article .img-div {
     flex: 0 0 110px;

@@ -2,6 +2,39 @@ var appConfig = {
     texts: {
 
     },
+    weatherCities: ['Aarhus', 'Skanderborg', 'Odder', 'Favrskov', 'London', 'New York', 'Bangkok', 'Beijing'],
+    weatherIcons: {
+            'day': {
+              '200': 'thunderstorm',
+              '300': 'showers',
+              '500': 'rain',
+              '520': 'showers',
+              '600': 'snow',
+              '800': 'day-sunny',
+              '801': 'day-cloudy',
+              '802': 'day-cloudy',
+              '803': 'day-cloudy',
+              '804': 'cloud',
+              '900': 'tornado',
+              '905': 'windy',
+              '906': 'hail'
+            },
+            'night': {
+              '200': 'night-alt-thunderstorm',
+              '300': 'night-alt-showers',
+              '500': 'night-alt-rain',
+              '520': 'night-alt-showers',
+              '600': 'night-alt-snow',
+              '800': 'night-clear',
+              '801': 'night-alt-cloudy',
+              '802': 'night-alt-cloudy',
+              '803': 'night-alt-cloudy',
+              '804': 'cloud',
+              '900': 'tornado',
+              '905': 'windy',
+              '906': 'hail'
+            }
+          },
     emediate: {
         "G1": {
             cu: "0",
