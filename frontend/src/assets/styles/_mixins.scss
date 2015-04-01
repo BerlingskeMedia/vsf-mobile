@@ -18,6 +18,18 @@
     margin: 0;
     padding: 0;
     @include clearfix();
+    a {
+      background: #333;
+      padding: $side-margin 25px;
+      font-size: 16px;
+      color: #fff;
+      width: 100%;
+      font-family: $berlingske-sans;
+      display: block;
+      &:hover {
+        background: #4a4a4a;
+      }
+    }
   }
   li {
     width: 50%;
@@ -26,16 +38,5 @@
     list-style-type: none;
     border-bottom: 1px solid #4a4a4a;
   }
-  a {
-    background: #333;
-    padding: $side-margin 25px;
-    font-size: 16px;
-    color: #fff;
-    width: 100%;
-    font-family: $berlingske-sans;
-    display: block;
-    &:hover {
-      background: #4a4a4a;
-    }
-  }
+
 }

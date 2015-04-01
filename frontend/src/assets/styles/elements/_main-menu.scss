@@ -14,13 +14,48 @@
   opacity: 0;
 
   @include menu-base();
-  
-  .button-wrapper {
+  .social {
+    background: #333;
+    font-size: 16px;
+    padding: 20px 25px;
+    a {
+      color: #fff;
+      display: inline-block;
+      padding: 10px 4px 0px;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      border-radius: 100%;
+      text-align: center;
+      margin-right: 10px;
+    }
+    .icon-facebook {
+      background: #395999;
+    }
+    .icon-twitter {
+      background: #578fcb;
+      &:before {
+        content: "\e60a";
+      }
+    }
+    .icon-google {
+      background: #de4b39;
+    }
+  }
+  .buttons {
     background: #333;
     padding: $side-margin 25px;
     font-size: 16px;
     color: #fff;
+    font-family: $berlingske-sans;
     width: 100%;
+    a {
+      display: inline-block;
+      padding: 12px;
+      border-radius: 15px;
+      background: #fff;
+      margin-right: 10px;
+    }
   }  
 }
 

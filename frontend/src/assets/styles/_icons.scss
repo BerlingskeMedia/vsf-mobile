@@ -22,6 +22,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-search:before {
+  content: "\e608";
+}
+
 .icon-close:before {
   content: "\e600";
 }
@@ -54,21 +58,22 @@
   content: "\e607";
 }
 
-.icon-search:before {
-  content: "\e608";
-}
-
-.icon-twitter:before {
+.icon-time:before {
   content: "\e609";
 }
 
-.icon-user:before {
+.icon-twitter:before {
   content: "\e60a";
 }
 
-.icon-video:before {
+.icon-user:before {
   content: "\e60b";
 }
+
+.icon-video:before {
+  content: "\e60c";
+}
+
 
 @font-face {
   font-family: 'Weathericons';
