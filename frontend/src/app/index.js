@@ -40,6 +40,10 @@ var app = angular
   .constant('config', appConfig)
   .config(function ($routeProvider, $locationProvider, $httpProvider, localStorageServiceProvider) {
     $routeProvider
+        .when('/test', {
+            templateUrl: 'app/pages/testPage/testPageTemplate.html',
+            controller: 'TestController'
+        })
         .when('/seneste', {
             templateUrl: 'app/pages/latestPage/latestPageTemplate.html',
             controller: 'LatestController'
