@@ -1,12 +1,15 @@
-<input list="cities" ng-change="updateDataList()" ng-model="cityAutocomplete">
-
-<datalist id="cities">
-  <option ng-repeat="cityChoice in cities" ng-value="cityChoice.name" />
-</datalist>
-
-<br /><br />
-<h1>{{ display.name }} {{ display.country }}</h1>
-<ul>
+<div class="section-header-menu">
+  <h1>{{ city }}</h1>
+  <a href class="section-menu-link" ng-click="toggleWeatherMenu()">﹀</a>
+</div>
+<div class="section-menu-pulldown" ng-class="{'submenu-open': citiesVisible}">
+  <ul class="menu">
+    <li ng-repeat="city in cities">
+      <a href ng-click="updateWeatherChart(city)">{{ city }}</a>
+    </li>
+  </ul>
+</div>
+<ul class="weather-items">
   <li class="weather-item" ng-repeat="item in list">
     <time>{{ item.dt * 1000  | date: "HH:mm" }}</time>
     <div class="weather-icon-wrapper">

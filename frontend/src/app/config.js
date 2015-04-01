@@ -2,6 +2,7 @@ var appConfig = {
     texts: {
 
     },
+    weatherCities: ['Aarhus', 'Skanderborg', 'Odder', 'Favrskov'],
     weatherIcons: {
             'day': {
               '200': 'thunderstorm',
@@ -52,7 +53,6 @@ var appConfig = {
         id: 64874,
         subsections: [
           {slug: 'fodbold', name: 'Fodbold'},
-          {slug: 'agf', name: 'GF'},
           {slug: 'haandbold', name: 'Håndbold'},
           {slug: 'basketball', name: 'Basketball'}
         ]

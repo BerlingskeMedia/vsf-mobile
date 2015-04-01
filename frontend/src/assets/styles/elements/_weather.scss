@@ -1,6 +1,5 @@
 .weather {
 
-padding: 0 $side-margin;
 
   input {
      background: transparent;
@@ -11,9 +10,9 @@ padding: 0 $side-margin;
      width: 100%;
 
   }
-  ul {
+  ul.weather-items {
     
-    padding: 0;
+    padding: 0 $side-margin;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
