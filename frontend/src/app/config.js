@@ -2,6 +2,7 @@ var appConfig = {
     texts: {
 
     },
+    timeAgoThreshold: 30,
     weatherCities: ['Aarhus', 'Skanderborg', 'Odder', 'Favrskov'],
     weatherIcons: {
             'day': {
