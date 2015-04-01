@@ -2,18 +2,14 @@
 
 padding: 0 $side-margin;
 
-  select {
+  input {
      background: transparent;
      border: none;
      font-size: 22px;
      height: 29px;
      padding: 0px; /* If you add too much padding here, the options won't show in IE */
      width: 100%;
-     option {
-       padding: 0;
-       border: none;
-       background: #fff;
-     }
+
   }
   ul {
     

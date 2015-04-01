@@ -5,17 +5,58 @@ app.directive('stiftenWeather', function() {
         restrict: 'AEC',
         templateUrl: 'app/directives/weather/weatherTemplate.html',
         scope: false,
-        controller: function($scope, $attrs, Weather, config, $filter, localStorageService) {
+        controller: function($scope, $attrs, Weather, config, Cities, $filter, localStorageService) {
           var weather_icons = config.weatherIcons;
-          $scope.cities = config.weatherCities;
-          var city = localStorageService.set('weather-city', $scope.city);
-          $scope.city = 'Aarhus';
+          $scope.cities = []
+          $scope.cityAutocomplete = localStorageService.get('weather-city');
+          if ($scope.cityAutocomplete == null) {
+            $scope.cityAutocomplete = 'Aarhus';
+            $scope.city = 'Aarhus';
+          }
+          var cities;
+          $scope.updateDataList = function() {
+            $scope.cities = [];
+            if ($scope.cityAutocomplete.length > 1) {
+              var lookup = false;
+              if (cities === undefined) {
+                lookup = true;  
+              } else {
+                if (!('$resolved' in cities)) {
+                  lookup = true;
+                } else {
+                  if (cities.$resolved === true) {
+                    lookup = true;
+                  }
+                }
+              }
+              if (lookup) {
+                cities =  Cities.get({city: $scope.cityAutocomplete});
+
+                cities.$promise.then(function(){
+                  if (cities.cod == 200) {
+                  
+                    if (cities.list.length > 0) {
+                      $scope.city = cities.list[0].name;
+                      $scope.updateChart();
+                    }
+                    angular.forEach(cities.list, function(value, key) {
+                      $scope.cities.push({id: value.id, name: value.name});
+                    });
+                  }
+                });
+              }
+            }
+          }
+    
+
           $scope.updateChart = function() {
             localStorageService.set('weather-city', $scope.city);
             var weather =  Weather.get({city: $scope.city});
             weather.$promise.then(function(){
               if (weather.cod == 200) {
                 //$scope.current = weather.list[0];
+                console.log(weather);
+                $scope.display = weather.city; 
                 $scope.list = [];
                 angular.forEach(weather.list.slice(0, 4), function(value, key) {
 
@@ -53,7 +94,6 @@ app.directive('stiftenWeather', function() {
             });
             
           }
-          $scope.city = 'Aarhus';
           $scope.updateChart();
         }
     };
