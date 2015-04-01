@@ -30,7 +30,7 @@ app.directive('stiftenLatestList', function() {
     return {
         restrict: 'AEC',
         scope: true,
-        controller: function($scope, $attrs, Latest, localStorageService) {
+        controller: function($scope, $attrs, Latest, localStorageService, $interval) {
           var id  = 0;
 
           // Get id from a parent controller
@@ -52,6 +52,13 @@ app.directive('stiftenLatestList', function() {
             $scope.articles = latest.items;
             localStorageService.set('articles-' + id, $scope.articles);
           });
+          $interval(function(){
+            var latest =  Latest.get({id:id, items:$attrs.items, type:$attrs.type});
+            latest.$promise.then(function(){
+              $scope.articles = latest.items;
+              localStorageService.set('articles-' + id, $scope.articles);
+            });
+          }, 30000);
         }
       }
 });
