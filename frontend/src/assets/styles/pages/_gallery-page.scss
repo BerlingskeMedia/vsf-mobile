@@ -1,0 +1,13 @@
+.page-gallery-page {
+  .main-container {
+    figure {
+      padding: 0;
+      figcaption {
+        margin-left: $side-margin;
+        margin-right: $side-margin;
+        font-family: $berlingske-sans;
+        font-size: 13px;
+      }
+    }
+  }
+}

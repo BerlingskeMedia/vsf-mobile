@@ -29,6 +29,7 @@ app.controller('StoryController', function ($scope, $rootScope, ContentItemByPat
       switch ($scope.story['content_type']) {
         case 'image_gallery':
           $scope.templateUrl = defaultTemplatePath + 'galleryPageTemplate.html';
+          $rootScope.pageTypeClass = 'page-article-page page-gallery-page';
           break;
         case 'news_article':
         default:
