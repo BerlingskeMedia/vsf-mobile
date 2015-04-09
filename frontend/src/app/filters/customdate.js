@@ -15,6 +15,6 @@ app.filter('customdate', function($filter, config) {
     if ($filter('date')(new Date(), 'M/d/yy') == $filter('date')(input, 'M/d/yy', '+0100')) {
       return $filter('date')(input, 'HH:mm' , '+0100');
     }
-    return $filter('date')(input, 'HH:mm - d/M yyyy', '+0100');
+    return $filter('date')(input, 'dd MMM HH:mm', '+0100');
    };
 })
