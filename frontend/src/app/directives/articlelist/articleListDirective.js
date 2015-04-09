@@ -43,20 +43,20 @@ app.directive('stiftenLatestList', function() {
             id = $attrs.id;
           }
           
-          var articles = localStorageService.get('articles-' + id);
+          var articles = localStorageService.get('articles-' + id + '-' + $attrs.items);
           if (articles !== null) {
             $scope.articles = articles;
           }
           var latest =  Latest.get({id:id, items:$attrs.items, type:$attrs.type});
           latest.$promise.then(function(){
             $scope.articles = latest.items;
-            localStorageService.set('articles-' + id, $scope.articles);
+            localStorageService.set('articles-' + id + '-' + $attrs.items, $scope.articles);
           });
           $interval(function(){
             var latest =  Latest.get({id:id, items:$attrs.items, type:$attrs.type});
             latest.$promise.then(function(){
               $scope.articles = latest.items;
-              localStorageService.set('articles-' + id, $scope.articles);
+              localStorageService.set('articles-' + id + '-' + $attrs.items, $scope.articles);
             });
           }, 30000);
         }
