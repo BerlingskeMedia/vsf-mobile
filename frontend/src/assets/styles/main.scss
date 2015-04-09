@@ -69,5 +69,10 @@ body.cookie-consent-visible .outer-wrapper {
 
 .more-link {
   margin-left: $side-margin;
-  margin-right: $side-margin; 
+  margin-right: $side-margin;
+  font-family: $berlingske-sans;
+  color: $label-blue;
+  font-size: 14px;
+  margin-bottom: 30px;
+  display: block;
 }
