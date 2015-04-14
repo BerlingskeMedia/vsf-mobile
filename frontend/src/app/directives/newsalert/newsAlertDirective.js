@@ -4,7 +4,7 @@ app.directive('stiftenNewsAlert', function(){
     return {
         restrict: 'AEC',
         templateUrl: 'app/directives/newsalert/newsAlertTemplate.html',
-        controller : function($scope, localStorageService, Nodequeue, PreprocesArticle, dismissedFilter) {
+        controller : function($scope, $rootScope, localStorageService, Nodequeue, PreprocesArticle, dismissedFilter) {
           $scope.displayAlert = false;
           $scope.alertVisibility = 'alert-displayed';
           var alertArticles = localStorageService.get('alertArticles');
@@ -44,7 +44,9 @@ app.directive('stiftenNewsAlert', function(){
             localStorageService.set('dismissedArticles',dismissedArticles);
             $scope.alertArticles = dismissedFilter($scope.alertArticles);
           }
-
+          $scope.$watch('alertArticles', function() {
+            $rootScope.alertStatusClass = 'alerts-open-' + $scope.alertArticles.length;
+          })
 
 
 

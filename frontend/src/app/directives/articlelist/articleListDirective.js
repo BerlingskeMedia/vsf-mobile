@@ -20,7 +20,9 @@ app.directive('stiftenNodequeueList', function() {
           }
           var nodequeue =  Nodequeue.get({id:id, items:$attrs.items});
           nodequeue.$promise.then(function(){
+
             $scope.articles = nodequeue.items;
+
           });
         }
       }
@@ -42,7 +44,7 @@ app.directive('stiftenLatestList', function() {
           if ('id' in $attrs) {
             id = $attrs.id;
           }
-          
+
           var articles = localStorageService.get('articles-' + id + '-' + $attrs.items);
           if (articles !== null) {
             $scope.articles = articles;
@@ -74,7 +76,7 @@ app.directive('stiftenFrontpageArticleList', function() {
               } else {
                 $scope.articles = val.splice(0, $attrs.items);
               }
-                
+
             }
           });
 
@@ -120,6 +122,15 @@ app.directive('stiftenEditorialArticleList', function() {
     return {
         restrict: 'AEC',
         templateUrl: 'app/directives/articlelist/editorialArticleListTemplate.html',
+        scope: true
+    };
+});
+
+// This directive just sets a template
+app.directive('stiftenGalleryArticleList', function() {
+    return {
+        restrict: 'AEC',
+        templateUrl: 'app/directives/articlelist/galleryArticleListTemplate.html',
         scope: true
     };
 });

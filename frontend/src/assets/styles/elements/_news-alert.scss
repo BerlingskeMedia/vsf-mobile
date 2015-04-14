@@ -1,7 +1,6 @@
-
 .alert-wrapper {
   display: none;
-  height: 90px;
+  height: $alert-height;
   width: 100%;
   padding: 22px $side-margin;
   background: #f8f8f8;
@@ -46,5 +45,20 @@
     a {
       color: #fff;
     }
+  }
+}
+body.alerts-open-2 {
+  .outer-wrapper, .main-menu {
+    margin-top: $alert-height * 2;
+  }
+}
+body.alerts-open-1 {
+  .outer-wrapper, .main-menu {
+    margin-top: $alert-height;
+  }
+}
+body.alerts-open-0 .outer-wrapper {
+  .outer-wrapper, .main-menu {
+    margin-top: 0;
   }
 }
