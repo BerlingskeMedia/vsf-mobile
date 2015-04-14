@@ -6,12 +6,9 @@
   width: 100%;
   left: 0;
   right: 0;
-  height: 100vh;
   margin: 0 auto;
   width: $menu-width;
   max-width: $page-max-width;
-  position: absolute;
-  top: $header-height;
   z-index: 30;
   background: #fff; //rgba(223,223,223, 0.95);
   min-height: 100vh;
