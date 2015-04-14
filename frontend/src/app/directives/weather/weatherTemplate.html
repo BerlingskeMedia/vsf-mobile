@@ -1,20 +1,12 @@
-<div class="section-header-menu">
+<div class="weather-wrapper" ng-class="timeOfDay">
   <h1>{{ city }}</h1>
-  <a href class="section-menu-link" ng-click="toggleWeatherMenu()">﹀</a>
-</div>
-<div class="section-menu-pulldown" ng-class="{'submenu-open': citiesVisible}">
-  <ul class="menu">
-    <li ng-repeat="city in cities">
-      <a href ng-click="updateWeatherChart(city)">{{ city }}</a>
+  <ul class="weather-items">
+    <li class="weather-item" ng-repeat="item in list">
+      <time>{{ item.dt * 1000  | date: "HH:mm" }}</time>
+      <div class="weather-icon-wrapper">
+        <i class="wi" ng-class="item.icon"></i>
+      </div>
+      <div class="weather-temp">{{ item.main.temp | number:0 }}°</div>
     </li>
   </ul>
 </div>
-<ul class="weather-items">
-  <li class="weather-item" ng-repeat="item in list">
-    <time>{{ item.dt * 1000  | date: "HH:mm" }}</time>
-    <div class="weather-icon-wrapper">
-      <i class="wi" ng-class="item.icon"></i>
-    </div>
-    <div class="weather-temp">{{ item.main.temp | number:0 }}°</div>
-  </li>
-</ul>

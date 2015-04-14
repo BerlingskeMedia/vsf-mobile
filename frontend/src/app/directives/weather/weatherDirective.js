@@ -7,17 +7,25 @@ app.directive('stiftenWeather', function() {
         scope: false,
         controller: function($scope, $attrs, Weather, config, $filter, localStorageService) {
           var weather_icons = config.weatherIcons;
-          $scope.cities = config.weatherCities;
-          $scope.city = localStorageService.get('weather-city');
-          $scope.citiesVisible = false;
-          if ($scope.city == null) {
-            $scope.city = 'Aarhus';
-            localStorageService.set('weather-city', $scope.city);
+          $scope.city = config.weatherCity;
+          
+          
+          var getTimeOfDay = function() {
+            var time = $filter('date')(new Date(), 'H');
+            switch (true) {
+              case (time < 5):
+                return 'night';
+              case (time < 10):
+                return 'morning';
+              case (time < 17):
+                return 'day';
+              case (time < 22):
+                return 'evening';
+              default:
+                return 'night';
+            }
           }
-          $scope.toggleWeatherMenu = function() {
-            $scope.citiesVisible = !$scope.citiesVisible;
-          }
-
+          $scope.timeOfDay = 'weather-' + getTimeOfDay();
           $scope.updateWeatherChart = function(city) {
             $scope.citiesVisible = false;
             $scope.city = city;
