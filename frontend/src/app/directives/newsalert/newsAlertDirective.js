@@ -4,9 +4,11 @@ app.directive('stiftenNewsAlert', function(){
     return {
         restrict: 'AEC',
         templateUrl: 'app/directives/newsalert/newsAlertTemplate.html',
-        controller : function($scope, $rootScope, localStorageService, Nodequeue, PreprocesArticle, dismissedFilter) {
+        controller : function($scope, $rootScope, localStorageService, Nodequeue, PreprocesArticle, dismissedFilter, $filter) {
           $scope.displayAlert = false;
           $scope.alertVisibility = 'alert-displayed';
+          //var date = Date.now();
+          $scope.hourIconClass = 'wi-time-' + $filter('date')(Date.now(), 'h');
           var alertArticles = localStorageService.get('alertArticles');
           var dismissedArticles = localStorageService.get('dismissedArticles');
           if (alertArticles !== null) {

@@ -1,6 +1,6 @@
 <div class="alert-wrapper" ng-repeat="alert in alertArticles" ng-class="[alertVisibility, alert.alertType]">
   <a class="alert-content" href ng-href="{{ alert.link | relativize }}">
-      <div class="alert-label">{{ alert.alertLabel }}</div>
+      <div class="alert-label"><span class="alert-icon wi" ng-class="hourIconClass"></span> {{ alert.alertLabel }}</div>
       <h2 class="alert-title">{{ alert.title }}</h2>
   </a>
   <a class="alert-closer icon-close" href ng-click="dismissAlert(alert)"></a>

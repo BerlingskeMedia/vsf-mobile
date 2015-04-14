@@ -1,4 +1,9 @@
+@keyframes pulsate {
+    from { opacity: 0;}
+    to {opacity: 1;}
+}
 .alert-wrapper {
+
   display: none;
   height: $alert-height;
   width: 100%;
@@ -44,6 +49,28 @@
     box-shadow: 0 1px 4px -2px #000;
     a {
       color: #fff;
+    }
+    .alert-label .alert-icon {
+      border-radius: 100%;
+      border: 1px solid #fff;
+      width: 12px;
+      height: 12px;
+      line-height: 1;
+      text-align: center;
+      vertical-align: middle;
+      margin-top: -2px;
+
+      &::before {
+        animation-name: pulsate;
+        animation-duration: .5s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        font-family: Arial;
+        font-size: 26px;
+        line-height: 10px;
+        content: '•';
+
+      }
     }
   }
 }
