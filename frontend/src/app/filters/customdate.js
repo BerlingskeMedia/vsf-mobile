@@ -16,7 +16,7 @@ app.filter('customdate', function($filter, config) {
       return diff + text + ' siden';
     }
     if (diff < config.timeAgoHourThreshold) {
-      var hours = Math.floor(diff / 60);
+      var hours = Math.ceil(diff / 60);
       var text = (hours==1) ? ' time' : ' timer';
       return hours + text + ' siden';
     }
