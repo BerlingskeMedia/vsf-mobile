@@ -2,7 +2,10 @@ var appConfig = {
     texts: {
 
     },
-    timeAgoThreshold: 15,
+    timeAgoNowThreshold: 2,
+    timeAgoMinuteThreshold: 59,
+    timeAgoHourThreshold: 119,
+    timeAgoDayThreshold: 119,
     weatherCities: ['Aarhus', 'Skanderborg', 'Odder', 'Favrskov'],
     weatherIcons: {
             'day': {
