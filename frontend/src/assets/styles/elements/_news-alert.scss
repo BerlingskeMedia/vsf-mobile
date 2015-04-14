@@ -69,6 +69,10 @@
         font-size: 28px;
         line-height: 10px;
         content: '•';
+        // Ugly hack to make the dot look right on desktop
+        html.no-touch & {
+          line-height: 11px;
+        }
       }
     }
   }
