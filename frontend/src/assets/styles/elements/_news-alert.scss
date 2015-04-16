@@ -5,9 +5,9 @@
 .alert-wrapper {
 
   display: none;
-  height: $alert-height;
+  min-height: $alert-height;
   width: 100%;
-  padding: 22px $side-margin;
+
   background: #f8f8f8;
   box-shadow: 0 1px 4px -2px #999;
   color: #212121;
@@ -22,6 +22,7 @@
   .alert-content {
     display: block;
     width: 100%;
+    padding: 22px $side-margin;
   }
   .alert-closer {
     flex: 0 0 40px;
@@ -29,19 +30,28 @@
     height: 40px;
     display: block;
     text-align: right;
-
+    margin-right: $side-margin;
+    margin-top: $side-margin;
   }
   .alert-label {
     font-size: 14px;
     font-weight: bold;
     font-family: $berlingske-sans;
     text-transform: uppercase;
+    color: $label-blue;
   }
   .alert-title {
     font-size: 14px;
     font-weight: normal;
     font-family: $berlingske-sans;
     margin-bottom: 0;
+    margin-top: 5px;
+  }
+  .alert-icon {
+    font-size: 19px;
+    line-height: 0.5;
+    display: inline-block;
+    margin-right: 2px;
   }
   &.alert-breaking {
     color: #fff;
@@ -50,11 +60,15 @@
     a {
       color: #fff;
     }
+    .alert-label {
+      color: #fff;
+      font-size: 16px;
+    }
     .alert-label .alert-icon {
       border-radius: 100%;
-      border: 1px solid #fff;
-      width: 12px;
-      height: 12px;
+      border: 2px solid #ddd;
+      width: 15px;
+      height: 15px;
       line-height: 1;
       text-align: center;
       vertical-align: middle;
