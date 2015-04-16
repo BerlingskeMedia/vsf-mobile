@@ -31,12 +31,14 @@ app.directive('stiftenWeather', function() {
             $scope.city = city;
             localStorageService.set('weather-city', $scope.city);
             var weather =  Weather.get({city: $scope.city});
+            var list = [];
             weather.$promise.then(function(){
               if (weather.cod == 200) {
                 //$scope.current = weather.list[0];
                 $scope.display = weather.city; 
                 $scope.list = [];
-                angular.forEach(weather.list.slice(0, 4), function(value, key) {
+                
+                angular.forEach(weather.list.slice(0, 5), function(value, key) {
 
                   // Determine if it's day or night time
                   var daytime = 'day';
@@ -65,8 +67,11 @@ app.directive('stiftenWeather', function() {
                     value.icon = 'wi-' + value.icon
                   }
 
-                  $scope.list.push(value);
+                  list.push(value);
                 });
+                $scope.now = list[0];
+                list.shift();
+                $scope.list = list;
 
               }
             });
