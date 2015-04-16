@@ -1,13 +1,5 @@
 .animate-view {
-transition: opacity .3s;
-}
-.animate-view.ng-enter, .animate-view.ng-leave {
-  
-}
-
-.animate-view.ng-enter {
-  //transform: rotateY(180deg);
-  
+  transition: opacity .3s;
 }
 
 .animate-view.ng-enter.ng-enter-active {
