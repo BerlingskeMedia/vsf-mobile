@@ -78,14 +78,13 @@
         animation-duration: .5s;
         animation-direction: alternate;
         animation-iteration-count: infinite;
-        font-family: Arial;
-        font-size: 28px;
-        line-height: 10px;
+        font-size: 24px;
+        top: -7px;
+        position: relative;
         content: '•';
-        // Ugly hack to make the dot look right on desktop
-        html.no-touch & {
-          line-height: 11px;
-        }
+        text-align: center;
+        display: block; 
+
       }
     }
   }
