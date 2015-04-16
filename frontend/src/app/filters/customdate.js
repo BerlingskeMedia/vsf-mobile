@@ -12,13 +12,12 @@ app.filter('customdate', function($filter, config) {
       return 'Lige nu';
     }
     if (diff < config.timeAgoMinuteThreshold) {
-      var text = (diff==1) ? ' minut' : ' minutter';
-      return diff + text + ' siden';
+      return diff + ' min.';
     }
     if (diff < config.timeAgoHourThreshold) {
       var hours = Math.ceil(diff / 60);
       var text = (hours==1) ? ' time' : ' timer';
-      return hours + text + ' siden';
+      return hours + text;
     }
     // Today
     if ($filter('date')(new Date(), 'M/d/yy') == $filter('date')(input, 'M/d/yy', '+0100')) {
