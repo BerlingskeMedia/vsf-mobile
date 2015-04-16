@@ -1,6 +1,6 @@
 <article ng-repeat="article in articles | limitTo: displayed : 0" class="header-article-list-article">
   <a class="article-content" href ng-href="{{ article.link | relativize }}">
-    <time class="publish-date"><span class="icon-time"></span> {{ article.pubDate | customdate }}</time>
+    <time class="publish-date"><span class="icon-time wi" ng-class="article.pubDate | iconize"></span> {{ article.pubDate | customdate }}</time>
     <h2>{{ article.title }}</h2>
   </a>
 </article>
