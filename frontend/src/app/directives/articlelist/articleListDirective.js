@@ -34,6 +34,29 @@ app.directive('stiftenLatestList', function() {
         scope: true,
         controller: function($scope, $attrs, Latest, localStorageService, $interval) {
           var id  = 0;
+          $scope.displayed = $attrs.items;
+          $scope.showExpandButton = false;
+          $scope.showAllLink = false;
+          $scope.expandButtonText = 'Vis flere';
+
+          if ('allLink' in $attrs) {
+            $scope.allLink = $attrs.allLink;
+          }
+          if ('allLinkText' in $attrs) {
+            $scope.allLinkText = $attrs.allLinkText;
+          }
+          if ('initial' in $attrs) {
+            $scope.displayed = $attrs.initial;
+            if ($attrs.initial != $attrs.items) {
+                $scope.showExpandButton = true;
+            }
+          }
+
+          $scope.showMore = function() {
+            $scope.displayed = $attrs.items;
+            $scope.showExpandButton = false;
+            $scope.showAllLink = true;
+          }
 
           // Get id from a parent controller
           if ('list' in $scope && 'id' in $scope.list) {
@@ -51,8 +74,7 @@ app.directive('stiftenLatestList', function() {
           }
           var latest =  Latest.get({id:id, items:$attrs.items, type:$attrs.type});
           latest.$promise.then(function(){
-            $scope.articles = latest.items;
-            localStorageService.set('articles-' + id + '-' + $attrs.items, $scope.articles);
+            localStorageService.set('articles-' + id + '-' + $attrs.items, latest.items);
           });
           $interval(function(){
             var latest =  Latest.get({id:id, items:$attrs.items, type:$attrs.type});
