@@ -1,3 +1,4 @@
 pushtoserver.sh
 frontend/dist
 varnish
+.idea/
