@@ -89,13 +89,14 @@
     }
   }
 }
+
 body.alerts-open-2 {
-  .outer-wrapper, .main-menu {
+  .outer-wrapper {
     margin-top: $alert-height * 2;
   }
 }
 body.alerts-open-1 {
-  .outer-wrapper, .main-menu {
+  .outer-wrapper {
     margin-top: $alert-height;
   }
 }
