@@ -20,6 +20,7 @@ body.cookie-consent-visible .site-header {
   height: $header-height + $cookie-consent-height;
 }
 .header-wrapper {
+  z-index: 80;
   padding: 8px $side-margin 0;
   border-bottom: 1px solid #b2b2b2;
   padding-bottom: 5px;

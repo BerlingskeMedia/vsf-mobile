@@ -2,12 +2,17 @@
     from { opacity: 0;}
     to {opacity: 1;}
 }
+.alerts {
+  position: fixed;
+  top: $header-height;
+  z-index: 20;
+  width: 100%;
+}
 .alert-wrapper {
 
   display: none;
   min-height: $alert-height;
   width: 100%;
-
   background: #f8f8f8;
   box-shadow: 0 1px 4px -2px #999;
   color: #212121;
@@ -83,11 +88,14 @@
         position: relative;
         content: '•';
         text-align: center;
-        display: block; 
+        display: block;
 
       }
     }
   }
+}
+body.cookie-consent-visible .alerts {
+  top: $header-height + $cookie-consent-height;
 }
 
 body.alerts-open-2 {
@@ -100,7 +108,7 @@ body.alerts-open-1 {
     margin-top: $alert-height;
   }
 }
-body.alerts-open-0 .outer-wrapper {
+body.alerts-open-0 {
   .outer-wrapper, .main-menu {
     margin-top: 0;
   }
