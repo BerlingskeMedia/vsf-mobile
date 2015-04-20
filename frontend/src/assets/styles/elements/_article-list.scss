@@ -2,8 +2,12 @@
 .header-article-list, .image-article-list, .most-popular-article-list {
   margin: 0 $side-margin;
   padding-top: 6px;
+0  margin-bottom: 40px;
   article {
     @include list-article();
+  }
+  article:last-child {
+    border-bottom: none;
   }
 
   .article-content {
