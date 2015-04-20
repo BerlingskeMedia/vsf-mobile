@@ -16,7 +16,7 @@ app.controller('StoryController', function ($scope, $rootScope, ContentItemByPat
   }
 
   // secondly we get it from the server.
-  var content =  ContentItemByPath.get({tag:$routeParams.tag, id:$routeParams.articleid});
+  var content =  ContentItemByPath.get({tag:$routeParams.tag, id:$routeParams.articleid, imagesize: '650x'});
   content.$promise.then(function(){
     $scope.story = content.items[0];
     localStorageService.set($routeParams.tag + '/' + $routeParams.articleid, $scope.story);

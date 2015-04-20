@@ -2,6 +2,7 @@ var appConfig = {
     texts: {
 
     },
+    defaultImageSize: '866x487-c',
     timeAgoNowThreshold: 2,
     timeAgoMinuteThreshold: 59,
     timeAgoHourThreshold: 119,
