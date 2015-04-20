@@ -1,8 +1,7 @@
 
 <article ng-repeat="article in articles" class="gallery-article-list-article">
   
-    <a class="article-content" href ng-href="{{ article.link | relativize }}">
-      <img ng-src="{{ article[1].attributes.url }}" />
+    <a class="article-content" href ng-href="{{ article.link | relativize }}" style="background-image: url('{{ article[1].attributes.url }}');">
       <div class="gallery-text-wrapper">
         <div class="image-counter">
           <span class="icon-images"></span>

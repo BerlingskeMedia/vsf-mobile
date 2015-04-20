@@ -225,9 +225,17 @@
   margin-bottom: 40px;
   article {
     margin: 15px $side-margin 0;
-    position: relative;
-    img {
+    min-height: 280px;
+    a {
+      display: block;
+      width: 100%;
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
       vertical-align: bottom;
+      height: 280px;
+      box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.7);
     }
   }
   .gallery-text-wrapper {
