@@ -4,7 +4,9 @@
   <time class="publish-date">{{ story.pubDate | date:"dd MMM yyyy HH:mm"}}</time>
 </div>
 <h4 class="subheader">{{ story.description }}</h4>
-<figure class="gallery-image-wrapper" ng-repeat="image in story.images">
-  <img ng-src="{{ image.src }}" alt />
-  <figcaption>{{ image.caption }}</figcaption>
-</figure>
+<div class="gallery-images">
+  <figure class="gallery-image-wrapper" ng-repeat="image in story.images">
+    <img ng-src="{{ image.src }}" alt />
+    <figcaption>{{ image.caption }}</figcaption>
+  </figure>
+</div>

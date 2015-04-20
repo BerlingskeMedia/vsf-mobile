@@ -1,12 +1,24 @@
 .page-gallery-page {
   .main-container {
+    .gallery-images {
+      background: #1f1f1f;
+    }
     figure {
       padding: 0;
+      padding-bottom: 30px;
+      margin-bottom: 0px;
       figcaption {
+        color: #e1e1e1;
         margin-left: $side-margin;
         margin-right: $side-margin;
         font-family: $berlingske-sans;
         font-size: 13px;
+        margin-top: 10px;
+        line-height: 18px;
+        &:before {
+          content: none;
+          display: none;
+        }
       }
     }
   }
