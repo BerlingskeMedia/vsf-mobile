@@ -5,6 +5,7 @@
 .alerts {
   position: fixed;
   top: $header-height;
+  max-width: $page-max-width;
   z-index: 20;
   width: 100%;
 }
