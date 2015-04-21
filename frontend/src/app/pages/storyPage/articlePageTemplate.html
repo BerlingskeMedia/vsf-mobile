@@ -5,7 +5,7 @@
 <h4 class="subheader">{{ story.description }}</h4>
 <figure class="article-image-wrapper" ng-show="story[1].attributes.url">
   <img ng-src="{{ story[1].attributes.url }}" alt />
-  <figcaption>{{ story[1].attributes.desc }}</figcaption>
+  <figcaption ng-if="story[1].attributes.desc">{{ story[1].attributes.desc }}</figcaption>
 </figure>
 <div berl-emediate cu="28269" tag="article"></div>
 <div class="byline-wrapper">

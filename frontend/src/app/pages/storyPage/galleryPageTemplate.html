@@ -7,6 +7,10 @@
 <div class="gallery-images">
   <figure class="gallery-image-wrapper" ng-repeat="image in story.images">
     <img ng-src="{{ image.src }}" alt />
-    <figcaption>{{ image.caption }}</figcaption>
+    <figcaption>
+      <div class="counter">{{ $index+1 }} / {{ story.images | propertyCounter }}</div>
+      <div class="caption">{{ image.caption }}</div>
+      <div ng-if="image.author" class="byline"><span class="byline-label">Foto: </span>{{ image.author }}</div>
+    </figcaption>
   </figure>
 </div>

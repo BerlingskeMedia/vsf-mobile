@@ -38,10 +38,20 @@
   font-style: normal;
 }
 
+h1 {
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 10px 0;
+}
+h4 {
+  margin-top: 0px;
+}
 a {
   color: $header-color;
 }
-
+p {
+  margin-top: 0;
+}
 .publish-date, .label, .search-stats, .meta-wrapper-search {
   font-family: $berlingske-sans;
 
@@ -54,14 +64,27 @@ a {
   }
 }
 .subheader {
-  color: #868585;
-  font-size: 20px;
+  color: #565656;
+  font-size: 16px;
   font-weight: normal;
-  line-height: 28px;
+  line-height: 1.25;
 }
+
+
 .article-body {
   font-size: 18px;
   line-height: 26px;
+  color: #242424;
+  // Mellem-rubrikker
+  h2 {
+    margin-bottom: 2px;
+    font-size: 20px;
+  }
+}
+figcaption {
+  font-family: $berlingske-sans;
+  font-size: 13px;
+  line-height: 18px;
 }
 h3.section-header {
   font-family: $berlingske-sans;

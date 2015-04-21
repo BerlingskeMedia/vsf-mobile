@@ -7,18 +7,25 @@
       padding: 0;
       padding-bottom: 30px;
       margin-bottom: 0px;
+      .counter {
+        border-bottom: 1px solid #464646;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+      }
       figcaption {
         color: #e1e1e1;
         margin-left: $side-margin;
         margin-right: $side-margin;
-        font-family: $berlingske-sans;
-        font-size: 13px;
-        margin-top: 10px;
-        line-height: 18px;
+        margin-top: 5px;
         &:before {
           content: none;
           display: none;
         }
+      }
+      .byline {
+        font-size: 10px;
+        color: #848484;
+        text-transform: uppercase;
       }
     }
   }
