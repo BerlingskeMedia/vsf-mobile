@@ -1,10 +1,14 @@
 .story-wrapper {
+  padding-top: 20px;
   .meta-wrapper, h1, .byline-wrapper, .subheader, .article-body {
     margin-left: $side-margin;
     margin-right: $side-margin;
   }
   .embedded-article {
 
+  }
+  h1 {
+    font-size: 32px;
   }
   figure {
     margin: 0;

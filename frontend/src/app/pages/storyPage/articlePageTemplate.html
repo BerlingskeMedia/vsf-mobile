@@ -1,15 +1,14 @@
-<div berl-emediate cu="28269" tag="article"></div>
 <div class="meta-wrapper">
-  <a class="label" href>{{ story.category }}</a>
+  <a class="label" href>{{ story.category }}</a>·<time class="publish-date">{{ story.pubDate | date:"dd MMM yyyy HH:mm"}}</time>
 </div>
 <h1>{{ story.title }}</h1>
+<h4 class="subheader">{{ story.description }}</h4>
 <figure class="article-image-wrapper" ng-show="story[1].attributes.url">
   <img ng-src="{{ story[1].attributes.url }}" alt />
   <figcaption>{{ story[1].attributes.desc }}</figcaption>
 </figure>
+<div berl-emediate cu="28269" tag="article"></div>
 <div class="byline-wrapper">
-  <div class="byline">{{ story.author }}</div>
-  <time class="publish-date">{{ story.pubDate | date:"dd MMM yyyy HH:mm"}}</time>
+  <div ng-if="story.author" class="byline">Af: {{ story.author }}</div>
 </div>
-<h4 class="subheader">{{ story.description }}</h4>
 <div class="article-body" ng-bind-html="story['content']"></div>
