@@ -4,7 +4,7 @@ app.directive('stiftenNewsAlert', function(){
     return {
         restrict: 'AEC',
         templateUrl: 'app/directives/newsalert/newsAlertTemplate.html',
-        controller : function($scope, $rootScope, localStorageService, Nodequeue, PreprocesArticle, dismissedFilter, $filter) {
+        controller : function($scope, $rootScope, localStorageService, Nodequeue, PreprocesAlertArticle, dismissedFilter, $filter) {
           $scope.displayAlert = false;
           $scope.alertVisibility = 'alert-displayed';
           //var date = Date.now();
@@ -21,7 +21,7 @@ app.directive('stiftenNewsAlert', function(){
 
               // Here we traverse to extract presentation-tags.
               for (var i=0; i < nodequeue.items.length; i++) {
-                nodequeue.items[i] = PreprocesArticle(nodequeue.items[i]);
+                nodequeue.items[i] = PreprocesAlertArticle(nodequeue.items[i]);
               }
 
               $scope.alertArticles = dismissedFilter(nodequeue.items);

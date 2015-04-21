@@ -1,6 +1,6 @@
 'use strict';
 
-app.factory('PreprocesArticle', function() {
+app.factory('PreprocesAlertArticle', function() {
   return function(item) {
     for (var x=0; x < item.fields.length; x++) {
       if (item.fields[x].attributes.keys == 'p_tag') {
@@ -18,7 +18,5 @@ app.factory('PreprocesArticle', function() {
       }
     }
     return item;
-
   }
-
 });

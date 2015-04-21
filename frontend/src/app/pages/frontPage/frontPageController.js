@@ -4,7 +4,7 @@
 
 
 // TODO: This should be a directive to put on ng-view instead!
-app.controller('FrontpageController', function ($scope, $rootScope,  Nodequeue, $location, localStorageService, PreprocesArticle) {
+app.controller('FrontpageController', function ($scope, $rootScope,  Nodequeue, $location, localStorageService, PreprocesAlertArticle) {
 
   $rootScope.pageTypeClass = 'page-front-page';
 
@@ -22,7 +22,7 @@ app.controller('FrontpageController', function ($scope, $rootScope,  Nodequeue, 
   var nodequeue =  Nodequeue.get({id:1011, items:20});
   nodequeue.$promise.then(function(){
     $scope.frontpageArticles = nodequeue.items;
-    $scope.frontpageArticles[0] = PreprocesArticle($scope.frontpageArticles[0]);
+    $scope.frontpageArticles[0] = PreprocesAlertArticle($scope.frontpageArticles[0]);
     localStorageService.set('frontpageArticles', $scope.frontpageArticles);
   });
 });
