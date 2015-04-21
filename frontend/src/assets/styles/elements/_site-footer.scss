@@ -37,6 +37,11 @@
 
 .footer-links {
   padding: 0px $side-margin;
+  .coorp-berl-media {
+    max-width: 200px;
+    display: block;
+    margin: 10px 0;
+  }
   a {
     display: block;
     padding: 10px 0;
@@ -47,6 +52,10 @@
   }
 }
 .footer-coorp {
+  @include clearfix();
+  a {
+    float: left;
+  }
   img {
     height: 43px;
     width: auto;
