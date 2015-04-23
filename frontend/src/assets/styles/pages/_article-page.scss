@@ -52,4 +52,50 @@
     font-weight: bold;
     content: 'Læs også: ';
   }
+  .article-related {
+    ul {
+      list-style-type: none;
+      margin: 0 $side-margin;
+      padding: 0;
+    }
+    li {
+      @include clearfix();
+      margin-top: 3px;
+      margin-left: 3px;
+      padding-left: 8px;
+      border-left: 1px solid #b2b2b2;
+      border-top: 1px solid #fff;
+      &:last-child {
+        border-left-style: dotted;
+      };
+    }
+    time {
+      display: block;
+      margin-bottom: 5px;
+      margin-top: -5px;
+      font-size: 13px;
+      font-weight: 400;
+      color: #353535;
+      &::before {
+        content: ' ';
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        border-radius: 100%;
+        background: #fff;
+        border: 1px solid #636363;
+        margin-right: 5px;
+        margin-left: -13px;
+      }
+    }
+    h4 {
+      margin-bottom: 16px;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    a {
+      color: $label-blue;
+    }
+  }
 }

@@ -12,4 +12,17 @@
   <div ng-if="story.author" class="byline">Af: {{ story.author }}</div>
 </div>
 <div class="article-body" ng-bind-html="story['content']"></div>
-<div ng-if="story.factObject" class="factbox">{{ story.factObject || json }}</div>
+<div stiften-fact-box ng-if="story.factId" class="factbox" fact-id="{{ story.factId }}"></div>
+<div ng-if="story.relatedStories" class="article-related">
+  <ul>
+    <li ng-repeat="related in (filteredItems = (story.relatedStories | orderBy : '-pubDate')) | limitTo: displayed">
+      <time class="publish-date">{{ related.pubDate | customdate }}</time>
+      <h4 class="related-title">
+        <a ng-href="{{ related.link | relativize }}">
+          {{ related.title }}
+        </a>
+      </h4>
+    </li>
+  </ul>
+  <button ng-hide="displayed == story.relatedStories.length" href ng-click="showMore();">Vis alle {{ displayed }} - {{ story.relatedStories.length }}</button>
+</div>

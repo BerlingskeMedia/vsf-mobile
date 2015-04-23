@@ -23,6 +23,11 @@ app.controller('StoryController', function ($scope, $rootScope, ContentItemByPat
     localStorageService.set($routeParams.tag + '/' + $routeParams.articleid, $scope.story);
   });
 
+  $scope.displayed = 3;
+  $scope.showMore = function() {
+    $scope.displayed = $scope.story.relatedStories.length;
+  }
+
 
   // When we have the story we set the matchnig template
   // Inspired by: http://blog.freeside.co/2013/02/11/dynamic-templates-in-angular-routes/
