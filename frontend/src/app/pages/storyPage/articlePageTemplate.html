@@ -12,3 +12,4 @@
   <div ng-if="story.author" class="byline">Af: {{ story.author }}</div>
 </div>
 <div class="article-body" ng-bind-html="story['content']"></div>
+<div ng-if="story.factObject" class="factbox">{{ story.factObject || json }}</div>

@@ -2,7 +2,7 @@
 
 'use strict';
 
-app.controller('StoryController', function ($scope, $rootScope, ContentItemByPath, $routeParams, localStorageService) {
+app.controller('StoryController', function ($scope, $rootScope, ContentItemByPath, $routeParams, localStorageService, PreprocesAlertArticle, PreprocesArticle) {
 
   $rootScope.pageTypeClass = 'page-story-page';
 
@@ -18,11 +18,13 @@ app.controller('StoryController', function ($scope, $rootScope, ContentItemByPat
   // secondly we get it from the server.
   var content =  ContentItemByPath.get({tag:$routeParams.tag, id:$routeParams.articleid, imagesize: '650x'});
   content.$promise.then(function(){
-    $scope.story = content.items[0];
+    $scope.story = PreprocesAlertArticle(content.items[0]);
+    PreprocesArticle($scope);
     localStorageService.set($routeParams.tag + '/' + $routeParams.articleid, $scope.story);
   });
 
-  // When we have the story we set the matchnig template 
+
+  // When we have the story we set the matchnig template
   // Inspired by: http://blog.freeside.co/2013/02/11/dynamic-templates-in-angular-routes/
   $scope.$watch('story', function() {
     if ('story' in $scope && 'content_type' in $scope.story) {
