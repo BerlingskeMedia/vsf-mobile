@@ -5,10 +5,13 @@
     margin-right: $side-margin;
   }
   .article-body {
-    padding-top: 10px;
+
   }
   .embedded-article {
 
+  }
+  .meta-wrapper.dates {
+    margin-bottom: 10px;
   }
   h1 {
     font-size: 32px;
@@ -53,7 +56,7 @@
     }
   }
   .byline-wrapper {
-    padding-top: 20px;
+    padding-top: 15px;
     font-family: $berlingske-sans;
     font-size: 13px;
     border-top: 1px solid #d7d7d7;
@@ -62,17 +65,35 @@
     & > * {
       margin-bottom: 2px;
     }
-    margin-bottom: 16px;
+    margin-bottom: 10px;
+  }
+  .embedded-article {
+    color: $label-blue;
   }
   .embedded-article::before {
     font-weight: bold;
+    display: block;
     content: 'Læs også: ';
+    color: #242424;
+  }
+  ul.tags {
+    margin: 0 $side-margin;
+    li {
+      display: inline-block;
+    }
+    .tag-link {
+      @include buttonize();
+      padding-left: 14px;
+      padding-right: 14px;
+      background: #f0f0f0;
+      border: none;
+      color: #6f6f6f;
+      margin-right: 10px;
+    }
   }
   .article-related {
     ul {
-      list-style-type: none;
       margin: 0 $side-margin;
-      padding: 0;
     }
     li {
       @include clearfix();
@@ -80,15 +101,17 @@
       margin-left: 3px;
       padding-left: 8px;
       border-left: 1px solid #d2d2d2;
-      border-top: 1px solid #fff;
+      border-top: 1px solid transparent;
       &:last-child {
-        border-left-style: dotted;
+        border-left-style: dashed;
+        border-left-color: #c2c2c2;
       };
     }
     ul.all-shown {
       margin-bottom: 40px;
       li:last-child {
         border-left-style: solid;
+        border-left-color: #d2d2d2;
       }
     }
     time {

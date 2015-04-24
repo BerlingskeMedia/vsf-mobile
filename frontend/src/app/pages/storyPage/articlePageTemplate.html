@@ -18,13 +18,19 @@
 <div class="byline-wrapper">
   <div ng-if="story.author" class="byline">Af: {{ story.author }}</div>
 </div>
-<div class="meta-wrapper">
+<div class="meta-wrapper dates">
   <time class="publish-date">{{ story.pubDate | date:"dd MMM yyyy HH:mm"}}</time>
   <time class="publish-date update-date" ng-if="story.updated">Opdateret: {{ story.updated | date:"dd MMM yyyy HH:mm"}}</time>
 </div>
 <div class="article-body" ng-bind-html="story['content']"></div>
 <div stiften-fact-box ng-if="story.factId" class="factbox" fact-id="{{ story.factId }}"></div>
 <h2 class="article-section-header">Mere om denne historie</h2>
+<ul class="tags">
+  <li ng-repeat="tag in story.tags">
+    <a href class="tag-link" ng-href="tag">{{ tag.value }}</a>
+  </li>
+</ul>
+
 <div ng-if="story.relatedStories" class="article-related">
   <ul ng-class="{ 'all-shown': displayed == story.relatedStories.length}">
     <li ng-repeat="related in (filteredItems = (story.relatedStories | orderBy : '-pubDate')) | limitTo: displayed">

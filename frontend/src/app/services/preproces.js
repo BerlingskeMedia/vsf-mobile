@@ -18,6 +18,12 @@ app.factory('PreprocesAlertArticle', function() {
             item.alertLabel = 'Netop nu';
           }
         }
+        if (item.fields[x].attributes.keys == 'tag') {
+          if (!('tags' in item)) {
+            item.tags = [];
+          }
+          item.tags.push(item.fields[x]);
+        }
       }
     }
     return item;
