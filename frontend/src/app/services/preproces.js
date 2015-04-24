@@ -31,7 +31,7 @@ app.factory('PreprocesAlertArticle', function() {
 });
 
 
-app.factory('PreprocesArticle', function(ContentItemById, localStorageService, $sce) {
+app.factory('PreprocesArticle', function(localStorageService, $sce) {
   return function(scope) {
     // Always trust html, so video tags do not get stripped.
     scope.story.content = $sce.trustAsHtml(scope.story.content);

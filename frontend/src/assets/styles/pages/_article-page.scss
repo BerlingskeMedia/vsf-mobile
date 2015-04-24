@@ -16,7 +16,14 @@
   h1 {
     font-size: 32px;
   }
-  
+  .factbox {
+    margin: 0 $side-margin 40px;
+    background: #f4f4f4;
+    font-family: $berlingske-sans;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
   h2.article-section-header {
     font-family: $berlingske-sans;
     color: #3b3b3b;
@@ -88,6 +95,7 @@
       background: #f0f0f0;
       border: none;
       color: #6f6f6f;
+      margin: 0 auto 20px;
       margin-right: 10px;
     }
   }

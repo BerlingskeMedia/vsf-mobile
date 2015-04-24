@@ -23,7 +23,7 @@
   <time class="publish-date update-date" ng-if="story.updated">Opdateret: {{ story.updated | date:"dd MMM yyyy HH:mm"}}</time>
 </div>
 <div class="article-body" ng-bind-html="story['content']"></div>
-<div stiften-fact-box ng-if="story.factId" class="factbox" fact-id="{{ story.factId }}"></div>
+<div stiften-factbox ng-if="story.factId" class="factbox" fact-id="{{ story.factId }}"></div>
 <h2 class="article-section-header">Mere om denne historie</h2>
 <ul class="tags">
   <li ng-repeat="tag in story.tags">
