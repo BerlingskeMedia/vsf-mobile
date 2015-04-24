@@ -78,6 +78,12 @@
         border-left-style: dotted;
       };
     }
+    ul.all-shown {
+      margin-bottom: 40px;
+      li:last-child {
+        border-left-style: solid;
+      }
+    }
     time {
       display: block;
       margin-bottom: 5px;

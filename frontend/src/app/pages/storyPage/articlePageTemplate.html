@@ -15,7 +15,7 @@
 <div stiften-fact-box ng-if="story.factId" class="factbox" fact-id="{{ story.factId }}"></div>
 <h2 class="article-section-header">Mere om denne historie</h2>
 <div ng-if="story.relatedStories" class="article-related">
-  <ul>
+  <ul ng-class="{ 'all-shown': displayed == story.relatedStories.length}">
     <li ng-repeat="related in (filteredItems = (story.relatedStories | orderBy : '-pubDate')) | limitTo: displayed">
       <time class="publish-date">{{ related.pubDate | customdate }}</time>
       <h4 class="related-title">
@@ -25,5 +25,5 @@
       </h4>
     </li>
   </ul>
-  <button ng-hide="displayed == story.relatedStories.length" href ng-click="showMore();">Vis alle {{ displayed }} - {{ story.relatedStories.length }}</button>
+  <button ng-hide="displayed == story.relatedStories.length" href ng-click="showMore();">Vis alle</button>
 </div>
