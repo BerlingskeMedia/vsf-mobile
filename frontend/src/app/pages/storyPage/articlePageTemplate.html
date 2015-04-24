@@ -13,6 +13,7 @@
 </div>
 <div class="article-body" ng-bind-html="story['content']"></div>
 <div stiften-fact-box ng-if="story.factId" class="factbox" fact-id="{{ story.factId }}"></div>
+<h2 class="article-section-header">Mere om denne historie</h2>
 <div ng-if="story.relatedStories" class="article-related">
   <ul>
     <li ng-repeat="related in (filteredItems = (story.relatedStories | orderBy : '-pubDate')) | limitTo: displayed">
