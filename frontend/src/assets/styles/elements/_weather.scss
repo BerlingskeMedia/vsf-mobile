@@ -7,20 +7,17 @@
     padding: 2px 0;
   }
   .weather-wrapper.weather-day {
-    background: linear-gradient(0deg, #bee0e9, #229dc5);
+    background: linear-gradient(0deg, #c9e0f1, #0275a9);
   }
   .weather-wrapper.weather-evening {
-    background: linear-gradient(0deg, #e8beb2, #9882ad 30%, #212769);
+    background: linear-gradient(0deg, #bf959f, #0b215b);
   }
   .weather-wrapper.weather-night {
-    background: linear-gradient(0deg, #bee0e9, #229dc5);
+    background: linear-gradient(0deg, #35597b, #0c2840);
   }
   .weather-wrapper.weather-morning {
-    background: linear-gradient(0deg, #bee0e9, #229dc5);
+    background: linear-gradient(0deg, #f9e9c0, #a2bbcf);
   }
-  //linear-gradient(0deg, rgba(0,0,0, 0.8), rgba(0,0,0, 0.1) );
-
-
 
   input {
      background: transparent;
