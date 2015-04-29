@@ -2,6 +2,7 @@ var appConfig = {
     texts: {
 
     },
+    chartbeatApikey: 'c3624866ca79af3601812dbe1eb517f4',
     defaultImageSize: '866x487-c',
     timeAgoNowThreshold: 2,
     timeAgoMinuteThreshold: 59,

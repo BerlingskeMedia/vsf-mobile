@@ -1,6 +1,26 @@
 'use strict';
 
 
+// This directive gets contents from Chartbeat
+app.directive('stiftenChartbeatList', function() {
+    return {
+        restrict: 'AEC',
+        scope: true,
+        templateUrl: 'app/directives/articlelist/mostPopularArticleListTemplate.html',
+        controller: function($scope, $attrs, Chartbeat) {
+
+          var chartbeat =  Chartbeat.get({});
+          chartbeat.$promise.then(function(){
+
+
+            $scope.articles = chartbeat.pages;
+
+          });
+        }
+      }
+});
+
+
 // This directive gets contents from Nodequeue service
 app.directive('stiftenNodequeueList', function() {
     return {
@@ -136,15 +156,6 @@ app.directive('stiftenFeaturedArticleList', function() {
     return {
         restrict: 'AEC',
         templateUrl: 'app/directives/articlelist/featuredArticleListTemplate.html',
-        scope: true
-    };
-});
-
-// This directive just sets a template
-app.directive('stiftenMostPopularArticleList', function() {
-    return {
-        restrict: 'AEC',
-        templateUrl: 'app/directives/articlelist/mostPopularArticleListTemplate.html',
         scope: true
     };
 });
