@@ -32,7 +32,7 @@
 </ul>
 
 <div ng-if="story.relatedStories" class="article-related">
-  <ul ng-class="{ 'all-shown': displayed == story.relatedStories.length}">
+  <ul ng-class="{ 'all-shown': displayed >= story.relatedStories.length}">
     <li ng-repeat="related in (filteredItems = (story.relatedStories | orderBy : '-pubDate')) | limitTo: displayed">
       <time class="publish-date">{{ related.pubDate | customdate }}</time>
       <h4 class="related-title">
@@ -42,5 +42,5 @@
       </h4>
     </li>
   </ul>
-  <button ng-hide="displayed == story.relatedStories.length" href ng-click="showMore();">Vis alle</button>
+  <button ng-hide="displayed >= story.relatedStories.length" href ng-click="showMore();">Vis alle</button>
 </div>
