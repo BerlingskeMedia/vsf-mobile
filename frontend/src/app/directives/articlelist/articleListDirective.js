@@ -7,15 +7,37 @@ app.directive('stiftenChartbeatList', function() {
         restrict: 'AEC',
         scope: true,
         templateUrl: 'app/directives/articlelist/mostPopularArticleListTemplate.html',
-        controller: function($scope, $attrs, Chartbeat) {
-
+        controller: function($scope, $attrs, Chartbeat, $interval) {
+          
+          $scope.filterArticles = function(pages) {
+            var filteredPages = [];
+            angular.forEach(pages, function(value, key){
+              // Filter non-articles based on URL
+              if ((value.path.split("/").length > 2) && value.title.length > 0) {
+                filteredPages.push(value);
+                var splitTitle = value.title.split(" - ");
+                splitTitle.pop();
+                value.title = splitTitle.join(' - ');
+              }
+            });
+            return filteredPages;
+          }
           var chartbeat =  Chartbeat.get({});
           chartbeat.$promise.then(function(){
 
 
-            $scope.articles = chartbeat.pages;
+            $scope.articles = $scope.filterArticles(chartbeat.pages);
 
           });
+          $interval(function(){
+            var chartbeat =  Chartbeat.get({});
+            chartbeat.$promise.then(function(){
+
+
+              $scope.articles = $scope.filterArticles(chartbeat.pages);
+
+            });
+          }, 3000);
         }
       }
 });
