@@ -42,21 +42,21 @@
     }
   }
   ul.weather-items {
-
-    padding: 0 $side-margin;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-
+    white-space:nowrap;
+    padding: 0 $side-margin 16px;
+    margin-bottom: 0px;
+    overflow-x: auto;
+    display: block;
     width: 100%;
 
     li {
+      display: inline-block;
       list-style: none;
-       flex-grow: 0;
-       text-align: center;
+      width: 25%;
+      text-align: center;
     }
     time {
-      text-align: left;
+      text-align: center;
       font-size: 22px;
       margin-bottom: 10px;
       display: block;
