@@ -1,5 +1,5 @@
 <div class="weather-wrapper" ng-class="timeOfDay">
-  <h1>Østjylland lige nu: <span class="weather-temp">{{ now.main.temp | number:0 }}°</span> <i class="wi header-weather-icon" ng-class="now.icon"></i></h1>
+  <h1>Østjylland <span class="weather-temp">{{ now.main.temp | number:0 }}°</span> <i class="wi header-weather-icon" ng-class="now.icon"></i></h1>
   <ul class="weather-items">
     <li class="weather-item" ng-repeat="item in list">
       <time>{{ item.dt * 1000  | date: "HH:mm" }}</time>
