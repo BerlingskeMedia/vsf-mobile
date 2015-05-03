@@ -1,4 +1,4 @@
-<article ng-repeat="article in articles | limitTo: 5 track by article.path" class="image-article-list-article" ng-style="{ 'top' : ($index * 75) + 'px' }">
+<article ng-repeat="article in articles | limitTo: 5 track by article.path" class="image-article-list-article" ng-style="{ 'transform' : 'translateY(' + ($index * 75) + 'px)' }">
   <a href ng-href="{{ article.path }}">  
     <div class="counter">{{ $index+1 }}</div>
     <h2>{{ article.title }}</h2>
