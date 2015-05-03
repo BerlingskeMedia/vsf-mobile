@@ -38,7 +38,7 @@ app.directive('stiftenWeather', function() {
                 $scope.display = weather.city; 
                 $scope.list = [];
                 
-                angular.forEach(weather.list.slice(0, 5), function(value, key) {
+                angular.forEach(weather.list.slice(0, 9), function(value, key) {
 
                   // Determine if it's day or night time
                   var daytime = 'day';
