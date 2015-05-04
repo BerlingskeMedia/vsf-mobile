@@ -4,12 +4,13 @@
 
 
 // TODO: This should be a directive to put on ng-view instead!
-app.controller('FrontpageController', function ($scope, $rootScope,  Nodequeue, $location, localStorageService, PreprocesAlertArticle) {
+app.controller('FrontpageController', function ($scope, $rootScope,  Nodequeue, $location, localStorageService, PreprocesAlertArticle, config) {
 
   $rootScope.pageTypeClass = 'page-front-page';
+  var queueId = config.frontpageQueueId;
+  var items = config.frontpageItems;
 
-
-  var frontpageArticles = localStorageService.get('frontpageArticles');
+  var frontpageArticles = localStorageService.get('articles-' + queueId + '-' + items);
   if (frontpageArticles !== null) {
     $scope.frontpageArticles = frontpageArticles;
   }
@@ -23,6 +24,6 @@ app.controller('FrontpageController', function ($scope, $rootScope,  Nodequeue, 
   nodequeue.$promise.then(function(){
     $scope.frontpageArticles = nodequeue.items;
     $scope.frontpageArticles[0] = PreprocesAlertArticle($scope.frontpageArticles[0]);
-    localStorageService.set('frontpageArticles', $scope.frontpageArticles);
+    localStorageService.set('articles-' + queueId + '-' + items, $scope.frontpageArticles);
   });
 });

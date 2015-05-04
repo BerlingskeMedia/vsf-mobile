@@ -54,7 +54,7 @@ var app = angular
         })
         .when('/:tag/:articleid', {
             // We use this hack to load different template based on Bond content types.
-            template: '<article class="story-wrapper" ng-include="templateUrl"></article>',
+            template: '<article ng-include="templateUrl"></article>',
             controller: 'StoryController'
         })
         .when('/:tag', {
