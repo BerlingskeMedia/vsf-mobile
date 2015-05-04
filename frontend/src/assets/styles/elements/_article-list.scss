@@ -209,7 +209,15 @@
 .editorial-article-list {
   margin-bottom: 40px;
   article {
-    margin-top: 70px;
+    margin-top: 0px;
+
+  }
+  .section-header.section-header-editorial {
+    padding-left: $side-margin;
+    padding-right: $side-margin;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
   }
   .label {
     font-family: $berlingske-sans;
@@ -224,16 +232,6 @@
     font-size: 15px;
     color: #7b7b7b;
   }
-  article a {
-    background: #f2f2f2;
-
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    align-items: stretch;
-    width: 100%;
-    padding-bottom: 10px;
-  }
   h2 {
     font-family: $berlingske-text;
     color: #333;
@@ -241,35 +239,33 @@
     font-style: italic;
     font-weight: normal;
     margin-top: 0px;
-    margin-left: $side-margin;
-    margin-right: 0;
-
+    margin-right: 0px;
     margin-bottom: 0px;
-    padding: 10px $side-margin 10px 0;
+    padding: 10px 0 10px 0;
   }
-  article .img-div {
-    flex: 0 0 85px;
-    width: 85px;
-    height: 85px;
-    align-self: flex-start;
-    border-radius: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-top: -15px;
-    border: 1px solid #b2b2b2;
-    margin-left: 0;
-    margin-right: $side-margin;
-  }
-  .meta-wrapper {
-    margin: 15px 0 0 $side-margin;
+  article a {
+    background: #f2f2f2;
     display: block;
     width: 100%;
-    align-self: flex-start;
-    border-bottom: 1px solid #b2b2b2;
-    padding-bottom: 10px;
-    padding-right: 6px;
+    padding: 0 $side-margin;
+    @include clearfix();
   }
+
+  .editorial-image-wrapper {
+    padding-left: 5%;
+    width: 45%;
+    float: left;
+  }
+  .editorial-image {
+    height: auto;
+    vertical-align: bottom;
+  }
+  .text-wrapper {
+    margin-left: $side-margin;
+    width: 50%;
+    float: left;
+  }
+
 }
 /* GALLERY ARTICLE LIST ITEM */
 .gallery-article-list {
