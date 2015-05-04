@@ -9,6 +9,26 @@ app.directive('stiftenChartbeatList', function() {
         templateUrl: 'app/directives/articlelist/mostPopularArticleListTemplate.html',
         controller: function($scope, $attrs, Chartbeat, $interval) {
 
+          $scope.items = 10;
+          $scope.expandButtonText = 'Vis flere';
+
+          if ('items' in $attrs) {
+            $scope.displayedItems = $attrs.items;
+          }
+          $scope.showExpandButton = true;
+          if ('initial' in $attrs) {
+            $scope.initialItems = $attrs.initial;
+            $scope.displayedItems = $attrs.initial;
+            if ($attrs.initial != $scope.items) {
+                $scope.showExpandButton = true;
+            }
+          }
+          $scope.showMore = function() {
+            $scope.displayedItems = $scope.items;
+            $scope.showExpandButton = false;
+          }
+
+
           $scope.filterArticles = function(pages) {
             var filteredPages = [];
             angular.forEach(pages, function(value, key){

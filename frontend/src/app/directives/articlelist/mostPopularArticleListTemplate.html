@@ -1,6 +1,9 @@
-<article ng-repeat="article in articles | limitTo: 5 track by article.path" class="image-article-list-article" ng-style="{ 'transform' : 'translateY(' + ($index * 75) + 'px)' }">
-  <a href ng-href="{{ article.path }}">  
-    <div class="counter">{{ $index+1 }}</div>
-    <h2>{{ article.title }}</h2>
-  </a>
-</article>
+<div class="popular-inner" ng-class="{'expanded': initialItems != displayedItems}">
+  <article ng-repeat="article in articles | limitTo: displayedItems track by article.path" class="image-article-list-article" ng-class="'popular-item-' + $index">
+    <a href ng-href="{{ article.path }}">
+      <div class="counter">{{ $index+1 }}</div>
+      <h2>{{ article.title }}</h2>
+    </a>
+  </article>
+</div>
+<button ng-show="showExpandButton" href ng-click="showMore();">{{ expandButtonText }}</button>

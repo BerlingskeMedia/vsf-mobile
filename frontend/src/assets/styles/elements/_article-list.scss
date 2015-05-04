@@ -122,11 +122,11 @@
   }
 }
 @keyframes fadeoutpopular {
-    from { 
+    from {
       opacity: 1;
       max-height: auto;
     }
-    to { 
+    to {
       opacity: 0;
       max-height: 0px;
     }
@@ -138,10 +138,16 @@
 
 /* MOST POPULAR ARTICLE LIST ITEM */
 .most-popular-article-list {
-  margin: 10px $side-margin 40px;
-  position: relative;
-  height: 380px;
-  overflow: hidden;
+  .popular-inner {
+    margin: 10px 0 20px;
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+  }
+  .popular-inner.expanded {
+    height: 760px;
+    margin-bottom: 40px;
+  }
   article {
     width: 100%;
     margin-bottom: 14px;
@@ -151,6 +157,12 @@
     height: 75px;
     padding-top: 10px;
   }
+  @for $i from 1 through 30 {
+    .popular-item-#{$i} {
+      transform : translateY(75px * $i);
+    }
+  }
+
   .ng-leave-active {
     display: none;
   }
