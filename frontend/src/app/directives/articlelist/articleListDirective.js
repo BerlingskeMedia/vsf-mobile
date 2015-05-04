@@ -8,7 +8,7 @@ app.directive('stiftenChartbeatList', function() {
         scope: true,
         templateUrl: 'app/directives/articlelist/mostPopularArticleListTemplate.html',
         controller: function($scope, $attrs, Chartbeat, $interval) {
-          
+
           $scope.filterArticles = function(pages) {
             var filteredPages = [];
             angular.forEach(pages, function(value, key){
@@ -55,7 +55,16 @@ app.directive('stiftenNodequeueList', function() {
           if ('imagesize' in $attrs) {
             $scope.imagesize = $attrs.imagesize;
           }
+          $scope.showTime = true;
+          // If an attribute with noTimestamp exists, overwrite.
+          if ('noTimestamps' in $attrs) {
+            $scope.showTime = false;
+          }
 
+
+          /*if ('imagesize' in $attrs) {
+            $scope.imagesize = $attrs.imagesize;
+          }*/
           // Get id from a parent controller
           if ('list' in $scope && 'id' in $scope.list) {
             id = $scope.list.id;
@@ -86,7 +95,11 @@ app.directive('stiftenLatestList', function() {
           $scope.showExpandButton = false;
           $scope.showAllLink = false;
           $scope.expandButtonText = 'Vis flere';
-
+          $scope.showTime = true;
+          // If an attribute with noTimestamp exists, overwrite.
+          if ('noTimestamps' in $attrs) {
+            $scope.showTime = false;
+          }
           if ('allLink' in $attrs) {
             $scope.allLink = $attrs.allLink;
           }
@@ -99,6 +112,7 @@ app.directive('stiftenLatestList', function() {
                 $scope.showExpandButton = true;
             }
           }
+
           $scope.imagesize = config.defaultImageSize;
           if ('imagesize' in $attrs) {
             $scope.imagesize = $attrs.imagesize;
@@ -143,6 +157,11 @@ app.directive('stiftenFrontpageArticleList', function() {
     return {
         restrict: 'AEC',
         controller: function($scope, $attrs) {
+          $scope.showTime = true;
+          // If an attribute with noTimestamp exists, overwrite.
+          if ('noTimestamps' in $attrs) {
+            $scope.showTime = false;
+          }
           $scope.$watch('frontpageArticles', function(val) {
             if (typeof val !== 'undefined') {
               if ('offset' in $attrs) {
