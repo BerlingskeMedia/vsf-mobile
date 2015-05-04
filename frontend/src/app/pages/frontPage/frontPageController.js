@@ -20,7 +20,7 @@ app.controller('FrontpageController', function ($scope, $rootScope,  Nodequeue, 
   }
   
 
-  var nodequeue =  Nodequeue.get({id:1011, items:20});
+  var nodequeue =  Nodequeue.get({id:queueId, items:items});
   nodequeue.$promise.then(function(){
     $scope.frontpageArticles = nodequeue.items;
     $scope.frontpageArticles[0] = PreprocesAlertArticle($scope.frontpageArticles[0]);
