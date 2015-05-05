@@ -1,17 +1,17 @@
 <div class="story-wrapper">
-  <h1>{{ story.title }}</h1>
+  <h1>{{ ::story.title }}</h1>
   <div class="byline-wrapper">
-    <div class="byline">{{ story.author }}</div>
-    <time class="publish-date">{{ story.pubDate | date:"dd MMM yyyy HH:mm"}}</time>
+    <div class="byline">{{ ::story.author }}</div>
+    <time class="publish-date">{{ ::story.pubDate | date:"dd MMM yyyy HH:mm"}}</time>
   </div>
-  <h4 class="subheader">{{ story.description }}</h4>
+  <h4 class="subheader">{{ ::story.description }}</h4>
   <div class="gallery-images">
     <figure class="gallery-image-wrapper" ng-repeat="image in story.images">
       <img ng-src="{{ image.src }}" alt />
       <figcaption>
-        <div class="counter">{{ $index+1 }} / {{ story.images | propertyCounter }}</div>
-        <div class="caption">{{ image.caption }}</div>
-        <div ng-if="image.author" class="byline"><span class="byline-label">Foto: </span>{{ image.author }}</div>
+        <div class="counter">{{ $index+1 }} / {{ ::story.images | propertyCounter }}</div>
+        <div class="caption">{{ ::image.caption }}</div>
+        <div ng-if="image.author" class="byline"><span class="byline-label">Foto: </span>{{ ::image.author }}</div>
       </figcaption>
     </figure>
   </div>
