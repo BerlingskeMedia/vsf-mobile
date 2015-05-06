@@ -24,6 +24,7 @@ app.directive('berlTracking', function ($rootScope, $location, $routeParams, con
             };
 
             $rootScope.$on('tracking', function () {
+                console.log('HOPLA');
                 if ($location.$$host === 'm.stiften.dk') {
                     track();
                 }

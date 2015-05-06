@@ -26,4 +26,5 @@ app.controller('FrontpageController', function ($scope, $rootScope,  Nodequeue, 
     $scope.frontpageArticles[0] = PreprocesAlertArticle($scope.frontpageArticles[0]);
     localStorageService.set('articles-' + queueId + '-' + items, $scope.frontpageArticles);
   });
+  $rootScope.$emit('tracking');  
 });

@@ -7,5 +7,5 @@ app.controller('fourofourController', function($routeParams, $scope, $location, 
     params.sortby = 'published';
 
     $scope.articles = ContentItems.get(params);
-
+    $rootScope.$emit('tracking');
 });

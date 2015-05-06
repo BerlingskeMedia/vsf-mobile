@@ -46,4 +46,5 @@ app.controller('StoryController', function ($scope, $rootScope, ContentItemByPat
       }
     }
   })
+  $rootScope.$emit('tracking');
 });

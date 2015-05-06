@@ -56,4 +56,5 @@ app.controller('SearchController', function ($scope, $rootScope, $location, Sear
   }
   
   $rootScope.pageTypeClass = 'page-search-page';
+  $rootScope.$emit('tracking');
 });

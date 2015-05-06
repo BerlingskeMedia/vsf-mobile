@@ -33,5 +33,5 @@ app.controller('ListController', function ($scope, $rootScope, $routeParams, con
   });
 
   $rootScope.pageTypeClass = 'page-list-page';
-
+  $rootScope.$emit('tracking');
 });
