@@ -245,27 +245,27 @@
   }
   article a {
     background: #f2f2f2;
-    display: block;
+    display: flex;
     width: 100%;
     padding: 0 $side-margin;
-    @include clearfix();
+    flex-direction: row;
+    justify-content: space-between;
+
   }
 
   .editorial-image-wrapper {
-    padding-left: 5%;
-    width: 45%;
-    float: left;
-    position: absolute;
-    vertical-align: bottom;
-    right: 10px;
+    width: 40%;
+    padding-left: 10px;
+    flex-grow: 4;
+    align-self: baseline;
   }
   .editorial-image {
-    height: auto;
     vertical-align: bottom;
+
   }
   .text-wrapper {
-    width: 50%;
-    float: left;
+    width: 55%;
+    flex-grow: 6;
   }
 
 }
