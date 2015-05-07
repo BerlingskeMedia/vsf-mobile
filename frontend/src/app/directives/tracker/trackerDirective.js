@@ -12,10 +12,6 @@ app.directive('berlTracking', function ($rootScope, $location, $routeParams, con
                 // Comscore
                 udm_('//int.sitestat.com/berlingske/m-aas/s?<SectionName>.panel');
 
-                // Facebookththth
-                //window._fbq = window._fbq || [];
-                //window._fbq.push(['track', 'PixelInitialized', {}]);
-
                 // Gemius
                 pp_gemius_event(pp_gemius_identifier);
 
@@ -24,7 +20,6 @@ app.directive('berlTracking', function ($rootScope, $location, $routeParams, con
             };
 
             $rootScope.$on('tracking', function () {
-                console.log('HOPLA');
                 if ($location.$$host === 'm.stiften.dk') {
                     track();
                 }
