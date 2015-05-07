@@ -109,7 +109,7 @@ app.directive('stiftenLatestList', function() {
     return {
         restrict: 'AEC',
         scope: true,
-        controller: function($scope, $attrs, Latest, localStorageService, $interval, config) {
+        controller: function($scope, $attrs, Latest, Term, localStorageService, $interval, config) {
           var id  = 0;
           $scope.displayed = $attrs.items;
           $scope.showExpandButton = false;
@@ -158,12 +158,16 @@ app.directive('stiftenLatestList', function() {
           if (articles !== null) {
             $scope.articles = articles;
           }
-          var latest =  Latest.get({id:id, items:$attrs.items, type:$attrs.type, imagesize: $scope.imagesize});
+          var fetcher = Latest;
+          if ('no-subs' in $attrs) {
+            var fetcher = Term;
+          }
+          var latest =  fetcher.get({id:id, items:$attrs.items, type:$attrs.type, imagesize: $scope.imagesize});
           latest.$promise.then(function(){
             localStorageService.set('articles-' + id + '-' + $attrs.items, latest.items);
           });
           $interval(function(){
-            var latest =  Latest.get({id:id, items:$attrs.items, type:$attrs.type, imagesize: $scope.imagesize});
+            var latest =  fetcher.get({id:id, items:$attrs.items, type:$attrs.type, imagesize: $scope.imagesize});
             latest.$promise.then(function(){
               $scope.articles = latest.items;
               localStorageService.set('articles-' + id + '-' + $attrs.items, $scope.articles);
