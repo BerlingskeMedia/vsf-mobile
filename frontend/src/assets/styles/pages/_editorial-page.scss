@@ -5,6 +5,7 @@
   h4.subheader {
     border-bottom: 1px solid #dddddd;
   }
+  .article-body p:first-child:first-letter { float: left; font-size: 500%; line-height: 1.05; padding-right: 2px; padding-left: 3px }
 }
 
 .editorial-header h2 {
