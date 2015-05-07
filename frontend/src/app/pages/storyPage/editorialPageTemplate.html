@@ -9,8 +9,11 @@
       </div>
   </div>
   <h1>{{ ::story.title }}</h1>
-  <h4 class="subheader">{{ ::story.description }}</h4>
   <div stiften-share-links></div>
+  <div class="meta-wrapper dates">
+    <time class="publish-date">{{ ::story.pubDate | date:"d. MMM yyyy HH:mm"}}</time>
+    <time class="publish-date update-date" ng-if="story.updated">Opdateret: {{ ::story.updated | date:"d. MMM yyyy HH:mm"}}</time>
+  </div>
   <div class="article-body" ng-bind-html="story['content']"></div>
   <div stiften-factbox ng-if="story.factId" class="factbox" fact-id="{{ story.factId }}"></div>
   <h2 class="article-section-header">Mere om denne historie</h2>
