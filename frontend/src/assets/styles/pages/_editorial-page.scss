@@ -1,41 +1,38 @@
 .page-editorial-page {
-
   h1 {
-//    text-
     font-style: italic;
   }
+}
 
-  .editorial-header h2 {
-    font-family: 'Berlingske Sans';
-    font-size: 22px;
-    font-weight: 900;
-    color: #333333;
-    text-transform: uppercase;
+.editorial-header h2 {
+  font-family: 'Berlingske Sans';
+  font-size: 22px;
+  font-weight: 900;
+  color: #333333;
+  text-transform: uppercase;
 
-  }
-  .editorial-header {
-    display: flex;
-    width: 100%;
-    padding: 0 $side-margin;
-    flex-direction: row;
-    justify-content: space-between;
-    border-bottom: 1px solid #dddddd;
-    margin-bottom: 20px;
-  }
-
-  .editorial-image-wrapper {
-    width: 40%;
-    padding-left: 10px;
-    flex-grow: 4;
-    align-self: flex-end;
-  }
-  .editorial-image {
-    vertical-align: bottom;
-
-  }
+}
+.editorial-header {
+  display: flex;
+  width: 100%;
+  padding: 0 $side-margin;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 20px;
   .text-wrapper {
     width: 55%;
     flex-grow: 6;
-
   }
+}
+
+.editorial-image-wrapper {
+  width: 40%;
+  padding-left: 10px;
+  flex-grow: 4;
+  align-self: flex-end;
+}
+.editorial-image {
+  vertical-align: bottom;
+
 }
