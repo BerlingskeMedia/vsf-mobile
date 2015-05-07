@@ -12,4 +12,27 @@
   <h4 class="subheader">{{ ::story.description }}</h4>
   <div stiften-share-links></div>
   <div class="article-body" ng-bind-html="story['content']"></div>
+  <div stiften-factbox ng-if="story.factId" class="factbox" fact-id="{{ story.factId }}"></div>
+  <h2 class="article-section-header">Mere om denne historie</h2>
+  <ul class="tags">
+    <li ng-repeat="tag in story.tags">
+      <a href class="tag-link" ng-href="tag">{{ ::tag.value }}</a>
+    </li>
+  </ul>
+  <div ng-if="story.relatedStories" class="article-related">
+    <ul ng-class="{ 'all-shown': displayed >= story.relatedStories.length}">
+      <li ng-repeat="related in (filteredItems = (story.relatedStories | orderBy : '-pubDate')) | limitTo: displayed">
+        <time class="publish-date">{{ ::related.pubDate | customdate }}</time>
+        <h4 class="related-title"><a ng-href="{{ related.link | relativize }}">{{ ::related.title }}</a></h4>
+      </li>
+    </ul>
+    <button ng-hide="displayed >= story.relatedStories.length" href ng-click="showMore();">Vis alle</button>
+  </div>
+  <h3 class="section-header">Populært på stiften</h3>
+  <div stiften-most-popular-article-list stiften-chartbeat-list initial="5" items="10" class="most-popular-article-list"></div>
+  <h3 class="section-header">Tophistorier</h3>
+  <div stiften-image-article-list stiften-nodequeue-list no-timestamps id="1011" items="3" class="image-article-list"></div>
+  <h3 class="section-header">Redaktionen anbefaler</h3>
+  <div stiften-image-article-list stiften-nodequeue-list id="5636" items="4" class="image-article-list"></div>
+  
 </div>
