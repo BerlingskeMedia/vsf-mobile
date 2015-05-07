@@ -2,6 +2,7 @@ var appConfig = {
     texts: {
 
     },
+    editorialId: 64925,
     frontpageQueueId: 1011,
     frontpageItems: 20,
     canonicalDomain: 'http://stiften.dk',
