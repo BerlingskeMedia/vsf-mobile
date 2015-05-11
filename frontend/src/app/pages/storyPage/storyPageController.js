@@ -8,13 +8,14 @@ app.controller('StoryController', function($scope, $rootScope, ContentItemByPath
 
     var defaultTemplatePath = 'app/pages/storyPage/';
 
+    $scope.contentLoading = true;
 
     // First we get the story from local storage
     var story = localStorageService.get($routeParams.tag + '/' + $routeParams.articleid);
     if (story !== null) {
         $scope.story = story;
+        $scope.contentLoading = false;
     }
-
     // secondly we get it from the server.
     var content = ContentItemByPath.get({
         tag: $routeParams.tag,
@@ -37,6 +38,7 @@ app.controller('StoryController', function($scope, $rootScope, ContentItemByPath
     // Inspired by: http://blog.freeside.co/2013/02/11/dynamic-templates-in-angular-routes/
     $scope.$watch('story', function() {
         if ('story' in $scope) {
+            $scope.contentLoading = false;
             // Editorial template
             if ('category_id' in $scope.story) {
                 if ($scope.story.category_id == config.editorialId) {
