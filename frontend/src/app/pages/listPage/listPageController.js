@@ -25,8 +25,7 @@ app.controller('ListController', function ($scope, $rootScope, $routeParams, con
   $scope.toggleSubsectionMenu = function() {
     $scope.subsectionVisible = !$scope.subsectionVisible;
   }
-
-  var latest =  Latest.get({id:id, items: 20, type: 'news_article'});
+  var latest =  Latest.get({id:id, items: config.itemsInSection, type: 'news_article'});
   latest.$promise.then(function(){
     $scope.header = latest.category;
     $scope.articles = latest.items;
