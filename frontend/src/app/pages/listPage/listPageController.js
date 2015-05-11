@@ -2,7 +2,7 @@
 
 'use strict';
 
-app.controller('ListController', function ($scope, $rootScope, $routeParams, config, Latest) {
+app.controller('ListController', function ($scope, $rootScope, $routeParams, config, localStorageService, Latest) {
     // We need to lookup term-ids based on slugs in BOND - this is an UGLY  hack.
   var id = 0;
   if (('tag' in $routeParams) && ($routeParams.tag in config.sections)) {
@@ -25,10 +25,16 @@ app.controller('ListController', function ($scope, $rootScope, $routeParams, con
   $scope.toggleSubsectionMenu = function() {
     $scope.subsectionVisible = !$scope.subsectionVisible;
   }
+  var section = localStorageService.get('section-' + id + '-' + config.itemsInSection);
+  if (section !== null) {
+    $scope.articles = section.items;
+    $scope.header = section.category;
+  }
   var latest =  Latest.get({id:id, items: config.itemsInSection, type: 'news_article'});
   latest.$promise.then(function(){
     $scope.header = latest.category;
     $scope.articles = latest.items;
+    localStorageService.set('section-' + id + '-' + config.itemsInSection, latest);
   });
 
   $rootScope.pageTypeClass = 'page-list-page';
