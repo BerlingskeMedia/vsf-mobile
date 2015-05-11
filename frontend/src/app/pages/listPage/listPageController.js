@@ -20,7 +20,7 @@ app.controller('ListController', function ($scope, $rootScope, $routeParams, con
       $scope.submenuLinks = config.sections[$routeParams.tag].subsections;
   }
 
-
+  $scope.showTime = true;
 
   $scope.toggleSubsectionMenu = function() {
     $scope.subsectionVisible = !$scope.subsectionVisible;
