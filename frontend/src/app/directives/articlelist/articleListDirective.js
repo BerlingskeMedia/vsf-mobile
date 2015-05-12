@@ -71,6 +71,24 @@ app.directive('stiftenNodequeueList', function() {
         controller: function($scope, $attrs, Nodequeue, config) {
           var id  = 0;
 
+          $scope.expandButtonText = 'Vis flere';
+          $scope.showExpandButton = false;
+          $scope.showAllLink = false;
+          $scope.displayed = $attrs.items;
+          if ('initial' in $attrs) {
+            $scope.displayed = $attrs.initial;
+            if ($attrs.initial != $attrs.items) {
+                $scope.showExpandButton = true;
+            }
+          }
+
+          if ('allLink' in $attrs) {
+            $scope.allLink = $attrs.allLink;
+          }
+          if ('allLinkText' in $attrs) {
+            $scope.allLinkText = $attrs.allLinkText;
+          }
+
           $scope.imagesize = config.defaultImageSize;
           if ('imagesize' in $attrs) {
             $scope.imagesize = $attrs.imagesize;
@@ -81,6 +99,11 @@ app.directive('stiftenNodequeueList', function() {
             $scope.showTime = false;
           }
 
+          $scope.showMore = function() {
+            $scope.displayed = $attrs.items;
+            $scope.showExpandButton = false;
+            $scope.showAllLink = true;
+          }
 
           /*if ('imagesize' in $attrs) {
             $scope.imagesize = $attrs.imagesize;
@@ -90,15 +113,25 @@ app.directive('stiftenNodequeueList', function() {
             id = $scope.list.id;
           }
 
-
           // If an attribute with id exists, overwrite.
           if ('id' in $attrs) {
             id = $attrs.id;
           }
           var nodequeue =  Nodequeue.get({id:id, items:$attrs.items, imagesize: $scope.imagesize});
           nodequeue.$promise.then(function(){
+            // Filter specific (probably current) article
+            if ('filterCurrent' in $attrs) {
+                var articles = [];
+                angular.forEach(nodequeue.items, function(value, key){
+                   if(value.link != $scope.story.link) {
+                       articles.push(value);
+                   }
+                });
+                $scope.articles = articles;
+            } else {
+                $scope.articles = nodequeue.items;
+            }
 
-            $scope.articles = nodequeue.items;
 
           });
         }
