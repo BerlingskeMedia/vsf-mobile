@@ -53,8 +53,11 @@
     li {
       display: inline-block;
       list-style: none;
-      width: 25%;
+      width: 23%;
       text-align: center;
+    }
+    li.time-23 {
+      border-right: 1px solid rgba(255,255,255, 0.3);
     }
     time {
       text-align: center;
