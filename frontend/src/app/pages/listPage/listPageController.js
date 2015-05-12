@@ -11,6 +11,7 @@ app.controller('ListController', function ($scope, $rootScope, $routeParams, con
   if (id === 0) {
     // TODO: 404
     console.log('ERROR');
+    return;
   }
 
   $scope.subsectionVisible = false;
