@@ -1,4 +1,5 @@
 <div class="story-wrapper">
+  <div berl-emediate cu="28269" tag="article"></div>
   <div class="meta-wrapper">
     <a class="label" href>{{ story.category }}</a>
   </div>
@@ -8,7 +9,6 @@
     <img ng-src="{{ story[1].attributes.url }}" alt />
     <figcaption ng-if="story[1].attributes.desc">{{ ::story[1].attributes.desc }}</figcaption>
   </figure>
-  <div berl-emediate cu="28269" tag="article"></div>
   <div stiften-share-links></div>
   <div class="byline-wrapper">
     <div ng-if="story.author && story.author.length > 0" class="byline">Af: <span class="byline-element" ng-repeat="byline in story.author">{{ ::byline.value.name }}</span></div>
