@@ -11,7 +11,7 @@
   <div berl-emediate cu="28269" tag="article"></div>
   <div stiften-share-links></div>
   <div class="byline-wrapper">
-    <div ng-if="story.author" class="byline">Af: <span class="byline-element" ng-repeat="byline in story.author">{{ ::byline.value.name }}</span></div>
+    <div ng-if="story.author && story.author.length > 0" class="byline">Af: <span class="byline-element" ng-repeat="byline in story.author">{{ ::byline.value.name }}</span></div>
   </div>
   <div class="meta-wrapper dates">
     <time class="publish-date">{{ ::story.pubDate | date:"d. MMM yyyy HH:mm"}}</time>
