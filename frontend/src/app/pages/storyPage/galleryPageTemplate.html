@@ -7,15 +7,20 @@
   <div stiften-share-links></div>
   <h4 class="subheader">{{ ::story.description }}</h4>
   <ul class="gallery-images">
-    <li ng-repeat="image in story.images">
+    <li id="image-{{$index + 1}}" ng-repeat="image in story.images">
       <figure class="gallery-image-wrapper">
         <img ng-src="{{ image.src }}" alt />
         <figcaption>
-          <div class="counter">{{ $index+1 }} / {{ ::story.images | propertyCounter }}</div>
-          <div class="caption">{{ ::image.caption }}</div>
+          <div class="counter">{{ $index+1 }} / {{ ::story.images | propertyCounter }} <a href class="icon-share" ng-click="image.showShowSocial = image.showShowSocial ? false : true"></a></div>
+          <div stiften-share-links ng-show="image.showShowSocial" anchor="image-{{$index + 1}}" class="image-social ng-hide-animate"></div>
+          <div class="caption">
+            {{ ::image.caption }}
+          </div>
           <div ng-if="image.author" class="byline"><span class="byline-label">Foto: </span><span class="byline-element" ng-repeat="byline in image.author">{{ ::byline.value.name }}</span></div>
+
         </figcaption>
       </figure>
+
       <!-- $index%5==0 && $index>0 -->
       <div berl-emediate cu="28268" tag="gallery" ng-if="$index===5"></div>
     </li>

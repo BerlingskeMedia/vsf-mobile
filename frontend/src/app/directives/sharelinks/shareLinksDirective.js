@@ -1,12 +1,16 @@
 'use strict';
 
-app.directive('stiftenShareLinks', function(){
+app.directive('stiftenShareLinks', function(config, $location){
     return {
         restrict: 'AEC',
         templateUrl: 'app/directives/sharelinks/shareLinksTemplate.html',
-        controller : function($scope, $location, config) {
+        link: function ($scope, $element, $attrs) {
           var path = $location.url();
-          var url = config.canonicalDomain + path;
+          var domain = config.canonicalDomain;
+          var url = domain + path;
+          if ('anchor' in $attrs) {
+              url = url + '#' + $attrs.anchor;
+          }
           var tweet = '';
           var subject = 'Stiften.dk';
           if ('story' in $scope.$parent) {

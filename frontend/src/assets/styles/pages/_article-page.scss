@@ -151,6 +151,34 @@
       color: $label-blue;
     }
   }
+
+  .image-social.ng-hide-add, .image-social.ng-hide-remove {
+      /* ensure visibility during the transition */
+      display: block !important; /* yes, important */
+  }
+  .image-social.ng-hide {
+     display: block !important;
+     max-height: 0px;
+     //transform: scale3d(1,0,1);
+     opacity: 0;
+     a {
+       transform: scale3d(.8,.8,.8);
+     }
+  }
+
+  .image-social {
+    //transform: scale3d(1,1,1);
+    display: block;
+    transition: .5s all;
+    max-height: 200px;
+    a {
+      transition: .5s all;
+      transform: scale3d(1,1,1);
+    }
+  }
+  .image-social .social-links {
+    margin-left: 0;
+  }
   .social-links {
     margin: 0 $side-margin 10px;
     padding-bottom: 5px;

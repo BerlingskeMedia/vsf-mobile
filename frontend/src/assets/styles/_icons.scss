@@ -22,6 +22,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-share:before {
+  content: "\e60d";
+}
+
 .icon-search:before {
   content: "\e608";
 }
