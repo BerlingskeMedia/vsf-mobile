@@ -5,8 +5,5 @@ app.directive('stiftenMainMenu', function(){
         restrict: 'AE',
         scope: true,
         templateUrl: 'app/directives/menu/menuTemplate.html',
-        controller : function($rootScope) {
-          //TODO: remove :-)
-        }
     };
 });
