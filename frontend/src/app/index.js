@@ -27,7 +27,8 @@ var app = angular
       'ngRoute',
       'ngSanitize',
       'ngTouch',
-      'LocalStorageModule'
+      'LocalStorageModule',
+      'flipsnap'
   ])
   .constant(
       'DOMAIN',

@@ -10,9 +10,9 @@
     "angular-sanitize": "1.3.x",
     "angular-resource": "1.3.x",
     "angular-route": "1.3.x",
-    "hammerjs": "~2.0.4",
     "angular-i18n": "1.3.x",
-    "angular-local-storage": "~0.1.5"
+    "angular-local-storage": "~0.1.5",
+    "angular-flipsnap": "~0.1.0"
   },
   "devDependencies": {
     "angular-mocks": "1.3.x"
@@ -21,5 +21,8 @@
     "angular-i18n": {
       "main": "angular-locale_da-dk.js"
     }
+  },
+  "resolutions": {
+    "angular": "1.3.x"
   }
 }

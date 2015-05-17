@@ -1,1 +1,5 @@
-<h1>GALOERY</h1>
+<div flipsnap flipsnap-id="flipsnap" >
+    <div flipsnap-pane ng-repeat="image in images" class="gallery-slide">
+        <div class="layer"><img ng-src="{{ image.value[0].attributes.url}}" /></div>
+    </div>
+</div>

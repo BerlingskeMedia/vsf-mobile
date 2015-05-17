@@ -1,10 +1,12 @@
 <div class="story-wrapper">
+
   <div berl-emediate cu="28269" tag="article"></div>
   <div class="meta-wrapper">
     <a class="label" href>{{ story.category }}</a>
   </div>
   <h1>{{ ::story.title }}</h1>
   <h4 class="subheader">{{ ::story.description }}</h4>
+  <div stiften-gallery></div>
   <figure class="article-image-wrapper" ng-show="story[1].attributes.url">
     <img ng-src="{{ story[1].attributes.url }}" alt />
     <figcaption ng-if="story[1].attributes.desc">{{ ::story[1].attributes.desc }}</figcaption>

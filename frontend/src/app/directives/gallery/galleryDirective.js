@@ -4,8 +4,9 @@ app.directive('stiftenGallery', function(){
     return {
         restrict: 'AEC',
         templateUrl: 'app/directives/gallery/galleryTemplate.html',
-        link: function ($scope, $element, $attrs) {
-            
+        controller : function($scope) {
+
+            $scope.images = $scope.story.media.image;
         }
     };
 });
