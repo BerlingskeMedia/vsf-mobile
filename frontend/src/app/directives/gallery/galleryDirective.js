@@ -4,9 +4,31 @@ app.directive('stiftenGallery', function(){
     return {
         restrict: 'AEC',
         templateUrl: 'app/directives/gallery/galleryTemplate.html',
-        controller : function($scope) {
-
+        controller: function ($scope) {
             $scope.images = $scope.story.media.image;
+            $scope.listenerAttached = false;
+            $scope.currentSlide = 0;
+  
+            $scope.$watch('flipsnap', function(){
+                if ('flipsnap' in $scope) {
+                    $scope.setSlide = function(id) {
+                        $scope.currentSlide = id;
+                        $scope.flipsnap.moveToPoint(id);
+                    }
+                    if (!$scope.listenerAttached) {
+                        $scope.listenerAttached = true;
+                        var el = $scope.flipsnap.element;
+                        el.addEventListener('fspointmove', function() {
+                            //Todo: update indicato
+                            console.log('Heard' + $scope.currentSlide);
+                            $scope.$apply(function(){
+                                $scope.currentSlide = $scope.flipsnap.currentPoint;
+                            })
+                        }, true);
+                    }
+
+                };
+            })
         }
     };
 });

@@ -1,5 +1,8 @@
 <div flipsnap flipsnap-id="flipsnap" >
     <div flipsnap-pane ng-repeat="image in images" class="gallery-slide">
-        <div class="layer"><img ng-src="{{ image.value[0].attributes.url}}" /></div>
+        <div class="layer"><img ng-src="{{ ::image.value[0].attributes.url}}" /></div>
     </div>
+</div>
+<div class="gallery-indicator">
+    <a href ng-click="setSlide($index)" ng-repeat="image in images" class="indicator" ng-class="(currentSlide == $index) ? 'active' : ''"></a>
 </div>
