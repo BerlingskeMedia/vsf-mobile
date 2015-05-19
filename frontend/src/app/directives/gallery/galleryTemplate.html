@@ -1,6 +1,9 @@
 <div flipsnap flipsnap-id="flipsnap" >
     <div flipsnap-pane ng-repeat="image in images" class="gallery-slide">
-        <div class="layer"><img ng-src="{{ ::image.value[0].attributes.url}}" /></div>
+      <figure>
+        <img ng-src="{{ ::image.value[0].attributes.url}}" alt />
+        <figcaption ng-if="story[1].attributes.desc" >{{ ::image.value.description }}</figcaption>
+      </figure>
     </div>
 </div>
 <div class="gallery-indicator">
