@@ -1,5 +1,11 @@
 .gallery-slide {
   width: 100vw;
+  img {
+    max-height: 320px;
+    margin: 0 auto;
+    width: auto;
+    display: block;
+  }
 }
 .gallery-indicator {
   margin: 0 auto;
