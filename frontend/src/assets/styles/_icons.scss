@@ -21,6 +21,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-sms:before {
+  content: "\e60e";
+}
 
 .icon-share:before {
   content: "\e60d";
