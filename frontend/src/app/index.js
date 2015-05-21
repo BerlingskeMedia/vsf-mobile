@@ -78,4 +78,12 @@ var app = angular
     $locationProvider.html5Mode(true).hashPrefix('!');
 
     localStorageServiceProvider.setPrefix('stm');
-  });
+  })
+  .config( [
+      '$compileProvider',
+      function( $compileProvider )
+      {
+          // Allow sms-links
+          $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|sms):/);
+      }
+  ]);

@@ -26,6 +26,15 @@ app.directive('stiftenShareLinks', function(config, $location){
           $scope.links.twitter = 'https://twitter.com/home?status=' + tweet;
           $scope.links.google = 'https://plus.google.com/share?url=' + url;
           $scope.links.mail = 'mailto:?subject=' + subject + '&body=' + subject + " \n" + url;
+          $scope.links.sms = 'sms:&body=' + subject + " \n" + url;
+          // Check for andoird
+          var ua = navigator.userAgent.toLowerCase();
+          var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+          if(isAndroid) {
+            // Do something!
+            // Redirect to Android-site?
+            $scope.links.sms = 'sms:?body=' + subject + " \n" + url;
+          }
         }
     };
 });
