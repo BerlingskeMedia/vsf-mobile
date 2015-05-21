@@ -6,6 +6,7 @@
       </figure>
     </div>
 </div>
-<div class="gallery-indicator">
+
+<div class="gallery-indicator" ng-if="images.length > 1">
     <a href ng-click="setSlide($index)" ng-repeat="image in images" class="indicator" ng-class="(currentSlide == $index) ? 'active' : ''"></a>
 </div>
