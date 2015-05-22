@@ -105,6 +105,14 @@ var appConfig = {
         name: 'Fodbold',
         id: 0
       },
+      krimi: {
+        name: 'Krimi',
+        id: 64915
+      },
+      debat: {
+        name: 'Debat',
+        id: 64924
+      },
       aarhus: {
         name: 'Aarhus',
         id: 64954
