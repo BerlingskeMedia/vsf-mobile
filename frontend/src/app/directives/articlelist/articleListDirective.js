@@ -234,10 +234,10 @@ app.directive('stiftenFrontpageArticleList', function() {
     };
 });
 // This directive just sets a template
-app.directive('stiftenImageArticleList', function() {
+app.directive('stiftenDefaultArticleList', function() {
     return {
         restrict: 'AEC',
-        templateUrl: 'app/directives/articlelist/imageArticleListTemplate.html',
+        templateUrl: 'app/directives/articlelist/defaultArticleListTemplate.html',
         scope: true
     };
 });

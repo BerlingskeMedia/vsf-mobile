@@ -3,10 +3,10 @@
   margin: 0 $side-margin;
   padding-top: 6px;
   margin-bottom: 40px;
-  article {
+  li article {
     @include list-article();
   }
-  article:last-child {
+  li:last-child article {
     border-bottom: none;
   }
 
@@ -227,11 +227,9 @@
   }
 }
 /* EDITORIAL ARTICLE LIST ITEM */
-.editorial-article-list {
+article.editorial-article-list-article {
   margin-bottom: 40px;
-  article {
-    margin-top: 0px;
-  }
+  margin-top: 0px;
   h3.section-header {
     border-bottom: none;
     margin-left: 0px;

@@ -1,13 +1,12 @@
-
-<article ng-repeat="article in articles" class="editorial-article-list-article">
+<article ng-repeat="article in articles" >
     <a href ng-href="{{ article.link | relativize }}">
       <div class="section-header editorial-header">
         <div class="editorial-header-text">
           <h3 class="section-header">Leder</h3>
-          <div class="byline">{{ article.author[0].value.name }}</div>
+          <div class="byline">{{ ::article.author[0].value.name }}</div>
         </div>
         <div class="editorial-image-wrapper">
-          <img class="editorial-image" ng-src="{{ article[1].attributes.url }}" />
+          <img class="editorial-image" ng-src="{{ ::article[1].attributes.url }}" />
         </div>
       </div>
       <div class="text-wrapper">

@@ -1,4 +1,3 @@
-<article ng-repeat="article in articles" class="image-article-list-article" ng-class="article.content_type.replace('_', '-') ">
   <a class="article-content" href ng-href="{{ article.link | relativize }}">
     <img ng-src="{{ article[1].attributes.url }}" />
     <div ng-if="article.content_type == 'video'" class="icon icon-video"></div>
@@ -10,4 +9,3 @@
   <a href ng-href="{{ article.link | relativize }}">  
     <h2>{{ article.title }}</h2>
   </a>
-</article>
