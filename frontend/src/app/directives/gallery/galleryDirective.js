@@ -8,7 +8,7 @@ app.directive('stiftenGallery', function(){
             $scope.images = $scope.story.media.image;
             $scope.listenerAttached = false;
             $scope.currentSlide = 0;
-  
+
             $scope.$watch('flipsnap', function(){
                 if ('flipsnap' in $scope) {
                     $scope.setSlide = function(id) {
@@ -18,11 +18,9 @@ app.directive('stiftenGallery', function(){
                     if (!$scope.listenerAttached) {
                         $scope.listenerAttached = true;
                         var el = $scope.flipsnap.element;
-                        el.addEventListener('fspointmove', function() {
-                            $scope.$apply(function(){
-                                $scope.currentSlide = $scope.flipsnap.currentPoint;
-                            })
-                        }, true);
+                        el.addEventListener('fstouchend', function(ev) {
+                            $scope.currentSlide = ev.newPoint;
+                        }, false);
                     }
 
                 };
