@@ -231,7 +231,10 @@
   margin-bottom: 40px;
   article {
     margin-top: 0px;
-
+  }
+  h3.section-header {
+    border-bottom: none;
+    margin-left: 0px;
   }
   .section-header.section-header-editorial {
     padding-left: $side-margin;
@@ -264,16 +267,11 @@
     margin-bottom: 0px;
     padding: 10px 0 10px 0;
   }
-  article a {
+
+  .text-wrapper {
     background: #f2f2f2;
-    display: flex;
-    width: 100%;
     padding: 0 $side-margin;
-    flex-direction: row;
-    justify-content: space-between;
-
   }
-
   .editorial-image-wrapper {
     width: 40%;
     padding-left: 10px;
@@ -284,11 +282,7 @@
     vertical-align: bottom;
 
   }
-  .text-wrapper {
-    width: 55%;
-    flex-grow: 6;
 
-  }
 
 }
 /* GALLERY ARTICLE LIST ITEM */

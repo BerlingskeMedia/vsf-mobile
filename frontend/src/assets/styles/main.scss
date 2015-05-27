@@ -20,6 +20,7 @@
 @import "elements/section-header-menu";
 @import "elements/spinner";
 @import "elements/gallery-element";
+@import "elements/editorial";
 
 @import "pages/article-page";
 @import "pages/gallery-page";
@@ -62,6 +63,9 @@ a {
 }
 .outer-wrapper {
   padding-top: $header-height;
+}
+.section-header {
+  border-bottom: 5px solid $stiften-orange;
 }
 
 

@@ -1,0 +1,30 @@
+// Note, these styles are both used on teaser and page
+
+.editorial-header h2 {
+  font-family: 'Berlingske Sans';
+  font-size: 22px;
+  font-weight: 900;
+  color: #333333;
+  text-transform: uppercase;
+
+}
+.editorial-header {
+  display: flex;
+  width: 100%;
+  padding: 0 $side-margin;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0px;
+}
+
+.editorial-image-wrapper {
+  width: 40%;
+  max-width: 120px;
+  padding-left: 10px;
+  flex-grow: 4;
+  align-self: flex-end;
+}
+.editorial-image {
+  vertical-align: bottom;
+
+}
