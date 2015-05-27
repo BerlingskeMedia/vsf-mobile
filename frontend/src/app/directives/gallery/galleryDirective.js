@@ -19,8 +19,6 @@ app.directive('stiftenGallery', function(){
                         $scope.listenerAttached = true;
                         var el = $scope.flipsnap.element;
                         el.addEventListener('fspointmove', function() {
-                            //Todo: update indicato
-                            console.log('Heard' + $scope.currentSlide);
                             $scope.$apply(function(){
                                 $scope.currentSlide = $scope.flipsnap.currentPoint;
                             })
