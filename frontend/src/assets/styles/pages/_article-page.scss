@@ -1,15 +1,26 @@
 .story-wrapper {
   padding-top: 20px;
+
+  &.alert-breaking .story-header {
+    @include clearfix();
+    background: $breaking-background-color;
+    color: #fff;
+    padding-top: 10px;
+    .subheader {
+      color: #fff;
+    }
+    .meta-wrapper .label {
+      color: #fff;
+      &.label-breaking {
+        margin-right: 0px;
+      }
+    }
+  }
   .meta-wrapper, h1, .byline-wrapper, .subheader, .article-body {
     margin-left: $side-margin;
     margin-right: $side-margin;
   }
-  .article-body {
 
-  }
-  .embedded-article {
-
-  }
   .meta-wrapper.dates {
     margin-bottom: 10px;
   }

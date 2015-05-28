@@ -1,11 +1,14 @@
 <div class="story-wrapper" ng-class="story.alertType">
 
   <div berl-emediate cu="28269" tag="article"></div>
-  <div class="meta-wrapper">
-    <a class="label" href>{{ story.category }}</a>
+  <div class="story-header">
+    <div class="meta-wrapper">
+      <span ng-if="story.alertType == 'alert-breaking'"><span class="label label-breaking">Breaking</span>&nbsp;·&nbsp;</span>
+      <a class="label" href>{{ story.category }}</a>
+    </div>
+    <h1>{{ ::story.title }}</h1>
+    <h4 class="subheader">{{ ::story.description }}</h4>
   </div>
-  <h1>{{ ::story.title }}</h1>
-  <h4 class="subheader">{{ ::story.description }}</h4>
   <div stiften-video ng-if="story.content_type == 'video'"></div>
   <div stiften-gallery ng-if="story.content_type != 'video'" ></div>
   <div stiften-share-links></div>
