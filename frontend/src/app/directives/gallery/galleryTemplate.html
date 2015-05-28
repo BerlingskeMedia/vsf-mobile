@@ -1,12 +1,21 @@
-<div flipsnap flipsnap-id="flipsnap" >
-    <div flipsnap-pane ng-repeat="image in images" class="gallery-slide">
-      <figure>
-        <img ng-src="{{ ::image.value[0].attributes.url}}" alt />
-        <figcaption ng-if="story[1].attributes.desc" ng-bind-html="::image.value.description"></figcaption>
-      </figure>
-    </div>
+<div class="article-image" ng-if="images.length > 0">
+  <figure>
+    <img ng-src="{{ ::images[0].value[0].attributes.url}}" alt />
+    <figcaption ng-if="::images[0].value.description" ng-bind-html="::images[0].value.description"></figcaption>
+    <a ng-if="images.length > 1" class="gallery-link" href ng-click="showGalleryOverlay = true">Imagelink</a>
+  </figure>
 </div>
-
-<div class="gallery-indicator" ng-if="images.length > 1">
-    <a href ng-click="setSlide($index)" ng-repeat="image in images" class="indicator" ng-class="(currentSlide == $index) ? 'active' : ''"></a>
+<div class="article-gallery-overlay" ng-class="{active: showGalleryOverlay}">
+  <a class="gallery-closer icon-close" href ng-click="showGalleryOverlay = !showGalleryOverlay"></a>
+  <div flipsnap flipsnap-id="flipsnap">
+      <div flipsnap-pane ng-repeat="image in images" class="gallery-slide">
+        <figure class="gallery-image-wrapper">
+          <img ng-src="{{ ::image.value[0].attributes.url}}" alt />
+          <figcaption ng-if="story[1].attributes.desc" ng-bind-html="::image.value.description"></figcaption>
+        </figure>
+      </div>
+  </div>
+  <div class="gallery-indicator" ng-if="images.length > 1">
+      <a href ng-click="setSlide($index)" ng-repeat="image in images" class="indicator" ng-class="(currentSlide == $index) ? 'active' : ''"></a>
+  </div>
 </div>
