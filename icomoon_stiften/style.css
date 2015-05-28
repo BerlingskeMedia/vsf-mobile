@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?-pln6ns');
-	src:url('fonts/icomoon.eot?#iefix-pln6ns') format('embedded-opentype'),
-		url('fonts/icomoon.woff?-pln6ns') format('woff'),
-		url('fonts/icomoon.ttf?-pln6ns') format('truetype'),
-		url('fonts/icomoon.svg?-pln6ns#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?m4jmw5');
+	src:url('fonts/icomoon.eot?#iefixm4jmw5') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?m4jmw5') format('truetype'),
+		url('fonts/icomoon.woff?m4jmw5') format('woff'),
+		url('fonts/icomoon.svg?m4jmw5#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,6 +23,21 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-populret:before {
+	content: "\e601";
+}
+.icon-Down:before {
+	content: "\e60f";
+}
+.icon-Link:before {
+	content: "\e610";
+}
+.icon-comment:before {
+	content: "\e611";
+}
+.icon-expand:before {
+	content: "\e612";
+}
 .icon-SMS:before {
 	content: "\e60e";
 }
@@ -34,9 +49,6 @@
 }
 .icon-close:before {
 	content: "\e600";
-}
-.icon-down:before {
-	content: "\e601";
 }
 .icon-facebook:before {
 	content: "\e602";

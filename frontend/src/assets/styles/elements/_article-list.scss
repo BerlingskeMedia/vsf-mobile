@@ -1,7 +1,6 @@
 /* GENERIC LIST PROPERTIES */
 .header-article-list, .image-article-list, .most-popular-article-list {
   margin: 0;
-  padding-top: 6px;
   margin-bottom: 40px;
   li article {
     @include list-article();
@@ -40,17 +39,17 @@
       position: relative;
       .icon {
         display: block;
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
+        font-size: 25px;
         border-radius: 100%;
         margin: auto;
         position: absolute;
         top: 0; left: 0; bottom: 0; right: 0;
-        background: #000;
+        background: rgba(0,0,0,0.6);
         color: #fff;
-        opacity: 0.6;
         text-align: center;
-        padding-top: 12px;
+        padding-top: 16px;
       }
     }
   }
@@ -61,7 +60,6 @@
 
 /* IMAGE ARTICLE LIST ITEM */
 .image-article-list {
-  padding-top: 14px;
   article {
     margin-bottom: 15px;
   }
@@ -173,8 +171,8 @@
 
 /* MOST POPULAR ARTICLE LIST ITEM */
 .most-popular-article-list {
+  margin-top: 5px;
   .popular-inner {
-    margin: 10px 0 20px;
     position: relative;
     height: 380px;
     overflow: hidden;
@@ -285,7 +283,6 @@ article.editorial-article-list-article {
     font-size: 18px;
     font-style: italic;
     font-weight: normal;
-    padding-top: 5px;
     padding-bottom: 20px;
     line-height: 1.3;
   }
