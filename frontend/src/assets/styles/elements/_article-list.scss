@@ -21,6 +21,10 @@
     display: block;
   }
 }
+.most-popular-article-list, .header-article-list {
+  margin-left: $side-margin;
+  margin-right: $side-margin;
+}
 .header-article-list, .image-article-list, .featured-article-list {
   h2 {
     font-weight: normal;
@@ -75,8 +79,6 @@
 /* HEADER ARTICLE LIST ITEM */
 .header-article-list .header-article-list-article {
   margin-bottom: 3px;
-  margin-left: $side-margin;
-  margin-right: $side-margin;  
   background: $header-list-background;
   border-bottom: none;
 }
