@@ -8,7 +8,10 @@ app.directive('stiftenGallery', function(){
             $scope.images = $scope.story.media.image;
             $scope.listenerAttached = false;
             $scope.currentSlide = 0;
-            $scope.showGalleryOverlay = true;
+            $scope.showGalleryOverlay = false;
+            $scope.toggleGalleryOverlay = function() {
+                $scope.showGalleryOverlay = !$scope.showGalleryOverlay;
+            }
             $scope.$watch('flipsnap', function(){
                 if ('flipsnap' in $scope) {
                     $scope.setSlide = function(id) {

@@ -2,11 +2,11 @@
   <figure>
     <img ng-src="{{ ::images[0].value[0].attributes.url}}" alt />
     <figcaption ng-if="::images[0].value.description" ng-bind-html="::images[0].value.description"></figcaption>
-    <a ng-if="images.length > 1" class="gallery-link" href ng-click="showGalleryOverlay = true">Imagelink</a>
+    <a ng-if="images.length > 1" class="gallery-link" href ng-click="toggleGalleryOverlay()">Imagelink</a>
   </figure>
 </div>
-<div class="article-gallery-overlay" ng-class="{active: showGalleryOverlay}">
-  <a class="gallery-closer icon-close" href ng-click="showGalleryOverlay = !showGalleryOverlay"></a>
+<div class="article-gallery-overlay" ng-class="{shown: showGalleryOverlay}">
+  <a class="gallery-closer icon-close" href ng-click="toggleGalleryOverlay()"></a>
   <div flipsnap flipsnap-id="flipsnap">
       <div flipsnap-pane ng-repeat="image in images" class="gallery-slide">
         <figure class="gallery-image-wrapper">

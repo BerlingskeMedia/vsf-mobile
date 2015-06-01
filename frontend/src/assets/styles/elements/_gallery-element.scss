@@ -21,10 +21,10 @@
 }
 .gallery-closer {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   color: #fff;
-  
+
 }
 .gallery-indicator {
   width: 100vw;
@@ -43,7 +43,7 @@
   .indicator.active {
     background: #fff;
   }
-  
+
 }
 .article-gallery-overlay {
   position: fixed;
@@ -53,10 +53,47 @@
   background: #000;
   height: 100%;
   display: none;
+  opacity: 0;
   figure.gallery-image-wrapper {
     background: #000;
   }
+  figure figcaption::before {
+    // change to white icon
+  }
 }
-.article-gallery-overlay.active {
+.article-gallery-overlay.shown-add-active {
   display: block;
+  animation: overlay-add .4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.article-gallery-overlay.shown-remove-active {
+  display: block;
+  animation: overlay-remove .4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.article-gallery-overlay.shown {
+  display: block;
+  opacity: 1;
+}
+@keyframes overlay-add {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+}
+@keyframes overlay-remove {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
 }
