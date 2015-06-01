@@ -1,5 +1,5 @@
   <a class="article-content" href ng-href="{{ article.link | relativize }}">
-    <img ng-src="{{ article[1].attributes.url }}" />
+    <img ng-if="article[1].attributes.url" ng-src="{{ ::article[1].attributes.url }}" />
     <div ng-if="article.content_type == 'video'" class="icon icon-video"></div>
     <div ng-if="article.content_type == 'image_gallery'" class="icon icon-images"></div>
   </a>

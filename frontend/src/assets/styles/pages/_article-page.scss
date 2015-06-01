@@ -60,6 +60,9 @@
     color: #777;
     padding-top: 4px;
     padding-bottom: 6px;
+    p {
+      margin-bottom: 0px;
+    }
     &::before {
       opacity: 0.5;
       background-image: url('/assets/images/cameraicon.svg');
@@ -131,8 +134,7 @@
     ul.all-shown {
       margin-bottom: 40px;
       li:last-child {
-        border-left-style: solid;
-        border-left-color: #d2d2d2;
+        border-left: none;
       }
     }
     time {

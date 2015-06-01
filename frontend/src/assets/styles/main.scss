@@ -95,7 +95,7 @@ video { max-width: 100%;}
   a {
     color: #fff;
     display: inline-block;
-    padding: 9px 4px 0px;
+    padding: 8px 4px 0px;
     width: 35px;
     height: 35px;
     font-size: 17px;
@@ -103,6 +103,9 @@ video { max-width: 100%;}
     border-radius: 100%;
     text-align: center;
     margin-right: 10px;
+  }
+  a.icon-twitter::before {
+    font-size: 15px;
   }
 }
 
