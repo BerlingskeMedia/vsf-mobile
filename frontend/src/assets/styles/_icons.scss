@@ -22,14 +22,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-.icon-popular:before {
+.icon-camera:before {
+	content: "\e613";
+}
+.icon-mail:before {
+	content: "\e606";
+}
+.icon-populret:before {
 	content: "\e601";
 }
 .icon-down:before {
 	content: "\e60f";
 }
-.icon-Link:before {
+.icon-link:before {
 	content: "\e610";
 }
 .icon-comment:before {
@@ -62,9 +67,6 @@
 .icon-instagram:before {
 	content: "\e605";
 }
-.icon-mail:before {
-	content: "\e606";
-}
 .icon-menu:before {
 	content: "\e607";
 }
@@ -77,10 +79,9 @@
 .icon-user:before {
 	content: "\e60b";
 }
-.icon-Video:before {
+.icon-video:before {
 	content: "\e60c";
 }
-
 
 
 @font-face {

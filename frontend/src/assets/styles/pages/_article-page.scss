@@ -64,18 +64,18 @@
       margin-bottom: 0px;
     }
     &::before {
-      opacity: 0.5;
-      background-image: url('/assets/images/cameraicon.svg');
-      background-position: 0 0;
-      background-repeat: no-repeat;
-      background-size: cover;
-      content: ' ';
+      font-size: 10px;
+      margin-right: 5px;
       display: block;
       float: left;
-      width: 15px;
-      height: 15px;
-      margin-right: 5px;
-      position: relative;
+      font-family: 'Icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1.6;
+      content: "\e613";
     }
   }
   .byline-wrapper {
