@@ -4,15 +4,16 @@ app.directive('stiftenNewsAlert', function(){
     return {
         restrict: 'AEC',
         templateUrl: 'app/directives/newsalert/newsAlertTemplate.html',
-        controller : function($scope, $rootScope, localStorageService, Nodequeue, PreprocesAlertArticle, dismissedFilter, $filter) {
+        controller : function($scope, $rootScope, localStorageService, Nodequeue, PreprocesAlertArticle, dismissedFilter, relativizeFilter, $filter, $location) {
           $scope.displayAlert = false;
           $scope.alertVisibility = 'alert-displayed';
           //var date = Date.now();
           $scope.hourIconClass = 'wi-time-' + $filter('date')(Date.now(), 'h');
-          var alertArticles = localStorageService.get('alertArticles');
-          var dismissedArticles = localStorageService.get('dismissedArticles');
-          if (alertArticles !== null) {
-            $scope.alertArticles = dismissedFilter(alertArticles);
+          $scope.alertArticles = localStorageService.get('alertArticles');
+          $scope.dismissedArticles = [];
+          $scope.dismissedArticles = localStorageService.get('dismissedArticles');
+          if ($scope.alertArticles !== null) {
+            $scope.alertArticles = dismissedFilter($scope.alertArticles);
           }
           var nodequeue =  Nodequeue.get({id:5910, items:2});
           nodequeue.$promise.then(function(){
@@ -39,17 +40,32 @@ app.directive('stiftenNewsAlert', function(){
           // Dsimiss callback
           $scope.dismissAlert = function(alert) {
             //dismissedArticles.push(alert.link);
-            if (dismissedArticles === null) {
-              dismissedArticles = [];
+            if ($scope.dismissedArticles === null) {
+              $scope.dismissedArticles = [];
             }
-            dismissedArticles.push(alert.link);
-            localStorageService.set('dismissedArticles',dismissedArticles);
+            $scope.dismissedArticles.push(relativizeFilter(alert.link));
+            localStorageService.set('dismissedArticles', $scope.dismissedArticles);
             $scope.alertArticles = dismissedFilter($scope.alertArticles);
           }
           $scope.$watch('alertArticles', function() {
-            $rootScope.alertStatusClass = 'alerts-open-' + $scope.alertArticles.length;
+              if ('alertArticles' in $scope && $scope.alertArticles !== null) {
+                $rootScope.alertStatusClass = 'alerts-open-' + $scope.alertArticles.length;
+              }
           })
-
+          $rootScope.$on("$routeChangeStart", function (event, next, current) {
+              // Dismiss article-alert, if we hit an alert article.
+              angular.forEach($scope.alertArticles, function(value, key) {
+                  var current = relativizeFilter($location.path());
+                  if (relativizeFilter(value.link) == current) {
+                      if ($scope.dismissedArticles === null) {
+                         $scope.dismissedArticles = [];
+                      }
+                      $scope.dismissedArticles.push(current);
+                      localStorageService.set('dismissedArticles', $scope.dismissedArticles);
+                      $scope.alertArticles = dismissedFilter($scope.alertArticles);
+                  }
+              });
+          });
 
 
         }
