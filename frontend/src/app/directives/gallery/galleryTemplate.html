@@ -2,7 +2,9 @@
   <figure>
     <img ng-src="{{ ::images[0].value[0].attributes.url}}" alt />
     <figcaption ng-if="::images[0].value.description" ng-bind-html="::images[0].value.description"></figcaption>
-    <a ng-if="images.length > 1" class="gallery-link" href ng-click="toggleGalleryOverlay()">Imagelink</a>
+    <a ng-if="images.length > 1" class="gallery-link" href ng-click="toggleGalleryOverlay()">
+      <span class="icon-expand"></span>
+    </a>
   </figure>
 </div>
 
