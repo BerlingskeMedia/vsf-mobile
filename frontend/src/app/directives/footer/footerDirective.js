@@ -5,10 +5,8 @@ app.directive('stiftenFooter', function(){
         restrict: 'AEC',
         templateUrl: 'app/directives/footer/footerTemplate.html',
         $scope: false,
-        controller : function($scope,config) {
-            $scope.copyright    = config.footer.copyright;
-            $scope.policies     = config.footer.policies;
-            $scope.socials      = config.footer.socials;
+        controller : function($scope, config) {
+            $scope.footer    = config.footer;
         }
     };
 });

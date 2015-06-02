@@ -145,35 +145,38 @@ var appConfig = {
 
 
     footer: {
-        copyright: "2014 Berlingske Media A/S",
-        policies: [
-            {
+        copyright: "2015 Berlingske Media A/S",
+        policies: {
+            copyright: {
                 text:'Ophavsret og vilkår',
                 link: 'http://www.berlingskemedia.dk/ophavsret-og-vilkaar/'
             },
-            {
+            privacy: {
                 text:'Cookie-og Privatlivspolitik',
                 link: 'http://www.berlingskemedia.dk/cookie-og-privatlivspolitik/'
             },
-            {
+            terms: {
                 text:'Generelle handelsbetingelser',
                 link: 'http://www.berlingskemedia.dk/generelle-handelsbetingelser/'
             }
-        ],
-        socials: [
-            {
-                icon:'facebook',
-                account: 'https://www.facebook.com/stiftstidende'
+        },
+        business: {
+            subscription: {
+                text:'Abonnement',
+                link: 'http://stiften.kundeunivers.dk/koeb-abonnement/stiften?r=YWFzX3BheXdhbGw=&return_url=http://stiften.dk&callback_url=http://login.berlingskemedia.net/sso/server/multisite-update/aas&ns_campaign=_Kundeunivers_abonnement_aas&ns_mchannel=&ns_source=Abonnement_link_aas&ns_linkname=link_bund&ns_fee=&sa=D&usg=ALhdy2-G7c_ykC2CAsD6w_6djEOi9w2isw'
             },
-            {
-                icon:'twitter',
-                account: 'https://twitter.com/stiftendk'
-            },
-            {
-                icon:'instagram',
-                account: 'http://instagram.com/stiftendk'
+            ads: {
+                text:'Annoncering',
+                link: 'http://midtjyskemedier.dk/prislister.html'
             }
-        ]
+            
+        },
+        socials: {
+            facebook: 'https://www.facebook.com/stiftstidende',
+            twitter: 'https://twitter.com/stiftendk',
+            instagram: 'http://instagram.com/stiftendk',
+            google: 'https://google.com/stiftendk'
+        }
 
     }
 }

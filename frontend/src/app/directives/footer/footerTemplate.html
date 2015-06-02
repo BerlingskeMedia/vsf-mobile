@@ -1,20 +1,20 @@
 <div class="footer-social social-links">
   <h2>Følg også stiften her</h2>
-  <a href="https://da-dk.facebook.com/stiftstidende" class="icon icon-facebook"></a>
-  <a href="https://twitter.com/stiftendk" class="icon icon-twitter"></a>
-  <a href="https://instagram.com/stiftendk" class="icon icon-instagram"></a>
-  <a href="https://google.com/stiftendk" class="icon icon-google"></a>
+  <a href ng-href="{{ footer.socials.facebook }}" class="icon icon-facebook"></a>
+  <a href ng-href="{{ footer.socials.twitter }}" class="icon icon-twitter"></a>
+  <a href ng-href="{{ footer.socials.instagram }}" class="icon icon-instagram"></a>
+  <a href ng-href="{{ footer.socials.google }}" class="icon icon-google"></a>
 </div>
 <div class="footer-links">
   <a class="first-col" ng-href="kontakt">Kontakt os</a>
   <a ng-href="omos">Om Århus Stifttidende</a>
-  <a class="first-col" ng-href="abonnement">Abonnement</a>
-  <a ng-href="annoncering">Annoncering</a>
+  <a class="first-col" href  ng-href="{{ footer.business.subscription.link }}">{{ footer.business.subscription.text }}</a>
+  <a href ng-href="{{ footer.business.ads.link }}">{{ footer.business.ads.text }}</a>
 </div>
 
 <div class="footer-copyright">
-  <p>@2015 Berlingske media</p>
-  <a href>Ophavsret og vilkår</a> |  <a href>Cookie- og privatlivspolitik</a>
+  <p>{{ footer.copyright }}</p>
+  <a href ng-href="{{ footer.policies.copyright.link }}">{{ footer.policies.copyright.text }}</a> |  <a href ng-href="{{ footer.policies.privacy.link }}">{{ footer.policies.privacy.text }}</a>
 
 </div>
 <div class="footer-coorp">
