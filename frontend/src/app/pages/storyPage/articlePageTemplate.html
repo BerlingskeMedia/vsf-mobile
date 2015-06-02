@@ -23,7 +23,7 @@
   <div stiften-factbox ng-if="story.factId" class="factbox" fact-id="{{ story.factId }}"></div>
   <h2 class="article-section-header">Mere om denne historie</h2>
   <ul class="tags">
-    <li ng-repeat="tag in story.tags">
+    <li ng-repeat="tag in story.tags | filter: tagBlacklist">
       <a href class="tag-link" ng-href="tag">{{ ::tag.value }}</a>
     </li>
   </ul>
