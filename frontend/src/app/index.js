@@ -58,13 +58,13 @@ var app = angular
             template: '<div stiften-spinner ng-show="contentLoading"></div><article ng-include="templateUrl"></article>',
             controller: 'StoryController'
         })
-        .when('/:tag', {
-            templateUrl: 'app/pages/listPage/listPageTemplate.html',
-            controller: 'ListController'
-        })
         .when('/404', {
             templateUrl: 'app/pages/404Page/404PageTemplate.html',
             controller: 'fourofourController'
+        })
+        .when('/:tag', {
+            templateUrl: 'app/pages/listPage/listPageTemplate.html',
+            controller: 'ListController'
         })
         .when('/', {
             templateUrl: 'app/pages/frontPage/frontPageTemplate.html',
