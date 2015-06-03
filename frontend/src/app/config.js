@@ -58,6 +58,10 @@ var appConfig = {
             h: "180"
         }
     },
+    sectionsWithSubsectionsById: {
+        64874: 'sport',
+        64952: 'oestjylland'
+    },
     sections: {
       sport: {
         name: 'Sport',
@@ -68,9 +72,9 @@ var appConfig = {
           {slug: 'basketball', name: 'Basketball'}
         ]
       },
-      lokal: {
-        name: 'Lokalnyt',
-        id: 0,
+      oestjylland: {
+        name: 'Østjylland',
+        id: 64952,
         subsections: [
           {slug: 'aarhus', name: 'Aarhus'},
           {slug: 'skanderborg', name: 'Skanderborg'},
