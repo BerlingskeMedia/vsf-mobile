@@ -1,0 +1,38 @@
+.author-info-wrapper {
+  padding: 0 $side-margin;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  margin-bottom: 20px;
+  .author-info-image {
+    flex: 0 0 92px;
+    width: 92px;
+    img {
+      border-radius: 100%;
+      max-width: 77px;
+    }
+  }
+  .author-info-text {
+    .author-icon {
+      display: inline-block;
+      min-width: 30px;
+    }
+    .author-name {
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: bold;
+    }
+    .author-link {
+      margin-bottom: 3px;
+      a {
+        color: $label-blue;
+        font-size: 14px;
+
+        .author-icon {
+          color: #9b9b9b;
+        };
+      }
+    }
+    
+  }
+}

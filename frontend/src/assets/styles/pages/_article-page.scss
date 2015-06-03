@@ -85,6 +85,14 @@
     border-top: 1px solid #d7d7d7;
     color: #747474;
     font-weight: bold;
+    .byline-element {
+      &::after {
+        content: ', ';
+      };
+      &:last-child::after {
+        content: none;
+      }
+    }
     & > * {
       margin-bottom: 2px;
     }

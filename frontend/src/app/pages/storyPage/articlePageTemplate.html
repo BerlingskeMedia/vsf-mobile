@@ -21,6 +21,7 @@
   </div>
   <div class="article-body" ng-bind-html="story['content']"></div>
   <div stiften-factbox ng-if="story.factId" class="factbox" fact-id="{{ story.factId }}"></div>
+  <div stiften-author-info ng-if="story.author[0].value.avatar" class="author-info"></div>
   <h2 class="article-section-header">Mere om denne historie</h2>
   <ul class="tags">
     <li ng-repeat="tag in story.tags | filter: tagBlacklist">
