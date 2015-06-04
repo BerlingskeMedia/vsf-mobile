@@ -13,7 +13,10 @@
     vertical-align: middle;
   }
   img {
-   padding-right: 18px; 
+    padding-right: 18px; 
+  }
+  li:last-child img {
+    padding-right: 0px;
   }
 }
 .sports-teams::-webkit-scrollbar-track
