@@ -62,6 +62,7 @@ var appConfig = {
         64874: 'sport',
         64952: 'oestjylland'
     },
+    sportsSections: [64874, 331537],
     sections: {
       sport: {
         name: 'Sport',
@@ -146,7 +147,43 @@ var appConfig = {
         id: 64952
       }
     },
-
+    sportsTeams: [
+        {
+            name: 'AGF',
+            id: 66919,
+            image: 'agf'
+        },
+        {
+            name: 'Aarhus Fremad',
+            id: 0,
+            image: 'aarhus-fremad'
+        },
+        {
+            name: 'Bakken Bears',
+            id: 66922,
+            image: 'bakken-bears'
+        },
+        {
+            name: 'Aarhus Håndbold',
+            id: 66921,
+            image: 'aarhus-haandbold'
+        },
+        {
+            name: 'SK Aarhus',
+            id: 66920,
+            image: 'skaarhus'
+        },
+        {
+            name: 'Skanderborg Håndbold',
+            id: 305761,
+            image: 'skanderborg-haandbold'
+        },
+        {
+            name: 'Odder Håndbold',
+            id: 305761,
+            image: 'odder-haandbold'
+        }
+    ],
 
     footer: {
         copyright: "2015 Berlingske Media A/S",
@@ -173,7 +210,7 @@ var appConfig = {
                 text:'Annoncering',
                 link: 'http://midtjyskemedier.dk/prislister.html'
             }
-            
+
         },
         socials: {
             facebook: 'https://www.facebook.com/stiftstidende',

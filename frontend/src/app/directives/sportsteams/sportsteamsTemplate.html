@@ -1,0 +1,5 @@
+<ul class="sports-teams">
+  <li ng-repeat="team in sportsTeams">
+    <a href ng-href="/{{ team.id }}"><img ng-src="{{ getImageURL(team.image) }}" /></a>
+  </li>
+</ul>

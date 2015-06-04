@@ -1,0 +1,18 @@
+.sports-teams {
+  white-space:nowrap;
+  padding: 0 $side-margin 16px;
+  margin-bottom: 0px;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+  width: 100%;
+  li {
+    width: 19%;
+    max-width: 80px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  img {
+   padding-right: 10px; 
+  }
+}

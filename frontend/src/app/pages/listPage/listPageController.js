@@ -35,7 +35,10 @@ app.controller('ListController', function ($scope, $rootScope, $routeParams, con
   }
   $scope.subsectionVisible = false;
   $scope.contentLoading = true;
-
+  $scope.showSportsTeams = false;
+  if (config.sportsSections.indexOf(Number(id)) >= 0) {
+    $scope.showSportsTeams = true;
+  }
 
 
   $scope.showTime = true;
