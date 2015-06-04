@@ -1,49 +1,11 @@
+NOTES
+
+Spotted
+------------------
+Please note, that "spotted"-articles used as external links in the galeri queue are filtered away, since we have no API-access to theses.
 
 
-Array ( 
-[Top historier] => http://www.stiften.dk/mecommobile/nodequeue/1011/15?output_type=xml&mmfd_version=2.0&show_related=true&show_external=true&show_external_sources=true 
-[Seneste Nyt] => http://www.stiften.dk/mecommobile/latest/news_article/64873/20?output_type=xml&mmfd_version=2.0&show_related=true&show_external=true&show_external_sources=true 
-[Mest Læste] => http://www.stiften.dk/mecommobile/nodequeue/1077/20?output_type=xml&mmfd_version=2.0&show_related=true&show_external=true&show_external_sources=true )
-
-
-
-
-
-Spørgsmål til API
-
-- Kan man få relative stier ud?
-- Kan man hente enkelte nodes?
-- Med hvilken id?
-- Kan man slå op på url?
-- Hvilke tags kan man forvente i brødteksten?
-- Hvilke content-types er der på stiften?
- 
- 
- 
- 
- NQ
- 
- 1 køid
- 2 antal artivler
- 
- image-size
- 
- 
- 
- 
- 
- LATEST
- 
-
- 
- 
- 
- NODE
- 
- /node/guid
- 
- 
- 
- 
- 
- 
+Tag-pages/sections
+------------------
+We don't have a slug for the tags on articles. This means we can't link from an article to a tag or section using a slug. 
+Because of that we have som sections in config and other sections/tag-pages.
