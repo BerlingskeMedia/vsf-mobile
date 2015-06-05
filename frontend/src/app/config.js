@@ -59,10 +59,25 @@ var appConfig = {
         }
     },
     sectionsWithSubsectionsById: {
-        64874: 'sport',
-        64952: 'oestjylland'
+        64874: 'sport', //sport
+        66919: 'sport', // AGF
+        0: 'sport', // Aarhus fremad
+        66922: 'sport', // Bears
+        66921: 'sport', // Aarhus håndbold
+        66920: 'sport', // SK Århus
+        305761: 'sport', // Skanderborg H
+        329953: 'sport', // Odder Håndbold
+        331535: 'sport', // Fodbold
+        331537: 'sport', // Basketball
+        331536: 'sport', // Håndbold
+        64952: 'oestjylland', //Østjylland
+        64954: 'oestjylland', //Århus
+        64928: 'oestjylland', //Skanderborg
+        64939: 'oestjylland', //Odder
+        64930: 'oestjylland', //Favrskov
+        64944: 'oestjylland', //Syddjurs
+        64938: 'oestjylland', //Norddjurs
     },
-    sportsSections: [64874, 331537],
     sections: {
       sport: {
         name: 'Sport',
@@ -82,8 +97,7 @@ var appConfig = {
           {slug: 'odder', name: 'Odder'},
           {slug: 'favrskov', name: 'Favrskov'},
           {slug: 'syddjurs', name: 'Syddjurs'},
-          {slug: 'norddjurs', name: 'Norddjurs'},
-          {slug: 'oestjylland', name: 'Østjylland'}
+          {slug: 'norddjurs', name: 'Norddjurs'}
         ]
       },
       indland: {
@@ -108,7 +122,15 @@ var appConfig = {
       },
       fodbold: {
         name: 'Fodbold',
-        id: 0
+        id: 331535
+      },
+      basketball: {
+        name: 'Basketball',
+        id: 331537
+      },
+      haandbold: {
+        name: 'Håndbold',
+        id: 331536
       },
       krimi: {
         name: 'Krimi',
@@ -142,10 +164,6 @@ var appConfig = {
         name: 'Norddjurs',
         id: 64938
       },
-      oestjylland: {
-        name: 'Østjylland',
-        id: 64952
-      }
     },
     sportsTeams: [
         {
@@ -180,9 +198,10 @@ var appConfig = {
         },
         {
             name: 'Odder Håndbold',
-            id: 305761,
+            id: 329953,
             image: 'odder-haandbold'
         }
+
     ],
 
     footer: {
