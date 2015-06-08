@@ -14,7 +14,9 @@ app.directive('stiftenHeader', function() {
           if ($location.path() == '/søg') {
             $rootScope.searchLink = '/';
           }
-
+          $scope.closeMenu = function () {
+              $rootScope.menuOpen = false;
+          }
           $scope.searchClick = function(event) {
             event.preventDefault();
             if ($location.path() == '/søg') {
