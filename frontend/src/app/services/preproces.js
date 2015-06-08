@@ -2,6 +2,7 @@
 
 app.factory('PreprocesAlertArticle', function() {
   return function(item) {
+    item.isInSports = false;
     // Find presentation tags
     if ('fields' in item) {
       for (var x=0; x < item.fields.length; x++) {
@@ -21,6 +22,9 @@ app.factory('PreprocesAlertArticle', function() {
         if (item.fields[x].attributes.keys == 'tag') {
           if (!('tags' in item)) {
             item.tags = [];
+          }
+          if (item.fields[x].value.toLowerCase() == 'sport') {
+              item.isInSports = true;
           }
           item.tags.push(item.fields[x]);
         }

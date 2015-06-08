@@ -42,7 +42,6 @@ app.controller('StoryController', function($scope, $rootScope, ContentItemByPath
         }
         return true;
     }
-
     // When we have the story we set the matchnig template
     // Inspired by: http://blog.freeside.co/2013/02/11/dynamic-templates-in-angular-routes/
     $scope.$watch('story', function() {

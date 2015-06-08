@@ -43,6 +43,9 @@
     <button ng-hide="displayed >= story.relatedStories.length" href ng-click="showMore();">Vis alle</button>
   </div>
 </div>
+<h3 ng-if="story.isInSports" class="section-header">Nyt fra de lokale hold</h3>
+<div ng-if="story.isInSports" stiften-sports-teams></div>
+
 <h3 class="section-header">Populært på stiften</h3>
 <div stiften-most-popular-article-list stiften-chartbeat-list initial="5" items="10" class="most-popular-article-list"></div>
 <h3 class="section-header">Tophistorier</h3>
