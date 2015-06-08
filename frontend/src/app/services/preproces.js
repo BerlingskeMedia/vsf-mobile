@@ -3,6 +3,12 @@
 app.factory('PreprocesAlertArticle', function() {
   return function(item) {
     item.isInSports = false;
+    item.displayMoreHeader = false;
+    var blacklist = [
+        69931, //Lysavis
+        68397, //Forside
+    ];
+
     // Find presentation tags
     if ('fields' in item) {
       for (var x=0; x < item.fields.length; x++) {
@@ -24,9 +30,13 @@ app.factory('PreprocesAlertArticle', function() {
             item.tags = [];
           }
           if (item.fields[x].value.toLowerCase() == 'sport') {
-              item.isInSports = true;
+            item.isInSports = true;
           }
-          item.tags.push(item.fields[x]);
+          if (blacklist.indexOf(item.fields[x].attributes.label) < 0) {
+            item.tags.push(item.fields[x]);
+          }
+          
+          
         }
       }
     }

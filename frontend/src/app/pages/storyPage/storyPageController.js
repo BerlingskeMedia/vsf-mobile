@@ -27,20 +27,9 @@ app.controller('StoryController', function($scope, $rootScope, ContentItemByPath
         PreprocesArticle($scope);
         localStorageService.set($routeParams.tag + '/' + $routeParams.articleid, $scope.story);
     });
-
     $scope.displayed = 3;
     $scope.showMore = function() {
         $scope.displayed = $scope.story.relatedStories.length;
-    }
-    $scope.tagBlacklist = function(input) {
-        var blacklist = [
-            69931, //Lysavis
-            68397, //Forside
-        ];
-        if (blacklist.indexOf(input.attributes.label) >= 0) {
-            return false;
-        }
-        return true;
     }
     // When we have the story we set the matchnig template
     // Inspired by: http://blog.freeside.co/2013/02/11/dynamic-templates-in-angular-routes/

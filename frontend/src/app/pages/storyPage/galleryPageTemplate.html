@@ -27,6 +27,12 @@
     </li>
   </ul>
 </div>
+<h2 class="article-section-header" ng-if="story.tags.length > 0 || story.relatedStories.length > 0 ">Læs mere om</h2>
+<ul class="tags">
+  <li ng-repeat="tag in story.tags">
+    <a href class="tag-link" ng-href="{{ ::tag.attributes.label }}">{{ ::tag.value }}</a>
+  </li>
+</ul>
 
 <h3 class="section-header">Flere gallerier</h3>
 <div stiften-gallery-article-list stiften-nodequeue-list id="5861" initial="3" items="8" imagesize="800x600" class="gallery-article-list" all-link-text="Se alle gallerier" all-link="/gallerier" filter-current></div>
