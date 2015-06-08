@@ -38,6 +38,10 @@ var app = angular
       'BACKEND_ADDRESS',
       'http://stiften.dk'
   )
+  .constant(
+      'BASE_URL_TO_RELATIVIZE',
+      'http://stiften.dk'
+  )
   .constant('config', appConfig)
   .config(function ($routeProvider, $locationProvider, $httpProvider, localStorageServiceProvider) {
     $routeProvider
