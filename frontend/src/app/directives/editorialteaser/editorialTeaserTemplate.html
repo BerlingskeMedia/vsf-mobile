@@ -3,6 +3,7 @@
     <div class="editorial-header-text">
       <h3 class="section-header">Leder</h3>
       <div class="byline">{{ ::article.author[0].value.name }}</div>
+      <div class="title">{{ ::article.author[0].value.aboutme }}</div>
     </div>
     <div class="editorial-image-wrapper">
       <img class="editorial-image" ng-src="{{ ::article[1].attributes.url }}" />
