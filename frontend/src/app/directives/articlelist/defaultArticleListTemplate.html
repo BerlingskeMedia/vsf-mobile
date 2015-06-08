@@ -1,6 +1,8 @@
 <ul>
-  <li ng-repeat="article in articles" ng-class="article.content_type.replace('_', '-') ">
+  <li ng-repeat="article in articles | limitTo: displayed : 0" ng-class="article.content_type.replace('_', '-') ">
     <article ng-if="article.category.toLowerCase() != 'leder'" stiften-image-teaser class="image-article-list-article" ng-class="article.content_type.replace('_', '-')"></article>
     <article ng-if="article.category.toLowerCase() == 'leder'" stiften-editorial-teaser class="editorial-article-list-article" ng-class="article.content_type.replace('_', '-')"></article>
   </li>
 </ul>
+<a class="more-link" ng-show="showAllLink" href ng-href="{{ allLink }}">{{ allLinkText}}</a>
+<button ng-show="showExpandButton" href ng-click="showMore();">{{ expandButtonText }}</button>
