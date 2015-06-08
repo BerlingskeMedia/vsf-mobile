@@ -27,7 +27,7 @@
     </li>
   </ul>
 </div>
-<h2 class="article-section-header" ng-if="story.tags.length > 0 || story.relatedStories.length > 0 ">Læs mere om</h2>
+<h2 class="article-section-header" ng-if="story.tags.length > 0">Læs mere om</h2>
 <ul class="tags">
   <li ng-repeat="tag in story.tags">
     <a href class="tag-link" ng-href="{{ ::tag.attributes.label }}">{{ ::tag.value }}</a>

@@ -215,6 +215,7 @@ app.directive('stiftenFrontpageArticleList', function() {
         restrict: 'AEC',
         controller: function($scope, $attrs) {
           $scope.showTime = true;
+          $scope.displayed = $attrs.items;
           // If an attribute with noTimestamp exists, overwrite.
           if ('noTimestamps' in $attrs) {
             $scope.showTime = false;
