@@ -9,7 +9,6 @@ app.directive('stiftenVideo', function(){
               return $sce.trustAsResourceUrl(src);
             }
             $scope.videoUrl = $scope.story.guid;
-            console.log($scope.videoUrl);
         }
     };
 });
