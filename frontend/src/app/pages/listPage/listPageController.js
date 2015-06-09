@@ -40,8 +40,7 @@ app.controller('ListController', function ($scope, $rootScope, $routeParams, con
   $scope.contentLoading = true;
   $scope.showSportsTeams = false;
 
-
-
+  $scope.displayed = config.itemsInSection;
   $scope.showTime = true;
 
   $scope.toggleSubsectionMenu = function() {
