@@ -49,6 +49,10 @@ var app = angular
             templateUrl: 'app/pages/testPage/testPageTemplate.html',
             controller: 'TestController'
         })
+        .when('/foto', {
+            templateUrl: 'app/pages/fotoPage/fotoPageTemplate.html',
+            controller: 'FotoController'
+        })
         .when('/seneste', {
             templateUrl: 'app/pages/latestPage/latestPageTemplate.html',
             controller: 'LatestController'
