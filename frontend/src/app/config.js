@@ -100,11 +100,11 @@ var appConfig = {
           {slug: 'norddjurs', name: 'Norddjurs'}
         ]
       },
-      indland: {
+      danmark: {
         name: 'Danmark',
         id: 64914
       },
-      udland: {
+      verden: {
         name: 'Verden',
         id: 64916
       },
