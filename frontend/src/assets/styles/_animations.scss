@@ -8,3 +8,7 @@
 .animate-view.ng-leave.ng-leave-active {
   opacity: 0;
 }
+
+.page-search-page .animate-view  {
+  transition: none;
+}

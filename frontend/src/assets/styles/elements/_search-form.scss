@@ -1,8 +1,5 @@
 
 .site-search {
-  transform: translateY(-120vh);
-  opacity: 0;
-  transition: transform $default-transition-time, opacity $default-transition-time;
   width: 100%;
   left: 0;
   right: 0;
@@ -36,9 +33,4 @@
   input:focus {
     outline: none;
   };
-}
-
-.search-open .site-search {
-  transform: translateY(0);
-  opacity: 1;
 }
