@@ -1,4 +1,5 @@
 <div class="story-wrapper">
+  <div berl-emediate cu="28269" tag="article"></div>
   <div class="editorial-header">
       <div class="text-wrapper">
           <h2>Leder</h2>
@@ -16,7 +17,8 @@
   </div>
   <div class="article-body" ng-bind-html="story['content']"></div>
   <div stiften-factbox ng-if="story.factId" class="factbox" fact-id="{{ story.factId }}"></div>
-    <h2 class="article-section-header" ng-if="story.tags.length > 0 || story.relatedStories.length > 0 ">Læs mere om</h2>
+  <div stiften-author-info ng-if="story.author[0].value.avatar" class="author-info"></div>
+  <h2 class="article-section-header" ng-if="story.tags.length > 0 || story.relatedStories.length > 0 ">Læs mere om</h2>
   <ul class="tags">
     <li ng-repeat="tag in story.tags">
       <a href class="tag-link" ng-href="tag">{{ ::tag.value }}</a>
@@ -32,6 +34,7 @@
     <button ng-hide="displayed >= story.relatedStories.length" href ng-click="showMore();">Vis alle</button>
   </div>
 </div>
+<h3 class="section-header">Seneste ledere</h3>
 <div stiften-default-article-list stiften-nodequeue-list filter-current type="news_article" id="1057" items="5" imagesize="650x" class="editorial-article-list"></div>
 <h3 class="section-header">Populært på stiften</h3>
 <div stiften-most-popular-article-list stiften-chartbeat-list initial="5" items="10" class="most-popular-article-list"></div>
