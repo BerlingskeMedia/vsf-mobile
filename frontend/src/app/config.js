@@ -132,9 +132,9 @@ var appConfig = {
         name: 'Håndbold',
         id: 331536
       },
-      krimi: {
-        name: 'Krimi',
-        id: 64915
+      alarm112: {
+        name: 'Alarm 112',
+        id: 64908
       },
       debat: {
         name: 'Debat',
