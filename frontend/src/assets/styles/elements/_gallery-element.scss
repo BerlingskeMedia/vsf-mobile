@@ -39,8 +39,8 @@
 .gallery-closer {
   position: fixed;
   top: 0px;
-  left: 0px;
-  padding: 15px;
+  right: 0px;
+  padding: 20px;
   color: #fff;
   z-index: 500;
 }
@@ -67,11 +67,12 @@
   position: fixed;
   top: 0;
   z-index: 100;
-  padding-top: 40px;
+  padding-top: 55px;
   background: #000;
   height: 100%;
   display: none;
   opacity: 0;
+  width: 100vw;
   figure.gallery-image-wrapper {
     background: #000;
   }
