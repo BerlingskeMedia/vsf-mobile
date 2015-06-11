@@ -6,8 +6,9 @@
   <div class="meta-wrapper">
       <a class="label" href ng-href="/{{ ::article.category_id }}">{{ ::article.category }}</a><span ng-show="showTime">·</span>
       <time ng-show="showTime" class="publish-date">{{ article.pubDate | date:"d. MMMM, HH:mm"}}</time>
-      <span ng-if="article.rating" stiften-rating rating="{{ article.rating }}"></span>
   </div>
   <a href ng-href="{{ article.link | relativize }}">
     <h2>{{ ::article.title }}</h2>
+    <div ng-if="article.rating" stiften-rating rating="{{ article.rating }}"></div>
   </a>
+
