@@ -7,6 +7,7 @@
       <a class="label" href>{{ story.category }}</a>
     </div>
     <h1>{{ ::story.title }}</h1>
+    <div ng-if="story.rating" stiften-rating rating="{{ story.rating }}"></div>
     <h4 class="subheader">{{ ::story.description }}</h4>
   </div>
   <div stiften-video ng-if="story.content_type == 'video'"></div>
