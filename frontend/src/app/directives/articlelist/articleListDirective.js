@@ -35,8 +35,11 @@ app.directive('stiftenChartbeatList', function() {
               // Filter non-articles based on URL
               if ((value.path.split("/").length == 3) && value.title.length > 0) {
                 filteredPages.push(value);
+
                 var splitTitle = value.title.split(" - ");
-                splitTitle.pop();
+                if (splitTitle.length > 1) {
+                    splitTitle.pop();
+                }
                 value.title = splitTitle.join(' - ');
               }
             });

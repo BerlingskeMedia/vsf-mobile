@@ -2,7 +2,7 @@
   <article ng-repeat="article in articles | limitTo: displayedItems track by article.path" class="image-article-list-article" ng-class="'popular-item-' + $index">
     <a href ng-href="{{ article.path }}">
       <div class="counter">{{ $index+1 }}</div>
-      <h2>{{ article.title }}</h2>
+      <h2>{{ ::article.title }}</h2>
     </a>
   </article>
 </div>
