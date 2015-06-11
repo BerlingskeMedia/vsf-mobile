@@ -33,7 +33,7 @@ app.directive('stiftenChartbeatList', function() {
             var filteredPages = [];
             angular.forEach(pages, function(value, key){
               // Filter non-articles based on URL
-              if ((value.path.split("/").length > 2) && value.title.length > 0) {
+              if ((value.path.split("/").length == 3) && value.title.length > 0) {
                 filteredPages.push(value);
                 var splitTitle = value.title.split(" - ");
                 splitTitle.pop();
