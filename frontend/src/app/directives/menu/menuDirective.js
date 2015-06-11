@@ -5,9 +5,12 @@ app.directive('stiftenMainMenu', function(){
         restrict: 'AE',
         scope: true,
         templateUrl: 'app/directives/menu/menuTemplate.html',
-        controller: function ($scope, $rootScope) {
-            $scope.closeMenu = function() {
+        controller: function ($scope, $rootScope, $location) {
+            $scope.menuClickHandler = function(newPath) {
                 $rootScope.menuOpen = false;
+                if ($location.path() !=  newPath) {
+                    $location.path(newPath);
+                }
             }
         }
     };

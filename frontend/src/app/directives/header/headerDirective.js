@@ -5,7 +5,7 @@ app.directive('stiftenHeader', function() {
         restrict: 'AEC',
         templateUrl: 'app/directives/header/headerTemplate.html',
         scope: false,
-        controller: function($scope, $rootScope, $location) {
+        controller: function($scope, $rootScope, $location, $route) {
           $rootScope.menuOpen = false;
           $rootScope.searchOpen = false;
           $rootScope.searchLink = '/søg';
@@ -16,6 +16,14 @@ app.directive('stiftenHeader', function() {
           }
           $scope.closeMenu = function () {
               $rootScope.menuOpen = false;
+          }
+          $scope.logoClickHandler = function() {
+              $rootScope.menuOpen = false;
+              if ($location.path() != "/") {
+                  $location.path("/");
+              } else {
+                  $route.reload();
+              }
           }
           $scope.searchClick = function(event) {
             event.preventDefault();
