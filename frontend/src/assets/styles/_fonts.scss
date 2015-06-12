@@ -95,11 +95,12 @@ figcaption {
 h3.section-header {
   font-family: $berlingske-sans;
   font-size: 22px;
-  font-weight: 900;
-  border-bottom: 5px solid $stiften-orange;
+  font-weight: 600;
+  border-bottom: 3px solid $stiften-orange;
   color: $header-color;
   text-transform: uppercase;
-  margin: 10px $side-margin 0px;
+  letter-spacing: 0.2px;
+  margin: 10px $side-margin;
   .icon-popular {
     font-size: 22px;
     display: inline-block;

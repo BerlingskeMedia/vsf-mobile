@@ -67,7 +67,7 @@ a {
   padding-top: $header-height;
 }
 .section-header {
-  border-bottom: 5px solid $stiften-orange;
+  border-bottom: 3px solid $stiften-orange;
 }
 
 
@@ -117,4 +117,5 @@ video { max-width: 100%;}
 ul {
   list-style-type: none;
   padding: 0;
+  margin-top: 0px;
 }
