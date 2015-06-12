@@ -249,6 +249,7 @@ article.editorial-article-list-article {
   h3.section-header {
     border-bottom: none;
     margin-left: 0px;
+    margin-bottom: 0px;
   }
   .section-header.section-header-editorial {
     padding-left: $side-margin;
@@ -266,11 +267,17 @@ article.editorial-article-list-article {
   }
   .byline, .title {
     font-family: $berlingske-sans;
-    font-weight: 400;
     font-size: 15px;
     color: #7b7b7b;
     margin-bottom: 5px;
     margin-top: 2px;
+  }
+  .title {
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+  .byline {
+    font-weight: bold;
   }
   h2 {
     font-family: $berlingske-text;
@@ -298,7 +305,6 @@ article.editorial-article-list-article {
   }
   .editorial-image-wrapper {
     width: 40%;
-    padding-left: 10px;
     flex-grow: 4;
     align-self: flex-end;
   }
