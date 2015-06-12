@@ -3,11 +3,13 @@
     <img ng-src="http://stiften.dk/{{ ::story.author[0].value.avatar }}" />
   </div>
   <div class="author-info-text">
-    <div class="author-name">{{ ::story.author[0].value.name }}</div>
     <!-- ><div class="author-title">{{ ::story.author[0].value.title }}</div> -->
+    <div class="author-name">{{ ::story.author[0].value.name }}</div>
+    <div class="author-title">{{ ::story.author[0].value.aboutme }}</div>
+
     <div ng-if="::story.author[0].value.email" class="author-email author-link"><a ng-href="mailto:{{ ::story.author[0].value.email }}"><span class="author-icon icon-mail"></span>{{ ::story.author[0].value.email }}</a></div>
     <div ng-if="::story.author[0].value.twitter_profile_id" class="author-twitter author-link"><a ng-href="{{ ::story.author[0].value.twitter_profile_id }}"><span class="author-icon icon-twitter"></span>{{ ::story.author[0].value.twitter_profile_id | twitterhandle }}</a></div>
-    <div ng-if="::story.author[0].value.instagram_profile_id" class="author-instagram author-link"><a ng-href="{{ ::story.author[0].value.instagram_profile_id }}"><span class="author-icon icon-instagram"></span>{{ ::story.author[0].value.instagram_profile_id | stripprotocol }}</a></div>
-    <div ng-if="::story.author[0].value.facebook_profile_id" class="author-facebook author-link"><a ng-href="{{ ::story.author[0].value.facebook_profile_id }}"><span class="author-icon icon-facebook"></span>{{ ::story.author[0].value.facebook_profile_id | stripprotocol }}</a></div>    
+    <div ng-if="::story.author[0].value.instagram_profile_id" class="author-instagram author-link"><a ng-href="{{ ::story.author[0].value.instagram_profile_id }}"><span class="author-icon icon-instagram"></span>{{ ::story.author[0].value.instagram_profile_id | stripprotocolanddomain }}</a></div>
+    <div ng-if="::story.author[0].value.facebook_profile_id" class="author-facebook author-link"><a ng-href="{{ ::story.author[0].value.facebook_profile_id }}"><span class="author-icon icon-facebook"></span>{{ ::story.author[0].value.facebook_profile_id | stripprotocolanddomain }}</a></div>
   </div>
 </div>

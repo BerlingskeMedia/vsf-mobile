@@ -211,19 +211,19 @@
       border: none;
     }
     .icon-facebook {
-      background: #395999;
+      background: $facebook-color;
     }
     .icon-twitter {
-      background: #578fcb;
+      background: $twitter-color;
     }
     .icon-google {
-      background: #de4b39;
+      background: $google-color;
     }
     .icon-mail {
-      background: #999;
+      background: $mail-color;
     }
     .icon-sms {
-      background: #71af5d;
+      background: $sms-color;
     }
   }
 }

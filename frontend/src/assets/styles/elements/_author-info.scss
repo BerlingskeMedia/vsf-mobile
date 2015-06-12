@@ -1,3 +1,4 @@
+
 .author-info-wrapper {
   padding: 0 $side-margin;
   display: flex;
@@ -9,28 +10,58 @@
     width: 92px;
     img {
       border-radius: 100%;
-      max-width: 77px;
     }
   }
   .author-info-text {
-    .author-icon {
-      display: inline-block;
-      min-width: 30px;
-    }
+    padding-left: $side-margin;
+    font-family: $berlingske-sans;
     .author-name {
-      margin-bottom: 5px;
       color: #333;
       font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .author-title {
+      color: #909090;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .author-icon {
+      display: inline-block;
+      min-width: 16px;
+      padding-right: 8px;
     }
     .author-link {
       margin-bottom: 3px;
       a {
         color: $label-blue;
         font-size: 14px;
-
+        margin-bottom: 6px;
+        display: block;
         .author-icon {
           color: #9b9b9b;
+          text-align:center;
         };
+        .author-icon.icon-mail {
+          font-size: 12px;
+        }
+        .author-icon.icon-twitter {
+          font-size: 13px;
+        }
+        .icon-facebook {
+          color: $facebook-color;
+        }
+        .icon-twitter {
+          color: $twitter-color;
+        }
+        .icon-google {
+          color: $google-color;
+        }
+        .icon-mail {
+          color: $mail-color;
+        }
+        .icon-sms {
+          color: $sms-color;
+        }
       }
     }
     
