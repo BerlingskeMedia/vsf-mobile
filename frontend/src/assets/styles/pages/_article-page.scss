@@ -125,6 +125,11 @@
       margin-right: 10px;
     }
   }
+  .article-divider {
+    border: none;
+    border-top: 1px solid #b2b2b2;
+    margin: 20px $side-margin 40px;
+  }
   .article-related {
     ul {
       margin: 0 $side-margin;
@@ -142,7 +147,7 @@
       };
     }
     ul.all-shown {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       li:last-child {
         border-left: none;
       }

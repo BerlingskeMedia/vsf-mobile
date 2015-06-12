@@ -1,10 +1,11 @@
 
 .author-info-wrapper {
-  padding: 0 $side-margin;
+  border-top: 1px solid #b2b2b2;
+  padding: 20px 0 0;
   display: flex;
   flex-flow: row wrap;
   align-items: stretch;
-  margin-bottom: 20px;
+  margin: 20px $side-margin;
   .author-info-image {
     flex: 0 0 92px;
     width: 92px;

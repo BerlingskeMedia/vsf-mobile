@@ -21,8 +21,9 @@
   </div>
   <div class="article-body" ng-bind-html="story['content']"></div>
   <div stiften-factbox ng-if="story.factId" class="factbox" fact-id="{{ story.factId }}"></div>
+  <div stiften-share-links></div>
   <div stiften-author-info ng-if="story.author[0].value.avatar" class="author-info"></div>
-  <h2 class="article-section-header" ng-if="story.tags.length > 0 || story.relatedStories.length > 0 ">Læs mere om</h2>
+  <h2 class="article-section-header" ng-if="story.tags.length > 0 || story.relatedStories.length > 0 ">Relateret</h2>
   <ul class="tags">
     <li ng-repeat="tag in story.tags">
       <a href class="tag-link" ng-href="{{ ::tag.attributes.label }}">{{ ::tag.value }}</a>
@@ -42,13 +43,14 @@
     </ul>
     <button ng-hide="displayed >= story.relatedStories.length" href ng-click="showMore();">Vis alle</button>
   </div>
+  <hr class="article-divider" ng-if="story.tags.length > 0 || story.relatedStories.length > 0 " />
 </div>
 <h3 ng-if="story.isInSports" class="section-header">Lokale hold</h3>
 <div ng-if="story.isInSports" stiften-sports-teams></div>
 
+<h3 class="section-header">Tophistorier</h3>
+<div stiften-default-article-list stiften-nodequeue-list no-timestamps id="1011" initial="3" items="10" all-link-text="Gå til forsiden" all-link="/" class="image-article-list"></div>
 <h3 class="section-header">Populært på stiften</h3>
 <div stiften-most-popular-article-list stiften-chartbeat-list initial="5" items="10" class="most-popular-article-list"></div>
-<h3 class="section-header">Tophistorier</h3>
-<div stiften-default-article-list stiften-nodequeue-list no-timestamps id="1011" initial="5" items="10" all-link-text="Gå til forsiden" all-link="/" class="image-article-list"></div>
 <h3 class="section-header">Redaktionen anbefaler</h3>
 <div stiften-default-article-list stiften-nodequeue-list id="5636" initial="3" items="8" class="image-article-list"></div>
