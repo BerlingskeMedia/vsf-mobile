@@ -5,12 +5,12 @@
   @include clearfix();
   h1 {
 
-    margin: 22px 0 15px $side-margin;
+    margin: 15px 0 10px $side-margin;
     float: left;
     color: #fff;
     font-size: 22px;
     font-family: $berlingske-sans;
-    font-weight: 900;
+    font-weight: 100;
     text-transform: uppercase;
     a {
       color: #fff;
@@ -18,13 +18,13 @@
   }
 }
 .section-menu-link {
-  margin: 15px $side-margin 12px 0;
+  margin: 10px $side-margin 0 0;
   font-size: 24px;
   font-weight: bold;
-  padding-top: 7px;
+  padding-top: 8px;
   color: #fff;
   float: right;
-  border: 3px solid #fff;
+  border: 2px solid #fff;
   border-radius: 100%;
   margin-right: $side-margin;
   text-align: center;
