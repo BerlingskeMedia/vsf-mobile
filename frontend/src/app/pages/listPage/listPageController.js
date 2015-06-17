@@ -50,7 +50,6 @@ app.controller('ListController', function ($scope, $rootScope, $routeParams, con
   if (section !== null) {
     $scope.articles = section.articles;
     $scope.header = section.header;
-    $scope.subHeader = section.subheader;
     $scope.showSportsTeams = section.showSportsTeams;
     $scope.contentLoading = false;
   }
@@ -66,11 +65,6 @@ app.controller('ListController', function ($scope, $rootScope, $routeParams, con
     // If we're on one of the subsections, display main section header
     if ($scope.hasSubsection) {
         // If it's a main subsection don't display sebheader
-        if (Number(id) != Number(config.sections[tag].id)) {
-            $scope.subHeader = $scope.header;
-            $scope.header = config.sections[tag].name
-            $scope.headerLinkId = config.sections[tag].id
-        }
         if (tag == 'sport') {
             $scope.showSportsTeams = true;
         }
@@ -78,7 +72,6 @@ app.controller('ListController', function ($scope, $rootScope, $routeParams, con
     $scope.articles = latest.items;
     var listData = {
         header: $scope.header,
-        subheader: $scope.subHeader,
         articles: latest.items,
         showSportsTeams: $scope.showSportsTeams
     }

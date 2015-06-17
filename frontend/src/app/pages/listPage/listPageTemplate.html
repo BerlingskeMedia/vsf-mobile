@@ -1,6 +1,5 @@
 <div class="section-header-menu" ng-show="header">
-  <h1 ng-if="!headerLinkId">{{ header }}</h1>
-  <h1 ng-if="headerLinkId"><a href ng-href="{{ headerLinkId }}">{{ header }}</a></h1>
+  <h1>{{ header }}</h1>
   <a href class="section-menu-link" ng-if="hasSubsection" ng-click="toggleSubsectionMenu()">﹀</a>
 </div>
 <div class="section-menu-pulldown" ng-class="{'submenu-open': subsectionVisible}">
@@ -9,8 +8,7 @@
       <a href ng-href="{{ link.slug }}">{{ link.name }}</a>
     </li>
   </ul>
+  <div ng-if="showSportsTeams" stiften-sports-teams class="menu-sports-teams"></div>
 </div>
 <div stiften-spinner ng-show="contentLoading"></div>
-<div stiften-sports-teams ng-if="showSportsTeams"></div>
-<h2 class="section-subheader" ng-if="subHeader">{{ subHeader }}</h2>
 <div stiften-default-article-list  content="controlled" type="news_article" items="7" class="image-article-list"></div>

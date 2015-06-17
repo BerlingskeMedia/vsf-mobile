@@ -30,14 +30,15 @@
         background: #4a4a4a;
       }
     }
+    li {
+      width: 50%;
+      float: left;
+      list-style-position: outside;
+      list-style-type: none;
+      border-bottom: 1px solid #4a4a4a;
+    }
   }
-  li {
-    width: 50%;
-    float: left;
-    list-style-position: outside;
-    list-style-type: none;
-    border-bottom: 1px solid #4a4a4a;
-  }
+
 
 }
 

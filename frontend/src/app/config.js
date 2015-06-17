@@ -83,6 +83,7 @@ var appConfig = {
         name: 'Sport',
         id: 64874,
         subsections: [
+          {slug: 'sport', name: 'Sport'},
           {slug: 'fodbold', name: 'Fodbold'},
           {slug: 'haandbold', name: 'Håndbold'},
           {slug: 'basketball', name: 'Basketball'}
@@ -92,12 +93,14 @@ var appConfig = {
         name: 'Østjylland',
         id: 64952,
         subsections: [
+          {slug: 'oestjylland', name: 'Østjylland'},
           {slug: 'aarhus', name: 'Aarhus'},
           {slug: 'skanderborg', name: 'Skanderborg'},
+          {slug: 'norddjurs', name: 'Norddjurs'},
           {slug: 'odder', name: 'Odder'},
-          {slug: 'favrskov', name: 'Favrskov'},
           {slug: 'syddjurs', name: 'Syddjurs'},
-          {slug: 'norddjurs', name: 'Norddjurs'}
+          {slug: 'favrskov', name: 'Favrskov'},
+
         ]
       },
       danmark: {

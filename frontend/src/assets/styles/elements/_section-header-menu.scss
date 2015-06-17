@@ -1,5 +1,7 @@
 .section-header-menu {
   background: #ffba3b;
+  position: relative;
+  z-index: 45;
   @include clearfix();
   h1 {
 
@@ -31,9 +33,22 @@
 
 }
 .section-menu-pulldown {
-  display: none;
+  position: absolute;
+  transform: translateY(-200%);
+  transition: transform .3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  z-index:40;
   &.submenu-open {
-    display: block;
+    transform: translateY(0);
   }
   @include menu-base();
+  .menu-sports-teams {
+    padding-top: 20px;
+    background: #f8f8f8;
+    border-bottom: 1px solid #b2b2b2;
+    ul.sports-teams {
+      padding-bottom: 0px;
+    }
+  }
 }
+
+
