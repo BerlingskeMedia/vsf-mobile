@@ -2,6 +2,7 @@ var appConfig = {
     texts: {
 
     },
+    maxStarRating: 6,
     itemsInSection: 30,
     editorialId: 64925,
     frontpageQueueId: 1011,

@@ -1,14 +1,13 @@
 'use strict';
 
-app.directive('stiftenRating', function(){
+app.directive('stiftenRating', function(config){
     return {
         restrict: 'AEC',
         templateUrl: 'app/directives/rating/ratingTemplate.html',
         link: function ($scope, $element, $attrs) {
             if ('rating' in $attrs) {
                 var rateArray = [];
-                console.log($attrs.rating);
-                for (var n=0; n<$attrs.rating; n++) {
+                for (var n=0; n< config.maxStarRating; n++) {
                     console.log(n);
                     rateArray.push(n);
                 }
