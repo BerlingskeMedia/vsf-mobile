@@ -5,12 +5,12 @@
   @include clearfix();
   h1 {
 
-    margin: 15px 0 10px $side-margin;
+    margin: 13px 0 13px $side-margin;
     float: left;
     color: #fff;
     font-size: 22px;
     font-family: $berlingske-sans;
-    font-weight: 100;
+    font-weight: 600;
     text-transform: uppercase;
     a {
       color: #fff;
@@ -18,18 +18,18 @@
   }
 }
 .section-menu-link {
-  margin: 10px $side-margin 0 0;
-  font-size: 24px;
-  font-weight: bold;
-  padding-top: 8px;
+  margin: 6px $side-margin 0 0;
+  font-size: 9px;
+  font-weight: 700;
+  padding-top: 14px;
+  padding-left: 1px;
   color: #fff;
   float: right;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   border-radius: 100%;
-  margin-right: $side-margin;
   text-align: center;
-  width: 30px;
-  height: 30px;
+  width: 37px;
+  height: 37px;
 
 }
 .section-menu-pulldown {

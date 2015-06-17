@@ -22,6 +22,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-star:before {
+	content: "\e614";
+}
 .icon-camera:before {
 	content: "\e613";
 }
@@ -33,6 +36,9 @@
 }
 .icon-down:before {
 	content: "\e60f";
+}
+.icon-down02:before {
+	content: "\e615";
 }
 .icon-link:before {
 	content: "\e610";
