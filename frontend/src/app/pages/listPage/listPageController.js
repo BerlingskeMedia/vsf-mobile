@@ -46,6 +46,24 @@ app.controller('ListController', function ($scope, $rootScope, $routeParams, con
   $scope.toggleSubsectionMenu = function() {
     $scope.subsectionVisible = !$scope.subsectionVisible;
   }
+  // Check if current submenu is active
+  // Done this akward way, because the same section
+  // can have both a slug and an id as location.
+  $scope.getSubmenuStatusClass = function(slug) {
+      var currentLocation = $location.path();
+      if (currentLocation[0] == '/') {
+          currentLocation = currentLocation.substring(1);
+      }
+      if (slug == currentLocation) {
+          return 'active';
+      }
+      if (slug in config.sections) {
+          if (currentLocation == config.sections[slug].id) {
+              return 'active';
+          }
+      }
+      return;
+  }
   var section = localStorageService.get('section-' + id + '-' + config.itemsInSection);
   if (section !== null) {
     $scope.articles = section.articles;
@@ -57,11 +75,11 @@ app.controller('ListController', function ($scope, $rootScope, $routeParams, con
   latest.$promise.then(function(){
     $scope.contentLoading = false;
     $scope.header = latest.category;
-    
+
     if ($routeParams.tag in config.sections) {
       $scope.header = config.sections[$routeParams.tag].name;
     }
-    
+
     // If we're on one of the subsections, display main section header
     if ($scope.hasSubsection) {
         // If it's a main subsection don't display sebheader

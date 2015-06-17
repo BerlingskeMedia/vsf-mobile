@@ -29,6 +29,9 @@
       &:hover {
         background: #4a4a4a;
       }
+      &.active {
+        background: #111;
+      }
     }
     li {
       width: 50%;

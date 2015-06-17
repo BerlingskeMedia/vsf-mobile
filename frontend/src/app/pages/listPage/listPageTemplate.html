@@ -5,7 +5,7 @@
 <div class="section-menu-pulldown" ng-class="{'submenu-open': subsectionVisible}">
   <ul class="menu">
     <li ng-repeat="link in submenuLinks">
-      <a href ng-href="{{ link.slug }}">{{ link.name }}</a>
+      <a href ng-href="{{ link.slug }}" ng-class="getSubmenuStatusClass(link.slug)">{{ link.name }}</a>
     </li>
   </ul>
   <div ng-if="showSportsTeams" stiften-sports-teams class="menu-sports-teams"></div>
