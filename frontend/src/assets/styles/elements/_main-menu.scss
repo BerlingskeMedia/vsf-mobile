@@ -14,10 +14,22 @@
   opacity: 0;
 
   @include menu-base();
-  .social {
+  .social-and-tip {
+    position: relative;
     background: #333;
+  }
+  .social, .tip {
+
     font-size: 16px;
-    padding: 20px 25px;
+    width: 50%;
+
+  }
+  .social {
+    padding: 20px 5px 20px 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 57%;
     a {
       color: #fff;
       display: inline-block;
@@ -40,23 +52,24 @@
     }
     .icon-google {
       background: #de4b39;
+      margin-right: 0px;
     }
   }
-  .buttons {
-    background: #333;
-    padding: $side-margin 25px;
-    font-size: 16px;
-    color: #fff;
-    font-family: $berlingske-sans;
-    width: 100%;
-    a {
-      display: inline-block;
-      padding: 12px;
-      border-radius: 15px;
-      background: #fff;
-      margin-right: 10px;
-    }
-  }  
+  .tip {
+    padding: 20px 25px 20px 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+     .tip-button {
+       @include buttonize();
+       margin: 0;
+       height: 40px;
+       padding-top: 14px;
+       text-align: center;
+       width: 100%;
+
+     }
+  }
 }
 
 .menu-open .main-menu {

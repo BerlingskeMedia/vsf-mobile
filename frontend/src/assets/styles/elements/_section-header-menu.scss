@@ -35,16 +35,19 @@
 .section-menu-pulldown {
   position: absolute;
   transform: translateY(-200%);
-  transition: transform .3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  transition: transform .4s ease-in;
   z-index:40;
   &.submenu-open {
+    transition: transform .3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
     transform: translateY(0);
   }
   @include menu-base();
   .menu-sports-teams {
     padding-top: 20px;
+    padding-bottom: 15px;
     background: #f8f8f8;
-    border-bottom: 1px solid #b2b2b2;
+    box-shadow: 0 1px 4px 0px gray;
+    z-index: 40;
     ul.sports-teams {
       padding-bottom: 0px;
     }
