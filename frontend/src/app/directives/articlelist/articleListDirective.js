@@ -242,9 +242,8 @@ app.directive('stiftenDefaultArticleList', function() {
     return {
         restrict: 'AEC',
         templateUrl: 'app/directives/articlelist/defaultArticleListTemplate.html',
+        scope: true,
         controller: function($scope, $attrs) {
-            //console.log($attrs);
-            // Check for ad-position
             $scope.insertAd = false;
             if ('insertAdPosition' in $attrs) {
                 $scope.insertAd = true
