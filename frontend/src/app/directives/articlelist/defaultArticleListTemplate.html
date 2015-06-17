@@ -2,6 +2,7 @@
   <li ng-repeat="article in articles | limitTo: displayed : 0" ng-class="article.content_type.replace('_', '-') ">
     <article ng-if="article.category.toLowerCase() != 'leder'" stiften-image-teaser class="image-article-list-article" ng-class="article.content_type.replace('_', '-')"></article>
     <article ng-if="article.category.toLowerCase() == 'leder'" stiften-editorial-teaser class="editorial-article-list-article" ng-class="article.content_type.replace('_', '-')"></article>
+    <div ng-if="insertAd && adPos==($index+1)" berl-emediate cu="28268" tag="frontpage" class="ad-extra-padding"></div>
   </li>
 </ul>
 <a class="more-link" ng-show="showAllLink" href ng-href="{{ allLink }}">{{ allLinkText}}</a>
