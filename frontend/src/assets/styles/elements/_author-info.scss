@@ -14,7 +14,7 @@
     }
   }
   .author-info-text {
-    padding-left: $side-margin;
+    padding-left: 10px;
     font-family: $berlingske-sans;
     .author-name {
       color: #333;
@@ -35,7 +35,7 @@
       margin-bottom: 3px;
       a {
         color: $label-blue;
-        font-size: 14px;
+        font-size: 13px;
         margin-bottom: 6px;
         display: block;
         .author-icon {
