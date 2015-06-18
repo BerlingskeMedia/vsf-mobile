@@ -50,12 +50,16 @@ var app = angular
             controller: 'TestController'
         })
         .when('/foto', {
-            templateUrl: 'app/pages/fotoPage/fotoPageTemplate.html',
+            templateUrl: 'app/pages/photoPage/photoPageTemplate.html',
             controller: 'FotoController'
         })
         .when('/seneste', {
             templateUrl: 'app/pages/latestPage/latestPageTemplate.html',
             controller: 'LatestController'
+        })
+        .when('/kontakt', {
+            templateUrl: 'app/pages/contactPage/contactPageTemplate.html',
+            controller: 'ContactController'
         })
         .when('/søg', {
             templateUrl: 'app/pages/searchPage/searchPageTemplate.html',
