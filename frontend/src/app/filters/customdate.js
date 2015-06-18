@@ -26,8 +26,8 @@ app.filter('customdate', function($filter, config) {
     // Yesterday
     var yesterday = now - (1000 * 60 * 60 * 24);
     if ($filter('date')(yesterday, 'M/d/yy') == $filter('date')(input, 'M/d/yy', '+0100')) {
-      return 'I går'; //$filter('date')(input, 'HH:mm' , '+0100');
+      return 'I går, ' + $filter('date')(input, 'HH:mm' , '+0100');
     }
-    return $filter('date')(input, 'dd MMM yyyy', '+0100');
+    return $filter('date')(input, 'dd MMMM yyyy, HH:mm', '+0100');
    };
 })

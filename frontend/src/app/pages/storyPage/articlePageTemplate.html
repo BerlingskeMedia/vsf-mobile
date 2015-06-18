@@ -17,7 +17,7 @@
     <div ng-if="story.author && story.author.length > 0" class="byline">Af: <span class="byline-element" ng-repeat="byline in story.author">{{ ::byline.value.name }}</span></div>
   </div>
   <div class="meta-wrapper dates">
-    <time class="publish-date">{{ ::story.pubDate | date:"d. MMM yyyy HH:mm"}}</time>
+    <time class="publish-date">{{ ::story.pubDate | date:"d. MMMM yyyy, HH:mm"}}</time>
   </div>
   <div class="article-ratings" ng-if="story.rating" stiften-rating rating="{{ story.rating }}"></div>
   <div class="article-body" ng-bind-html="story['content']"></div>
