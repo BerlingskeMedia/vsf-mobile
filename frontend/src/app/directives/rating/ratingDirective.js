@@ -8,7 +8,6 @@ app.directive('stiftenRating', function(config){
             if ('rating' in $attrs) {
                 var rateArray = [];
                 for (var n=0; n< config.maxStarRating; n++) {
-                    console.log(n);
                     rateArray.push(n);
                 }
                 $scope.rating = $attrs.rating;

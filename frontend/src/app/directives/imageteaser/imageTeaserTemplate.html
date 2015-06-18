@@ -9,6 +9,6 @@
   </div>
   <a href ng-href="{{ article.link | relativize }}">
     <h2>{{ ::article.title }}</h2>
-    <div ng-if="article.rating" stiften-rating rating="{{ article.rating }}"></div>
+    <div class="teaser-rating" ng-if="article.rating" stiften-rating rating="{{ article.rating }}"></div>
   </a>
 
