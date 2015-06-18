@@ -1,24 +1,28 @@
-<div class="footer-social social-links">
-  <h2>Følg også stiften her</h2>
-  <a href ng-href="{{ footer.socials.facebook }}" class="icon icon-facebook"></a>
-  <a href ng-href="{{ footer.socials.twitter }}" class="icon icon-twitter"></a>
-  <a href ng-href="{{ footer.socials.instagram }}" class="icon icon-instagram"></a>
-  <a href ng-href="{{ footer.socials.google }}" class="icon icon-google"></a>
-</div>
-<div class="footer-links">
-  <a class="first-col" ng-href="kontakt">Kontakt os</a>
-  <a ng-href="omos">Om Århus Stifttidende</a>
-  <a class="first-col" href  ng-href="{{ footer.business.subscription.link }}">{{ footer.business.subscription.text }}</a>
-  <a href ng-href="{{ footer.business.ads.link }}">{{ footer.business.ads.text }}</a>
-</div>
-
-<div class="footer-copyright">
-  <p>{{ footer.copyright }}</p>
-  <a href ng-href="{{ footer.policies.copyright.link }}">{{ footer.policies.copyright.text }}</a> |  <a href ng-href="{{ footer.policies.privacy.link }}">{{ footer.policies.privacy.text }}</a>
-
-</div>
-<div class="footer-coorp">
-  <a class="coorp-berl" href="http://b.dk"><img src="/assets/images/berlingske.svg" /></a>
-  <a class="coorp-bt" href="http://bt.dk"><img src="/assets/images/bt.svg" /></a>
-  <a class="coorp-aoa" href="http://aoa.dk"><img src="/assets/images/aoa.svg" /></a>
+<div class="footer-inner">
+  <div class="footer-social social-links">
+    <a href ng-href="{{ footer.socials.facebook }}" class="icon icon-facebook"></a>
+    <a href ng-href="{{ footer.socials.twitter }}" class="icon icon-twitter"></a>
+    <a href ng-href="{{ footer.socials.instagram }}" class="icon icon-instagram"></a>
+  </div>
+  <div class="footer-links">
+    <div class="first-col">
+      <a href="mailto:red@stiften.dk?subject=Tip Stiften">Tip os</a>
+      <a href ng-href="kontakt">Nyhedsbrev</a>
+      <a href ng-href="kontakt">Kontakt os</a>
+    </div>
+    <div class="second-col">
+      <a href ng-href="{{ footer.business.subscription.link }}">{{ footer.business.subscription.text }}</a>
+      <a href ng-href="{{ footer.business.ads.link }}">{{ footer.business.ads.text }}</a>
+      <a href ng-href="{{ footer.business.service.link }}">{{ footer.business.service.text }}</a>
+    </div>
+  </div>
+  <div class="footer-location">
+    <img class="logo" src="/assets/images/stiftenlogo_white.svg" />
+    <a href="https://www.google.dk/maps/place/%C3%85rhus+Stiftstidende/@56.150159,10.203263,17z/data=!3m1!4b1!4m6!1m3!3m2!1s0x0000000000000000:0xa1003982f4c39856!2s%C3%85rhus+Stiftstidende!3m1!1s0x0000000000000000:0xa1003982f4c39856">Banegårdspladsen 11 · 8000 Aarhus C</a>
+    <a href="tel:+4587401010">+45 8740 1010</a>
+  </div>
+  <div class="footer-copyright">
+    <p>{{ footer.copyright }}</p>
+    <a href target="_blank" ng-href="{{ footer.policies.copyright.link }}">{{ footer.policies.copyright.text }}</a> |  <a href target="_blank" ng-href="{{ footer.policies.privacy.link }}">{{ footer.policies.privacy.text }}</a>
+  </div>
 </div>

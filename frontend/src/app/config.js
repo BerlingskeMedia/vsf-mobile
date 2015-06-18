@@ -212,28 +212,31 @@ var appConfig = {
         copyright: "2015 Berlingske Media A/S",
         policies: {
             copyright: {
-                text:'Ophavsret og vilkår',
+                text: 'Ophavsret og vilkår',
                 link: 'http://www.berlingskemedia.dk/ophavsret-og-vilkaar/'
             },
             privacy: {
-                text:'Cookie-og Privatlivspolitik',
+                text: 'Cookie-og Privatlivspolitik',
                 link: 'http://www.berlingskemedia.dk/cookie-og-privatlivspolitik/'
             },
             terms: {
-                text:'Generelle handelsbetingelser',
+                text: 'Generelle handelsbetingelser',
                 link: 'http://www.berlingskemedia.dk/generelle-handelsbetingelser/'
             }
         },
         business: {
             subscription: {
-                text:'Abonnement',
+                text: 'Abonnement',
                 link: 'http://stiften.kundeunivers.dk/koeb-abonnement/stiften?r=YWFzX3BheXdhbGw=&return_url=http://stiften.dk&callback_url=http://login.berlingskemedia.net/sso/server/multisite-update/aas&ns_campaign=_Kundeunivers_abonnement_aas&ns_mchannel=&ns_source=Abonnement_link_aas&ns_linkname=link_bund&ns_fee=&sa=D&usg=ALhdy2-G7c_ykC2CAsD6w_6djEOi9w2isw'
             },
             ads: {
-                text:'Annoncering',
+                text: 'Annoncering',
                 link: 'http://midtjyskemedier.dk/prislister.html'
+            },
+            service: {
+                text: 'Kundeservice',
+                link: ' https://stiften.kundeunivers.dk/kontakt'
             }
-
         },
         socials: {
             facebook: 'https://www.facebook.com/stiftstidende',

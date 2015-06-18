@@ -1,6 +1,10 @@
 .site-footer {
-  background: #1e1e1e;
+  background: #2f2f2f;
   font-family: $berlingske-sans;
+}
+.footer-inner {
+  box-shadow: 0 9px 24px -4px #000;
+  margin: 0 $side-margin;
 }
 .footer-social, .footer-copyright, .footer-coorp {
   padding-left: 35px;
@@ -9,14 +13,14 @@
 .footer-links {
   padding: 15px 35px;
   background: #2f2f2f;
+  border-bottom: 1px solid #575757;
 }
 .footer-social {
-  padding-top: 15px;
+  padding-top: 25px;
   padding-bottom: 25px;
   background: #2f2f2f;
   color: #fff;
   text-align: center;
-  border-bottom: 1px solid #575757;
   h2 {
     font-family: $berlingske-sans;
     font-weight: normal;
@@ -31,11 +35,33 @@
   };
 }
 
-
+.footer-location {
+  text-align: center;
+  padding-bottom: 20px;
+  a {
+    margin: 0 auto;
+    display: block;
+    color: #dbdbdb;
+    text-decoration: underline;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  img {
+    width: 180px;
+    margin-bottom: 10px;
+    padding-left: 17px;
+    height: auto;
+  }
+}
 
 .footer-links {
   margin-bottom: 20px;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .first-col, .second-col {
+    padding: 0 20px;
+  }
   @include clearfix();
   .coorp-berl-media {
     max-width: 200px;
@@ -45,38 +71,16 @@
   a {
     display: block;
     padding: 10px 0;
-    width: 60%;
-    float: left;
     font-size: 14px;
     color: #fff;
   }
-  .first-col {
-    width: 40%;
-  }
-}
-.footer-coorp {
-  @include clearfix();
-  padding-bottom: 20px;
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0 auto;
-  width: 272px;
 
-  a {
-  
-  }
-  a.coorp-aoa {
-    padding-right: 0px;
-  }
-  img {
-    height: 24px;
-    width: auto;
-    margin-right: 8px;
-  }
 }
+
 .footer-copyright {
+  background: #1e1e1e;
   font-size: 11px;
-  padding-bottom: 20px;
+  padding: 20px 0;
   color: #919191;
   text-align: center;
   a {
