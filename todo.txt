@@ -1,0 +1,12 @@
+TODO
+-------
+
+FORSIDE
+- Cookies + ikon og mindre tekst
+
+
+
+
+
+BOND
+- Tilføj author-id til author-object på artikler
