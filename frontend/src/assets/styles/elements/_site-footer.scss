@@ -2,10 +2,7 @@
   background: #2f2f2f;
   font-family: $berlingske-sans;
 }
-.footer-inner {
-  box-shadow: 0 9px 24px -4px #000;
-  margin: 0 $side-margin;
-}
+
 .footer-social, .footer-copyright, .footer-coorp {
   padding-left: 35px;
   padding-right: 35px;
@@ -48,6 +45,7 @@
     a {
       color: #dbdbdb;
       font-size: 13px;
+      text-decoration: underline;
     }
   }
   img {
