@@ -21,7 +21,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-pin:before {
+	content: "\e60f";
+}
+.icon-link:before {
+	content: "\e610";
+}
 .icon-star:before {
 	content: "\e614";
 }
