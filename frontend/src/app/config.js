@@ -176,11 +176,6 @@ var appConfig = {
             image: 'agf'
         },
         {
-            name: 'Aarhus Fremad',
-            id: 0,
-            image: 'aarhus-fremad'
-        },
-        {
             name: 'Bakken Bears',
             id: 66922,
             image: 'bakken-bears'
@@ -194,6 +189,11 @@ var appConfig = {
             name: 'SK Aarhus',
             id: 66920,
             image: 'skaarhus'
+        },
+        {
+            name: 'Aarhus Fremad',
+            id: 0,
+            image: 'aarhus-fremad'
         },
         {
             name: 'Skanderborg Håndbold',
