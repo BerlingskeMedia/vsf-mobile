@@ -32,6 +32,7 @@ app.directive('stiftenHeader', function() {
               $rootScope.searchFocus = false;
             } else {
               $location.path($rootScope.searchLink);
+              //$rootScope.searchOpen = true;
               $rootScope.searchFocus = true;
             }
           }

@@ -1,15 +1,11 @@
 
 .site-search {
-  width: 100%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: $menu-width;
-  max-width: $page-max-width;
-  z-index: 30;
-  background: #fff; //rgba(223,223,223, 0.95);
   min-height: 100vh;
   padding: $side-margin;
+  opacity: 0;
+  animation: searchinit .5s 0.5s;
+  animation-fill-mode: forwards;
+
   #search-field {
     border: none;
     background: none;
@@ -33,4 +29,13 @@
   input:focus {
     outline: none;
   };
+}
+
+@keyframes searchinit {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
