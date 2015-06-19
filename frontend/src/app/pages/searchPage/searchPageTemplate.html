@@ -1,6 +1,6 @@
 <div class="site-search" ng-class="{searched: searched}">
   <form ng-submit="doSearch($event)" novalidate>
-    <input search-field type="search" name="search" placeholder="Søg på stiften.dk" id="search-field" ng-model="searchphrase" />
+    <input search-field type="search" name="search" placeholder="Søg på stiften" id="search-field" ng-model="searchphrase" />
     <input type="submit" name="submit" value="Søg" id="search-submit" />
   </form>
   <div id="search-results" class="search-results" ng-if="searched" ng-class="{'result-returned': searching}">
