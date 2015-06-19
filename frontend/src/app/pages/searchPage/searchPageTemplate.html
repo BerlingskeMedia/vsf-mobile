@@ -1,4 +1,4 @@
-<div class="site-search">
+<div class="site-search" ng-class="{searched: searched}">
   <form ng-submit="doSearch($event)" novalidate>
     <input search-field type="search" name="search" placeholder="Søg på stiften.dk" id="search-field" ng-model="searchphrase" />
     <input type="submit" name="submit" value="Søg" id="search-submit" />
@@ -10,3 +10,5 @@
     <button id="search-show-more" href ng-if="showMoreLink" ng-click="showMoreResults()">Vis flere</button>
   </div>
 </div>
+<h3 ng-if="numberOfResults == 0" class="section-header">Populært på stiften</h3>
+<div ng-if="numberOfResults == 0" stiften-most-popular-article-list stiften-chartbeat-list initial="5" items="10" class="most-popular-article-list"></div>

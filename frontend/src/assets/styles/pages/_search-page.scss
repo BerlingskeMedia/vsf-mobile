@@ -1,5 +1,13 @@
-
-
+.site-search {
+  min-height: 100vh;
+  padding: $side-margin;
+  opacity: 0;
+  animation: searchinit .5s 0.5s;
+  animation-fill-mode: forwards;
+}
+.site-search.searched {
+  min-height: 0;
+}
 .search-stats {
   margin-top: 20px;
   margin-bottom: 20px;

@@ -1,10 +1,5 @@
 
 .site-search {
-  min-height: 100vh;
-  padding: $side-margin;
-  opacity: 0;
-  animation: searchinit .5s 0.5s;
-  animation-fill-mode: forwards;
 
   #search-field {
     border: none;
