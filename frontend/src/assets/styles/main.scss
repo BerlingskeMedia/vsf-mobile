@@ -82,16 +82,15 @@ body.cookie-consent-visible .main-menu {
   top: $cookie-consent-height + $header-height;
 }
 
-
-.more-link {
-  font-family: $berlingske-sans;
-  color: $label-blue;
-  font-size: 15px;
-  margin-top: 15px;
-  margin-bottom: 40px;
-  display: block;
+.list-button-wrapper {
   text-align: center;
 }
+.more-link, .expand-link {
+ 
+  @include buttonize();
+
+}
+
 
 video { max-width: 100%;}
 .embedded-video { height: auto ;}

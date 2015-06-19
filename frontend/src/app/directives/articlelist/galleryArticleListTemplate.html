@@ -9,5 +9,7 @@
       </div>
     </a>
 </article>
-<a class="more-link" ng-show="showAllLink" href ng-href="{{ allLink }}">{{ allLinkText}}</a>
-<button ng-show="showExpandButton" href ng-click="showMore();">{{ expandButtonText }}</button>
+<div class="list-button-wrapper">
+  <a class="more-link" ng-show="showAllLink && allLink" href ng-href="{{ allLink }}">{{ allLinkText}}<span class="icon-link"></span></a>
+  <a class="expand-link" ng-show="showExpandButton" href ng-click="showMore();">{{ expandButtonText }}<span class="icon-down"></span></a>
+</div>

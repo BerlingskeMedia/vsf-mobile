@@ -56,10 +56,13 @@
   background: #fff;
   text-transform: uppercase;
   padding: 11px 25px 9px;
-  display: block;
+  display: inline-block;
   margin: 15px auto 40px;
   &:active {
     border: 1px solid #333;
   }
-
+  span {
+    font-size: 9px;
+    margin-left: 10px;
+  }
 }

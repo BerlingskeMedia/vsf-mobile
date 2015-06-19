@@ -6,4 +6,6 @@
     </a>
   </article>
 </div>
-<button ng-show="showExpandButton" href ng-click="showMore();">{{ expandButtonText }}</button>
+<div class="list-button-wrapper">
+  <a class="expand-link" ng-show="showExpandButton" href ng-click="showMore();">{{ expandButtonText }}<span class="icon-down"></span></a>
+</div>
