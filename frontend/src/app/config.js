@@ -14,6 +14,7 @@ var appConfig = {
     timeAgoMinuteThreshold: 59,
     timeAgoHourThreshold: 119,
     timeAgoDayThreshold: 119,
+    weatherCacheTTLinSecs: 500,
     weatherCity: 'Aarhus',
     weatherIcons: {
             'day': {
