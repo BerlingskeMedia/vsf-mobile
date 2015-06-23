@@ -208,7 +208,12 @@ var appConfig = {
         }
 
     ],
-
+    socials: {
+        facebook: 'https://www.facebook.com/stiftstidende',
+        twitter: 'https://twitter.com/stiftendk',
+        instagram: 'http://instagram.com/stiftendk',
+        google: 'https://google.com/stiftendk'
+    },
     footer: {
         copyright: "2015 Berlingske Media A/S",
         policies: {
@@ -239,13 +244,6 @@ var appConfig = {
                 link: ' https://stiften.kundeunivers.dk/kontakt'
             }
         },
-        socials: {
-            facebook: 'https://www.facebook.com/stiftstidende',
-            twitter: 'https://twitter.com/stiftendk',
-            instagram: 'http://instagram.com/stiftendk',
-            google: 'https://google.com/stiftendk'
-        }
-
     }
 }
 

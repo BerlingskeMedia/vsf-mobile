@@ -7,6 +7,7 @@ app.directive('stiftenFooter', function(){
         $scope: false,
         controller : function($scope, config) {
             $scope.footer    = config.footer;
+            $scope.socials    = config.socials;
         }
     };
 });
