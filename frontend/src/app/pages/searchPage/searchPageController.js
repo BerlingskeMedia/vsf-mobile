@@ -3,7 +3,7 @@
 'use strict';
 
 app.controller('SearchController', function ($scope, $rootScope, $location, Search) {
-  
+
   $rootScope.searchOpen = true;
 
   $scope.page = 1;
@@ -45,16 +45,13 @@ app.controller('SearchController', function ($scope, $rootScope, $location, Sear
 
     }
   }
-  $scope.hopla = function(event, msg) {
-    console.log(event);
-    console.log('type: ' + msg);
-  }
-  
+
+
   if ('q' in $location.search()) {
     $scope.searchphrase = $location.search()['q'];
     $scope.doSearch();
   }
-  
+
   $rootScope.pageTypeClass = 'page-search-page';
   $rootScope.$emit('tracking');
 });
