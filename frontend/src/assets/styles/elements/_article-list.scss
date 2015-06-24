@@ -250,39 +250,8 @@
 article.editorial-article-list-article {
   margin-bottom: 40px;
   margin-top: 0px;
-  h3.section-header {
-    border-bottom: none;
-    margin-left: 0px;
-    margin-bottom: 0px;
-  }
-  .section-header.section-header-editorial {
-    padding-left: $side-margin;
-    padding-right: $side-margin;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-  }
-  .label {
-    font-family: $berlingske-sans;
-    font-weight: 900;
-    font-size: 22px;
-    color: #333;
-    margin-bottom: 2px;
-  }
-  .byline, .title {
-    font-family: $berlingske-sans;
-    font-size: 15px;
-    color: #7b7b7b;
-    margin-bottom: 5px;
-    margin-top: 2px;
-  }
-  .title {
-    font-weight: 400;
-    margin-bottom: 12px;
-  }
-  .byline {
-    font-weight: bold;
-  }
+
+
   h2 {
     font-family: $berlingske-text;
     color: #333;
@@ -292,7 +261,7 @@ article.editorial-article-list-article {
     margin-top: 0px;
     margin-right: 0px;
     margin-bottom: 0px;
-    padding: 20px 0 10px 0;
+    padding: 14px 0 5px 0;
   }
   .editorial-quote {
     font-family: $berlingske-text;
