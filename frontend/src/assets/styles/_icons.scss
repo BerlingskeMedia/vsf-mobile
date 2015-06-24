@@ -21,6 +21,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-phone:before {
+	content: "\e616";
+}
 .icon-pin:before {
 	content: "\e60f";
 }
