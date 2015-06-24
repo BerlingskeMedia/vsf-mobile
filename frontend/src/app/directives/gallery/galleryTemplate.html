@@ -9,8 +9,10 @@
 </div>
 
 <div class="article-gallery-overlay" ng-class="{shown: showGalleryOverlay}">
-  <div class="gallery-counter">{{ currentSlide+1 }}/{{ images.length }}</div>
-  <a class="gallery-closer icon-close" href ng-click="toggleGalleryOverlay()"></a>
+  <div class="gallery-overlay-header">
+    <div class="gallery-counter">{{ currentSlide+1 }}/{{ images.length }}</div>
+    <a class="gallery-closer icon-close" href ng-click="toggleGalleryOverlay()"></a>
+  </div>
   <div flipsnap flipsnap-id="flipsnap">
       <div flipsnap-pane ng-repeat="image in images" class="gallery-slide">
         <figure class="gallery-image-wrapper">
