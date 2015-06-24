@@ -9,6 +9,7 @@
 </div>
 
 <div class="article-gallery-overlay" ng-class="{shown: showGalleryOverlay}">
+  <div class="gallery-counter">{{ currentSlide+1 }}/{{ images.length }}</div>
   <a class="gallery-closer icon-close" href ng-click="toggleGalleryOverlay()"></a>
   <div flipsnap flipsnap-id="flipsnap">
       <div flipsnap-pane ng-repeat="image in images" class="gallery-slide">
@@ -17,8 +18,5 @@
           <figcaption ng-if="story[1].attributes.desc" ng-bind-html="::image.value.description"></figcaption>
         </figure>
       </div>
-  </div>
-  <div class="gallery-indicator" ng-if="images.length > 1">
-      <a href ng-click="setSlide($index)" ng-repeat="image in images" class="indicator" ng-class="(currentSlide == $index) ? 'active' : ''"></a>
   </div>
 </div>
