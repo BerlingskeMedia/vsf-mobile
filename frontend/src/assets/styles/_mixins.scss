@@ -57,12 +57,18 @@
   text-transform: uppercase;
   padding: 11px 25px 9px;
   display: inline-block;
-  margin: 15px auto 40px;
+  margin: 5px auto 10px;
   &:active {
     border: 1px solid #333;
   }
   span {
-    font-size: 9px;
+    padding-top: 1px;
+    font-size: 6px;
     margin-left: 10px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  span.more-link {
+    font-size: 9px;
   }
 }
