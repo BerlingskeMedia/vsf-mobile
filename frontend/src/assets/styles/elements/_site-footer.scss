@@ -37,8 +37,13 @@
   padding-bottom: 20px;
   p {
     margin: 0 auto 10px;
-    span { //icon
+    span.icon-pin { //icon
       font-size: 12px;
+      color: #dbdbdb;
+      margin-right: 5px;
+    }
+    span.icon-phone { //icon
+      font-size: 9px;
       color: #dbdbdb;
       margin-right: 5px;
     }
