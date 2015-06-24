@@ -30,21 +30,11 @@ app.directive('stiftenGallery', function(){
                               $scope.flipsnap.element.style.width = ($scope.images.length * 100) + 'vw';
                               $scope.flipsnap.refresh();
                           });
-                          $scope.setSlide = function(id) {
-                              $scope.currentSlide = id;
-                              $scope.flipsnap.moveToPoint(id);
-
-                          }
                       }
                     }
                 }
             }
 
-            $scope.$watch('flipsnap', function(){
-                if ('flipsnap' in $scope) {
-
-                };
-            })
         }
     };
 });
