@@ -1,21 +1,22 @@
 <div class="story-wrapper">
   <div berl-emediate cu="28269" tag="article"></div>
-  <div class="editorial-header">
-      <div class="text-wrapper">
-          <h2>Leder</h2>
-          <div class="byline">{{ ::story.author[0].value.name }}</div>
-      </div>
-      <div class="editorial-image-wrapper">
-          <img class="editorial-image" ng-src="{{ ::story[1].attributes.url }}" />
-      </div>
+  <div class="section-header editorial-header">
+    <div class="editorial-header-text">
+      <h3 class="section-header">Leder</h3>
+      <div class="byline">{{ ::story.author[0].value.name }}</div>
+      <div class="title">{{ ::story.author[0].value.aboutme }}</div>
+    </div>
+    <div class="editorial-image-wrapper">
+      <img class="editorial-image" ng-src="{{ ::story.author[0].value.avatar }}" />
+    </div>
   </div>
   <h1>{{ ::story.title }}</h1>
-  <div stiften-share-links></div>
   <div class="meta-wrapper dates">
     <time class="publish-date">{{ ::story.pubDate | date:"d. MMMM yyyy, HH:mm"}}</time>
   </div>
   <div class="article-body" ng-bind-html="story['content']"></div>
   <div stiften-factbox ng-if="story.factId" class="factbox" fact-id="{{ story.factId }}"></div>
+  <div stiften-share-links></div>
   <div stiften-author-info ng-if="story.author[0].value.avatar" class="author-info"></div>
   <h2 class="article-section-header" ng-if="story.tags.length > 0 || story.relatedStories.length > 0 ">Relateret</h2>
   <ul class="tags">
@@ -34,7 +35,7 @@
   </div>
 </div>
 <h3 class="section-header">Seneste ledere</h3>
-<div stiften-default-article-list stiften-nodequeue-list filter-current type="news_article" id="1057" items="5" imagesize="650x" class="editorial-article-list"></div>
+<div stiften-editorial-article-list stiften-nodequeue-list filter-current type="news_article" id="1057" items="5" imagesize="650x" class="editorial-article-list"></div>
 <h3 class="section-header">Populært på stiften</h3>
 <div stiften-most-popular-article-list stiften-chartbeat-list initial="5" items="10" class="most-popular-article-list"></div>
 <h3 class="section-header">Tophistorier</h3>
