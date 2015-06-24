@@ -1,9 +1,26 @@
 .page-editorial-page {
   h1 {
     font-style: italic;
+    margin: 20px $side-margin 10px;
   }
   h4.subheader {
     border-bottom: 1px solid #dddddd;
   }
-  .article-body p:first-child:first-letter { float: left; font-size: 500%; line-height: 1.05; padding-right: 2px; padding-left: 3px }
+  .article-body p:first-child:first-letter {
+    float: left;
+    font-size: 500%;
+    line-height: 1.05;
+    padding-right: 2px;
+    padding-left: 3px;
+    display: inline-block;
+    margin-bottom: -16px;
+  }
+
+  .section-header.editorial-header {
+    margin-left: $side-margin;
+    margin-right: $side-margin;
+    padding-left: 0;
+    padding-right: 0;
+    width: inherit;
+  }
 }
