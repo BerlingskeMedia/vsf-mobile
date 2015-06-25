@@ -77,6 +77,7 @@ app.directive('stiftenNodequeueList', function() {
           $scope.expandButtonText = 'Vis flere';
           $scope.showExpandButton = false;
           $scope.showAllLink = false;
+          $scope.shortTimestamps = false;
           $scope.displayed = $attrs.items;
           if ('initial' in $attrs) {
             $scope.displayed = $attrs.initial;
@@ -100,6 +101,9 @@ app.directive('stiftenNodequeueList', function() {
           // If an attribute with noTimestamp exists, overwrite.
           if ('noTimestamps' in $attrs) {
             $scope.showTime = false;
+          }
+          if ('shortTimestamps' in $attrs) {
+            $scope.shortTimestamps = true;
           }
 
           $scope.showMore = function() {
@@ -218,11 +222,17 @@ app.directive('stiftenFrontpageArticleList', function() {
         restrict: 'AEC',
         controller: function($scope, $attrs) {
           $scope.showTime = true;
+          $scope.shortTimestamps = false;
           $scope.displayed = $attrs.items;
           // If an attribute with noTimestamp exists, overwrite.
           if ('noTimestamps' in $attrs) {
             $scope.showTime = false;
           }
+          // If an attribute with short timestamp exists, overwrite.
+          if ('shortTimestamps' in $attrs) {
+            $scope.shortTimestamps = true;
+          }
+
           $scope.$watch('frontpageArticles', function(val) {
             if (typeof val !== 'undefined') {
               if ('offset' in $attrs) {
@@ -245,9 +255,13 @@ app.directive('stiftenDefaultArticleList', function() {
         scope: true,
         controller: function($scope, $attrs) {
             $scope.insertAd = false;
+            $scope.shortTimestamps = false;
             if ('insertAdPosition' in $attrs) {
                 $scope.insertAd = true
                 $scope.adPos = $attrs.insertAdPosition;
+            }
+            if ('shortTimestamps' in $attrs) {
+              $scope.shortTimestamps = true;
             }
         }
     };

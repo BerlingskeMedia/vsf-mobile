@@ -4,8 +4,9 @@
     <div ng-if="article.content_type == 'image_gallery'" class="icon icon-images"></div>
   </a>
   <div class="meta-wrapper">
-      <a class="label" href ng-href="/{{ ::article.category_id }}">{{ ::article.category }}</a><span ng-show="showTime">·</span>
-      <time ng-show="showTime" class="publish-date">{{ article.pubDate | date:"d. MMMM, HH:mm"}}</time>
+      <a class="label" href ng-href="/{{ ::article.category_id }}">{{ ::article.category }}</a>
+      <time ng-show="showTime && !shortTimestamps" class="publish-date"><span>·</span>{{ article.pubDate | date:"d. MMMM, HH:mm"}}</time>
+      <time ng-show="showTime && shortTimestamps" class="publish-date">{{ article.pubDate | shortCustomdate }}</time>
   </div>
   <a href ng-href="{{ article.link | relativize }}">
     <h2>{{ ::article.title }}</h2>
