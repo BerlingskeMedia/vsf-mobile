@@ -1,5 +1,6 @@
 .story-wrapper {
 
+
   &.alert-breaking .story-header {
     @include clearfix();
     background: $breaking-background-color;
@@ -148,8 +149,10 @@
     margin: 20px $side-margin 40px;
   }
   .article-related {
+    text-align: center;
     ul {
       margin: 0 $side-margin;
+      text-align: left;
     }
     li {
       @include clearfix();
