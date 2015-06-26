@@ -55,10 +55,10 @@
           <div stiften-news-alert class="alerts"></div>
           <nav stiften-main-menu class="main-menu"></nav>
           <div class="main-container">
-              <div ng-view class="main animate-view" autoscroll="true"></div>
+              <div ng-view class="main animate-view" autoscroll="true" ng-class="pageTypeClass"></div>
           </div>
 
-
+          <div stiften-weather city="Aarhus" class="weather"></div>
           <footer stiften-footer class="site-footer"></footer>
         </div>
         <div berl-tracking></div>
