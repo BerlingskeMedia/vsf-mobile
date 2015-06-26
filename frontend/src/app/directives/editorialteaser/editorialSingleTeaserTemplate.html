@@ -1,0 +1,16 @@
+<a href ng-href="{{ articles[0].link | relativize }}">
+  <div class="section-header editorial-header">
+    <div class="editorial-header-text">
+      <h3 class="section-header">Leder</h3>
+      <div class="byline">{{ ::articles[0].author[0].value.name }}</div>
+      <div class="title">{{ ::articles[0].author[0].value.aboutme }}</div>
+    </div>
+    <div class="editorial-image-wrapper">
+      <img class="editorial-image" ng-src="{{ ::articles[0].author[0].value.avatar }}" />
+    </div>
+  </div>
+  <div class="text-wrapper">
+    <h2>{{ ::articles[0].title }}</h2>
+    <div class="editorial-quote">{{ ::articles[0].description }}</div>
+  </div>
+</a>

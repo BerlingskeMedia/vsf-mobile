@@ -1,0 +1,18 @@
+
+<div class="section-header editorial-header editorial-list-header">
+    <div class="editorial-header-text">
+      <a ng-if="showLabel" class="label" href ng-href="/{{ ::article.category_id }}">{{ ::article.category }}</a>
+      <a href ng-href="{{ article.link | relativize }}">
+        <div class="byline">{{ ::article.author[0].value.name }}</div>
+        <h2>{{ article.title }}</h2>
+      </a>
+    </div>
+  
+    <div class="editorial-image-wrapper">
+      <a href ng-href="{{ article.link | relativize }}">
+        <div class="editorial-image" style="background-image: url('{{ ::article.author[0].value.avatar }}');"></div>
+      </a>
+    </div>
+
+</div>
+

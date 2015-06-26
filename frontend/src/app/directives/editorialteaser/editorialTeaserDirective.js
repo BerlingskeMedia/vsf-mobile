@@ -1,8 +1,14 @@
 'use strict';
 
-app.directive('stiftenEditorialTeaser', function(){
+app.directive('stiftenEditorialSingleTeaser', function(){
     return {
         restrict: 'AEC',
-        templateUrl: 'app/directives/editorialteaser/editorialTeaserTemplate.html'
+        templateUrl: 'app/directives/editorialteaser/editorialSingleTeaserTemplate.html',
+    };
+});
+app.directive('stiftenEditorialListTeaser', function(){
+    return {
+        restrict: 'AEC',
+        templateUrl: 'app/directives/editorialteaser/editorialListTeaserTemplate.html'
     };
 });

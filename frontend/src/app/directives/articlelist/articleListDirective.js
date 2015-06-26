@@ -216,6 +216,7 @@ app.directive('stiftenLatestList', function() {
 app.directive('stiftenFrontpageArticleList', function() {
     return {
         restrict: 'AEC',
+        scope: true,
         controller: function($scope, $attrs) {
           $scope.showTime = true;
           $scope.displayed = $attrs.items;
@@ -248,6 +249,10 @@ app.directive('stiftenDefaultArticleList', function() {
             if ('insertAdPosition' in $attrs) {
                 $scope.insertAd = true
                 $scope.adPos = $attrs.insertAdPosition;
+            }
+            $scope.showLabel = false;
+            if ('showLabel' in $attrs) {
+                $scope.showLabel = true
             }
         }
     };

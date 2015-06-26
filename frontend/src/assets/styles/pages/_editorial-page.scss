@@ -15,12 +15,14 @@
     display: inline-block;
     margin-bottom: -16px;
   }
-
-  .section-header.editorial-header {
-    margin-left: $side-margin;
-    margin-right: $side-margin;
-    padding-left: 0;
-    padding-right: 0;
-    width: inherit;
+  .story-wrapper {
+    .section-header.editorial-header {
+      margin-left: $side-margin;
+      margin-right: $side-margin;
+      padding-left: 0;
+      padding-right: 0;
+      width: inherit;
+    }
+      
   }
 }
