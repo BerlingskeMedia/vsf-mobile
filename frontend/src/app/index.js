@@ -45,10 +45,6 @@ var app = angular
   .constant('config', appConfig)
   .config(function ($routeProvider, $locationProvider, $httpProvider, localStorageServiceProvider) {
     $routeProvider
-        .when('/test', {
-            templateUrl: 'app/pages/testPage/testPageTemplate.html',
-            controller: 'TestController'
-        })
         .when('/foto', {
             templateUrl: 'app/pages/photoPage/photoPageTemplate.html',
             controller: 'FotoController'
@@ -60,6 +56,10 @@ var app = angular
         .when('/kontakt', {
             templateUrl: 'app/pages/contactPage/contactPageTemplate.html',
             controller: 'ContactController'
+        })
+        .when('/redaktion', {
+            templateUrl: 'app/pages/staffPage/staffPageTemplate.html',
+            controller: 'StaffController'
         })
         .when('/søg', {
             templateUrl: 'app/pages/searchPage/searchPageTemplate.html',
