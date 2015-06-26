@@ -28,6 +28,9 @@
     font-style: italic;
   }
 }
+.search-more-wrapper {
+  text-align: center;
+}
 #search-show-more {
   @include buttonize();
 }

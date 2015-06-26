@@ -1,13 +1,15 @@
 <div class="site-search" ng-class="{searched: searched}">
   <form ng-submit="doSearch($event)" novalidate>
-    <input search-field type="search" name="search" placeholder="Søg på stiften" id="search-field" ng-model="searchphrase" />
+    <input search-field type="search" name="search" placeholder="Søg på stiften.dk" id="search-field" ng-model="searchphrase" />
     <input type="submit" name="submit" value="Søg" id="search-submit" />
   </form>
   <div id="search-results" class="search-results" ng-if="searched" ng-class="{'result-returned': searching}">
     <div ng-if="numberOfResults > 0" class="search-stats">{{ numberOfResults }} resultater på <span class="searchphrase">{{ resultphrase }}</span></div>
     <div ng-if="numberOfResults == 0" class="search-stats">Din søgning på <span class="searchphrase">{{ resultphrase }}</span> gav ingen resultater</div>
     <div stiften-result-list class="result-article-list"></div>
-    <button id="search-show-more" href ng-if="showMoreLink" ng-click="showMoreResults()">Vis flere</button>
+    <div class="search-more-wrapper">
+      <button id="search-show-more" href ng-if="showMoreLink" ng-click="showMoreResults()">Vis flere<span class="icon-down"></button>
+    </div>
   </div>
 </div>
 <h3 ng-if="numberOfResults == 0" class="section-header">Populært på stiften</h3>
