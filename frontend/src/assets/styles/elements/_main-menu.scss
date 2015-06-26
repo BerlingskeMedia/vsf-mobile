@@ -14,9 +14,22 @@
   opacity: 0;
 
   @include menu-base();
+  .subscription-wrapper {
+    padding: 20px;
+  }
+  .subscription-button {
+    @include buttonize();
+    width: 100%;
+    background: $stiften-orange;
+    border-color: $stiften-orange;
+    color: $menu-background-color;
+    text-align: center;
+    padding: 14px 25px 13px;
+  }
   .social-and-tip {
     position: relative;
     background: #333;
+    @include clearfix();
   }
   .social, .tip {
 
@@ -25,11 +38,10 @@
 
   }
   .social {
-    padding: 20px 5px 20px 25px;
-    position: absolute;
+    padding: 20px 5px 20px 20px;
     top: 0;
     left: 0;
-    width: 57%;
+    width: 100%;
     a {
       color: #fff;
       display: inline-block;
@@ -73,6 +85,7 @@
 
      }
   }
+
 }
 
 .menu-open .main-menu {
