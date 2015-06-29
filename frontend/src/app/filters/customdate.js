@@ -31,3 +31,22 @@ app.filter('customdate', function($filter, config) {
     return $filter('date')(input, 'dd MMMM yyyy, HH:mm', '+0100');
    };
 })
+
+// This is the baseline list directive
+app.filter('shortCustomdate', function($filter, config) {
+  return function(input) {
+    var now = new Date().getTime() - (new Date().getTimezoneOffset() * 60 * 1000),
+        time = new Date(input).getTime(),
+        diff = Math.ceil((now - time) / (1000 * 60));
+
+    if (diff < config.timeAgoNowThreshold) {
+      return 'Lige nu';
+    }
+    if (diff < config.timeAgoMinuteThreshold) {
+      return diff + ' min.';
+    }
+    var hours = Math.ceil(diff / 60);
+    var text = (hours==1) ? ' time' : ' timer';
+    return hours + text;
+    }
+})
