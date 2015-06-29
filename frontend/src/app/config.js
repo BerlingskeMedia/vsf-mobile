@@ -6,7 +6,7 @@ var appConfig = {
     itemsInSection: 30,
     editorialId: 64925,
     frontpageQueueId: 1011,
-    frontpageItems: 20,
+    frontpageItems: 21,
     canonicalDomain: 'http://stiften.dk',
     chartbeatApikey: 'c3624866ca79af3601812dbe1eb517f4',
     defaultImageSize: '866x487-c',
