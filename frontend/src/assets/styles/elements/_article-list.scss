@@ -32,6 +32,12 @@
   article.video, article.image-gallery {
     .article-content {
       position: relative;
+      .image-count {
+        position: relative;
+        top: -17px;
+        font-size: 11px;
+        left: -3px;
+      }
       .icon {
         display: block;
         width: 60px;
