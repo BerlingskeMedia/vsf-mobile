@@ -45,11 +45,8 @@ app.filter('shortCustomdate', function($filter, config) {
     if (diff < config.timeAgoMinuteThreshold) {
       return diff + ' min.';
     }
-    if (diff < config.timeAgoHourThreshold) {
-      var hours = Math.ceil(diff / 60);
-      var text = (hours==1) ? ' time' : ' timer';
-      return hours + text;
-    }
-    return '';
+    var hours = Math.ceil(diff / 60);
+    var text = (hours==1) ? ' time' : ' timer';
+    return hours + text;
     }
 })
