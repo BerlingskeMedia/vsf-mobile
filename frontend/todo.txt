@@ -1,0 +1,41 @@
+
+(tjek) Seneste nyt: Timestamp - ikke med dato
+(tjek) Tophistorier: Timestamp - timer på alle teasers
+(tjek) Gallerier på teasers på tophistorier og redaktionen anbefaler: Tilføj antal billeder i ikonet
+(tjek) Leder: Billeder / ikke croppet image pre-set til lederteaser 
+(tjek) Tilføj Vejr element på alle sider (er vel nærmest done)?
+(tjek) Fixe tekstlinks (kontakt os breaker)
+(tjek) Tophistorier: Load flere historier (knap)
+(tjek) Kategori + topic pages: 20 historier + load 10 mere + tilføj search (jeg vender tilbage med wording)
+
+
+
+(Design)
+Lederteasers på artikel + debat anvender samme format. Billedstørrelsen skal 
+Byline billede på lederen skal justeres
+
+(Wont fix)
+Carousel captions: Hvorfor kommer captions ikke med ud?
+http://stiften.dk/sport/gangstere-i-en-gentleman-sport
+
+
+
+Footer: 
+Ændre tlf.ikon
+
+
+Søgefelt: Venstre padding
+Search: Transitions ligner lort eller det der er værre
+
+————————
+Fejlside
+Pull to refresh
+
+Author page:
+BOEN-3044 / Mecom mobile api expansion: Author - improvements
+BOEN-3008 / Add 'Author title' to mecommobile feed
+
+
+Start august
+Nyhedsbrev sign-up
+Login + premium
