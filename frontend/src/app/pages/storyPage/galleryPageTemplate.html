@@ -1,5 +1,4 @@
 <div class="story-wrapper">
-  <div class="story-header">
   <h1>{{ ::story.title }}</h1>
   <div class="byline-wrapper">
     <div class="byline" ng-if="story.author && story.author.length > 0">Af: <span class="byline-element" ng-repeat="byline in story.author">{{ ::byline.value.name }}</span></div>
