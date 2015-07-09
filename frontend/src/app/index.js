@@ -36,7 +36,7 @@ var app = angular
   )
   .constant(
       'BACKEND_ADDRESS',
-      'http://stiften.dk'
+      ''  //Empty to make the url relative
   )
   .constant(
       'BASE_URL_TO_RELATIVIZE',
