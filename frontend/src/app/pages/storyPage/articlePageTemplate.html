@@ -22,6 +22,7 @@
   <div class="article-ratings" ng-if="story.rating" stiften-rating rating="{{ story.rating }}"></div>
   <div class="article-body" ng-bind-html="story['content']"></div>
   <div stiften-factbox ng-if="story.factId" class="factbox" fact-id="{{ story.factId }}"></div>
+  <div stiften-fbcomments></div>
   <div stiften-share-links></div>
   <div stiften-author-info ng-if="story.author[0].value.avatar" class="author-info"></div>
   <h2 class="article-section-header" ng-if="story.tags.length > 0 || story.relatedStories.length > 0 ">Relateret</h2>
@@ -30,7 +31,6 @@
       <a href class="tag-link" ng-href="{{ ::tag.attributes.label }}">{{ ::tag.value }}</a>
     </li>
   </ul>
-
   <div ng-if="story.relatedStories" class="article-related">
     <ul ng-class="{ 'all-shown': displayed >= story.relatedStories.length}">
       <li ng-repeat="related in (filteredItems = (story.relatedStories | orderBy : '-pubDate')) | limitTo: displayed">
