@@ -20,9 +20,9 @@
     <time class="publish-date">{{ ::story.pubDate | date:"d. MMMM yyyy, HH:mm"}}</time>
   </div>
   <div class="article-ratings" ng-if="story.rating" stiften-rating rating="{{ story.rating }}"></div>
-  <div class="article-body" ng-bind-html="story['content']"></div>
+  <div class="article-body" ng-bind-html="story['content']" ng-if="story['content']"></div>
   <div stiften-factbox ng-if="story.factId" class="factbox" fact-id="{{ story.factId }}"></div>
-  <div stiften-fbcomments></div>
+  <div stiften-fbcomments class="stiften-fbcomments"></div>
   <div stiften-share-links></div>
   <div stiften-author-info ng-if="story.author[0].value.avatar" class="author-info"></div>
   <h2 class="article-section-header" ng-if="story.tags.length > 0 || story.relatedStories.length > 0 ">Relateret</h2>

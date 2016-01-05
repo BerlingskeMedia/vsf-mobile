@@ -1,0 +1,6 @@
+.stiften-fbcomments {
+  // The fb-plugin has a built-in 8px padding, we substract.
+  margin-left: $side-margin - 8;
+  margin-right: $side-margin -8;
+  margin-bottom: 20px;
+}
