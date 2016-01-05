@@ -35,8 +35,8 @@ app.factory('PreprocesAlertArticle', function() {
           if (blacklist.indexOf(item.fields[x].attributes.label) < 0) {
             item.tags.push(item.fields[x]);
           }
-          
-          
+
+
         }
       }
     }
@@ -47,6 +47,10 @@ app.factory('PreprocesAlertArticle', function() {
 
 app.factory('PreprocesArticle', function(localStorageService, $sce) {
   return function(scope) {
+
+    //Remove cdata-wrapper
+    scope.story.content = scope.story.content.replace("<![CDATA[", "").replace("]]>", "");
+
     // Always trust html, so video tags do not get stripped.
     scope.story.content = $sce.trustAsHtml(scope.story.content);
 
