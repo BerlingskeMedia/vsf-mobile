@@ -10,6 +10,7 @@
       <a class="label" href ng-href="/{{ ::article.category_id }}">{{ ::article.category }}</a><span ng-if="showTime">·</span>
       <time ng-if="showTime && !shortTimestamps" class="publish-date">{{ article.pubDate | date:"d. MMMM, HH:mm"}}</time>
       <time ng-if="showTime && shortTimestamps" class="publish-date">{{ article.pubDate | shortCustomdate }}</time>
+      <span ng-if="article.plus_access!==undefined && !article.plus_access"><a ng-href="/login">+</a></span>
   </div>
   <a href ng-href="{{ article.link | relativize }}">
     <h2>{{ ::article.title }}</h2>
