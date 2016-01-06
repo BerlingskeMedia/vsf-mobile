@@ -45,6 +45,14 @@ var app = angular
   .constant('config', appConfig)
   .config(function ($routeProvider, $locationProvider, $httpProvider, localStorageServiceProvider) {
     $routeProvider
+        .when('/logout', {
+            template: " ",
+            controller: 'LogoutController'
+        })
+        .when('/login', {
+            templateUrl: 'app/pages/loginPage/loginPageTemplate.html',
+            controller: 'LoginController'
+        })
         .when('/foto', {
             templateUrl: 'app/pages/photoPage/photoPageTemplate.html',
             controller: 'FotoController'
