@@ -1,2 +1,21 @@
 <h1>LOGIN DIRECTIVE TEMPLATE</h1>
 <p>Hooplasd</p>
+  <form name="login" ng-submit="login(user)" class="login-form" ng-class="{'error': loginError}">
+
+    <div class="response">
+      <div class="form-error" ng-if="loginError">
+        Forkert login... 
+      </div>
+      <div class="form-error" ng-if="loginForm.password.$invalid && loginForm.password.$dirty">
+        Indtast et password
+      </div>
+    </div>
+    <input type="email" name="email" ng-required="true" placeholder="E-mail" ng-model="user.email" />
+
+    <input type="password" name="password" ng-required="true" placeholder="Password" ng-model="user.password"  />
+
+    <input type="submit" name="submit" value="Log ind" id="submit" />
+
+
+    <div><a>Jeg har glemt mit kodeord.</a></div>
+  </form>
