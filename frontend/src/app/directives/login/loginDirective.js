@@ -6,7 +6,7 @@ app.directive('stiftenLogin', function(){
         templateUrl: 'app/directives/login/loginTemplate.html',
         controller: function ($scope, User) {
           console.log('login directive loaded');
-          $scope.doLogin = function(user) {
+          $scope.login = function(user) {
             console.log('login func', user);
             User.login(user);
           }

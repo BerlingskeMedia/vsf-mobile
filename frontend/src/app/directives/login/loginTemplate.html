@@ -1,5 +1,7 @@
-  <form name="login" ng-submit="doLogin(user)" class="login-form" ng-class="{'error': loginError}">
 
+  <form name="login-form" ng-submit="login(user)" class="login-form" ng-class="{'error': loginError}">
+    <h2>Login</h2>
+    <p class="buy-subscription">Har du ikke abonnement? <a class="buy-link" href="">Køb et her</a></p>
     <div class="response">
       <div class="form-error" ng-if="loginError">
         Forkert login... 
@@ -12,8 +14,8 @@
 
     <input type="password" name="password" ng-required="true" placeholder="Password" ng-model="user.password"  />
 
-    <input type="submit" name="submit" value="Log ind" id="submit" />
+    <input class="strong-button" type="submit" name="submit" value="Log ind" id="submit" />
 
 
-    <div><a>Jeg har glemt mit kodeord.</a></div>
+    <p class="forgot"><a>Jeg har glemt mit kodeord.</a></p>
   </form>
