@@ -7,3 +7,37 @@ button:focus {
 button {
   @include buttonize();
 }
+
+
+
+.login-form {
+  padding-left: $side-margin;
+  padding-right: $side-margin;
+
+  input[type="email"],  input[type="password"]{
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: #b2b2b2 4px solid;
+    background: #f0f0f0;
+  }
+  .buy-link {
+    color: $stiften-orange;
+  }
+  .forgot {
+    font-size: 12px;
+    float: right;
+  }
+}
+
+.strong-button {
+  @include buttonize();
+  width: 100%;
+  background: $stiften-orange;
+  border-color: $stiften-orange;
+  color: $menu-background-color;
+  text-align: center;
+  padding: 14px 25px 13px;
+}

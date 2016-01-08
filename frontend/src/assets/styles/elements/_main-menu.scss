@@ -17,15 +17,6 @@
   .subscription-wrapper {
     padding: 0 20px;
   }
-  .subscription-button {
-    @include buttonize();
-    width: 100%;
-    background: $stiften-orange;
-    border-color: $stiften-orange;
-    color: $menu-background-color;
-    text-align: center;
-    padding: 14px 25px 13px;
-  }
   .social-and-tip {
     position: relative;
     background: #333;
