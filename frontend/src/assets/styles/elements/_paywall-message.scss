@@ -2,8 +2,10 @@
   box-shadow: -1px 0 3px 1px rgba(0,0,0, 0.3);
   position: fixed;
   height: 60vh;
+  width: 100vw;
   top: 40vh;
   left: 0;
-  background: #FFF;
+  color: #FFF;
+  background: $menu-background-color;
   z-index: 99999;
 }
