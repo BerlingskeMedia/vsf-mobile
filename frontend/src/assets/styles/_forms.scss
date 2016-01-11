@@ -8,7 +8,10 @@ button, .button {
   @include buttonize();
 }
 
-
+input[type="button"]:disabled,
+input[type="submit"]:disabled  {
+  opacity: 0.4;
+}
 
 .login-form {
   padding-left: $side-margin;
