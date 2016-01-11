@@ -4,7 +4,7 @@ textarea:focus,
 button:focus {
     outline: none;
 }
-button {
+button, .button {
   @include buttonize();
 }
 
