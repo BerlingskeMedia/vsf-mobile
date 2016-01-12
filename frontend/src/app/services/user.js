@@ -2,13 +2,10 @@
 
 
 
-app.factory('User', function($http) {
+app.factory('User', function($http, config) {
  
   function login(user) {
-      console.log('login sertvice!' ,user);
-    $http.post('/api/sso-server/authenticate-extended.json', user).then(function(data){
-             console.log(data);
-    });
+    return $http.post(config.ssoEndpoint, user);
   }
 
 
