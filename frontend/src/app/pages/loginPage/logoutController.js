@@ -1,7 +1,7 @@
 'use strict';
 
-app.controller('LogoutController', function() {
-
-   document.cookie = 'sso_token=; expires=' + expire.toUTCString() + '; path=/';
-
+app.controller('LogoutController', function($location, $scope) {
+  document.cookie = 'sso_user_name=; path=/';
+  document.cookie = 'sso_token=; path=/';
+  $location.path('/');
 });

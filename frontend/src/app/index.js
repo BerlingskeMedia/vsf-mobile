@@ -106,7 +106,8 @@ var app = angular
           // Allow sms-links
           $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|sms):/);
       }
-  ]).config(function($httpProvider) {
+  ])
+  .config(function($httpProvider) {
     // The interceptor add a custom header adding the SSO token
     var interceptor = function($cookies) {
       return {

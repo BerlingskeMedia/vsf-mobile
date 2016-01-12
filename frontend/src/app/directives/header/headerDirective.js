@@ -5,7 +5,7 @@ app.directive('stiftenHeader', function() {
         restrict: 'AEC',
         templateUrl: 'app/directives/header/headerTemplate.html',
         scope: false,
-        controller: function($scope, $rootScope, $location, $route) {
+        controller: function($scope, $rootScope, $location, $route, $cookies) {
           $rootScope.menuOpen = false;
           $rootScope.searchOpen = false;
           $rootScope.searchLink = '/søg';
@@ -47,6 +47,7 @@ app.directive('stiftenHeader', function() {
             if (value) {
               $rootScope.searchOpen = false;
             }
+            $rootScope.token = $cookies['sso_token'];
           });
 
           $rootScope.$on("$routeChangeStart", function (event, next, current) {

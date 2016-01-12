@@ -1,7 +1,7 @@
 <div class="buttons-wrapper">
-  <a ng-if="!$root.user" class="strong-button subscription-button" href target="_blank" ng-href="{{ footer.business.subscription.link }}">Abonnnement</a>
-  <a ng-if="!$root.user"class="button login-button" href ng-href="login" class="login">Log ind</a>
-  <a ng-if="$root.user" class="button logout-button" href ng-href="logout">Log ud</a>
+  <a ng-if="!$root.token" class="strong-button subscription-button" href target="_blank" ng-href="{{ footer.business.subscription.link }}">Abonnnement</a>
+  <a ng-if="!$root.token" class="button login-button" href ng-href="login" class="login">Log ind</a>
+  <a ng-if="$root.token" class="button logout-button" href ng-href="logout">Log ud</a>
 </div>
 
 <ul class="menu">
