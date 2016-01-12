@@ -36,7 +36,7 @@ var app = angular
   )
   .constant(
       'BACKEND_ADDRESS',
-      ''  //Empty to make the url relative
+      '/content'  //Empty to make the url relative
   )
   .constant(
       'BASE_URL_TO_RELATIVIZE',
@@ -106,4 +106,28 @@ var app = angular
           // Allow sms-links
           $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|sms):/);
       }
-  ]);
+  ]).config(function($httpProvider) {
+
+    var interceptor = function($cookies) {
+      return {
+        request: function(config) {
+
+
+          if (config.url.match(/mecommobile/g) && config.method === 'GET') {
+            //console.log('hit');
+            config.headers['X-MJM-token'] = ''; //$cookies.sso_token;
+            if ('sso_token' in $cookies && $cookies.sso_token.length > 0) {
+              config.headers['X-MJM-token'] =  $cookies.sso_token;
+            }
+
+          }
+          console.log(config.headers);
+          return config;
+        }
+      }
+    }
+
+    $httpProvider.interceptors.push(interceptor)
+  });
+
+
