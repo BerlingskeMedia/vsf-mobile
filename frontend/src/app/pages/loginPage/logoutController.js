@@ -1,7 +1,7 @@
 'use strict';
 
 app.controller('LogoutController', function() {
-  
-  console.log('logout!');
-  
+
+   document.cookie = 'sso_token=; expires=' + expire.toUTCString() + '; path=/';
+
 });

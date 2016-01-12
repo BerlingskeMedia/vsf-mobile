@@ -1,6 +1,5 @@
 'use strict';
 
-app.controller('LoginController', function() {
-  
+app.controller('LoginController', function($cookies) {
 
 });
