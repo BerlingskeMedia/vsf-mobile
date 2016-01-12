@@ -3,6 +3,11 @@ var appConfig = {
 
     },
     ssoEndpoint: 'http://stiften.dev/sso',
+    timeEndpoint: 'http://stiften.dev/time',
+    commentOpenHour: 8,
+    commentClosingHour: 20,
+    commentClosed: 'Kommentar lukket',
+    commentWelcome: 'Velkommen',
     maxStarRating: 6,
     itemsInSection: 30,
     editorialId: 64925,
