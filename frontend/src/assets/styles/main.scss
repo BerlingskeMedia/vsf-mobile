@@ -84,6 +84,11 @@ body.cookie-consent-visible .main-menu {
   top: $cookie-consent-height + $header-height;
 }
 
+body.page-lock {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 .list-button-wrapper {
   text-align: center;
 }
