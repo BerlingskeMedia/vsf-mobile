@@ -2,6 +2,7 @@ var appConfig = {
     texts: {
 
     },
+    ssoEndpoint: 'http://stiften.dev/sso',
     maxStarRating: 6,
     itemsInSection: 30,
     editorialId: 64925,
