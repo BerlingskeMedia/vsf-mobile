@@ -66,21 +66,7 @@
       background: #43739b;
     }
   }
-  .tip {
-    padding: 20px 25px 20px 25px;
-    position: absolute;
-    top: 0;
-    right: 0;
-     .tip-button {
-       @include buttonize();
-       margin: 0;
-       height: 40px;
-       padding-top: 14px;
-       text-align: center;
-       width: 100%;
 
-     }
-  }
   .buttons-wrapper {
     margin: 10px 0;
     display: flex;
@@ -91,11 +77,17 @@
     margin-left: 25px;
     margin-right: 25px;
   }
-  .subscription-button, .login-button {
+  .subscription-button, .login-button, .epaper-button, .tip-button {
     margin-left: 25px;
     margin-right: 25px;
     width: 50%;
     float: left;
+  }
+  .tip-button {
+    @include buttonize();
+    margin-right: 25px;
+    padding-top: 14px;
+    text-align: center;
   }
   .login-button {
     height: 40px;

@@ -1,6 +1,6 @@
 <div class="buttons-wrapper">
   <a ng-if="!$root.token" class="strong-button subscription-button" href target="_blank" ng-href="{{ footer.business.subscription.link }}">Abonnnement</a>
-  <a ng-if="!$root.token" class="button login-button" href ng-href="login" class="login">Log ind</a>
+  <a ng-if="!$root.token" class="button login-button login" href ng-href="login">Log ind</a>
   <a ng-if="$root.token" class="button logout-button" href ng-href="logout">Log ud</a>
 </div>
 
@@ -18,13 +18,7 @@
   <li><a ng-click="menuClickHandler('debat')" href>Debat</a></li>
   <li><a ng-click="menuClickHandler('foto')" href>Foto</a></li>
 </ul>
-<div class="social-and-tip">
-  <div class="social">
-    <a href ng-href="{{ socials.facebook }}" class="icon icon-facebook"></a>
-    <a href ng-href="{{ socials.twitter }}" class="icon icon-twitter"></a>
-    <a href ng-href="{{ socials.instagram }}" class="icon icon-instagram"></a>
-  </div>
-  <div class="tip">
-    <a href="mailto:red@stiften.dk?subject=Tip Stiften" class="tip-button">Tip os!</a>
-  </div>
+<div class="buttons-wrapper">
+  <a  class="button strong-button epaper-button" href ng-href="login">E-Avis</a>
+  <a href="mailto:red@stiften.dk?subject=Tip Stiften" class="tip-button">Tip os!</a>
 </div>

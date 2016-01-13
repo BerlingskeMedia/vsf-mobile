@@ -239,7 +239,7 @@ var appConfig = {
         business: {
             subscription: {
                 text: 'Abonnement',
-                link: 'http://stiften.kundeunivers.dk/koeb-abonnement/stiften?r=YWFzX3BheXdhbGw=&return_url=http://stiften.dk&callback_url=http://login.berlingskemedia.net/sso/server/multisite-update/aas&ns_campaign=_Kundeunivers_abonnement_aas&ns_mchannel=&ns_source=Abonnement_link_aas&ns_linkname=link_bund&ns_fee=&sa=D&usg=ALhdy2-G7c_ykC2CAsD6w_6djEOi9w2isw'
+                link: 'http://abonnement.stiften.dk'
             },
             ads: {
                 text: 'Annoncering',
