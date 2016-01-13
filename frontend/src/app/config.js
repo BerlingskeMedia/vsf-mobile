@@ -1,9 +1,4 @@
 var appConfig = {
-    texts: {
-
-    },
-    ssoEndpoint: 'http://stiften.dev/sso',
-    timeEndpoint: 'http://stiften.dev/time',
     commentOpenHour: 8,
     commentClosingHour: 20,
     commentClosed: 'Kommentar lukket',

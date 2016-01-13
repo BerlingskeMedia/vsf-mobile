@@ -2,10 +2,10 @@
 
 
 
-app.factory('Time', function($http, config) {
+app.factory('Time', function($http, BACKEND_ADDRESS) {
  
   function getTime() {
-    return $http.get(config.timeEndpoint);
+    return $http.get(BACKEND_ADDRESS + '/time');
   }
 
 

@@ -2,10 +2,10 @@
 
 
 
-app.factory('User', function($http, config) {
+app.factory('User', function($http, BACKEND_ADDRESS) {
  
   function login(user) {
-    return $http.post(config.ssoEndpoint, user);
+    return $http.post(BACKEND_ADDRESS + '/sso', user);
   }
 
 
