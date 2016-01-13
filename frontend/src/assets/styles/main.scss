@@ -87,6 +87,9 @@ body.cookie-consent-visible .main-menu {
 body.page-lock {
   max-height: 100vh;
   overflow: hidden;
+  .story-wrapper {
+    opacity: 0.4;
+  }
 }
 
 .list-button-wrapper {

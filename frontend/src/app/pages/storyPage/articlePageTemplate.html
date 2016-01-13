@@ -1,5 +1,4 @@
 <div class="story-wrapper" ng-class="story.alertType">
-  <div stiften-paywall class="paywall-message" ng-if="story.plus_access!==undefined && !story.plus_access && !$root.user"></div>
   <div berl-emediate cu="28269" tag="article"></div>
   <div class="story-header">
     <div class="meta-wrapper">
@@ -60,3 +59,4 @@
   <h3 class="section-header">Redaktionen anbefaler</h3>
   <div stiften-default-article-list stiften-nodequeue-list id="5636" initial="3" items="8" class="image-article-list"></div>
 </div>
+<div stiften-paywall class="paywall-message" ng-if="story.plus_access!==undefined && !story.plus_access && !$root.user"></div>
