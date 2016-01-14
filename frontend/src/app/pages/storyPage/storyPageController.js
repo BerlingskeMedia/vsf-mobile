@@ -65,5 +65,8 @@ app.controller('StoryController', function($scope, $rootScope, ContentItemByPath
             }
         }
     })
+    $rootScope.$on("$routeChangeStart", function (event, next, current) {
+      $rootScope.pageLockedClass = '';
+    });
     $rootScope.$emit('tracking');
 });
