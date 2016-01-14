@@ -32,9 +32,7 @@ app.controller('StoryController', function($scope, $rootScope, ContentItemByPath
         $scope.displayed = $scope.story.relatedStories.length;
     }
     $rootScope.pageLockedClass = '';
-    if ($scope.story.plus_access!==undefined && !story.plus_access && (!$rootScope.token || $rootScope.token.length===0)) {
-      $rootScope.pageLockedClass = 'page-lock';
-    }
+
     // When we have the story we set the matchnig template
     // Inspired by: http://blog.freeside.co/2013/02/11/dynamic-templates-in-angular-routes/
     $scope.$watch('story', function() {
@@ -61,6 +59,9 @@ app.controller('StoryController', function($scope, $rootScope, ContentItemByPath
                         $scope.templateUrl = defaultTemplatePath + 'articlePageTemplate.html';
                         break;
                 }
+            }
+            if ($scope.story.plus_access!==undefined && !story.plus_access && (!$rootScope.token || $rootScope.token.length===0)) {
+              $rootScope.pageLockedClass = 'page-lock';
             }
         }
     })
