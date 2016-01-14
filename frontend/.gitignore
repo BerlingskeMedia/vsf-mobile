@@ -2,6 +2,9 @@
 node_modules
 bower_components
 
+## Settings
+src/environment.js
+
 ### Temp and build folders ###
 dist
 .tmp

@@ -36,7 +36,7 @@ var app = angular
   )
   .constant(
       'BACKEND_ADDRESS',
-      'http://api.stiften.dev:8000'  //Empty to make the url relative
+      environmentConfig.backendAddress
   )
   .constant(
       'BASE_URL_TO_RELATIVIZE',
