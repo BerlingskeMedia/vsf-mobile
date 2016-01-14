@@ -12,6 +12,9 @@ app.directive('stiftenGallery', function(){
                 $scope.currentSlide = 0;
                 $scope.showGalleryOverlay = false;
                 $scope.toggleGalleryOverlay = function() {
+                    if ($scope.story.plus_access!==undefined && !$scope.story.plus_access) {
+                      return;
+                    }
                     $scope.showGalleryOverlay = !$scope.showGalleryOverlay;
                     if ($scope.showGalleryOverlay) {
                       $scope.flipsnap.element.style.width = ($scope.images.length * 100) + 'vw';
