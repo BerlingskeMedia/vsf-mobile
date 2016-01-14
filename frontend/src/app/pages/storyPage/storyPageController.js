@@ -60,7 +60,7 @@ app.controller('StoryController', function($scope, $rootScope, ContentItemByPath
                         break;
                 }
             }
-            if ($scope.story.plus_access!==undefined && !$scope.story.plus_access && (!$rootScope.token || $rootScope.token.length===0)) {
+            if (('plus_access' in $scope.story) && !$scope.story.plus_access) {
               $rootScope.pageLockedClass = 'page-lock';
             }
         }
