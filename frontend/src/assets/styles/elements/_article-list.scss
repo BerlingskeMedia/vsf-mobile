@@ -91,6 +91,7 @@
 }
 
 .header-article-list-article {
+  position: relative;
   @include clearfix;
   a {
     display: flex;
@@ -114,6 +115,12 @@
     padding-right: 10px;
     margin-bottom: 0px;
     letter-spacing: .015em;
+  }
+  .label-premium {
+    font-size: 9px;
+    position: absolute;
+    top: 3px;
+    right: 3px;
   }
 }
 
