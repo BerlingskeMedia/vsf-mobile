@@ -1,6 +1,11 @@
 .stiften-fbcomments {
   // The fb-plugin has a built-in 8px padding, we substract.
-  margin-left: $side-margin - 8;
-  margin-right: $side-margin -8;
+  margin-left: $side-margin;
+  margin-right: $side-margin;
   margin-bottom: 20px;
+  .comment-welcome {
+    background: $stiften-orange;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
 }
