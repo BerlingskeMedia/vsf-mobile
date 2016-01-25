@@ -8,4 +8,10 @@
   color: #FFF;
   background: $menu-background-color;
   z-index: 99999;
+  .label-premium {
+    position: absolute;
+    top: -8px;
+    left: $side-margin;
+    font-size: 12px;
+  }
 }
