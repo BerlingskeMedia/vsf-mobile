@@ -1,6 +1,7 @@
 <article ng-repeat="article in articles | filter: {content_type: 'image_gallery'} | limitTo: displayed : 0" class="gallery-article-list-article">
     <a class="article-content" href ng-href="{{ article.link | relativize }}" style="background-image: url('{{ article[1].attributes.url }}');">
       <div class="gallery-text-wrapper">
+        <span class="label label-premium" stiften-premium ng-if="article.plus_access!==undefined"></span>
         <div class="image-counter">
           <span class="icon-images"></span>
           <span class="counter">{{ article.images | propertyCounter }}</span>

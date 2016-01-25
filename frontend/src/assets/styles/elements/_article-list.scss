@@ -316,6 +316,12 @@
       font-size: 18px;
       line-height: 1.2;
     }
+    .label.label-premium {
+      position: absolute;
+      top: -25px;
+      left: 0px;
+      font-size: 12px;
+    }
   }
   .more-link {
     margin-left: $side-margin;
