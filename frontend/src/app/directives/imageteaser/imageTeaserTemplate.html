@@ -1,19 +1,17 @@
-
-  <a class="article-content" href ng-href="{{ ::article.link | relativize }}">
-    <img ng-if="article[1].attributes.url" ng-src="{{ ::article[1].attributes.url }}" />
-    <div ng-if="article.content_type == 'video'" class="icon icon-video"></div>
-    <div ng-if="article.content_type == 'image_gallery'" class="icon icon-images">
-      <div class="image-count">{{ article.images | propertyCounter }}</div>
-    </div>
-  </a>
-  <div class="meta-wrapper">
-      <a class="label" href ng-href="/{{ ::article.category_id }}">{{ ::article.category }}</a><span ng-if="showTime">·</span>
-      <time ng-if="showTime && !shortTimestamps" class="publish-date">{{ article.pubDate | date:"d. MMMM, HH:mm"}}</time>
-      <time ng-if="showTime && shortTimestamps" class="publish-date">{{ article.pubDate | shortCustomdate }}</time>
-      <span ng-if="article.plus_access!==undefined && !article.plus_access"><a ng-href="/login">+</a></span>
+<a class="article-content" href ng-href="{{ ::article.link | relativize }}">
+  <img ng-if="article[1].attributes.url" ng-src="{{ ::article[1].attributes.url }}" />
+  <div ng-if="article.content_type == 'video'" class="icon icon-video"></div>
+  <div ng-if="article.content_type == 'image_gallery'" class="icon icon-images">
+    <div class="image-count">{{ article.images | propertyCounter }}</div>
   </div>
-  <a href ng-href="{{ article.link | relativize }}">
-    <h2>{{ ::article.title }}</h2>
-    <div class="teaser-rating" ng-if="article.rating" stiften-rating rating="{{ article.rating }}"></div>
-  </a>
-
+  <span class="label label-premium" stiften-premium ng-if="article.plus_access!==undefined"></span>
+</a>
+<div class="meta-wrapper">
+    <a class="label" href ng-href="/{{ ::article.category_id }}">{{ ::article.category }}</a><span ng-if="showTime">·</span>
+    <time ng-if="showTime && !shortTimestamps" class="publish-date">{{ article.pubDate | date:"d. MMMM, HH:mm"}}</time>
+    <time ng-if="showTime && shortTimestamps" class="publish-date">{{ article.pubDate | shortCustomdate }}</time>
+</div>
+<a href ng-href="{{ article.link | relativize }}">
+  <h2>{{ ::article.title }}</h2>
+  <div class="teaser-rating" ng-if="article.rating" stiften-rating rating="{{ article.rating }}"></div>
+</a>

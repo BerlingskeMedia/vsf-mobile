@@ -81,6 +81,14 @@
   h2 {
     margin-bottom: 10px;
   }
+  .article-content {
+    position: relative;
+  }
+  .label-premium {
+    position: absolute;
+    bottom: 20px;
+    font-size: 12px;
+  }
 }
 
 /* HEADER ARTICLE LIST ITEM */
