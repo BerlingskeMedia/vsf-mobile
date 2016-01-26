@@ -1,17 +1,18 @@
 .paywall-message {
   box-shadow: -1px 0 3px 1px rgba(0,0,0, 0.3);
   position: fixed;
-  height: 60vh;
+  min-height: 60vh;
   width: 100vw;
   top: 40vh;
   left: 0;
   color: #FFF;
   background: $menu-background-color;
-  z-index: 99999;
+  z-index: 20;
   .label-premium {
-    position: absolute;
+    position: relative;
     top: -8px;
     left: $side-margin;
-    font-size: 12px;
+    font-size: 16px;
+    padding: 5px 5px 1px 4px;
   }
 }

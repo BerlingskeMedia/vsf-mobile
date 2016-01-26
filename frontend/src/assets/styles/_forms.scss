@@ -20,11 +20,38 @@ input[type="submit"]:disabled  {
   input[type="email"],  input[type="password"]{
     width: 100%;
     font-size: 16px;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 20px 10px;
+    margin-bottom: 15px;
     border: none;
-    border-bottom: #b2b2b2 4px solid;
-    background: #f0f0f0;
+    border-bottom: #565656 2px solid;
+    background: #888888;
+    color: #fff;
+    border-radius: 0;
+    &:active, &:focus {
+      border-bottom-color: $stiften-orange;
+    };
+  }
+  input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #d2d2d2;
+    font-style: italic;
+  }
+  input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+     color:    #d2d2d2;
+     opacity:  1;
+     font-style: italic;
+  }
+  input::-moz-placeholder { /* Mozilla Firefox 19+ */
+     color:    #d2d2d2;
+     opacity:  1;
+     font-style: italic;
+  }
+  input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+     color:    #d2d2d2;
+     font-style: italic;
+  }
+  input:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+    color:    #d2d2d2;
+    font-style: italic;
   }
   .buy-link {
     color: $stiften-orange;
@@ -33,10 +60,14 @@ input[type="submit"]:disabled  {
     font-size: 12px;
     float: right;
   }
+  .strong-button {
+    margin-bottom: 25px;
+  }
 }
 
 .strong-button {
   @include buttonize();
+  -webkit-appearance: none;
   width: 100%;
   background: $stiften-orange;
   border-color: $stiften-orange;
