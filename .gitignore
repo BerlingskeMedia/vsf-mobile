@@ -3,3 +3,4 @@ buildandpush.sh
 frontend/dist
 varnish
 .idea/
+npm-debug.log
