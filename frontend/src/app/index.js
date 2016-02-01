@@ -36,7 +36,7 @@ var app = angular
   )
   .constant(
       'BACKEND_ADDRESS',
-      environmentConfig.backendAddress
+      'https://ssoapi.bemit.dk/'
   )
   .constant(
       'BASE_URL_TO_RELATIVIZE',
@@ -125,5 +125,3 @@ var app = angular
 
     $httpProvider.interceptors.push(interceptor)
   });
-
-
