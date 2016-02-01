@@ -36,7 +36,7 @@ var app = angular
   )
   .constant(
       'BACKEND_ADDRESS',
-      'https://ssoapi.bemit.dk/'
+      'https://ssoapi.bemit.dk'
   )
   .constant(
       'BASE_URL_TO_RELATIVIZE',
