@@ -112,7 +112,7 @@ var app = angular
     var interceptor = function($cookies) {
       return {
         request: function(config) {
-          if (config.url.match(/mecommobile/g) && config.method === 'GET') {
+          if (config.url.match(/content/g) && config.method === 'GET') {
             config.headers['X-MJM-token'] = ''; //$cookies.sso_token;
             if ('sso_token' in $cookies && $cookies.sso_token.length > 0) {
               config.headers['X-MJM-token'] =  $cookies.sso_token;
