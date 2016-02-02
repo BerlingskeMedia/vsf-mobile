@@ -53,6 +53,10 @@ var app = angular
             templateUrl: 'app/pages/loginPage/loginPageTemplate.html',
             controller: 'LoginController'
         })
+        .when('/password', {
+            templateUrl: 'app/pages/resetPasswordPage/resetPasswordPageTemplate.html',
+            controller: 'ResetPasswordController'
+        })
         .when('/foto', {
             templateUrl: 'app/pages/photoPage/photoPageTemplate.html',
             controller: 'FotoController'
