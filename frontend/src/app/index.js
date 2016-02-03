@@ -124,4 +124,9 @@ var app = angular
     }
 
     $httpProvider.interceptors.push(interceptor)
+  })
+  .run(function($rootScope, $window){
+    $rootScope.$on("$routeChangeStart", function (event, next, current) {
+      $window._fbq.push(['track', 'PixelInitialized', {}]);
+    });
   });
