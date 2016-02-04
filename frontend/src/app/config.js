@@ -2,7 +2,7 @@ var appConfig = {
     commentOpenHour: 7,
     commentClosingHour: 24,
     commentClosed: 'Det er desværre ikke muligt at kommentere Stiftens artikler i mellem 0:00 - 7:00. Kom tilbage senere.',
-    commentWelcome: 'Deltag i debatten nedenfor. Husk debatten er lukket om natten i tidsrummet 0:00 - 7:00. Se vores <a href="">debat-regler her</a>.',
+    commentWelcome: 'Deltag i debatten nedenfor. Husk debatten er lukket om natten i tidsrummet 0:00 - 7:00. Se vores <a href="/debat-regler">debat-regler her</a>.',
     maxStarRating: 6,
     itemsInSection: 30,
     editorialId: 64925,
