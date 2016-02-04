@@ -60,7 +60,7 @@ app.directive('stiftenChartbeatList', function() {
                     $scope.articles = $scope.filterArticles(chartbeat.pages);
 
                 });
-            }, 3000);
+            }, 15000);
         }
     }
 });
