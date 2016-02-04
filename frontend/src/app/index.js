@@ -65,6 +65,10 @@ var app = angular
             templateUrl: 'app/pages/contactPage/contactPageTemplate.html',
             controller: 'ContactController'
         })
+        .when('/debat-regler', {
+            templateUrl: 'app/pages/debatePage/debatePageTemplate.html',
+            controller: 'DebateController'
+        })
         .when('/redaktion', {
             templateUrl: 'app/pages/staffPage/staffPageTemplate.html',
             controller: 'StaffController'
