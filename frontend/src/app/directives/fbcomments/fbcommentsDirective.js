@@ -20,7 +20,7 @@ app.directive('stiftenFbcomments', function(){
 
                var time = new Date(data.data.time);
                var hour = time.getHours();
-               if ((hour > config.commentOpenHour) && (hour < config.commentClosingHour)) {
+               if ((hour >= config.commentOpenHour) && (hour < config.commentClosingHour)) {
                  var intro = config.commentWelcome;
                  var href        = config.canonicalDomain + $location.url();
                  var numposts    = 5;
