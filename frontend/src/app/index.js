@@ -129,8 +129,9 @@ var app = angular
 
     $httpProvider.interceptors.push(interceptor)
   })
-  .run(function($rootScope, $window){
+  .run(function($rootScope, $window, config, $location){
     $rootScope.$on("$routeChangeStart", function (event, next, current) {
+      $rootScope.canonical_url = config.canonicalDomain + $location.url();
       $window._fbq.push(['track', 'PixelInitialized', {}]);
     });
   });

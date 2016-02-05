@@ -33,6 +33,7 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <meta property="fb:app_id" content="301895599836646" />
+    <link rel="canonical" ref="{{$root.canonical_url}}" />
     <base href="/">
 
     <!-- build:css({.tmp,src}) styles/app.css -->
@@ -72,6 +73,30 @@
           js.src = "//connect.facebook.net/da_DK/sdk.js#xfbml=1&version=v2.5";
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
+        <script type='text/javascript'>
+            var _sf_async_config={};
+
+            /** CONFIGURATION START **/
+            _sf_async_config.uid = 49449;
+            _sf_async_config.domain = 'stiften.dk';
+            _sf_async_config.useCanonical = true;
+            /** CONFIGURATION END **/
+
+            (function(){
+              function loadChartbeat() {
+                window._sf_endpt=(new Date()).getTime();
+                var e = document.createElement('script');
+                e.setAttribute('language', 'javascript');
+                e.setAttribute('type', 'text/javascript');
+                e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+                document.body.appendChild(e);
+              }
+              var oldonload = window.onload;
+              window.onload = (typeof window.onload != 'function') ?
+                 loadChartbeat : function() { oldonload(); loadChartbeat(); };
+            })();
+
+        </script>
         <div class="outer-wrapper">
           <header stiften-header class="site-header"></header>
           <div stiften-news-alert class="alerts"></div>
