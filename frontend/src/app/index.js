@@ -132,7 +132,7 @@ var app = angular
   .run(function($rootScope, $window, config, $location){
     $rootScope.$on("$routeChangeStart", function (event, next, current) {
       if ($location.host() === 'm.stiften.dk') {
-        //udm_('//int.sitestat.com/berlingske/bite/s?<SectionName>.panel');
+        udm_('http://int.sitestat.com/berlingske/m-aas/s?');
         pp_gemius_event(pp_gemius_identifier);
         $rootScope.canonical_url = config.canonicalDomain + $location.url();
         $window._fbq.push(['track', 'PixelInitialized', {}]);
