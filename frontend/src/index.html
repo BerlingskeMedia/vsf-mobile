@@ -52,6 +52,7 @@
 </head>
     <body ng-class="[menuStatusClass, searchStatusClass, pageTypeClass, cookieConsentVisibility, alertStatusClass, pageLockedClass]">
         <div id="fb-root"></div>
+        <!-- FB -->
         <script>
             (function() {
                 var _fbq = window._fbq || (window._fbq = []);
@@ -66,6 +67,7 @@
                 _fbq.push(['addPixelId', '301895599836646']);
             })();
         </script>
+             <!-- FB -->
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
@@ -73,6 +75,7 @@
           js.src = "//connect.facebook.net/da_DK/sdk.js#xfbml=1&version=v2.5";
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
+         <!-- ChartBeat -->
         <script type='text/javascript'>
             var _sf_async_config={};
 
@@ -102,6 +105,7 @@
             function udm_(e){var t="comScore=",n=document,r=n.cookie,i="",s="indexOf",o="substring",u="length",a=2048,f,l="&ns_",c="&",h,p,d,v,m=window,g=m.encodeURIComponent||escape;if(r[s](t)+1)for(d=0,p=r.split(";"),v=p[u];d<v;d++)h=p[d][s](t),h+1&&(i=c+unescape(p[d][o](h+t[u])));e+=l+"_t="+ +(new Date)+l+"c="+(n.characterSet||n.defaultCharset||"")+"&c8="+g(n.title)+i+"&c7="+g(n.URL)+"&c9="+g(n.referrer),e[u]>a&&e[s](c)>0&&(f=e[o](0,a-8).lastIndexOf(c),e=(e[o](0,f)+l+"cut="+g(e[o](f+1)))[o](0,a)),n.images?(h=new Image,m.ns_p||(ns_p=h),h.src=e):n.write("<","p","><",'img src="',e,'" height="1" width="1" alt="*"',"><","/p",">")};
             // ]]>
         </script>
+        <!-- Gemius -->
         <!-- (C)2000-2015 Gemius SA - gemiusAudience / bt.dk / BT BITE -->
         <script type="text/javascript">
           <!--//--><![CDATA[//><!--
@@ -112,6 +116,17 @@
           (function(d,t) {try {var gt=d.createElement(t),s=d.getElementsByTagName(t)[0],l='http'+((location.protocol=='https:')?'s':''); gt.setAttribute('async','async');
           gt.setAttribute('defer','defer'); gt.src=l+'://gadk.hit.gemius.pl/xgemius.js'; s.parentNode.insertBefore(gt,s);} catch (e) {}})(document,'script');
           //--><!]]>
+        </script>
+        <!-- Gallup -->
+        <script type="text/javascript">
+            (function() {
+                var scr = document.createElement('script');
+                scr.type = 'text/javascript';
+                scr.async = true;
+                scr.src = '/assets/js-third-party/spring.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(scr, s);
+            })();
         </script>
         <div class="outer-wrapper">
           <header stiften-header class="site-header"></header>
