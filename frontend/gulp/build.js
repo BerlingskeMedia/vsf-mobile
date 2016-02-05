@@ -103,6 +103,12 @@ gulp.task('assetsHtml', function () {
         .pipe($.size());
 });
 
+gulp.task('thirdPartyJS', function () {
+    return gulp.src('src/assets/js-third-party/**/*')
+        .pipe(gulp.dest('dist/assets/js-third-party'))
+        .pipe($.size());
+});
+
 gulp.task('stupidJWPlayer', function() {
     return gulp.src(['bower_components/jwplayer-mirror/jwplayer.flash.swf', 'bower_components/jwplayer-mirror/jwplayer.html5.js'])
         .pipe(gulp.dest('dist'))
@@ -127,4 +133,4 @@ gulp.task('clean', function (done) {
   $.del(['.tmp', 'dist'], done);
 });
 
-gulp.task('build', ['html', 'images', 'svgs', 'fonts', 'misc', 'assetsHtml', 'stupidJWPlayer']);
+gulp.task('build', ['html', 'images', 'svgs', 'fonts', 'misc', 'assetsHtml', 'thirdPartyJS', 'stupidJWPlayer']);
