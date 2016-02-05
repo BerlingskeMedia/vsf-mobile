@@ -132,19 +132,26 @@ var app = angular
   .run(function($rootScope, $window, config, $location){
     $rootScope.$on("$routeChangeStart", function (event, next, current) {
       if ($location.host() === 'm.stiften.dk') {
+
+        var locUrl = $location.url();
+        if (locUrl == '/') {
+          var comscorePage = 'frontpage';
+        } else {
+          var comscorePage = locUrl.substring(1).replace('/', '.') + '.page';
+        }
         //Comscore
-        udm_('http://int.sitestat.com/berlingske/m-aas/s?');
+        udm_('http://int.sitestat.com/berlingske/m-aas/s?' + comscorePage);
         //Gemius
         pp_gemius_event(pp_gemius_identifier);
         // Canonical
-        $rootScope.canonical_url = config.canonicalDomain + $location.url();
+        $rootScope.canonical_url = config.canonicalDomain + locUrl;
         // FB
         $window._fbq.push(['track', 'PixelInitialized', {}]);
         // Gallup
-        springq || [];
-        springq.push({ 
+        var springq = springq || [];
+        springq.push({
           "s":"stiften",
-          "cp": $location.url(),
+          "cp": locUrl,
           "url": document.location.href
         });
       }
