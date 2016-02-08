@@ -7,7 +7,6 @@ app.controller('StoryController', function($scope, $rootScope, ContentItemByPath
     $rootScope.pageTypeClass = 'page-story-page';
 
     var defaultTemplatePath = 'app/pages/storyPage/';
-
     $scope.contentLoading = true;
 
     // First we get the story from local storage
