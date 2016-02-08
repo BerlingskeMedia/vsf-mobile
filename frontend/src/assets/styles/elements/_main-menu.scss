@@ -10,7 +10,7 @@
   width: $menu-width;
   max-width: $page-max-width;
   transition: transform $default-transition-time, opacity $default-transition-time;
-  transform: translate3d(0, -150vh, 0);
+  transform: translate3d(0, -150%, 0);
   opacity: 0;
 
   @include menu-base();
