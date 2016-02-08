@@ -37,6 +37,8 @@ app.controller('StoryController', function($scope, $rootScope, ContentItemByPath
     $scope.$watch('story', function() {
         if ('story' in $scope) {
             $scope.contentLoading = false;
+
+            $rootScope.metaTitle = $scope.story.title;
             // Editorial template
             if ('category_id' in $scope.story) {
                 if ($scope.story.category_id == config.editorialId) {

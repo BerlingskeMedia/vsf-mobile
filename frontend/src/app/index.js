@@ -130,6 +130,7 @@ var app = angular
     $httpProvider.interceptors.push(interceptor)
   })
   .run(function($rootScope, $window, config, $location){
+    $rootScope.metaTitle = config.defaultMetaTitle;
     $rootScope.$on("$routeChangeStart", function (event, next, current) {
       if ($location.host() === 'm.stiften.dk') {
 

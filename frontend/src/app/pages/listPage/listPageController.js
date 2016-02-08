@@ -94,11 +94,10 @@ app.controller('ListController', function($scope, $rootScope, $routeParams, conf
     latest.$promise.then(function() {
         $scope.contentLoading = false;
         $scope.header = latest.category;
-
         if ($routeParams.tag in config.sections) {
             $scope.header = config.sections[$routeParams.tag].name;
         }
-
+        $rootScope.metaTitle = $scope.header;
         // If we're on one of the subsections, display main section header
         if ($scope.hasSubsection) {
             // If it's a main subsection don't display sebheader

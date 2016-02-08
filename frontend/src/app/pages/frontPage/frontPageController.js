@@ -7,6 +7,7 @@
 app.controller('FrontpageController', function ($scope, $rootScope,  Nodequeue, $location, localStorageService, PreprocesAlertArticle, config) {
 
   $rootScope.pageTypeClass = 'page-front-page';
+  $rootScope.metaTitle = config.defaultMetaTitle;
   var queueId = config.frontpageQueueId;
   var items = config.frontpageItems;
 
