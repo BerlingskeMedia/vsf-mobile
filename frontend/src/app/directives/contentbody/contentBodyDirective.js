@@ -8,9 +8,6 @@ app.directive('stiftenContentBody', function ($compile) {
               return scope.$eval(attrs.stiftenContentBody);
           }, function (value) {
 
-    
-
-
                 element.html(value && value.toString());
                 // If scope is provided use it, otherwise use parent scope
                 var compileScope = scope;
