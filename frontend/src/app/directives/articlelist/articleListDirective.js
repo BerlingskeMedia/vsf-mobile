@@ -259,7 +259,12 @@ app.directive('stiftenFrontpageArticleList', function() {
                 if (typeof val !== 'undefined') {
                     if ('offset' in $attrs) {
                         var articles = val;
-                        $scope.articles = articles;
+                        var begin = $attrs.offset;
+                        var end = articles.length;
+                        if (!$scope.showExpandButton) {
+                          end = $scope.displayed
+                        }
+                        $scope.articles = val.splice(begin, end);
                     } else {
                         var articles = val;
                         $scope.articles = val.splice(0, 1);
