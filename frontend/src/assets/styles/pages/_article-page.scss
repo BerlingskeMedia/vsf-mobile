@@ -127,7 +127,7 @@
     }
     margin-bottom: 10px;
   }
-  .embedded-article {
+  .embedded-article, .embedded-gallery, a {
     color: $label-blue;
   }
   .embedded-article::before {
