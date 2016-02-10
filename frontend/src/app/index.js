@@ -75,7 +75,8 @@ var app = angular
         })
         .when('/søg', {
             templateUrl: 'app/pages/searchPage/searchPageTemplate.html',
-            controller: 'SearchController'
+            controller: 'SearchController',
+            reloadOnSearch: false
         })
         .when('/:tag/:articleid', {
             // We use this hack to load different template based on Bond content types.
