@@ -49,7 +49,7 @@
     <hr class="article-divider" ng-if="story.tags.length > 0 || story.relatedStories.length > 0 " />
   </div><!-- PAYWALL-wrapper -->
 </div>
-<div class="extras" ng-if="story.plus_access!==undefined && !story.plus_access && $root.token">
+<div class="extras" ng-if="story.plus_access===undefined || (story.plus_access && $root.token)">
   <h3 ng-if="story.isInSports" class="section-header">Lokale hold</h3>
   <div ng-if="story.isInSports" stiften-sports-teams></div>
 
