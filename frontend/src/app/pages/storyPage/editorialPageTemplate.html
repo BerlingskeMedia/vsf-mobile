@@ -19,7 +19,7 @@
   <div stiften-fbcomments class="stiften-fbcomments"></div>
   <div stiften-share-links></div>
   <div stiften-author-info ng-if="story.author[0].value.avatar" class="author-info"></div>
-  <h2 class="article-section-header" ng-if="story.tags.length > 0 || story.relatedStories.length > 0 ">Relateret</h2>
+  <h2 class="article-section-header" ng-if="story.tags.length > 0 || story.relatedStories.length > 0 ">Læs også</h2>
   <ul class="tags">
     <li ng-repeat="tag in story.tags">
       <a href class="tag-link" ng-href="tag">{{ ::tag.value }}</a>
