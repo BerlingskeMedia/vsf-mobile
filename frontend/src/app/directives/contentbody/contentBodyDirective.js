@@ -1,4 +1,4 @@
-app.directive('stiftenContentBody', function ($compile) {
+app.directive('stiftenContentBody', function ($compile, $sce) {
     'use strict';
     return {
         restrict: 'A',
@@ -7,20 +7,8 @@ app.directive('stiftenContentBody', function ($compile) {
           scope.$watch(function () {
               return scope.$eval(attrs.stiftenContentBody);
           }, function (value) {
-
                 element.html(value && value.toString());
-                // If scope is provided use it, otherwise use parent scope
-                var compileScope = scope;
-
-                if (attrs.contentBody) {
-                  compileScope = scope.$eval(attrs.stiftenContentBody);
-                }
-
-                $compile(element.contents())(compileScope);
-
-
-
-
+                $compile(element.contents())(scope);
           });
       }
     };
