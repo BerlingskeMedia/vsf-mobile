@@ -1,7 +1,7 @@
 <article ng-repeat="article in articles | limitTo: displayed : 0" class="header-article-list-article">
   <a class="article-content" href ng-href="{{ article.link | relativize }}">
     <time class="publish-date"><span class="icon-time wi" ng-class="article.pubDate | iconize"></span> {{ article.pubDate | customdate }}</time>
-    <h2>{{ article.title }}</h2>
+    <h2>{{ article.title_frontpage || article.title }}</h2>
     <span class="label label-premium" stiften-premium ng-if="article.plus_access!==undefined"></span>
   </a>
 </article>

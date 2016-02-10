@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="text-wrapper">
-    <h2>{{ ::articles[0].title }}</h2>
+    <h2>{{ articles[0].title_frontpage || articles[0].title }}</h2>
     <div class="editorial-quote">{{ ::articles[0].description }}</div>
   </div>
 </a>

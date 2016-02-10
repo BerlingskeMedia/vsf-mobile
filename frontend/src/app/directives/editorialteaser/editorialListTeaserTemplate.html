@@ -4,7 +4,7 @@
       <a ng-if="showLabel" class="label" href ng-href="/{{ ::article.category_id }}">{{ ::article.category }}</a>
       <a href ng-href="{{ article.link | relativize }}">
         <div class="byline">{{ ::article.author[0].value.name }}</div>
-        <h2>{{ article.title }}</h2>
+        <h2>{{ article.title_frontpage || article.title }}</h2>
       </a>
     </div>
   
