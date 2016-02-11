@@ -151,12 +151,14 @@ var app = angular
         $window._fbq.push(['track', 'PixelInitialized', {}]);
         // Gallup
 
+        /*
         var sp_e0 = {
           "s":"stiften",
           "cp": locUrl,
           "url": document.location.href
         };
         spring.c(sp_e0);
+        */
       }
     });
   });
