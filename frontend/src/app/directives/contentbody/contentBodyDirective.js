@@ -1,4 +1,4 @@
-app.directive('stiftenContentBody', function ($compile, $sce) {
+app.directive('stiftenContentBody', function ($compile, $sce, $window) {
     'use strict';
     return {
         restrict: 'A',
@@ -9,6 +9,9 @@ app.directive('stiftenContentBody', function ($compile, $sce) {
           }, function (value) {
                 element.html(value && value.toString());
                 $compile(element.contents())(scope);
+                if ('FB' in $window) {
+                  FB.XFBML.parse();
+                }
           });
       }
     };
