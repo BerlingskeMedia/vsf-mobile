@@ -23,7 +23,7 @@ app.directive('stiftenShareLinks', function(config, $location){
 
           $scope.links = {};
           $scope.links.fb = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
-          $scope.links.twitter = 'https://twitter.com/home?status=' + tweet;
+          $scope.links.twitter = 'https://twitter.com/intent/tweet?text=' + tweet;
           $scope.links.google = 'https://plus.google.com/share?url=' + url;
           $scope.links.mail = 'mailto:?subject=' + subject + '&body=' + subject + " \n" + url;
           $scope.links.sms = 'sms:&body=' + subject + " \n" + url;
