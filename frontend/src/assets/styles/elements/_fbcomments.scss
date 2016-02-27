@@ -3,9 +3,15 @@
   margin-left: $side-margin;
   margin-right: $side-margin;
   margin-bottom: 20px;
+  font-family: $berlingske-sans;
   .comment-welcome {
-    background: $stiften-orange;
+    color: #FFF;
+    background: #3c5a9a;
     padding: 10px;
     margin-bottom: 10px;
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
   }
 }

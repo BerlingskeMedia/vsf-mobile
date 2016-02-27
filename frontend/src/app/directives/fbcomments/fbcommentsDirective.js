@@ -14,28 +14,18 @@ app.directive('stiftenFbcomments', function(){
      return {
          restrict: 'A',
          scope: {},
-         controller: function($location, $element, $scope, Time, config) {
+         controller: function($location, $element, $scope, config) {
 
-             Time.getTime().then(function(data){
 
-               var time = new Date(data.data.time);
-               var hour = time.getHours();
-               if ((hour >= config.commentOpenHour) && (hour < config.commentClosingHour)) {
-                 var intro = config.commentWelcome;
-                 var href        = config.canonicalDomain + $location.url();
-                 var numposts    = 5;
-                 var colorscheme = 'light';
+           var intro = config.commentWelcome;
+           var href        = config.canonicalDomain + $location.url();
+           var numposts    = 5;
+           var colorscheme = 'light';
 
-                 $element.html(createHTML(intro, href, numposts, colorscheme));
-                 if (typeof(FB) !== 'undefined') {
-                   FB.XFBML.parse($element[0]);
-                 }
-               } else {
-                 var commentsClosed = config.commentClosed;
-                 $element.html('<div class="comment-welcome">' + commentsClosed + '</div>');
-               }
-             });
-
+           $element.html(createHTML(intro, href, numposts, colorscheme));
+           if (typeof(FB) !== 'undefined') {
+             FB.XFBML.parse($element[0]);
+           }
          }
      };
 });
