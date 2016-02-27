@@ -79,13 +79,15 @@
   }
   .subscription-button, .login-button, .epaper-button, .tip-button {
     margin-left: 25px;
-    margin-right: 25px;
     width: 50%;
     float: left;
+    display: block;
+    overflow: hidden;
+    padding: 14px 0px 13px;
   }
   .tip-button {
     @include buttonize();
-    margin-right: 25px;
+    margin-left: 25px;
     padding-top: 14px;
     text-align: center;
   }
