@@ -155,6 +155,8 @@ var app = angular
                 "cp": 'stiften' + $location.url(),
                 "url": document.location.href
         }, 2);
+        // Google Analytics
+        $window.ga('send', 'pageview', { page: $location.url() });
       }
     });
   });
