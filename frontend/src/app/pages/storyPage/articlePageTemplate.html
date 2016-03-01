@@ -11,7 +11,8 @@
   </div>
 
   <div stiften-video ng-if="story.content_type == 'video'"></div>
-  <div stiften-gallery ng-if="story.content_type != 'video'" ></div>
+  <div stiften-video-link ng-if="story.content_type == 'webtv_link'"></div>
+  <div stiften-gallery ng-if="story.content_type != 'video' && story.content_type != 'webtv_link'" ></div>
   <div stiften-share-links></div>
   <div class="byline-wrapper">
     <div ng-if="story.author && story.author.length > 0" class="byline">Af: <span class="byline-element" ng-repeat="byline in story.author">{{ ::byline.value.name }}</span></div>
