@@ -50,7 +50,7 @@
     <!-- endbuild -->
     <![endif]-->
 </head>
-    <body ng-class="[menuStatusClass, searchStatusClass, pageTypeClass, cookieConsentVisibility, alertStatusClass, pageLockedClass]">
+    <body stiften-scroller ng-class="[menuStatusClass, searchStatusClass, pageTypeClass, cookieConsentVisibility, alertStatusClass, pageLockedClass]">
         <div id="fb-root"></div>
         <!-- FB -->
         <script>
@@ -154,6 +154,7 @@
         <script src="../bower_components/flipsnap/flipsnap.js"></script>
         <script src="../bower_components/angular-flipsnap/angular-flipsnap.js"></script>
         <script src="../bower_components/angular-flipsnap/angular-flipsnap.min.js"></script>
+        <script src="../bower_components/angular-scroll/angular-scroll.js"></script>
         <!-- endbower -->
 
         <!-- endbuild -->
@@ -182,6 +183,7 @@
         <script src="app/services/chartbeat.js"></script>
         <script src="app/services/user.js"></script>
 
+        <script src="app/directives/scroller/scrollerDirective.js"></script>
         <script src="app/directives/searchfield/searchFieldDirective.js"></script>
         <script src="app/directives/login/loginDirective.js"></script>
         <script src="app/directives/paywall/paywallDirective.js"></script>
@@ -207,7 +209,6 @@
         <script src="app/directives/contentbody/contentBodyDirective.js"></script>
         <script src="app/directives/iframe/iframeDirective.js"></script>
 
-        <!-- TODO: remove test-page -->
         <script src="app/pages/loginPage/loginController.js"></script>
         <script src="app/pages/loginPage/logoutController.js"></script>
         <script src="app/pages/storyPage/storyPageController.js"></script>

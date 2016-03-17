@@ -5,6 +5,7 @@
 app.controller('SearchController', function ($scope, $rootScope, $location, Search) {
 
   $rootScope.searchOpen = true;
+  $scope.scrollRoute = true;
 
   $scope.page = 1;
   $scope.searching = false;

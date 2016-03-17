@@ -13,6 +13,7 @@ app.directive('stiftenMainMenu', function(){
                 newPath = '/' + newPath;
                 $rootScope.menuOpen = false;
                 if ($location.path() !=  newPath) {
+                    $rootScope.dontScroll = true;
                     $location.path(newPath);
                 }
             }

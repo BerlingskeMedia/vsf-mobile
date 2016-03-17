@@ -3,6 +3,8 @@
 'use strict';
 
 app.controller('ListController', function($scope, $rootScope, $routeParams, config, localStorageService, Latest, $location) {
+
+    $scope.scrollRoute = true;
     // We need to lookup term-ids based on slugs in BOND - this is an UGLY  hack.
     var id = 0;
     var tag = '';

@@ -26,6 +26,7 @@ var app = angular
       'ngResource',
       'ngRoute',
       'ngSanitize',
+      'duScroll',
       'ngTouch',
       'LocalStorageModule',
       'flipsnap'

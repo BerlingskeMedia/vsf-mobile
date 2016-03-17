@@ -19,6 +19,7 @@ app.directive('stiftenHeader', function() {
           }
           $scope.logoClickHandler = function() {
               $rootScope.menuOpen = false;
+              $rootScope.dontScroll = true;
               if ($location.path() != "/") {
                   $location.path("/");
               } else {
