@@ -23,7 +23,7 @@
   <div class="article-ratings" ng-if="story.rating" stiften-rating rating="{{ story.rating }}"></div>
   <div berl-emediate cu="30127" tag="article"></div>
   <div class="article-body" stiften-content-body="story['content']" ng-if="story['content']"></div>
-  <div class="paywall-wrapper" ng-if="story.plus_access===undefined || !story.plus_access || $root.token">
+  <div class="paywall-wrapper" ng-if="story.plus_access===undefined || !story.plus_access || !$root.token">
     <div stiften-factbox ng-if="story.factId" class="factbox" fact-id="{{ story.factId }}"></div>
     <div stiften-fbcomments class="stiften-fbcomments"></div>
     <div stiften-share-links></div>
