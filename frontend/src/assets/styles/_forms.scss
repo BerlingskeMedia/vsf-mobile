@@ -28,7 +28,7 @@ input[type="submit"]:disabled  {
     color: #fff;
     border-radius: 0;
     &:active, &:focus {
-      border-bottom-color: $stiften-orange;
+      border-bottom-color: $mjm-blue;
     };
   }
   input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -54,7 +54,7 @@ input[type="submit"]:disabled  {
     font-style: italic;
   }
   .buy-link {
-    color: $stiften-orange;
+    color: $mjm-blue;
   }
   .forgot {
     font-size: 12px;
@@ -69,8 +69,8 @@ input[type="submit"]:disabled  {
   @include buttonize();
   -webkit-appearance: none;
   width: 100%;
-  background: $stiften-orange;
-  border-color: $stiften-orange;
+  background: $mjm-blue;
+  border-color: $mjm-blue;
   color: $menu-background-color;
   text-align: center;
   padding: 14px 25px 13px;
