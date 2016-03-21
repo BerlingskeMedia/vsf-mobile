@@ -216,7 +216,7 @@ var appConfig = {
         google: 'https://google.com/stiftendk'
     },
     footer: {
-        copyright: "2015 Berlingske Media A/S",
+        copyright: "2016 Jysk Fynske Medier",
         policies: {
             copyright: {
                 text: 'Ophavsret og vilkår',
