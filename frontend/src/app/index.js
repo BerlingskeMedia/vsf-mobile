@@ -33,7 +33,7 @@ var app = angular
   ])
   .constant(
       'DOMAIN',
-      'stiften.dk'
+      'amtsavisen.dk'
   )
   .constant(
       'BACKEND_ADDRESS',
@@ -41,7 +41,7 @@ var app = angular
   )
   .constant(
       'BASE_URL_TO_RELATIVIZE',
-      'http://stiften.dk'
+      'http://amtsavisen.dk'
   )
   .constant('config', appConfig)
   .config(function ($routeProvider, $locationProvider, $httpProvider, localStorageServiceProvider) {
