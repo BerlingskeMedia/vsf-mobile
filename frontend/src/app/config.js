@@ -4,8 +4,8 @@ var appConfig = {
     commentWelcome: 'Kom med dine kommentarer nedenfor. Eller deltag i debatten på vores <a href="https://www.facebook.com/stiftstidende">Facebook-side</a>.',
     maxStarRating: 6,
     itemsInSection: 30,
-    editorialId: 64925,
-    frontpageQueueId: 1011,
+    editorialId: 1418,
+    frontpageQueueId: 1375,
     frontpageItems: 21,
     canonicalDomain: 'http://amtsavisen.dk',
     chartbeatApikey: 'c3624866ca79af3601812dbe1eb517f4',
@@ -16,7 +16,7 @@ var appConfig = {
     timeAgoHourThreshold: 119,
     timeAgoDayThreshold: 119,
     weatherCacheTTLinSecs: 500,
-    weatherCity: 'RAnders',
+    weatherCity: 'Randers',
     weatherIcons: {
             'day': {
               '200': 'thunderstorm',
@@ -62,17 +62,6 @@ var appConfig = {
         }
     },
     sectionsWithSubsectionsById: {
-        64874: 'sport', //sport
-        66919: 'sport', // AGF
-        0: 'sport', // Aarhus fremad
-        66922: 'sport', // Bears
-        66921: 'sport', // Aarhus håndbold
-        66920: 'sport', // SK Århus
-        305761: 'sport', // Skanderborg H
-        329953: 'sport', // Odder Håndbold
-        331535: 'sport', // Fodbold
-        331537: 'sport', // Basketball
-        331536: 'sport', // Håndbold
         64952: 'oestjylland', //Østjylland
         64954: 'oestjylland', //Århus
         64928: 'oestjylland', //Skanderborg
@@ -84,47 +73,39 @@ var appConfig = {
     sections: {
       sport: {
         name: 'Sport',
-        id: 64874,
-        subsections: [
-          {slug: 'sport', name: 'Sport'},
-          {slug: 'fodbold', name: 'Fodbold'},
-          {slug: 'haandbold', name: 'Håndbold'},
-          {slug: 'basketball', name: 'Basketball'}
-        ]
+        id: 1405
       },
       oestjylland: {
         name: 'Østjylland',
-        id: 64952,
+        id: 1391,
         subsections: [
           {slug: 'oestjylland', name: 'Østjylland'},
-          {slug: 'aarhus', name: 'Aarhus'},
-          {slug: 'skanderborg', name: 'Skanderborg'},
-          {slug: 'norddjurs', name: 'Norddjurs'},
-          {slug: 'odder', name: 'Odder'},
-          {slug: 'syddjurs', name: 'Syddjurs'},
+          {slug: 'randers', name: 'Randers'},
+          {slug: 'mariagerfjord', name: 'Mariagerfjord'},
           {slug: 'favrskov', name: 'Favrskov'},
-
+          {slug: 'norddjurs', name: 'Norddjurs'},
+          {slug: 'syddjurs', name: 'Syddjurs'},
         ]
       },
-      danmark: {
+      indland: {
         name: 'Danmark',
-        id: 64914
+        id: 1397
       },
       verden: {
         name: 'Verden',
-        id: 64916
+        id: 1398
       },
       kultur: {
         name: 'Kultur',
-        id: 64897
+        id: 1406
       },
       erhverv: {
         name: 'Erhverv',
-        id: 64913
+        id: 1399
       },
       navne: {
         name: 'Navne',
-        id: 64917
+        id: 1420
       },
       fodbold: {
         name: 'Fodbold',
@@ -140,35 +121,31 @@ var appConfig = {
       },
       alarm112: {
         name: 'Alarm 112',
-        id: 64908
+        id: 1401
       },
       debat: {
         name: 'Debat',
-        id: 64924
+        id: 1417
       },
-      aarhus: {
-        name: 'Aarhus',
-        id: 64954
+      randers: {
+        name: 'Randers',
+        id: 1390
       },
-      skanderborg: {
-        name: 'Skanderborg',
-        id: 64928
-      },
-      odder: {
-        name: 'Odder',
-        id: 64939
+      mariagerfjord: {
+        name: 'Mariagerfjord',
+        id: 1390
       },
       favrskov: {
         name: 'Favrskov',
-        id: 64930
+        id: 1393
       },
       syddjurs: {
         name: 'Syddjurs',
-        id: 64944
+        id: 1394
       },
       norddjurs: {
         name: 'Norddjurs',
-        id: 64938
+        id: 1395
       },
     },
     sportsTeams: [
@@ -234,7 +211,7 @@ var appConfig = {
         business: {
             subscription: {
                 text: 'Abonnement',
-                link: 'http://abonnement.stiften.dk'
+                link: 'http://abonnement.amtsavisen.dk/'
             },
             ads: {
                 text: 'Annoncering',
@@ -242,7 +219,7 @@ var appConfig = {
             },
             service: {
                 text: 'Kundeservice',
-                link: ' https://stiften.kundeunivers.dk/kontakt'
+                link: 'https://amtsavisen.kundeunivers.dk/kontakt'
             }
         },
     }
