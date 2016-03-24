@@ -14,7 +14,7 @@ app.directive('berlEmediate', function($timeout) {
 
         $timeout(function(){
           if (typeof(EAS_load_fif) != "undefined" && document.getElementById(id)) {
-                    console.log('loAD: ' + id);
+            console.log('Load AD: ' + id);
             EAS_load_fif(id, "./assets/html/EAS_fif.html",
               "http://ad1.emediate.dk/eas?cu=" + cu + ";cre=mu;js=y;pageviewid=;target=_blank"
             );
