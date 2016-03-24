@@ -1,6 +1,6 @@
 'use strict';
 
-app.directive('berlEmediate', function() {
+app.directive('berlEmediate', function($timeout) {
   return {
     restrict: 'AEC',
     templateUrl: 'app/directives/emediate/emediateTemplate.html',
@@ -9,18 +9,18 @@ app.directive('berlEmediate', function() {
       var cu = attrs.cu;
       var id = 'banner-' + cu;
       scope.id = id;
-      element.ready(function () {  
+      element.ready(function () {
+        // Wait for next render-cycle to make sure, id is set.
 
-              //  && config.emediate[cu].cu && config.emediate[cu].cu != "0"
-              if (typeof(EAS_load_fif) != "undefined" && document.getElementById(id)) {
-                EAS_load_fif(id, "./assets/html/EAS_fif.html",
-                  "http://ad1.emediate.dk/eas?cu=" + cu + ";cre=mu;js=y;pageviewid=;target=_blank"
-                );
-
-                // Prevent evaluating this controller multiple times
-
-              }
-      });   
+        $timeout(function(){
+          if (typeof(EAS_load_fif) != "undefined" && document.getElementById(id)) {
+                    console.log('loAD: ' + id);
+            EAS_load_fif(id, "./assets/html/EAS_fif.html",
+              "http://ad1.emediate.dk/eas?cu=" + cu + ";cre=mu;js=y;pageviewid=;target=_blank"
+            );
+          }
+        }, 1);
+      });
     }
   };
 });
